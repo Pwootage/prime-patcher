@@ -25,7 +25,7 @@ class Area(val version: () => PrimeVersion) extends BinarySerializable {
     f.write32(docks.length).writeArray(docks)
     if (version() == PrimeVersion.PRIME_2) {
       f.write32(relFiles.length).writeArray(relFiles, _.writeString)
-      f.write32(relFiles.length).writeArray(relOffsets, _.write32)
+      f.write32(relOffsets.length).writeArray(relOffsets, _.write32)
       f.writeString(areaName)
     }
   }
