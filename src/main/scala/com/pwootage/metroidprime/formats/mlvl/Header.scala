@@ -3,6 +3,7 @@ package com.pwootage.metroidprime.formats.mlvl
 import com.pwootage.metroidprime.formats.BinarySerializable
 import java.nio.ByteBuffer
 
+import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 
 object Header {
@@ -21,6 +22,12 @@ class Header extends BinarySerializable {
   var worldSAVW = u32
   var defaultSkyboxCDML = u32
 
+  def primeVersion = if (prime1) {
+    PrimeVersion.PRIME_1
+  } else if (prime2) {
+    PrimeVersion.PRIME_2
+  } else ???
+
   def prime1: Boolean = version == Header.VERSION_PRIME_1
   def prime2: Boolean = version == Header.VERSION_PRIME_2
 
@@ -31,27 +38,27 @@ class Header extends BinarySerializable {
     if (!(version == Header.VERSION_PRIME_1 || prime2)) {
       throw new IllegalArgumentException("Invalid version: " + version)
     }
-    f.i32(magic)
-    f.i32(version)
-    f.i32(worldNameSTRG)
+    f.write32(magic)
+    f.write32(version)
+    f.write32(worldNameSTRG)
     if (prime2) {
-      f.i32(darkWorldNameSTRG)
-      f.i32(unknown1)
+      f.write32(darkWorldNameSTRG)
+      f.write32(unknown1)
     }
-    f.i32(worldSAVW)
-    f.i32(defaultSkyboxCDML)
+    f.write32(worldSAVW)
+    f.write32(defaultSkyboxCDML)
   }
 
   def read(buff: PrimeDataFile) {
-    magic = buff.i32()
-    version = buff.i32()
-    worldNameSTRG = buff.i32()
+    magic = buff.read32()
+    version = buff.read32()
+    worldNameSTRG = buff.read32()
     if (prime2) {
-      darkWorldNameSTRG = buff.i32()
-      unknown1 = buff.i32()
+      darkWorldNameSTRG = buff.read32()
+      unknown1 = buff.read32()
     }
-    worldSAVW = buff.i32()
-    defaultSkyboxCDML = buff.i32()
+    worldSAVW = buff.read32()
+    defaultSkyboxCDML = buff.read32()
     if (magic != Header.MAGIC) {
       throw new IllegalArgumentException("Invalid magic: " + magic)
     }

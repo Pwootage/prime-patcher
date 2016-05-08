@@ -12,16 +12,16 @@ class MemoryRelay extends BinarySerializable {
 
 
   override def write(f: PrimeDataFile): Unit = {
-    f.i32(relayInstanceID)
-    f.i32(targetInstanceID)
-    f.i16(message)
-    f.i8(unk)
+    f.write32(relayInstanceID)
+    f.write32(targetInstanceID)
+    f.write16(message)
+    f.write8(unk)
   }
 
   override def read(f: PrimeDataFile): Unit = {
-    relayInstanceID = f.i32()
-    targetInstanceID = f.i32()
-    message = f.i16()
-    unk = f.i8()
+    relayInstanceID = f.read32()
+    targetInstanceID = f.read32()
+    message = f.read16()
+    unk = f.read8()
   }
 }
