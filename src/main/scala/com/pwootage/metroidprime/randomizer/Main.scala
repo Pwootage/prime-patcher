@@ -18,7 +18,7 @@ object Main {
 
     pf.close()
 
-    val out = "out.MLVL"
+    val out = "out/out.MLVL"
     val raf2 = new RandomAccessFile(out, "rw")
     raf2.getChannel.truncate(0)//Clear out file
     val pf2 = new PrimeDataFile(raf2)
