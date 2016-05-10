@@ -4,11 +4,10 @@ import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 
 class MemoryRelay extends BinarySerializable {
-  import PrimeDataFile.Types._
-  var relayInstanceID = u32
-  var targetInstanceID = u32
-  var message = u16
-  var unk = u8(0)
+  var relayInstanceID: Int = -1
+  var targetInstanceID: Int = -1
+  var message: Short = -1
+  var unk: Byte = -1
 
 
   override def write(f: PrimeDataFile): Unit = {

@@ -4,11 +4,9 @@ import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 
 class Vec3 extends BinarySerializable {
-  import PrimeDataFile.Types._
-
-  var x = float
-  var y = float
-  var z = float
+  var x: Float = Float.NaN
+  var y: Float = Float.NaN
+  var z: Float = Float.NaN
 
   override def write(f: PrimeDataFile): Unit = {
     f.writeFloat(x)

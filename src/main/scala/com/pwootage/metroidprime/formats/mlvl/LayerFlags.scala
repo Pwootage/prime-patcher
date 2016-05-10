@@ -4,10 +4,8 @@ import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 
 class LayerFlags extends BinarySerializable {
-  import PrimeDataFile.Types._
-
-  var count = u32
-  var flags = u64
+  var count: Int = -1
+  var flags: Long = 0xDEADBEA7l
 
   override def write(f: PrimeDataFile): Unit = {
     f.write32(count)

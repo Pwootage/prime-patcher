@@ -4,10 +4,8 @@ import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 
 class AudioGroup extends BinarySerializable {
-  import PrimeDataFile.Types._
-
-  var unk1 = u32
-  var AGSC = u32
+  var unk1: Int = -1
+  var AGSC: Int = -1
 
   override def write(f: PrimeDataFile): Unit = {
     f.write32(unk1)

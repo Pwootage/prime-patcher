@@ -4,13 +4,11 @@ import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 
 class AreaHeader extends BinarySerializable{
-  import PrimeDataFile.Types._
-
-  var name = u32
-  val transform = floatArray(12)
-  val boundingBox = floatArray(6)
-  var MREA = u32
-  var id = u32
+  var name: Int = -1
+  val transform = new Array[Float](12)
+  val boundingBox = new Array[Float](6)
+  var MREA: Int = -1
+  var id: Int = -1
 
   override def write(f: PrimeDataFile): Unit = {
     f.write32(name)

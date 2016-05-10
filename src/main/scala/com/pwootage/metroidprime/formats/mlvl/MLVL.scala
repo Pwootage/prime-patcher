@@ -2,19 +2,16 @@ package com.pwootage.metroidprime.formats.mlvl
 
 import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
-import PrimeDataFile._
 
 class MLVL extends BinarySerializable {
 
-  import PrimeDataFile.Types._
-
   val header = new Header
   var memoryRelays = Array[MemoryRelay]()
-  var areaUnk = u32
+  var areaUnk: Int = -1
   var areas = Array[Area]()
-  var MAPWID = u32
-  var MAPWunk1 = u8
-  var MAPWunk2 = u32
+  var MAPWID: Int = -1
+  var MAPWunk1: Byte = -1
+  var MAPWunk2: Int = -1
   var audioGroups = Array[AudioGroup]()
   var audioUnk1 = ""
   var layerFlags = Array[LayerFlags]()
@@ -37,11 +34,7 @@ class MLVL extends BinarySerializable {
     f.write32(layerFlags.length).writeArray(layerFlags)
     f.write32(layerNames.length).writeArray(layerNames, _.writeString)
     f.write32(layerOffsets.length).writeArray(layerOffsets, _.write32)
-    val endPos = f.pos
-    val padding = 32 - (endPos % 32).toInt
-    if (padding != 32) {
-      for ( _ <- 1 to padding) f.write8(0xFF.toByte)
-    }
+    f.writePaddingTo(32)
   }
 
   def read(f: PrimeDataFile): Unit = {
@@ -60,10 +53,6 @@ class MLVL extends BinarySerializable {
     layerFlags = f.readArray(f.read32(), () => new LayerFlags)
     layerNames = f.readArrayWithCount(f.read32(), _.readString)
     layerOffsets = f.readArrayWithCount(f.read32(), _.read32)
-    val endPos = f.pos
-    val padding = 32 - (endPos % 32).toInt
-    if (padding != 32) {
-      for ( _ <- 1 to padding) f.read8()
-    }
+    f.readPaddingTo(32)
   }
 }

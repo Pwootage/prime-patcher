@@ -13,14 +13,13 @@ object Header {
 }
 
 class Header extends BinarySerializable {
-  import PrimeDataFile.Types._
-  var magic = u32
-  var version = u32
-  var worldNameSTRG = u32
-  var darkWorldNameSTRG = u32
-  var unknown1 = u32
-  var worldSAVW = u32
-  var defaultSkyboxCDML = u32
+  var magic: Int = -1
+  var version: Int = -1
+  var worldNameSTRG: Int = -1
+  var darkWorldNameSTRG: Int = -1
+  var unknown1: Int = -1
+  var worldSAVW: Int = -1
+  var defaultSkyboxCDML: Int = -1
 
   def primeVersion = if (prime1) {
     PrimeVersion.PRIME_1

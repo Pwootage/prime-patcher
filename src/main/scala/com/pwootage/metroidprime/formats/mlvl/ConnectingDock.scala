@@ -4,11 +4,8 @@ import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 
 class ConnectingDock extends BinarySerializable {
-
-  import PrimeDataFile.Types._
-
-  var area = u32
-  var dock = u32
+  var area: Int = -1
+  var dock: Int = -1
 
   override def write(f: PrimeDataFile): Unit = {
     f.write32(area)
