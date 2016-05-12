@@ -1,6 +1,6 @@
 package com.pwootage.metroidprime.formats.io
 
-import java.io.{DataInput, DataOutput, RandomAccessFile}
+import java.io._
 import java.nio.charset.StandardCharsets
 import java.util
 
@@ -9,6 +9,10 @@ import com.pwootage.metroidprime.formats.BinarySerializable
 import scala.reflect.ClassTag
 
 class PrimeDataFile(input: Option[DataInput], output: Option[DataOutput]) {
+
+  def this(bytes: Array[Byte]) {
+    this(Some(new DataInputStream(new ByteArrayInputStream(bytes))), None)
+  }
 
   def this(dataInput: DataInput) {
     this(Some(dataInput), None)

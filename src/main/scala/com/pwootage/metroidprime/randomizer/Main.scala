@@ -5,6 +5,8 @@ import java.nio.file.{Files, Paths}
 
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.mrea.MREA
+import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
+import com.pwootage.metroidprime.formats.scly.prime1ScriptObjects.Pickup
 
 object Main {
   def main(args: Array[String]) {
@@ -28,6 +30,17 @@ object Main {
     mrea.write(pf2)
     raf2.close()
     println("done")
+
+    val scly = mrea.parseSCLY
+
+    scly.layers(0).objects.find(_.typ == Prime1ScriptObjectType.Pickup.id).foreach(item => {
+      Files.write(Paths.get("out/missle1.item"), item.binaryData)
+      val pickup = new Pickup
+      pickup.read(item.pdfForBody)
+      println(pickup)
+    })
+
+    println("done3")
 
     Files.write(Paths.get("out/out.COLL"), mrea.rawSections(mrea.collisionSection))
 

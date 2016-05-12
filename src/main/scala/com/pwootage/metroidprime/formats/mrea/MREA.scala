@@ -5,6 +5,7 @@ import java.io.{ByteArrayInputStream, DataInputStream}
 import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.mrea.collision.Collision
+import com.pwootage.metroidprime.formats.scly.SCLY
 
 object MREA {
   val MAGIC = 0xDEADBEEF
@@ -85,8 +86,13 @@ class MREA extends BinarySerializable {
 
   def parseCollision = {
     val res = new Collision
-    val pdf = new PrimeDataFile(new DataInputStream(new ByteArrayInputStream(rawSections(collisionSection))))
-    pdf.read(res)
+    res.read(rawSections(collisionSection))
+    res
+  }
+
+  def parseSCLY = {
+    val res = new SCLY
+    res.read(rawSections(SCLYSection))
     res
   }
 }
