@@ -5,11 +5,11 @@ import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.scly.prime1ScriptObjects.common.{ActorParams, AnimationParams}
 
 class Pickup extends ScriptObjectInstanceBase {
-  val pos = new Vec3
-  val rotation = new Vec3
-  val scale = new Vec3
-  val collisionScale = new Vec3
-  val scanOffset = new Vec3
+  var pos = new Vec3
+  var rotation = new Vec3
+  var scale = new Vec3
+  var collisionScale = new Vec3
+  var scanOffset = new Vec3
   var item: Int = -1
   var capacity: Int = -1
   var amount: Int = -1
@@ -64,7 +64,8 @@ class Pickup extends ScriptObjectInstanceBase {
     active = f.readBool()
     spawnDelay = f.readFloat()
     particlePART = f.read32()
-
-    println("parsed")
   }
+
+  def itemEnum = Prime1PickupType.fromID(item)
+  def itemName = itemEnum.toString
 }

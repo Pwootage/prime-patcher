@@ -3,6 +3,7 @@ package com.pwootage.metroidprime.formats.mrea
 import java.io.{ByteArrayInputStream, DataInputStream}
 
 import com.pwootage.metroidprime.formats.BinarySerializable
+import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.mrea.collision.Collision
 import com.pwootage.metroidprime.formats.scly.SCLY
@@ -27,7 +28,6 @@ class MREA extends BinarySerializable {
   var VISISection: Int = -1
   var PATHSection: Int = -1
   var AROTsection: Int = -1
-  var sectionSizes = Array[Int]()
   var rawSections = Array[Array[Byte]]()
 
   override def write(f: PrimeDataFile): Unit = {
@@ -44,11 +44,11 @@ class MREA extends BinarySerializable {
     f.write32(VISISection)
     f.write32(PATHSection)
     f.write32(AROTsection)
-    f.writeArray(sectionSizes, _.write32)
+    f.writeArray(rawSections.map(_.length), _.write32)
     f.writePaddingTo(32)
 
-    for (i <- rawSections) {
-      f.writeBytes(i)
+    for (section <- rawSections) {
+      f.writeBytes(section)
       f.writePaddingTo(32)
     }
   }
@@ -67,7 +67,7 @@ class MREA extends BinarySerializable {
     VISISection = f.read32()
     PATHSection = f.read32()
     AROTsection = f.read32()
-    sectionSizes = f.readArrayWithCount(sectionCount, _.read32)
+    val sectionSizes = f.readArrayWithCount(sectionCount, _.read32)
     f.readPaddingTo(32)
 
     rawSections = new Array(sectionCount)
@@ -94,5 +94,14 @@ class MREA extends BinarySerializable {
     val res = new SCLY
     res.read(rawSections(SCLYSection))
     res
+  }
+
+  def setSCLY(scly: SCLY): Unit = {
+    rawSections(SCLYSection) = scly.toByteArray
+  }
+
+  def primeVersion = version match {
+    case MREA.VERSION_PRIME_1 => PrimeVersion.PRIME_1
+    case MREA.VERSION_PRIME_2 => PrimeVersion.PRIME_2
   }
 }

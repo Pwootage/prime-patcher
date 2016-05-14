@@ -4,6 +4,7 @@ import java.io.{ByteArrayInputStream, DataInputStream}
 
 import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
+import com.pwootage.metroidprime.utils.ByteDiffer
 
 object SCLY {
   val MAGIC = 0x53434C59
@@ -18,6 +19,13 @@ class SCLY extends BinarySerializable {
   override def write(f: PrimeDataFile): Unit = {
     f.write32(magic)
     f.write32(unk1)
+    f.write32(layers.length)
+    val layerBytes = layers.map(_.toByteArray)
+    f.writeArray(layerBytes.map(_.length), _.write32)
+    for (layer <- layerBytes) {
+      f.writeBytes(layer)
+    }
+    f.writePaddingTo(32)
   }
 
   override def read(f: PrimeDataFile): Unit = {

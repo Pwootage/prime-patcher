@@ -17,6 +17,6 @@ trait BinarySerializable {
   def toByteArray = {
     val byteOut = new ByteArrayOutputStream()
     this.write(new PrimeDataFile(None, Some(new DataOutputStream(byteOut))))
-    byteOut
+    byteOut.toByteArray
   }
 }

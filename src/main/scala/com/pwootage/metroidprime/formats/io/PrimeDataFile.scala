@@ -55,6 +55,7 @@ class PrimeDataFile(input: Option[DataInput], output: Option[DataOutput]) {
 
   def writeBytes(bytes: Array[Byte]) = {
     out.write(bytes)
+    _pos += bytes.length
     this
   }
 
@@ -125,7 +126,17 @@ class PrimeDataFile(input: Option[DataInput], output: Option[DataOutput]) {
     val endPos = this.pos
     val padding = 32 - (endPos % 32).toInt
     if (padding != 32) {
-      for (_ <- 1 to padding) this.write8(0xFF.toByte)
+      for (_ <- 1 to padding) this.write8(v)
+    }
+    this
+  }
+
+  def writePaddingBytesGivenStartOffset(start: Long, count: Int, v: Byte = 0x00): PrimeDataFile= {
+    val endPos = this.pos
+    val len = endPos - start
+    val padding = 32 - (len % 32).toInt
+    if (padding != 32) {
+      for (_ <- 1 to padding) this.write8(v)
     }
     this
   }
