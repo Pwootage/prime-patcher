@@ -8,6 +8,10 @@ import com.pwootage.metroidprime.formats.BinarySerializable
 
 import scala.reflect.ClassTag
 
+object PrimeDataFile {
+  def apply(input: Option[DataInput], output: Option[DataOutput]) = new PrimeDataFile(input, output)
+}
+
 class PrimeDataFile(input: Option[DataInput], output: Option[DataOutput]) {
 
   def this(bytes: Array[Byte]) {
@@ -124,8 +128,8 @@ class PrimeDataFile(input: Option[DataInput], output: Option[DataOutput]) {
 
   def writePaddingTo(i: Int, v: Byte = 0x00): PrimeDataFile = {
     val endPos = this.pos
-    val padding = 32 - (endPos % 32).toInt
-    if (padding != 32) {
+    val padding = i - (endPos % i).toInt
+    if (padding != i) {
       for (_ <- 1 to padding) this.write8(v)
     }
     this
@@ -134,8 +138,8 @@ class PrimeDataFile(input: Option[DataInput], output: Option[DataOutput]) {
   def writePaddingBytesGivenStartOffset(start: Long, count: Int, v: Byte = 0x00): PrimeDataFile= {
     val endPos = this.pos
     val len = endPos - start
-    val padding = 32 - (len % 32).toInt
-    if (padding != 32) {
+    val padding = count - (len % count).toInt
+    if (padding != count) {
       for (_ <- 1 to padding) this.write8(v)
     }
     this

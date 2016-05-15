@@ -3,12 +3,13 @@ package com.pwootage.metroidprime
 import java.io.{FileWriter, RandomAccessFile}
 import java.nio.file.{Files, Paths}
 
-import com.pwootage.metroidprime.dump.PickupDumper
+import com.pwootage.metroidprime.dump.{Extractor, PickupDumper}
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.mrea.MREA
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
 import com.pwootage.metroidprime.formats.scly.prime1ScriptObjects.Pickup
 import com.pwootage.metroidprime.randomizer.Randomizer
+import com.pwootage.metroidprime.utils.FileIdentifier
 import org.rogach.scallop.{ScallopConf, Subcommand}
 
 object Main {
@@ -20,6 +21,12 @@ object Main {
       val outDir = trailArg[String](descr = "Output directory")
     }
     addSubcommand(dump)
+
+    val extract = new Subcommand("extract") {
+      val destDir = trailArg[String](descr = "Where to put the results")
+      val srcFiles = trailArg[List[String]](descr = "ISOs or PAKs to parse")
+    }
+    addSubcommand(extract)
 
     val randomize = new Subcommand("randomize") {
       val dirWithPAKs = trailArg[String]()
@@ -47,7 +54,43 @@ object Main {
     command match {
       case conf.dump => dump(conf)
       case conf.randomize => randomize(conf)
+      case conf.extract => extract(conf)
       case conf.test => test()
+    }
+  }
+
+  def dump(conf: PatcherConf): Unit = {
+    conf.dump.what() match {
+      case "pickups" => PickupDumper.dump(conf.dump.searchDirectory(), conf.dump.outDir())
+    }
+  }
+  def extract(conf: PatcherConf): Unit = {
+    for (file <- conf.extract.srcFiles()) {
+      if (FileIdentifier.isISO(file)) {
+        Extractor.extractIso(file)
+      }
+    }
+  }
+
+  def randomize(conf: PatcherConf): Unit = {
+    (new Randomizer).naiveRandomize(conf.randomize.dirWithPAKs())
+  }
+
+  def test(): Unit = {
+    val file = Paths.get("K:/roms/gc/mp-extracted/mp1/Metroid4-pak/b2701146.MREA")
+    val bytes = Files.readAllBytes(file)
+    val mrea = new MREA
+    mrea.read(bytes)
+    val bytes2 = mrea.toByteArray
+
+    if (bytes.length != bytes2.length) {
+      println(s"invalid lengths: ${bytes.length} ${bytes2.length}")
+    }
+
+    for (i <- bytes.indices) {
+      if (bytes(i) != bytes2(i)) {
+        println(s"invalid at pos ${i.toHexString} ${bytes(i)} ${bytes2(i)}")
+      }
     }
   }
 
@@ -141,33 +184,5 @@ object Main {
     objOut.close()
 
     print("done2")
-  }
-
-  def dump(conf: PatcherConf): Unit = {
-    conf.dump.what() match {
-      case "pickups" => PickupDumper.dump(conf.dump.searchDirectory(), conf.dump.outDir())
-    }
-  }
-
-  def randomize(conf: PatcherConf): Unit = {
-    (new Randomizer).naiveRandomize(conf.randomize.dirWithPAKs())
-  }
-
-  def test(): Unit = {
-    val file = Paths.get("K:/roms/gc/mp-extracted/mp1/Metroid4-pak/b2701146.MREA")
-    val bytes = Files.readAllBytes(file)
-    val mrea = new MREA
-    mrea.read(bytes)
-    val bytes2 = mrea.toByteArray
-
-    if (bytes.length != bytes2.length) {
-      println(s"invalid lengths: ${bytes.length} ${bytes2.length}")
-    }
-
-    for (i <- bytes.indices) {
-      if (bytes(i) != bytes2(i)) {
-        println(s"invalid at pos ${i.toHexString} ${bytes(i)} ${bytes2(i)}")
-      }
-    }
   }
 }

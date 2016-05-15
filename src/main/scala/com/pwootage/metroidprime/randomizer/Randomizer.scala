@@ -1,18 +1,15 @@
 package com.pwootage.metroidprime.randomizer
 
-import java.io.DataInputStream
 import java.nio.file.Files
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
-import com.pwootage.metroidprime.Main.PatcherConf
 import com.pwootage.metroidprime.formats.common.PrimeVersion
-import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.mrea.MREA
-import com.pwootage.metroidprime.formats.scly.{Prime1ScriptObjectType, SCLY, ScriptObjectInstance}
 import com.pwootage.metroidprime.formats.scly.prime1ScriptObjects.Pickup
-import com.pwootage.metroidprime.utils.{ByteDiffer, FileLocator}
+import com.pwootage.metroidprime.formats.scly.{Prime1ScriptObjectType, SCLY, ScriptObjectInstance}
+import com.pwootage.metroidprime.utils.FileLocator
 
 import scala.util.Random
 
