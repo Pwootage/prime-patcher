@@ -1,3 +1,5 @@
+import proguard.gradle.ProGuardTask
+
 group 'com.pwootage.metroidprime.randomizer'
 version '0.1-SNAPSHOT'
 
@@ -6,6 +8,15 @@ apply plugin: 'scala'
 
 repositories {
     mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'net.sf.proguard:proguard-gradle:5.2.1'
+    }
 }
 
 task fatJar(type: Jar) {
@@ -17,6 +28,13 @@ task fatJar(type: Jar) {
     with jar
 }
 
+task proguard(type: ProGuardTask, dependsOn: 'fatJar') {
+    //Currently broken for whatever reason
+    configuration 'proguard.txt'
+
+    injars 'build/libs/patcher-' + version + '.jar'
+    outjars 'build/libs/patcher-' + version + '-min.jar'
+}
 
 dependencies {
     compile 'org.scala-lang:scala-library:2.11.8'
