@@ -23,7 +23,9 @@ object Main {
     addSubcommand(dump)
 
     val extract = new Subcommand("extract") {
-      val force = toggle(name="force", short='f', default=Some(false))
+      val force = toggle(name="force", short='f', default=Some(false), descrYes = "Overwrite existing files")
+      val extractPaks = toggle(name="paks", short='p', default = Some(false), descrYes = "Extract PAKs from ISOs")
+      val quieter = toggle(name="quieter", short='q', default = Some(false), descrYes = "Squelch constant PAK extraction messages (will update every 500 files)")
       val destDir = trailArg[String](descr = "Where to put the results")
       val srcFiles = trailArg[List[String]](descr = "ISOs or PAKs to parse")
     }
@@ -68,7 +70,7 @@ object Main {
   def extract(conf: PatcherConf): Unit = {
     for (file <- conf.extract.srcFiles()) {
       if (FileIdentifier.isISO(file)) {
-        Extractor.extractIso(file, conf.extract.destDir(), conf.extract.force())
+        new Extractor(conf.extract.destDir(), conf.extract.force(), conf.extract.extractPaks(), conf.extract.quieter()).extractIso(file)
       }
     }
   }
