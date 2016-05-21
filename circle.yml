@@ -6,6 +6,10 @@ general:
   artifacts:
     - "build/libs"
 
+checkout:
+  post:
+    - "chmod +x ./gradlew"
+
 test:
   post:
-    - "./gradlew assemble"
+    - "./gradlew fatJar"
