@@ -18,5 +18,5 @@ class Resource extends BinarySerializable{
     typ = f.read32()
   }
 
-  override def toString = s"Dependency(${id.toHexString}.${DataTypeConversion.intAsStr(typ)})"
+  override def toString = s"Dependency(${id.toHexString}.${DataTypeConversion.intContainingCharsAsStr(typ)})"
 }
