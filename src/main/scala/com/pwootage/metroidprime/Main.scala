@@ -3,7 +3,7 @@ package com.pwootage.metroidprime
 import java.io.{FileWriter, RandomAccessFile}
 import java.nio.file.{Files, Paths}
 
-import com.pwootage.metroidprime.dump.{Extractor, PickupDumper}
+import com.pwootage.metroidprime.dump.{CollisionDumper, Extractor, PickupDumper}
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.mrea.MREA
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
@@ -65,6 +65,7 @@ object Main {
   def dump(conf: PatcherConf): Unit = {
     conf.dump.what() match {
       case "pickups" => PickupDumper.dump(conf.dump.searchDirectory(), conf.dump.outDir())
+      case "collision" => new CollisionDumper().dump(conf.dump.searchDirectory(), conf.dump.outDir())
     }
   }
   def extract(conf: PatcherConf): Unit = {
@@ -133,59 +134,5 @@ object Main {
     Files.write(Paths.get("out/out.COLL"), mrea.rawSections(mrea.collisionSection))
 
     val coll = mrea.parseCollision
-
-    Files.deleteIfExists(Paths.get("out/coll.obj"))
-    val objOut = new FileWriter("out/coll.obj", false)
-
-    objOut.write(s"# Vertexes (${coll.verts.length}\n")
-    for (v <- coll.verts) {
-      objOut.write(s"v ${v.x} ${v.y} ${v.z}\n")
-    }
-
-    var uhhh = 0
-    objOut.write(s"# Faces (${coll.faces.length}\n")
-    for ((f, i) <- coll.faces.zipWithIndex) {
-      val flags = coll.collisionMaterialFlags(coll.facePropertyIndices(i))
-      val line1 = coll.lines(f.ind1)
-      val line2 = coll.lines(f.ind2)
-      val line3 = coll.lines(f.ind3)
-      if (Seq(line1.ind1, line1.ind2, line2.ind1, line2.ind2, line3.ind1, line3.ind2).exists(_ > coll.verts.length)) {
-        uhhh += 1
-        objOut.write("#")
-      }
-      val (l1a, l1b) = (coll.verts(line1.ind1), coll.verts(line1.ind2))
-      val (l2a, l2b) = (coll.verts(line2.ind1), coll.verts(line2.ind2))
-      val (l3a, l3b) = (coll.verts(line3.ind1), coll.verts(line3.ind2))
-
-      val i1 = line1.ind1
-      val (i2, otherLine) = {
-        if (line1.ind1 == line2.ind1) {
-          (line2.ind2, line3)
-        } else if (line1.ind1 == line2.ind2) {
-          (line2.ind1, line3)
-        } else if (line1.ind1 == line3.ind1) {
-          (line3.ind2, line2)
-        } else {
-          (line3.ind1, line2)
-        }
-      }
-      val i3 = {
-        if (i2 == otherLine.ind1) {
-          otherLine.ind2
-        } else {
-          otherLine.ind1
-        }
-      }
-      if ((flags & 0x2000000) > 0) {
-        objOut.write(s"f ${i1 + 1} ${i2 + 1} ${i3 + 1}\n")
-      } else {
-        objOut.write(s"f ${i3 + 1} ${i2 + 1} ${i1 + 1}\n")
-      }
-    }
-    println(s"Uhh: $uhhh")
-
-    objOut.close()
-
-    print("done2")
   }
 }

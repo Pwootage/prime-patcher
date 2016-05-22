@@ -12,8 +12,8 @@ object DataTypeConversion {
   def strToIntContainingChars(str: String): Int = {
     val byte1 = str(0) & 0xFF
     val byte2 = str(1) & 0xFF
-    val byte3 = str(3) & 0xFF
-    val byte4 = str(4) & 0xFF
+    val byte3 = str(2) & 0xFF
+    val byte4 = str(3) & 0xFF
     (byte1 << 24) | (byte2 << 16) | (byte3 << 8) | byte4
   }
 
