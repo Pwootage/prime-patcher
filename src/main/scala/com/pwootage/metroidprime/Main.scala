@@ -3,7 +3,7 @@ package com.pwootage.metroidprime
 import java.io.{FileWriter, RandomAccessFile}
 import java.nio.file.{Files, Paths}
 
-import com.pwootage.metroidprime.dump.{CollisionDumper, Extractor, PickupDumper}
+import com.pwootage.metroidprime.dump.{CollisionDumper, Extractor, PickupDumper, Repacker}
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.mrea.MREA
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
@@ -30,6 +30,14 @@ object Main {
       val srcFiles = trailArg[List[String]](descr = "ISOs or PAKs to parse")
     }
     addSubcommand(extract)
+
+    val repack =  new Subcommand("repack") {
+      val force = toggle(name="force", short='f', default=Some(false), descrYes = "Overwrite existing file")
+      val quieter = toggle(name="quieter", short='q', default = Some(false), descrYes = "Squelch constant PAK extraction messages (will update every 500 files)")
+      val srcDir = trailArg[String](descr = "Source directory - can be PAK root (list.json) or ISO root (info.json)")
+      val outFile = trailArg[String](descr = "Target File (.pak or .iso)")
+    }
+    addSubcommand(repack)
 
     val randomize = new Subcommand("randomize") {
       val dirWithPAKs = trailArg[String]()
@@ -58,6 +66,7 @@ object Main {
       case conf.dump => dump(conf)
       case conf.randomize => randomize(conf)
       case conf.extract => extract(conf)
+      case conf.repack => repack(conf)
       case conf.test => test()
     }
   }
@@ -72,8 +81,14 @@ object Main {
     for (file <- conf.extract.srcFiles()) {
       if (FileIdentifier.isISO(file)) {
         new Extractor(conf.extract.destDir(), conf.extract.force(), conf.extract.extractPaks(), conf.extract.quieter()).extractIso(file)
+      } else {
+        new Extractor(conf.extract.destDir(), conf.extract.force(), conf.extract.extractPaks(), conf.extract.quieter()).extractPak(file)
       }
     }
+  }
+
+  def repack(conf: PatcherConf): Unit = {
+    new Repacker(conf.repack.outFile(), conf.repack.force(), conf.repack.quieter()).repack(conf.repack.srcDir())
   }
 
   def randomize(conf: PatcherConf): Unit = {

@@ -1,22 +1,15 @@
 package com.pwootage.metroidprime.dump
 
 import java.io._
-import java.nio.ByteBuffer
 import java.nio.file.{Files, Path, Paths, StandardOpenOption}
-import java.util.stream.StreamSupport
-import java.util.zip.{DeflaterInputStream, InflaterOutputStream}
+import java.util.zip.InflaterOutputStream
 
-import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.databind.util.ArrayBuilders.ByteBuilder
-import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
-import com.pwootage.metroidprime.formats.iso.{FST, FileDirectory, FileEntry, GCIsoHeaders}
+import com.pwootage.metroidprime.formats.iso.{FST, FileDirectory, GCIsoHeaders}
 import com.pwootage.metroidprime.formats.pak.PAKFile
-import com.pwootage.metroidprime.utils.{ByteDiffer, DataTypeConversion, Logger, PrimeJacksonMapper}
+import com.pwootage.metroidprime.utils.{DataTypeConversion, Logger, PrimeJacksonMapper}
 import org.anarres.lzo._
-
-import scala.io.StdIn
 
 class Extractor(targetDirectory: String, force: Boolean, extractPaks: Boolean, quieter: Boolean) {
 
@@ -79,6 +72,60 @@ class Extractor(targetDirectory: String, force: Boolean, extractPaks: Boolean, q
     Logger.success("Done")
   }
 
+  def extractPak(fileName: String): Unit = {
+    val file = Paths.get(fileName)
+    val target = Paths.get(targetDirectory)
+    if (Files.exists(target)) {
+      if (Files.isDirectory(target)) {
+        if (!force) {
+          Logger.error("Target directory already exists; pass -f to force overwrite")
+          System.exit(1)
+        } else {
+          Logger.info("Target directory already exits; force specified, overwriting existing files")
+        }
+      } else {
+        Logger.error("Target file exists and is not a directory")
+        System.exit(1)
+      }
+    } else {
+      Files.createDirectories(target)
+    }
+    val raf = new RandomAccessFile(file.toFile, "rw")
+    raf.seek(0)
+
+    Logger.info("Determining Prime version...")
+
+    val pak = new PAKFile(PrimeVersion.PRIME_1) //Doesn't matter, we're just looking for a compressed file
+    pak.read(new PrimeDataFile(Some(raf), None))
+
+    val compressedResource = pak.resources.find(_.compressed)
+
+    val ver = compressedResource match {
+      case None =>
+        Logger.error("No compressed files! Unable to determine source version.")
+        System.exit(1)
+        PrimeVersion.PRIME_1 // Unreacable code
+      case Some(r) =>
+        raf.seek(r.offset + 4)
+        val magic = raf.readUnsignedShort()
+        if (magic == 0x78DA) {
+          PrimeVersion.PRIME_1
+        } else if (magic <= 0x4000) {
+          PrimeVersion.PRIME_2
+        } else {
+          Logger.error("Unable to determine Prime Version - no ZLib header or valid block size found")
+          System.exit(1)
+          PrimeVersion.PRIME_1 // Unreacable code
+        }
+    }
+
+    Logger.info(s"Detected ${ver.prettyName}")
+    raf.seek(0)
+    extractPakFromRAFFromCurrentOffset(ver, raf, target)
+
+    Logger.success("Done")
+  }
+
   private def recursivelyExtractFiles(version: Option[PrimeVersion], raf: RandomAccessFile, dir: FileDirectory, targetDir: Path): Unit = {
     Files.createDirectories(targetDir)
     for (file <- dir.fileChildren) {
@@ -121,7 +168,7 @@ class Extractor(targetDirectory: String, force: Boolean, extractPaks: Boolean, q
     val offset = raf.getFilePointer
     val pak = new PAKFile(primeVersion)
     pak.read(new PrimeDataFile(Some(raf), None))
-    Files.write(targetDir.resolve("lists.json"), PrimeJacksonMapper.pretty.writeValueAsBytes(pak.toBasicResourceList))
+    Files.write(targetDir.resolve("list.json"), PrimeJacksonMapper.pretty.writeValueAsBytes(pak.toBasicResourceList))
 
     val uniqueFiles = pak.resources.map(_.idStr).toSet
     var alreadyExtractedFiles = Set[String]()
@@ -146,10 +193,15 @@ class Extractor(targetDirectory: String, force: Boolean, extractPaks: Boolean, q
           val decompressedSize = raf.readInt()
 
           if (primeVersion == PrimeVersion.PRIME_1) {
+            val resourceStart = raf.getFilePointer
             val decompressedOut = new InflaterOutputStream(out)
-            copyBytes(raf, resource.size, decompressedOut)
+            copyBytes(raf, resource.size - 4, decompressedOut)
             decompressedOut.flush()
-            //TODO: verify size in Prime 1?
+            val resourceEnd = raf.getFilePointer
+            val bytesRead = resourceEnd - resourceStart
+            if (bytesRead != resource.size - 4) {
+              throw new IOException("Read incorrect number of bytes from original file")
+            }
           } else if (primeVersion == PrimeVersion.PRIME_2) {
             var decompressedSoFar = 0
             while (decompressedSoFar < decompressedSize) {

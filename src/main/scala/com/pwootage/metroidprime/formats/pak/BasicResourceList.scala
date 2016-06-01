@@ -1,3 +1,5 @@
 package com.pwootage.metroidprime.formats.pak
 
-case class BasicResourceList(namedResources: Map[String,String], resources: Seq[String])
+import com.pwootage.metroidprime.formats.common.PrimeVersion
+
+case class BasicResourceList(primeVersion: PrimeVersion, namedResources: Map[String,String], resources: Seq[String])

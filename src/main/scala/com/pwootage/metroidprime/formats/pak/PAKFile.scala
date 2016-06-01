@@ -9,7 +9,7 @@ object PAKFile {
   val Version = 0x00030005
 }
 
-class PAKFile(primeVersion: PrimeVersion) extends BinarySerializable {
+class PAKFile(val primeVersion: PrimeVersion) extends BinarySerializable {
   var version: Int = -1
   var unused: Int = -1
 
@@ -35,11 +35,17 @@ class PAKFile(primeVersion: PrimeVersion) extends BinarySerializable {
   }
 
   def toBasicResourceList = BasicResourceList(
+    primeVersion = primeVersion,
     namedResources = Map[String, String](namedResources.map(r => r.name -> r.idStr):_*),
     resources = resources.map(_.idStr)
   )
 
   def fromBasicResourceList(res: BasicResourceList): Unit = {
+    if (primeVersion != res.primeVersion) {
+      throw new IllegalArgumentException("Attempt to restore from the wrong version of Prime!")
+    }
+    version = PAKFile.Version
+    unused = 0
     namedResources = res.namedResources.map(tuple => {
       val (name, idStr) = tuple
       val (id, typ) = DataTypeConversion.strResourceToIdAndType(idStr)

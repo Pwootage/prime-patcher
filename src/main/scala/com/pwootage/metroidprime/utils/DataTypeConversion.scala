@@ -39,7 +39,7 @@ object DataTypeConversion {
     case Some(m) =>
       val idStr = m.group(1)
       val typStr = m.group(2)
-      (Integer.parseInt(idStr, 16), strToIntContainingChars(typStr))
+      (java.lang.Long.parseLong(idStr, 16).toInt, strToIntContainingChars(typStr))
     case None => throw new IllegalArgumentException(s"Invalid file ID $idStr")
   }
 }
