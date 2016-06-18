@@ -126,8 +126,25 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
       } else {
         Logger.progressResetLine(s"Copying ${file.name}")
 
-        srcRaf.seek(file.offset)
-        copyBytes(new RandomAccessFileInputStream(srcRaf), len, new RandomAccessFileOutputStream(destRaf))
+        if (shouldPatch(file.name)) {
+          val unpatchedBytes = new ByteArrayOutputStream()
+          copyBytes(new RandomAccessFileInputStream(srcRaf), len, unpatchedBytes)
+
+          var patchedBytes = unpatchedBytes.toByteArray
+
+          val patches = patchesByFile(file.name)
+
+          for ((patchfile, patch) <- patches) {
+            Logger.info(s"Patching ${file.name} - ${patch.description.getOrElse("")}")
+            patchedBytes = applyPatch(patchfile, patch, patchedBytes)
+          }
+
+          copyBytes(new ByteArrayInputStream(patchedBytes), patchedBytes.length, new RandomAccessFileOutputStream(destRaf))
+          
+        } else {
+          srcRaf.seek(file.offset)
+          copyBytes(new RandomAccessFileInputStream(srcRaf), len, new RandomAccessFileOutputStream(destRaf))
+        }
       }
 
       val fileLen = destRaf.getFilePointer - fileOffset
@@ -174,11 +191,7 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
 
     for (resource <- pak.resources.sortBy(_.offset)) {
       val resourceName = resource.idStr
-      if (quieter) {
-        if (processedFiles % 500 == 0) {
-          Logger.progressResetLine(s"Processed $processedFiles/${pak.resources.length}")
-        }
-      } else {
+      if (!quieter) {
         Logger.progressResetLine(s"Processing $resourceName $processedFiles/${pak.resources.length}")
       }
 
@@ -200,9 +213,7 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
     val resourceName = resource.idStr
     srcRaf.seek(srcPakStart + resource.offset)
 
-    if (shouldPatch(resource)) {
-      Logger.info(s"Patching ${resource.idStr}")
-
+    if (shouldPatch(resource.idStr)) {
       actuallyPatchResource(primeVersion, srcRaf, destRaf, resource, srcPakStart, destPakStart)
 
       true
@@ -225,6 +236,7 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
     val patches = patchesByFile(resource.idStr)
 
     for ((patchfile, patch) <- patches) {
+      Logger.info(s"Patching ${resource.idStr} - ${patch.description.getOrElse("")}")
       patchedBytes = applyPatch(patchfile, patch, patchedBytes)
     }
 
@@ -353,8 +365,8 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
     }
   }
 
-  def shouldPatch(resource: Resource): Boolean = {
-    patchesByFile.contains(resource.idStr)
+  def shouldPatch(file: String): Boolean = {
+    patchesByFile.contains(file)
   }
 
   private def isCompressedType(size: Int, typ: Int) = DataTypeConversion.intContainingCharsAsStr(typ) match {

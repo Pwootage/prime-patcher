@@ -41,7 +41,7 @@ object Main {
 
     val patch =  new Subcommand("patch") {
       val force = toggle(name="force", short='f', default=Some(false), descrYes = "Overwrite existing file")
-      val quieter = toggle(name="quieter", short='q', default = Some(false), descrYes = "Squelch constant PAK extraction/repacking messages (will update every 500 files)")
+      val quieter = toggle(name="quieter", short='q', default = Some(false), descrYes = "Squelch constant PAK extraction/repacking messages")
       val srcFile = trailArg[String](descr = "Source ISO")
       val outFile = trailArg[String](descr = "Target ISO")
       val patchfiles = trailArg[List[String]](descr = "Patchfiles to use")
