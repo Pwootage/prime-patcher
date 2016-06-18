@@ -238,19 +238,13 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
     case "ANCS" => true
     case "ANIM" => true
     case "FONT" => true
-//    case x => if (size > 0x400) {
-//      x match {
-        case "PART" => true
-        case "ELSC" => true
-        case "SWHC" => true
-        case "WPSC" => true
-        case "DPSC" => true
-        case "CRSC" => true
-        case _ => false
-//      }
-//    } else {
-//      false
-//    }
+    case "PART" => true
+    case "ELSC" => true
+    case "SWHC" => true
+    case "WPSC" => true
+    case "DPSC" => true
+    case "CRSC" => true
+    case _ => false
   }
 
   private def isIgnored(file: Path) = {
