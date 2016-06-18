@@ -133,7 +133,7 @@ class Extractor(targetDirectory: String, force: Boolean, extractPaks: Boolean, q
       Logger.progress(s"${file.name} (${DataTypeConversion.bytesToReadable(len)})")
       raf.seek(file.offset)
 
-      if (file.name.toLowerCase.endsWith(".pak") && extractPaks) {
+      if (file.name.toLowerCase.endsWith(".pak") && extractPaks && shouldExtract(file.name)) {
         Logger.info("Found PAK file; extracting it")
         raf.seek(file.offset)
         extractPakFromRAFFromCurrentOffset(version.get, raf, targetDir.resolve(file.name.replace('.', '-')))
@@ -161,6 +161,13 @@ class Extractor(targetDirectory: String, force: Boolean, extractPaks: Boolean, q
       totalRead += read
     }
   }
+
+  def shouldExtract(name: String): Boolean = {
+//    name.toLowerCase.contains("metroid")
+//    name.toLowerCase.contains("metroid1")
+    true
+  }
+
 
   private def extractPakFromRAFFromCurrentOffset(primeVersion: PrimeVersion, raf: RandomAccessFile, targetDir: Path) = {
     Files.createDirectories(targetDir)

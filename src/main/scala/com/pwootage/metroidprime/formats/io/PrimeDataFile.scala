@@ -135,7 +135,7 @@ class PrimeDataFile(input: Option[DataInput], output: Option[DataOutput]) {
     this
   }
 
-  def writePaddingBytesGivenStartOffset(start: Long, count: Int, v: Byte = 0x00): PrimeDataFile= {
+  def writePaddingBytesGivenStartOffset(start: Long, count: Int, v: Byte = 0x00): PrimeDataFile = {
     val endPos = this.pos
     val len = endPos - start
     val padding = count - (len % count).toInt
@@ -146,4 +146,9 @@ class PrimeDataFile(input: Option[DataInput], output: Option[DataOutput]) {
   }
 
   def pos = _pos
+
+  def setOffset(pos: Int): PrimeDataFile = {
+    this._pos = pos
+    this
+  }
 }

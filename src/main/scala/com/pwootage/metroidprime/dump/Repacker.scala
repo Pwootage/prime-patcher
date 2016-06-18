@@ -2,11 +2,13 @@ package com.pwootage.metroidprime.dump
 
 import java.io._
 import java.nio.file.{Files, Path, Paths, StandardOpenOption}
+import java.util.stream.Collectors
 import java.util.zip.{Deflater, DeflaterInputStream, DeflaterOutputStream, InflaterOutputStream}
 
+import scala.collection.JavaConversions._
 import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
-import com.pwootage.metroidprime.formats.iso.{FST, FileDirectory, GCIsoHeaders}
+import com.pwootage.metroidprime.formats.iso.{FST, FileDirectory, FileEntry, GCIsoHeaders}
 import com.pwootage.metroidprime.formats.pak.{BasicResourceList, PAKFile}
 import com.pwootage.metroidprime.utils.{DataTypeConversion, Logger, PrimeJacksonMapper, RandomAccessFileOutputStream}
 import org.anarres.lzo._
@@ -53,8 +55,9 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
 
     val infoJson = src.resolve("info.json")
     val header = PrimeJacksonMapper.mapper.readValue(Files.readAllBytes(infoJson), classOf[GCIsoHeaders])
+
+    Logger.progressResetLine("Writing initial headers...")
     targetRaf.seek(0)
-    //Initial header write; note we'll write it a second time after we've substituted in correct offsets
     PrimeDataFile(Some(targetRaf), Some(targetRaf)).write(header)
 
     val gameID = DataTypeConversion.intContainingCharsAsStr(header.discHeader.gameCode) + DataTypeConversion.intContainingCharsAsStr(header.discHeader.makerCode)
@@ -69,20 +72,36 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
       None
     }
 
-    //    Logger.progress("Parsing file structure....")
-    //    val fst = new FST
-    //    raf.seek(header.discHeader.fstOffset)
-    //    PrimeDataFile(Some(raf), Some(raf)).read(fst)
-    //
-    //    Logger.info(s"Found ${fst.rootDirectoryEntry.recursivelyCalculateEntryCount + 1} files and folders")
-    //
-    //    //Write some header info to files so we can parse it again later
-    //    Files.write(target.resolve("info.json"), PrimeJacksonMapper.pretty.writeValueAsBytes(header))
-    //    recursivelyExtractFiles(version, raf, fst.rootDirectoryEntry, target)
-    //
-    //    raf.close()
-    //
-    //    Logger.success("Done")
+    val fst = new FST
+    fst.rootDirectoryEntry = parseRealFilesystemIntoFST("<root>", src)
+
+    Logger.info(s"Found ${fst.rootDirectoryEntry.recursivelyCalculateEntryCount + 1} files and directories to put into ISO")
+
+    Logger.progressResetLine("Writing file structure to iso...")
+    header.discHeader.fstOffset = targetRaf.getFilePointer.toInt
+    PrimeDataFile(Some(targetRaf), Some(targetRaf)).write(fst)
+    header.discHeader.fstSize = targetRaf.getFilePointer.toInt - header.discHeader.fstOffset
+    header.discHeader.fstMaxSize = header.discHeader.fstSize
+
+    recursivelyWriteFiles(src, fst.rootDirectoryEntry, targetRaf)
+
+    //Truncate rest of file
+    targetRaf.setLength(targetRaf.getFilePointer)
+    Logger.info(s"Finished writing files; final file length ${targetRaf.getFilePointer}")
+
+    val bootOffset = fst.rootDirectoryEntry.fileChildren.find(_.name == "default.dol").get.offset
+    Logger.progressResetLine(s"Boot dol offset: $bootOffset")
+    header.discHeader.bootDolOffset = bootOffset
+
+    Logger.progressResetLine("Re-writing header...")
+    targetRaf.seek(0)
+    PrimeDataFile(Some(targetRaf), Some(targetRaf)).write(header)
+
+    Logger.progressResetLine("Re-writing file structure...")
+    targetRaf.seek(header.discHeader.fstOffset)
+    PrimeDataFile(Some(targetRaf), Some(targetRaf)).write(fst)
+
+    Logger.success("Done")
   }
 
   def repackPak(src: Path, targetRaf: RandomAccessFile): Unit = {
@@ -95,7 +114,10 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
     Logger.progressResetLine(s"Writing initial header...")
     //Initial write of the header; we'll re-write the header after we've calculated all the appropriate offsets
     targetRaf.seek(pakStart)
-    PrimeDataFile(Some(targetRaf), Some(targetRaf)).write(realList)
+    PrimeDataFile(Some(targetRaf), Some(targetRaf))
+      .write(realList)
+      .setOffset(targetRaf.getFilePointer.toInt)
+      .writePaddingBytesGivenStartOffset(pakStart, 32)
 
     var extractedFiles = 0
     for (resource <- realList.resources) {
@@ -117,13 +139,14 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
       val decompressedSize = Files.size(resourcePath).toInt
       var compressedSize: Option[Int] = None
 
-      if (decompressedSize > 0x400) { //No reason to compress things that are too small
+      if (isCompressedType(decompressedSize, resource.typ)) {
+        //No reason to compress things that are too small, unless they're a compressed type
         targetRaf.writeInt(decompressedSize) // Write decompressed size
         val resourceInput = Files.newInputStream(resourcePath, StandardOpenOption.READ)
 
         if (realList.primeVersion == PrimeVersion.PRIME_1) {
           //Manually add header
-//          targetRaf.writeShort(0x78DA)
+          //          targetRaf.writeShort(0x78DA)
           //Compress
           val compressedOut = new DeflaterOutputStream(new RandomAccessFileOutputStream(targetRaf), new Deflater(9, false))
           copyBytes(resourceInput, decompressedSize, compressedOut)
@@ -172,6 +195,14 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
         resourceInput.close()
       }
 
+      resource.size += {
+        val padStart = targetRaf.getFilePointer.toInt
+        val padEnd = PrimeDataFile(Some(targetRaf), Some(targetRaf))
+          .setOffset(targetRaf.getFilePointer.toInt)
+          .writePaddingBytesGivenStartOffset(pakStart, 32, 0xFF.toByte)
+          .pos
+        (padEnd - padStart).toInt
+      }
       //Resource processing end
     }
 
@@ -197,6 +228,95 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
       }
       out.write(buff, 0, read)
       totalRead += read
+    }
+  }
+
+  private def isCompressedType(size: Int, typ: Int) = DataTypeConversion.intContainingCharsAsStr(typ) match {
+    case "TXTR" => true
+    case "CMDL" => true
+    case "CSKR" => true
+    case "ANCS" => true
+    case "ANIM" => true
+    case "FONT" => true
+//    case x => if (size > 0x400) {
+//      x match {
+        case "PART" => true
+        case "ELSC" => true
+        case "SWHC" => true
+        case "WPSC" => true
+        case "DPSC" => true
+        case "CRSC" => true
+        case _ => false
+//      }
+//    } else {
+//      false
+//    }
+  }
+
+  private def isIgnored(file: Path) = {
+    if (file.getFileName.toString == "info.json") {
+      true
+    } else if (file.getFileName.toString == "list.json") {
+      true
+    } else if (isPakDirectory(file)) {
+      true
+    } else {
+      false
+    }
+  }
+
+  private def isPakDirectory(file: Path): Boolean = {
+    Files.isDirectory(file) && Files.exists(file.resolve("list.json"))
+  }
+
+  private def parseRealFilesystemIntoFST(name: String, src: Path): FileDirectory = {
+    val children = {
+      val stream = Files.list(src)
+      val res = stream.iterator().toIndexedSeq
+      stream.close()
+      res
+    }
+
+    val fileChildren = (for (child <- children) yield {
+      if (Files.isRegularFile(child) && !isIgnored(child)) {
+        Some(FileEntry(child.getFileName.toString, 0, 0))
+      } else if (isPakDirectory(child)) {
+        Some(FileEntry(child.getFileName.toString.replace("-", "."), 0, 0))
+      } else {
+        None
+      }
+    }).flatten
+
+    val directoryChildren = for (child <- children if Files.isDirectory(child) && !isIgnored(child)) yield {
+      parseRealFilesystemIntoFST(child.getFileName.toString, child)
+    }
+
+    FileDirectory(name, fileChildren, directoryChildren)
+  }
+
+  def recursivelyWriteFiles(src: Path, dir: FileDirectory, targetRaf: RandomAccessFile): Unit = {
+    for (file <- dir.fileChildren) {
+      if (file.name.toLowerCase.endsWith(".pak") && isPakDirectory(src.resolve(file.name.replace('.', '-')))) {
+        Logger.info("Found PAK; packing in-line")
+        file.offset = targetRaf.getFilePointer.toInt
+
+        repackPak(src.resolve(file.name.replace('.', '-')), targetRaf)
+
+        file.length = targetRaf.getFilePointer.toInt - file.offset
+      } else {
+        val srcFile = src.resolve(file.name)
+
+        file.offset = targetRaf.getFilePointer.toInt
+        file.length = Files.size(srcFile).toInt
+
+        Logger.progressResetLine(s"Writing ${file.name} @ ${file.offset} (${file.length} bytes)")
+        val fin = Files.newInputStream(srcFile)
+        copyBytes(fin, file.length, new RandomAccessFileOutputStream(targetRaf))
+      }
+    }
+
+    for (dir <- dir.directoryChildren) {
+      recursivelyWriteFiles(src.resolve(dir.name), dir, targetRaf)
     }
   }
 }
