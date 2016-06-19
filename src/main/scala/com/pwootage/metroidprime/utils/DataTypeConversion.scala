@@ -40,7 +40,7 @@ object DataTypeConversion {
       val idStr = m.group(1)
       val typStr = m.group(2)
       (java.lang.Long.parseLong(idStr, 16).toInt, strToIntContainingChars(typStr))
-    case None => throw new IllegalArgumentException(s"Invalid file ID $idStr")
+    case siNone => throw new IllegalArgumentException(s"Invalid file ID $idStr")
   }
 
   def stringToLong(str: String): Long = {

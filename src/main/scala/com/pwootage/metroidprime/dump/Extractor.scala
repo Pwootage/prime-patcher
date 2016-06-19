@@ -164,8 +164,8 @@ class Extractor(targetDirectory: String, force: Boolean, extractPaks: Boolean, q
 
   def shouldExtract(name: String): Boolean = {
 //    name.toLowerCase.contains("metroid")
-//    name.toLowerCase.contains("metroid1")
-    true
+    name.toLowerCase.contains("metroid4")
+//    true
   }
 
 

@@ -4,7 +4,6 @@ import java.io.{ByteArrayInputStream, ByteArrayOutputStream, DataInputStream, Da
 
 import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
-import com.pwootage.metroidprime.formats.scly.prime1ScriptObjects.ScriptObjectInstanceBase
 
 class ScriptObjectInstance extends BinarySerializable {
   var typ: Byte = -1
@@ -47,10 +46,14 @@ class ScriptObjectInstance extends BinarySerializable {
   def typeEnum = Prime1ScriptObjectType.fromID(typ)
   def typeString = typeEnum.toString
 
+  def toTemplate = {
+    val templ = typeEnum.template()
+    templ.read(binaryData)
+    templ
+  }
+
   def name = try {
-    val obj = new ScriptObjectInstanceBase
-    obj.read(pdfForBody)
-    obj.name
+    toTemplate.properties.find(_.name == "Name").map(_.value.toString).getOrElse("<ERR>")
   } catch {
     case _: Throwable => "<ERR>"
   }

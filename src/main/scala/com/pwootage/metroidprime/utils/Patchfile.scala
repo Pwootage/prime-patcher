@@ -1,14 +1,15 @@
 package com.pwootage.metroidprime.utils
 
 import java.nio.file.{Files, Path}
-import java.util
 
 import com.fasterxml.jackson.annotation.{JsonIgnore, JsonInclude, JsonSubTypes, JsonTypeInfo}
 import com.fasterxml.jackson.databind.JsonNode
 import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.mrea.MREA
-import com.pwootage.metroidprime.formats.scly.prime1ScriptObjects.{Pickup, ScriptObjectInstanceBase}
-import com.pwootage.metroidprime.formats.scly.{Prime1ScriptObjectType, SCLY, ScriptObjectConnection, ScriptObjectInstance}
+import com.pwootage.metroidprime.formats.scly.{Prime1ScriptObjectType, ScriptObjectConnection, ScriptObjectInstance}
+import com.pwootage.metroidprime.templates.ScriptTemplate
+
+import scala.collection.JavaConversions._
 
 case class Patchfile(description: String,
                      patches: Seq[PatchAction],
@@ -63,6 +64,9 @@ case class ScriptObjectPatch(_filename: String,
   var add: Option[Boolean] = None
 
   @JsonInclude(JsonInclude.Include.NON_EMPTY)
+  var layer: Option[Int] = None
+
+  @JsonInclude(JsonInclude.Include.NON_EMPTY)
   var linksToRemove: List[ScriptObjectConnection] = List()
 
   @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -85,37 +89,59 @@ case class ScriptObjectPatch(_filename: String,
     val scly = mrea.parseSCLY
     val objectType = typeEnum(primeVersion)
 
-    for (layer <- scly.layers) {
-      if (remove.getOrElse(false)) {
-        layer.objects = layer.objects.filter(o => o.id == id && o.typeEnum == objectType)
-      } else {
-        if (add.getOrElse(false)) {
-          val res = new ScriptObjectInstance
-          res.id = id
-          res.typ = objectType.id
-          //TODO: prime 2 property count nonsense
+    if (add.getOrElse(false)) {
+      val res = new ScriptObjectInstance
+      res.id = id
+      res.typ = objectType.id
+
+      val template = res.typeEnum.template()
+
+      applyPatchToTemplate(objectPatch.get, template)
+
+      res.binaryData = template.toByteArray
+
+      res.propertyCount = template.properties.length
+
+      scly.layers(layer.getOrElse(0)).objects +:= res
+
+    } else {
+      for (layer <- scly.layers) {
+        if (remove.getOrElse(false)) {
+          layer.objects = layer.objects.filter(o => o.id == id && o.typeEnum == objectType)
         } else {
-          val objToModify = layer.objects
-            .find(o => o.id == id && o.typeEnum == objectType)
-            .getOrElse(throw new IllegalArgumentException("Unable to find script object to patch"))
+          if (!add.getOrElse(false)) {
+            val objToModify = layer.objects
+              .find(o => o.id == id && o.typeEnum == objectType)
+              .getOrElse(throw new IllegalArgumentException("Unable to find script object to patch"))
 
-          if (objectPatch.isDefined) {
-            val parsedObject: ScriptObjectInstanceBase = objectType.toObject(objToModify)
+            if (objectPatch.isDefined) {
+              val template = objectType.template()
 
-            if (parsedObject == null) {
-              throw new IllegalArgumentException("This object type is not yet supported")
+              if (template == null) {
+                throw new IllegalArgumentException("Unknown actor parameters")
+              }
+
+              template.read(objToModify.binaryData)
+
+              applyPatchToTemplate(objectPatch.get, template)
+              objToModify.propertyCount = template.properties.length
+
+              val newBinary = template.toByteArray
+
+              objToModify.binaryData = newBinary
+              //
+              //            PrimeJacksonMapper.mapper.readerForUpdating(parsedObject).readValue(objectPatch.get)
+              //            objToModify.binaryData = parsedObject.toByteArray
             }
 
-            PrimeJacksonMapper.mapper.readerForUpdating(parsedObject).readValue(objectPatch.get)
-            objToModify.binaryData = parsedObject.toByteArray
+            if (binaryPatch.isDefined) {
+              objToModify.binaryData = binaryPatch.get
+            }
           }
 
-          if (binaryPatch.isDefined) {
-            objToModify.binaryData = binaryPatch.get
-          }
-
-
+          //Done modifying
         }
+        //Done with layer
       }
     }
 
@@ -123,4 +149,14 @@ case class ScriptObjectPatch(_filename: String,
     mrea.toByteArray
   }
 
+
+  def applyPatchToTemplate(patch: JsonNode, template: ScriptTemplate) = {
+    for (field: String <- patch.fieldNames().toIterator) {
+      val v = patch.get(field)
+      template.properties.find(_.ID == field) match {
+        case Some(x) => x.applyPatch(v)
+        case None => throw new IllegalArgumentException(s"Unknown property $field")
+      }
+    }
+  }
 }

@@ -1,6 +1,9 @@
 package com.pwootage.metroidprime.templates
 
-class ColorScriptPropertyValue {
+import com.pwootage.metroidprime.formats.BinarySerializable
+import com.pwootage.metroidprime.formats.io.PrimeDataFile
+
+class ColorScriptPropertyValue extends BinarySerializable {
   var r: Float = 0
   var g: Float = 0
   var b: Float = 0
@@ -16,4 +19,19 @@ class ColorScriptPropertyValue {
   }
 
   override def toString = s"ColorScriptPropertyValue()"
+
+  override def write(f: PrimeDataFile): Unit = {
+    f.writeFloat(r)
+    f.writeFloat(g)
+    f.writeFloat(b)
+    f.writeFloat(a)
+  }
+
+  override def read(f: PrimeDataFile): Unit = {
+    r = f.readFloat()
+    g = f.readFloat()
+    b = f.readFloat()
+    a = f.readFloat()
+  }
+
 }

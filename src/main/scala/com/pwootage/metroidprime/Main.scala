@@ -9,7 +9,6 @@ import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.mrea.MREA
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
-import com.pwootage.metroidprime.formats.scly.prime1ScriptObjects.Pickup
 import com.pwootage.metroidprime.randomizer.Randomizer
 import com.pwootage.metroidprime.templates.{IntScriptProperty, ScriptProperty, ScriptTemplate, ScriptTemplates}
 import com.pwootage.metroidprime.utils.{FileIdentifier, Patchfile, PrimeJacksonMapper}
@@ -105,10 +104,10 @@ object Main {
 
   def dump(conf: PatcherConf): Unit = {
     conf.dump.what() match {
-      case "pickups" => PickupDumper.dump(conf.dump.searchDirectory(), conf.dump.outDir())
       case "collision" => new CollisionDumper().dump(conf.dump.searchDirectory(), conf.dump.outDir())
     }
   }
+
   def extract(conf: PatcherConf): Unit = {
     for (file <- conf.extract.srcFiles()) {
       if (FileIdentifier.isISO(file)) {
@@ -136,49 +135,14 @@ object Main {
   }
 
   def randomize(conf: PatcherConf): Unit = {
-    (new Randomizer).naiveRandomize(conf.randomize.dirWithPAKs())
+//    (new Randomizer).naiveRandomize(conf.randomize.dirWithPAKs())
   }
 
   def test(): Unit = {
+    for (v <- Prime1ScriptObjectType.values()) {
+      println(v.template())
+    }
     val t = ScriptTemplates.loadTemplate("ScriptTemplateV4.xml")
     println(t)
-  }
-
-  def oldMain(): Unit = {
-    //    val file = "K:/roms/gc/mp-extracted/mp1/Metroid2-pak/83f6ff6f.MLVL"
-    //    val file = "K:/roms/gc/mp-extracted/mp2/Metroid1-pak/3bfa3eff.MLVL"
-    val file = "K:/roms/gc/mp-extracted/mp1/Metroid4-pak/b2701146.MREA"
-    val raf = new RandomAccessFile(file, "r")
-    val pf = new PrimeDataFile(raf, raf)
-
-    val mrea = new MREA
-    mrea.read(pf)
-
-    raf.close()
-
-    val out = "out/out.MREA"
-    val outPath = Paths.get(out)
-    Files.createDirectories(outPath.getParent)
-    val raf2 = new RandomAccessFile(out, "rw")
-    raf2.getChannel.truncate(0) //Clear out file
-    val pf2 = new PrimeDataFile(raf2, raf2)
-    mrea.write(pf2)
-    raf2.close()
-    println("done")
-
-    val scly = mrea.parseSCLY
-
-    scly.layers(0).objects.find(_.typ == Prime1ScriptObjectType.Pickup.id).foreach(item => {
-      Files.write(Paths.get("out/missile1.item"), item.binaryData)
-      val pickup = new Pickup
-      pickup.read(item.pdfForBody)
-      println(pickup)
-    })
-
-    println("done3")
-
-    Files.write(Paths.get("out/out.COLL"), mrea.rawSections(mrea.collisionSection))
-
-    val coll = mrea.parseCollision
   }
 }

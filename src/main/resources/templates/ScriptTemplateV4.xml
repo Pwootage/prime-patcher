@@ -171,7 +171,8 @@
 			sub-properties will be repeated for each element of the array. Sub-properties can have a default value assigned, but the default value will be applied to
 			each element; you can't specify different defaults for different elements.-->
 		<array ID="0x83847192" name="Array">
-			<default>5</default>
+			<!-- pretty sure this is inavlid? -->
+			<!--<default>5</default>-->
 			<properties>
 				<property ID="0x00" name="Array Sub-Property 1" type="long"/>
 				<property ID="0x01" name="Array Sub-Property 2" type="string">

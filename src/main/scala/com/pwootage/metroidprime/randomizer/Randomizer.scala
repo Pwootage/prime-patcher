@@ -7,14 +7,13 @@ import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
 import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.mrea.MREA
-import com.pwootage.metroidprime.formats.scly.prime1ScriptObjects.Pickup
 import com.pwootage.metroidprime.formats.scly.{Prime1ScriptObjectType, SCLY, ScriptObjectInstance}
 import com.pwootage.metroidprime.utils.FileLocator
 
 import scala.util.Random
 
 class Randomizer {
-  val objectMapper = new ObjectMapper() with ScalaObjectMapper
+  /*val objectMapper = new ObjectMapper() with ScalaObjectMapper
   objectMapper.registerModule(DefaultScalaModule)
 
   val pickupsPrime1 = objectMapper.readValue[Seq[Pickup]](getClass.getResourceAsStream("/itemPatches/pickups.json"))
@@ -66,5 +65,5 @@ class Randomizer {
         }
       }
     }
-  }
+  }*/
 }
