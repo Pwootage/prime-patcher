@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScriptTemplate version="4">
+    <name>Brizgee</name>
+    <properties>
+        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml"/>
+        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <property ID="0x733BD27C" type="float">
+            <default>2.5</default>
+        </property>
+        <property ID="0xAC47C628" type="float">
+            <default>360.0</default>
+        </property>
+        <property ID="0x8E4F7B29" type="float">
+            <default>720.0</default>
+        </property>
+        <property ID="0x3D3C1B76" type="float">
+            <default>120.0</default>
+        </property>
+        <property ID="0xA72530E8" type="float">
+            <default>40.0</default>
+        </property>
+        <property ID="0x5E6A54B8" type="float">
+            <default>0.2</default>
+        </property>
+        <property ID="0x07F947F4" type="long">
+            <default>-1</default>
+        </property>
+        <property ID="0x0B7325EA" type="long">
+            <default>-1</default>
+        </property>
+        <struct ID="0xF573E11C" template="Structs/DamageVulnerability.xml"/>
+        <property ID="0xAA13253A" type="float">
+            <default>2.0</default>
+        </property>
+        <struct ID="0xB482E5DD" template="Structs/DamageInfo.xml"/>
+        <property ID="0x80DA8053" type="float">
+            <default>1.5</default>
+        </property>
+        <struct ID="0x143D18C6" template="Structs/DamageInfo.xml"/>
+        <property ID="0xF78947D4" type="float">
+            <default>2.0</default>
+        </property>
+        <property ID="0x6A942A60" type="long">
+            <default>-1</default>
+        </property>
+        <property ID="0x808392EC" type="long">
+            <default>-1</default>
+        </property>
+        <property ID="0xDF2D8017" type="long">
+            <default>-1</default>
+        </property>
+    </properties>
+    <states/>
+    <messages/>
+    <editor>
+        <properties>
+            <property name="InstanceName" ID="0x255A4580:0x494E414D"/>
+            <property name="Position" ID="0x255A4580:0x5846524D:0x00"/>
+            <property name="Rotation" ID="0x255A4580:0x5846524D:0x01"/>
+            <property name="Scale" ID="0x255A4580:0x5846524D:0x02"/>
+            <property name="Active" ID="0x255A4580:0x41435456"/>
+            <property name="LightParameters" ID="0x7E397FED:0xB028DB0E"/>
+        </properties>
+        <assets>
+            <animparams source="property">0xB3774750:0xE25FB08C</animparams>
+            <model source="property">0x7E397FED:0xC0BA9E18</model>
+            <model source="property">0x7E397FED:0x6B1FBC3A</model>
+        </assets>
+        <rotation_type>enabled</rotation_type>
+        <scale_type>enabled</scale_type>
+    </editor>
+</ScriptTemplate>

@@ -10,6 +10,18 @@ Working Features:
 [Latest Successful Build](https://circleci.com/api/v1/project/Pwootage/prime-randomizer/latest/artifacts/0/home/ubuntu/prime-randomizer/build/libs/patcher-0.1-SNAPSHOT-min.jar?branch=master&filter=successful)
 
 
+# Credits
+
+Parax
+* Reverse Engineering
+* PWE (used while developing)
+* Template files for script object properties
+* Spelling Checks <3
+
+Miles
+* Reverse Engineering
+* Prime scripts I used while working with dolphin
+
 # LICENSE
     Copyright (C) 2016 Christopher Freestone
 

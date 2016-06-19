@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScriptTemplate version="4">
+    <name>DarkSamus</name>
+    <properties>
+        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x0214A7EB" type="multi">
+            <properties>
+                <property ID="0xB5049BBB" type="float">
+                    <default>80.0</default>
+                </property>
+                <property ID="0x3390E915" type="float">
+                    <default>60.0</default>
+                </property>
+                <property ID="0xF8CC3AB0" type="float">
+                    <default>40.0</default>
+                </property>
+                <property ID="0xE5C90A08" type="float">
+                    <default>20.0</default>
+                </property>
+                <property ID="0x2E95D9AD" type="float">
+                    <default>-1.0</default>
+                </property>
+                <property ID="0x21E4D323" type="file" extensions="SCAN"/>
+                <property ID="0x00D1AA67" type="long">
+                    <default>0</default>
+                </property>
+                <property ID="0xA57B4FAC" type="long">
+                    <default>0</default>
+                </property>
+                <property ID="0x8836C426" type="long">
+                    <default>0</default>
+                </property>
+                <property ID="0xB87C5139" type="long">
+                    <default>0</default>
+                </property>
+                <property ID="0x9F566DB4" type="long">
+                    <default>0</default>
+                </property>
+                <property ID="0xA2AAC8E7" type="long">
+                    <default>0</default>
+                </property>
+                <property ID="0xF8ACA397" type="long">
+                    <default>0</default>
+                </property>
+                <property ID="0x80A0B2CB" type="long">
+                    <default>0</default>
+                </property>
+                <property ID="0x69ED492E" type="long">
+                    <default>0</default>
+                </property>
+                <property ID="0x90419A55" type="long">
+                    <default>0</default>
+                </property>
+                <property ID="0x761DB727" type="long">
+                    <default>0</default>
+                </property>
+                <property ID="0xDCB8AF1C" type="long">
+                    <default>0</default>
+                </property>
+                <property ID="0x9CFDDBA8" type="long">
+                    <default>0</default>
+                </property>
+                <property ID="0xF5056D9D" type="file" extensions="WPSC"/>
+                <property ID="0x58DBCC52" type="file" extensions="WPSC"/>
+                <property ID="0x3A6D3A64" type="file" extensions="PART"/>
+                <property ID="0xF3D84488" type="file" extensions="UNKN"/>
+                <property ID="0x49BE8A11" type="file" extensions="PART"/>
+                <property ID="0xE8706E6E" type="file" extensions="PART"/>
+                <struct ID="0x6CC7412A" template="Structs/PlasmaBeamInfo.xml"/>
+                <property ID="0xACFD8EA8" type="file" extensions="WPSC"/>
+                <struct ID="0xE8FC7798" template="Structs/HoverThenHomeProjectile.xml"/>
+                <property ID="0x5377D4B5" type="character"/>
+                <property ID="0x4C8AEE6D" type="file" extensions="PART"/>
+                <property ID="0x0B17536C" type="file" extensions="SCAN"/>
+                <property ID="0x76C64459" type="file" extensions="WPSC"/>
+                <struct ID="0xEC493F59" template="Structs/PlasmaBeamInfo.xml"/>
+                <property ID="0xD1D51E35" type="file" extensions="WPSC"/>
+                <property ID="0x8E96E5E4" type="file" extensions="PART"/>
+                <property ID="0x5B67A4E7" type="file" extensions="TXTR"/>
+                <property ID="0x4F6E81A8" type="float">
+                    <default>100.0</default>
+                </property>
+                <property ID="0xE8F323F9" type="file" extensions="UNKN"/>
+                <property ID="0x9049A2FB" type="file" extensions="CAUD"/>
+                <property ID="0x8B8B33D9" type="file" extensions="UNKN"/>
+                <property ID="0x09133ECD" type="file" extensions="UNKN"/>
+                <property ID="0x3C67B14E" type="file" extensions="UNKN"/>
+                <property ID="0xAF6889B0" type="file" extensions="UNKN"/>
+                <property ID="0xA47E51D3" type="file" extensions="UNKN"/>
+            </properties>
+        </struct>
+        <struct ID="0x02C43C41" template="Structs/DarkSamusData.xml"/>
+        <struct ID="0xB3774750" template="Structs/PatternedAI.xml"/>
+        <struct ID="0xDD042FE0" template="Structs/DarkSamusData.xml"/>
+        <struct ID="0x1464AE05" template="Structs/PatternedAI.xml"/>
+        <struct ID="0xD0621C92" template="Structs/DarkSamusData.xml"/>
+        <struct ID="0x24D00673" template="Structs/PatternedAI.xml"/>
+        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+    </properties>
+    <states/>
+    <messages/>
+    <editor>
+        <properties>
+            <property name="InstanceName" ID="0x255A4580:0x494E414D"/>
+            <property name="Position" ID="0x255A4580:0x5846524D:0x00"/>
+            <property name="Rotation" ID="0x255A4580:0x5846524D:0x01"/>
+            <property name="Scale" ID="0x255A4580:0x5846524D:0x02"/>
+            <property name="Active" ID="0x255A4580:0x41435456"/>
+            <property name="LightParameters" ID="0x7E397FED:0xB028DB0E"/>
+        </properties>
+        <assets>
+            <animparams source="property">0x0214A7EB:0x5377D4B5</animparams>
+            <animparams source="property">0xB3774750:0xA244C9D8</animparams>
+            <animparams source="property">0x1464AE05:0xA244C9D8</animparams>
+            <animparams source="property">0x24D00673:0xA244C9D8</animparams>
+            <model source="property">0x7E397FED:0xBB52F0BE</model>
+        </assets>
+        <rotation_type>enabled</rotation_type>
+        <scale_type>enabled</scale_type>
+    </editor>
+</ScriptTemplate>

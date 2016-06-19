@@ -19,7 +19,7 @@ class Header extends BinarySerializable {
   var darkWorldNameSTRG: Int = -1
   var unknown1: Int = -1
   var worldSAVW: Int = -1
-  var defaultSkyboxCDML: Int = -1
+  var defaultSkyboxCMDL: Int = -1
 
   def primeVersion = if (prime1) {
     PrimeVersion.PRIME_1
@@ -45,7 +45,7 @@ class Header extends BinarySerializable {
       f.write32(unknown1)
     }
     f.write32(worldSAVW)
-    f.write32(defaultSkyboxCDML)
+    f.write32(defaultSkyboxCMDL)
   }
 
   def read(buff: PrimeDataFile) {
@@ -57,7 +57,7 @@ class Header extends BinarySerializable {
       unknown1 = buff.read32()
     }
     worldSAVW = buff.read32()
-    defaultSkyboxCDML = buff.read32()
+    defaultSkyboxCMDL = buff.read32()
     if (magic != Header.MAGIC) {
       throw new IllegalArgumentException("Invalid magic: " + magic)
     }

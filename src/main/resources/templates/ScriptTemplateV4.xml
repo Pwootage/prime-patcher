@@ -1,0 +1,292 @@
+<!-- This is the spec for ScriptTemplate version 4.-->
+<?xml version="1.0" encoding="UTF-8"?>
+<ScriptTemplate version="4">
+	
+	<!--The name of the object is specified at the beginning of the ScriptTemplate block like with version 3.-->
+    <name>ScriptObject</name>
+
+	<!--Version 4 specifies a "versions" block which forward declares multiple versions of the object. This is used to account
+		for version differences. Versions are identified via the property count (which is determined at runtime from analyzing the
+		template), which means the versions block is incompatible with DKCR and should be left out on DKCR script object templates.
+		If an object's property count doesn't match any of the versions listed in the template, then this will cause an error.-->
+	<versions>
+		<version name="NTSC 0-00"/>
+		<version name="PAL 0-00"/>
+	</versions>
+	
+	<!--The properties block is the main meat of the template, and it determines what properties the object has. There are five
+		types of sub-elements in the properties block: property, struct, enum, bitfield, and array. Each type is fairly similar,
+		but there's some key syntactical differences between them.-->
+    <properties>
+	
+		<!--Properties can be laid out on multiple lines. The first line declares three parameters that every property must have:
+			the ID, type, and name. The optional parameters are listed as sub-elements of the property.
+			
+			The following property types are valid: bool, byte, short, long, float, string, vector3f, color, file, character,
+			MayaSpline, enum, bitfield, struct, and array.
+			
+			The following parameters are valid for most/all property types:
+			- default: used to initialize the property when the user creates a new instance of this object. Not valid for character,
+			  MayaSpline, file, struct, and array properties.
+			  ***NOTE*** The default property values for Prime 2, 3, and DKCR were extracted directly from the games' executables
+			  and generally shouldn't be modified. In DKCR's case, the default values are actually used when reading/writing files.
+			  DO NOT modify DKCR's default property values unless you're 100% sure you've found a mistake; doing so can prevent DKCR
+			  files from being read and written correctly.
+			- description: a brief description explaining what the property does and how it should be used. This is displayed in
+			  the editor via a tooltip when the user hovers their mouse over the property name.
+			- cook_pref: specifies whether this property is present in the game's cooked files. Uncooked properties are not read
+			  from or written to cooked data. There are three possible values: always, never, and nopref (no preference). If this
+			  parameter is excluded, the property is assumed to have no preference.
+			
+			The following parameters are valid for byte, short, long, and float properties:
+			- range: the range of possible values. This currently is not enforced in the editor, but will be used in the future.
+			- suffix: a string displayed after the property value in the editor; for example, you can set a suffix to "%" to make
+			  the editor display a % symbol after the property.-->
+		<property ID="0x00" name="Integer Property" type="long">
+			<default>0</default>
+			<description>This is a long property which is apparently a percentage of something!</description>
+			<range>0,100</range>
+			<suffix>%</suffix>
+			<cook_pref>never</cook_pref>
+		</property>
+		
+		<property ID="0x01" name="Scale" type="vector3f">
+			<default>1.0, 1.0, 1.0</default>
+		</property>
+		
+		<property ID="0x02" name="Color Property" type="color">
+			<default>0.5, 0.5, 0.5, 1.0</default>
+		</property>
+		
+		<!--Properties can also specify a file. File properties are structured the same way as other properties, but they have an additional
+			required parameter that lists what extensions the property is able to take. Multiple extensions can be specified, separated with
+			a comma.-->
+		<property ID="0x02" name="File Property" type="file" extensions="CMDL,TXTR,CINF"/>
+		
+		<!--On this property, the name is left out. In this case, the ID will be used to look up the name from Properties.xml.
+			If Properties.xml doesn't contain the name, then it will throw an error. The rest of the parameters are left out too, which means
+			they will be left at their default settings: the default value will be 0, the description will be empty, the range will be as
+			low/high as the data type allows, and cook_pref will be nopref.-->
+		<property ID="0x11223344" type="float"/>
+		
+		<!--Here's an example of what a version-exclusive property looks like. A "versions" block is added as a property parameter which
+			lists every version that the property can appear in. If the versions block is left out, then the property is assumed to be
+			present in every version of the game.-->
+		<property ID="0x18302202" type="long">
+			<versions>
+				<version>NTSC 0-00</version>
+			</versions>
+		</property>
+		
+		<!--Here's an embedded struct. All sub-properties are specified in the template directly. Struct type can be either "single" or
+			"multi", and it refers to whether the properties in the struct are each considered a separate property, or if the entire struct
+			is considered one giant property. This isn't visible to the user, and it doesn't change how properties are structured in the XML,
+			but it affects how the data is cooked. Note that even single structs are required to specify an ID for every sub-property!-->
+        <struct ID="0x255A4580" type="multi" name="Struct">
+			<cook_pref>always</cook_pref>
+			<properties>
+				<property ID="0x40041023" name="Some Property" type="string">
+					<default>Hi</default>
+					<cook_pref>never</cook_pref>
+				</property>
+			</properties>
+		</struct>
+		
+		<!--This is a template struct. When a template is specified, the properties will be read in from the specified XML. In this case,
+			they can be left out of the script object XML. Struct type can also be read from the XML, so it can be left out too.-->
+		<struct ID="0x52033302" template="Structs/SomeStruct.xml"/>
+		
+		<!--This is another template struct, but this time there's a twist. On this one, we actually do specify sub-properties within the
+			script template. The struct template is still read in, but after that the sub-properties are parsed and used to override
+			settings within the struct XML. This can be used to override specific property parameters, such as preventing a specific property
+			from cooking or overriding its default value. You can also override the property's name, but not the ID or type.-->
+		<struct ID="0x55810020" template="Structs/AnotherStruct.xml">
+			<properties>
+				<!--This string property is one that's present on most objects that use this struct, but not this one, so we disable
+					cooking to tell the editor not to read or write this property. We override the default value so it shows something
+					useful to the user.-->
+				<property ID="0x494E414D" name="InstanceName">
+					<default>Default Object Name</default>
+					<cook_pref>never</cook_pref>
+				</property>
+				<!--This float property is present for this object, but its default value is overridden in the game's loader, so we override it here too.-->
+				<property ID="0x54040304" name="OverrideName">
+					<default>20.0</default>
+				</property>
+				<!--Here we want to override the default value of a property within a sub-struct. This can be done too!-->
+				<struct ID="0x59339201">
+					<properties>
+						<struct ID="0x55120120">
+							<properties>
+								<property ID="0x49392934">
+									<default>100</default>
+								</property>
+							</properties>
+						</struct>
+					</properties>
+				</struct>
+			</properties>
+		</struct>
+		
+		<!--This is an enum property. Enums are an integral property where only a specific set of values is allowed as input. In the editor, these
+			are displayed using a combo box. They will be displayed in the editor in the order that they're listed in the template, so you don't need
+			to make sure they're listed in ascending order; if putting them out of order makes them more easily understood then it can be done.-->
+		<enum ID="0x55012034">
+			<default>0x25</default>
+			<enumerators>
+				<enumerator ID="0x0" name="First Option"/>
+				<enumerator ID="0x50" name="Second Option"/>
+				<enumerator ID="0x25" name="Third Option"/>
+			</enumerators>
+			<versions>
+				<version>PAL 0-00</version>
+			</versions>
+		</enum>
+		
+		<!--Like structs, enums can also be set up to use a template. An enum template only specifies the list of enumerators, so other property parameters
+			still need to be specified on a case-by-case basis.-->
+		<enum ID="0x50301284" template="Enums/EnumTemplate.xml">
+			<default>0x0</default>
+		</enum>
+		
+		<!--This is a bitfield property. Bitfields allow multiple properties to be packed into one value. They are defined by a series of flags that define an AND mask,
+			which is used to extract the relevant bits from the value. Currently only boolean flags are supported, so each mask should only cover one bit. The default value
+			of a bitfield is a long that specifies the bitfield's value when all the flags are ORed together.-->
+		<bitfield ID="0x30103053" name="Bitfield">
+			<default>0x7</default>
+			<flags>
+				<flag mask="0x1" name="Flag 1"/>
+				<flag mask="0x2" name="Flag 2"/>
+				<flag mask="0x4" name="Flag 4"/>
+			</flags>
+		</bitfield>
+		
+		<!--Like enums and structs, bitfields can use an external template to list its flags. Similarly to enum templates, the bitfield templates only cover the list of
+			flags that are used by the bitfield, so the default value still needs to be set on a case-by-case basis.-->
+		<bitfield ID="0x55555555" name="Bitfield 2" template="Bitfields/BitfieldTemplate.xml">
+			<default>0x3F0F</default>
+		</bitfield>
+		
+		<!--This is an array property. Arrays are structured the same way as a struct, but they don't have a type value (they're all considered single). An array's
+			sub-properties will be repeated for each element of the array. Sub-properties can have a default value assigned, but the default value will be applied to
+			each element; you can't specify different defaults for different elements.-->
+		<array ID="0x83847192" name="Array">
+			<default>5</default>
+			<properties>
+				<property ID="0x00" name="Array Sub-Property 1" type="long"/>
+				<property ID="0x01" name="Array Sub-Property 2" type="string">
+					<default>Text</default>
+				</property>
+				<property ID="0x02" name="Array Sub-Property 3" type="float"/>
+			</properties>
+		</array>
+		
+		<!--Again, arrays can use an external template.-->
+		<array ID="0x38129319" name="TemplateArray" template="Arrays/ArrayTemplate.xml"/>
+		
+		<!--As you'd expect, array sub-properties can be overridden.-->
+		<array ID="0x39192939" name="AnotherTemplateArray" template="Arrays/ArrayTemplate.xml">
+			<properties>
+				<property ID="0x03">
+					<default>1</default>
+				</property>
+				<property ID="0x06">
+					<default>NewDefault</default>
+				</property>
+			</properties>
+		</array>
+	</properties>
+	
+	<!--The states/messages block indicate, respectively, what states the object can enter and what messages it's able to receive. This is not used at the moment,
+		but in the future it'll be used to allow the UI to only display states/messages for a particular object that that object can actually use. If the
+		states/messages block is left out, or if it's empty, then it will be assumed that any state/message is valid. State and message names can also be overridden
+		here on a per-object basis, so for example, you could override InternalState00 with a more descriptive name.-->
+	<states>
+		<state ID="ACTV"/>
+		<state ID="ICTV"/>
+		<state ID="IS00" name="InternalStateOverrideName"/>
+	</states>
+	
+	<messages>
+		<message ID="ACTV"/>
+		<message ID="DCTV"/>
+		<message ID="IM00" name="InternalMessageOverrideName"/>
+	</messages>
+	
+	<!--The editor block sets up parameters that are used by the editor. In the editor block, properties from the properties block are accessed by specifying an ID string,
+		a string containing the IDs of each of a property's parents and then the property itself. ID strings use a colon (:) as a scope operator, indicating that the property
+		is within a struct. The editor block is not allowed to access sub-properties of arrays.-->
+	<editor>
+		
+		<!--First up is the editor properties block. The editor needs access to certain common parameters of objects in order to correctly display them in the
+			viewport or to display them on the UI.
+			
+			There are six editor properties: InstanceName (string), Position (vector3f), Rotation (vector3f), Scale (vector3f), Active (bool), and LightParameters (struct).-->
+		<properties>
+			<property name="InstanceName" ID="0x255A4580:0x494E414D"/>
+			<property name="Position" ID="0x255A4580:0x5846524D:0x00"/>
+			<property name="Rotation" ID="0x255A4580:0x5846524D:0x01"/>
+			<property name="Scale" ID="0x255A4580:0x5846524D:0x02"/>
+			<property name="Active" ID="0x255A4580:0x41435456"/>
+		</properties>
+		
+		<!--Editor assets specify assets that can be used to render the instance in the world. There are four types of editor assets: model, animparams, billboard, and
+			collision. Assets can be accessed either through an object property specified via an ID string, or as a path to a file located in the editor's resources
+			folder. Assets are implicitly prioritized by their order. The editor will try to use the first asset listed in the file, and if it doesn't exist, it will 
+			move on to the next one down. If none of the assets listed exist, then the object will render with a generic purple box. The exception is collision assets,
+			which can coexist with other types and will render when object collision is enabled in the viewport. AnimParams assets can additionally specify a "forcenode"
+			setting, which will force it to render with a specific animset node, ignoring the one set in the property. (This is mostly used to prevent PlayerActor from
+			rendering with the empty suit.)
+			
+			Notes: Model assets must point to a CMDL. AnimParams assets must point to a character property. Collision assets must point to a DCLN. Billboard assets must
+			point to a TXTR. Resource paths are relative to the editor resources folder.-->
+		<assets>
+			<model source="property">0xC27FFA8F</model>
+			<animparams source="property">0xE25FB08C:0xA192BC21</animparams>
+            <billboard source="file">script/common/ObjectBillboard.txtr</billboard>
+			<collision source="property">0x182401AA</collision>
+		</assets>
+		
+		<!--Models and characters specified by properties can be attached to objects that use skinned models on specific bones for more accurate previews in the editor
+			viewport. This is done via the attachments block. Like with properties, required parameters are listed in-line while optional parameters can be specified as
+			sub-elements. There are two required parameters: a property ID that points to either a file property that accepts CMDLs or a character property, plus the name
+			of a locator bone to attach to. Note that it's perfectly valid to specify multiple attachments using the same property ID; in that case, the model will be
+			attached multiple times to different parts of the objects.
+			
+			These are the optional parameters:
+			- attach_type: This can be either "attach" or "follow". Attach will snap the object's orientation to the bone's internal rotation offset, while follow doesn't.
+			If the attach type is not specified, it defaults to Attach. (Any rotations applied by an animation are applied to the attached object either way.)-->
+		<attachments>
+			<attachment propertyID="0x0C" locator="Hive_LCTR"/>
+			<attachment propertyID="0xC55918CC:0xC0A86488" locator="L_front_knee_2"/>
+			<attachment propertyID="0xC55918CC:0xC0A86488" locator="R_front_knee_2"/>
+			<attachment propertyID="0xC55918CC:0xC0A86488" locator="L_back_knee_2"/>
+			<attachment propertyID="0xC55918CC:0xC0A86488" locator="R_back_knee_2"/>
+			<attachment propertyID="0x66E34A08" locator="L_front_claw">
+				<attach_type>follow</attach_type>
+			</attachment>
+		</attachments>
+		<!--rotation_type and scale_type specify what type of rotating/scaling is allowed on this object. This can be used to disable rotation and scale for objects where
+			those aren't valid transform types; for example, Triggers in Prime 1 must be axis-aligned, so it makes sense to disable rotation for them.
+			
+			There are two valid rotation types: enabled and disabled. There are three valid scale types: enabled, disabled, and volume.-->
+		<rotation_type>enabled</rotation_type>
+		<scale_type>volume</scale_type>
+		
+		<!--When volume is specified as the scale type, the editor block must specify parameters for a preview volume that will render when the object is selected. This is
+			generally used to display bounds for objects that specify an area of effect with their scale parameter, where actually scaling the object's normal assets at all
+			times would cause it to take up too much space. Volumes need to specify a shape, and can optionally specify a scale.
+			
+			There are five valid volume shapes: Box, AxisAlignedBox, Ellipsoid, Cylinder, and Conditional.-->
+		<preview_volume shape="AxisAlignedBox"/>
+
+		<!--When a preview volume's shape is conditional, the volume can specify a property ID and a number of conditions. The property corresponding to that ID will be looked
+			up and checked against the conditions, and that will determine what shape to use. Conditions must specify a value and a shape (which can be any shape other than
+			Conditional), and can also optionally set a scale value. The condition property must specify a bool, byte, short, long, or enum property. Note: It's invalid for
+			a template to list multiple preview volumes, but we're doing it here for the sake of demonstration.-->
+		<preview_volume shape="Conditional" propertyID="0xD5869B0B">
+			<condition value="0x00" shape="Ellipsoid"/>
+			<condition value="0x01" shape="Cylinder" scale="2"/>
+		</preview_volume>
+	</editor>
+</ScriptTemplate>

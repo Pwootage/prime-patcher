@@ -9,6 +9,7 @@ import com.pwootage.metroidprime.formats.mrea.MREA
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
 import com.pwootage.metroidprime.formats.scly.prime1ScriptObjects.Pickup
 import com.pwootage.metroidprime.randomizer.Randomizer
+import com.pwootage.metroidprime.templates.{IntScriptProperty, ScriptProperty, ScriptTemplate, ScriptTemplates}
 import com.pwootage.metroidprime.utils.{FileIdentifier, Patchfile, PrimeJacksonMapper}
 import org.rogach.scallop.{ScallopConf, Subcommand}
 
@@ -118,21 +119,12 @@ object Main {
   }
 
   def test(): Unit = {
-    val file = Paths.get("K:/roms/gc/mp-extracted/mp1/Metroid4-pak/b2701146.MREA")
-    val bytes = Files.readAllBytes(file)
-    val mrea = new MREA
-    mrea.read(bytes)
-    val bytes2 = mrea.toByteArray
+    val p: ScriptProperty[_] = new IntScriptProperty
+    val str = PrimeJacksonMapper.xmlMapper.writeValueAsString(p)
+    println(str)
 
-    if (bytes.length != bytes2.length) {
-      println(s"invalid lengths: ${bytes.length} ${bytes2.length}")
-    }
-
-    for (i <- bytes.indices) {
-      if (bytes(i) != bytes2(i)) {
-        println(s"invalid at pos ${i.toHexString} ${bytes(i)} ${bytes2(i)}")
-      }
-    }
+    val t = ScriptTemplates.loadTemplate("ScriptTemplateV4.xml")
+    println(t)
   }
 
   def oldMain(): Unit = {

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScriptTemplate version="4">
+    <name>AreaAttributes</name>
+    <properties>
+        <property ID="0x00" name="Unknown" type="long">
+            <description>If set to anything other than 1, AreaAttributes will not work.</description>
+        </property>
+        <property ID="0x01" name="Show Skybox" type="bool"/>
+        <enum ID="0x02" name="Environmental Effect">
+            <enumerators>
+                <enumerator ID="0x00" name="None"/>
+                <enumerator ID="0x01" name="Snow"/>
+                <enumerator ID="0x02" name="Rain"/>
+            </enumerators>
+        </enum>
+        <property ID="0x03" name="Initial Environmental Effect Density" type="float"/>
+        <property ID="0x04" name="Initial Thermal Heat Level" type="float"/>
+        <property ID="0x05" name="X-Ray Fog Distance" type="float"/>
+        <property ID="0x06" name="Initial World Lighting Level" type="float"/>
+        <property ID="0x07" name="Skybox Model" type="file" extensions="CMDL"/>
+        <enum ID="0x08" name="Phazon Type">
+            <enumerators>
+                <enumerator ID="0x00" name="None"/>
+                <enumerator ID="0x01" name="Blue"/>
+                <enumerator ID="0x02" name="Orange"/>
+            </enumerators>
+        </enum>
+    </properties>
+    <states/>
+    <messages/>
+    <editor>
+        <properties/>
+        <assets>
+            <billboard source="file">script/common/AreaAttributes.txtr</billboard>
+        </assets>
+        <rotation_type>disabled</rotation_type>
+        <scale_type>disabled</scale_type>
+    </editor>
+</ScriptTemplate>

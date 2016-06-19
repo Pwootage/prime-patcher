@@ -136,11 +136,11 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
 
           for ((patchfile, patch) <- patches) {
             Logger.info(s"Patching ${file.name} - ${patch.description.getOrElse("")}")
-            patchedBytes = applyPatch(patchfile, patch, patchedBytes)
+            patchedBytes = applyPatch(version.get, patchfile, patch, patchedBytes)
           }
 
           copyBytes(new ByteArrayInputStream(patchedBytes), patchedBytes.length, new RandomAccessFileOutputStream(destRaf))
-          
+
         } else {
           srcRaf.seek(file.offset)
           copyBytes(new RandomAccessFileInputStream(srcRaf), len, new RandomAccessFileOutputStream(destRaf))
@@ -237,7 +237,7 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
 
     for ((patchfile, patch) <- patches) {
       Logger.info(s"Patching ${resource.idStr} - ${patch.description.getOrElse("")}")
-      patchedBytes = applyPatch(patchfile, patch, patchedBytes)
+      patchedBytes = applyPatch(primeVersion, patchfile, patch, patchedBytes)
     }
 
     writeResourceToStream(primeVersion, destRaf, resource, destPakStart, patchedBytes)
@@ -385,7 +385,7 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
     case _ => false
   }
 
-  def applyPatch(patchfile: Patchfile, patch: PatchAction, src: Array[Byte]): Array[Byte] = {
-    patch.execute(patchfile.patchfileLocation.get.getParent, src)
+  def applyPatch(primeVersion: PrimeVersion, patchfile: Patchfile, patch: PatchAction, src: Array[Byte]): Array[Byte] = {
+    patch.execute(primeVersion, patchfile.patchfileLocation.get.getParent, src)
   }
 }

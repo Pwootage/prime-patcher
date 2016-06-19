@@ -1,11 +1,15 @@
 package com.pwootage.metroidprime.utils
 
+import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.core.{JsonGenerator, JsonParser}
 import com.fasterxml.jackson.databind.module.SimpleModule
 import com.fasterxml.jackson.databind._
+import com.fasterxml.jackson.dataformat.xml.{JacksonXmlModule, XmlMapper}
 import com.fasterxml.jackson.module.scala.{DefaultScalaModule, JacksonModule}
+import com.pwootage.metroidprime.templates._
 
 object PrimeJacksonMapper {
+
   trait Hexable {
     def toHexString: String
   }
@@ -19,10 +23,25 @@ object PrimeJacksonMapper {
     .addDeserializer(classOf[Short], new IntegerTypeHexDeserializer[Short](_.toShort))
     .addDeserializer(classOf[Int], new IntegerTypeHexDeserializer[Int](_.toInt))
     .addDeserializer(classOf[Long], new IntegerTypeHexDeserializer[Long](x => x))
+    .addDeserializer(classOf[ScriptPropertyCookPreference], new JsonDeserializer[ScriptPropertyCookPreference] {
+      override def deserialize(p: JsonParser, ctxt: DeserializationContext): ScriptPropertyCookPreference = ScriptPropertyCookPreference.fromIdentifier(p.getValueAsString)
+    })
+    .addDeserializer(classOf[ScriptPropertyType], new JsonDeserializer[ScriptPropertyType] {
+      override def deserialize(p: JsonParser, ctxt: DeserializationContext): ScriptPropertyType = ScriptPropertyType.fromIdentifier(p.getValueAsString)
+    })
+    .addDeserializer(classOf[ScriptPropertyStructType], new JsonDeserializer[ScriptPropertyStructType] {
+      override def deserialize(p: JsonParser, ctxt: DeserializationContext): ScriptPropertyStructType = ScriptPropertyStructType.fromIdentifier(p.getValueAsString)
+    })
 
   val mapper = new ObjectMapper()
     .registerModule(DefaultScalaModule)
     .registerModule(PrimeJacksonModule)
+
+  val xmlMapper = new XmlMapper(new JacksonXmlModule)
+    .registerModule(DefaultScalaModule)
+    .registerModule(PrimeJacksonModule)
+    .setSerializationInclusion(JsonInclude.Include.NON_EMPTY)
+    .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
 
   val pretty = mapper.writerWithDefaultPrettyPrinter()
 
@@ -49,4 +68,5 @@ object PrimeJacksonMapper {
       convert(long)
     }
   }
+
 }

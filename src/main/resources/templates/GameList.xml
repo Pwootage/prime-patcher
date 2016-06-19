@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GameList version="4">
+    <properties>Properties.xml</properties>
+    <game>
+        <name>Metroid Prime</name>
+        <mrea>0x0F</mrea>
+        <master>mp1/MasterTemplate.xml</master>
+    </game>
+    <game>
+        <name>Metroid Prime 2: Echoes Bonus Disc</name>
+        <mrea>0x15</mrea>
+        <master>mp2demo/MasterTemplate.xml</master>
+    </game>
+    <game>
+        <name>Metroid Prime 2: Echoes</name>
+        <mrea>0x19</mrea>
+        <master>mp2/MasterTemplate.xml</master>
+    </game>
+    <game>
+        <name>Metroid Prime 3: Corruption E3 2006 Prototype Build</name>
+        <mrea>0x1D</mrea>
+        <master>mp3proto/MasterTemplate.xml</master>
+    </game>
+    <game>
+        <name>Metroid Prime 3: Corruption</name>
+        <mrea>0x1E</mrea>
+        <master>mp3/MasterTemplate.xml</master>
+    </game>
+    <game>
+        <name>Donkey Kong Country Returns</name>
+        <mrea>0x20</mrea>
+        <master>dkcr/MasterTemplate.xml</master>
+    </game>
+</GameList>

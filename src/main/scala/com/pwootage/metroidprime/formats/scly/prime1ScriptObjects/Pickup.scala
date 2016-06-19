@@ -16,7 +16,7 @@ class Pickup extends ScriptObjectInstanceBase {
   var dropRate: Float = Float.NaN
   var lifeTime: Float = Float.NaN
   var fadeLength: Float = Float.NaN
-  var modelCDML: Int = -1
+  var modelCMDL: Int = -1
   val animParams = new AnimationParams
   val actorParams = new ActorParams
   var active: Boolean = false
@@ -37,7 +37,7 @@ class Pickup extends ScriptObjectInstanceBase {
     f.writeFloat(dropRate)
     f.writeFloat(lifeTime)
     f.writeFloat(fadeLength)
-    f.write32(modelCDML)
+    f.write32(modelCMDL)
     f.write(animParams)
     f.write(actorParams)
     f.writeBool(active)
@@ -58,7 +58,7 @@ class Pickup extends ScriptObjectInstanceBase {
     dropRate = f.readFloat()
     lifeTime = f.readFloat()
     fadeLength = f.readFloat()
-    modelCDML = f.read32()
+    modelCMDL = f.read32()
     f.read(animParams)
     f.read(actorParams)
     active = f.readBool()

@@ -1,5 +1,10 @@
 package com.pwootage.metroidprime.formats.scly;
 
+import com.pwootage.metroidprime.formats.scly.prime1ScriptObjects.Pickup;
+import com.pwootage.metroidprime.formats.scly.prime1ScriptObjects.ScriptObjectInstanceBase;
+
+import java.lang.reflect.InvocationTargetException;
+
 public enum Prime1ScriptObjectType {
     Actor(0x0),
     EnemyUnused(0x1),
@@ -18,7 +23,7 @@ public enum Prime1ScriptObjectType {
     NewIntroBoss(0xE),
     SpawnPoint(0xF),
     CameraHint(0x10),
-    Pickup(0x11),
+    Pickup(0x11, com.pwootage.metroidprime.formats.scly.prime1ScriptObjects.Pickup.class),
     JumpPointUnused(0x12),
     MemoryRelay(0x13),
     RandomRelay(0x14),
@@ -135,10 +140,33 @@ public enum Prime1ScriptObjectType {
     EnergyBall(0x8B);
 
     public final byte id;
+    public final Class<? extends ScriptObjectInstanceBase> objectClass;
 
-    Prime1ScriptObjectType(int id) {
+    Prime1ScriptObjectType(int id, Class<? extends ScriptObjectInstanceBase> objectClass) {
+        this.objectClass = objectClass;
         if (id < 0 || id > 255) throw new IllegalArgumentException();
         this.id = (byte) id;
+    }
+
+    Prime1ScriptObjectType(int id) {
+        this.objectClass = null;
+        if (id < 0 || id > 255) throw new IllegalArgumentException();
+        this.id = (byte) id;
+    }
+
+    public <T extends ScriptObjectInstanceBase> T toObject(ScriptObjectInstance src) {
+        if (objectClass == null) {
+            return null;
+        } else {
+            try {
+                T res = (T) objectClass.getConstructor().newInstance();
+                res.read(src.binaryData());
+
+                return res;
+            } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     public static Prime1ScriptObjectType fromID(int id) {
