@@ -42,4 +42,14 @@ object DataTypeConversion {
       (java.lang.Long.parseLong(idStr, 16).toInt, strToIntContainingChars(typStr))
     case None => throw new IllegalArgumentException(s"Invalid file ID $idStr")
   }
+
+  def stringToLong(str: String): Long = {
+    if (str.startsWith("0x")) {
+      java.lang.Long.parseLong(str.substring(2), 16)
+    } else if (str.startsWith("0b")) {
+      java.lang.Long.parseLong(str.substring(2), 2)
+    } else {
+      java.lang.Long.parseLong(str)
+    }
+  }
 }

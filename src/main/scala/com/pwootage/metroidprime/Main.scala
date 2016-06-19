@@ -119,10 +119,6 @@ object Main {
   }
 
   def test(): Unit = {
-    val p: ScriptProperty[_] = new IntScriptProperty
-    val str = PrimeJacksonMapper.xmlMapper.writeValueAsString(p)
-    println(str)
-
     val t = ScriptTemplates.loadTemplate("ScriptTemplateV4.xml")
     println(t)
   }

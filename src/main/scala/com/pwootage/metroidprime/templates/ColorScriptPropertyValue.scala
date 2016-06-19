@@ -14,4 +14,6 @@ class ColorScriptPropertyValue {
     b = split(2).toFloat
     a = split(3).toFloat
   }
+
+  override def toString = s"ColorScriptPropertyValue()"
 }

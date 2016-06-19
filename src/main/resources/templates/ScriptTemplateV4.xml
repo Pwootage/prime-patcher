@@ -67,12 +67,12 @@
 			If Properties.xml doesn't contain the name, then it will throw an error. The rest of the parameters are left out too, which means
 			they will be left at their default settings: the default value will be 0, the description will be empty, the range will be as
 			low/high as the data type allows, and cook_pref will be nopref.-->
-		<property ID="0x11223344" type="float"/>
+		<property ID="0x0001F679" type="float"/>
 		
 		<!--Here's an example of what a version-exclusive property looks like. A "versions" block is added as a property parameter which
 			lists every version that the property can appear in. If the versions block is left out, then the property is assumed to be
 			present in every version of the game.-->
-		<property ID="0x18302202" type="long">
+		<property ID="0x003E7991" type="long">
 			<versions>
 				<version>NTSC 0-00</version>
 			</versions>

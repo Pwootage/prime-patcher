@@ -56,14 +56,7 @@ object PrimeJacksonMapper {
       val long = if (p.getCurrentToken.isNumeric) {
         p.getLongValue
       } else {
-        val str = p.getValueAsString
-        if (str.startsWith("0x")) {
-          java.lang.Long.parseLong(str.substring(2), 16)
-        } else if (str.startsWith("0b")) {
-          java.lang.Long.parseLong(str.substring(2), 2)
-        } else {
-          java.lang.Long.parseLong(str)
-        }
+        DataTypeConversion.stringToLong(p.getValueAsString)
       }
       convert(long)
     }

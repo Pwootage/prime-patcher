@@ -12,4 +12,7 @@ class Vector3FScriptPropertyValue {
     y = split(1).toFloat
     z = split(2).toFloat
   }
+
+
+  override def toString = s"Vector3FScriptPropertyValue($x, $y, $z)"
 }
