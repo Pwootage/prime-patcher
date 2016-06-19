@@ -29,8 +29,8 @@
             <default>13.0</default>
         </property>
         <property ID="0x4A426BB3" type="file" extensions="CMDL"/>
-        <struct ID="0xC9416034" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x5F11893B" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xC9416034" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x5F11893B" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0x587FA387" type="float">
             <default>7.0</default>
         </property>
@@ -38,7 +38,7 @@
             <default>10.0</default>
         </property>
         <property ID="0x2697E437" type="file" extensions="WPSC"/>
-        <struct ID="0xAC187FA7" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xAC187FA7" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0x76AF083E" type="file" extensions="PART"/>
         <property ID="0x723A9398" type="file" extensions="CAUD"/>
         <property ID="0x79BC753E" type="float">
@@ -66,7 +66,7 @@
             <default>15.0</default>
         </property>
         <property ID="0x76C64459" type="file" extensions="WPSC"/>
-        <struct ID="0x37ED6EBB" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x37ED6EBB" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xD20CECF7" type="float">
             <default>100.0</default>
         </property>
@@ -101,8 +101,8 @@
         <property ID="0x323F59C3" type="file" extensions="ELSC"/>
         <property ID="0xE4F90605" type="file" extensions="ELSC"/>
         <property ID="0x96805AFD" type="file" extensions="PART"/>
-        <struct ID="0x89E7495B" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x2CE7520F" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x89E7495B" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x2CE7520F" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0x58066C47" type="file" extensions="CAUD"/>
         <property ID="0xC2B3754E" type="float">
             <default>0.75</default>
@@ -119,7 +119,7 @@
         <struct ID="0xAF8984B2" type="multi">
             <properties>
                 <property ID="0x459AE4A8" type="file" extensions="WPSC"/>
-                <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x337F9524" template="mp3/Structs/DamageInfo.xml"/>
                 <property ID="0xE9C8E2BD" type="file" extensions="PART"/>
                 <property ID="0x86FFB3F6" type="file" extensions="CAUD"/>
                 <property ID="0x2F79B3D0" type="float">
@@ -324,7 +324,7 @@
                 <property ID="0x6552BCC0" type="float">
                     <default>1.2</default>
                 </property>
-                <struct ID="0xC8A1EAC8" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xC8A1EAC8" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0xEDE35A42" type="float">
                     <default>20.0</default>
                 </property>
@@ -343,9 +343,9 @@
                 <property ID="0x3E9AC5F3" type="float">
                     <default>4.0</default>
                 </property>
-                <struct ID="0xC9416034" template="Structs/DamageInfo.xml"/>
-                <struct ID="0x5F11893B" template="Structs/DamageInfo.xml"/>
-                <struct ID="0x37ED6EBB" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xC9416034" template="mp3/Structs/DamageInfo.xml"/>
+                <struct ID="0x5F11893B" template="mp3/Structs/DamageInfo.xml"/>
+                <struct ID="0x37ED6EBB" template="mp3/Structs/DamageInfo.xml"/>
             </properties>
         </struct>
     </properties>

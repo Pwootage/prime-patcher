@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>CameraPitch</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0x81D093B3" type="MayaSpline"/>
         <property ID="0xAD9F8E3E" type="MayaSpline"/>
         <property ID="0x3922D9DC" type="bool">

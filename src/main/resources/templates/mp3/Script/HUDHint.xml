@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>HUDHint</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0xD80447E0" type="file" extensions="UNKN"/>
         <property ID="0x6078A651" type="float">
             <default>15.0</default>

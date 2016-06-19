@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>GenericCreature</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml">
             <properties>
                 <struct ID="0x5846524D">
                     <properties>
@@ -13,9 +13,9 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0xBF81C83E" template="Structs/ShadowData.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0xBF81C83E" template="dkcr/Structs/ShadowData.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="dkcr/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0x7B71AE90">
                     <properties>
@@ -337,11 +337,11 @@
                         <property ID="0x6950B5DA" type="long">
                             <default>0</default>
                         </property>
-                        <struct ID="0xD54D6FAD" template="Structs/GenericCreatureStructC.xml"/>
-                        <struct ID="0xAE53ED4E" template="Structs/GenericCreatureStructC.xml"/>
-                        <struct ID="0x31896ED0" template="Structs/GenericCreatureStructC.xml"/>
-                        <struct ID="0x586EE888" template="Structs/GenericCreatureStructC.xml"/>
-                        <struct ID="0xC7B46B16" template="Structs/GenericCreatureStructC.xml"/>
+                        <struct ID="0xD54D6FAD" template="dkcr/Structs/GenericCreatureStructC.xml"/>
+                        <struct ID="0xAE53ED4E" template="dkcr/Structs/GenericCreatureStructC.xml"/>
+                        <struct ID="0x31896ED0" template="dkcr/Structs/GenericCreatureStructC.xml"/>
+                        <struct ID="0x586EE888" template="dkcr/Structs/GenericCreatureStructC.xml"/>
+                        <struct ID="0xC7B46B16" template="dkcr/Structs/GenericCreatureStructC.xml"/>
                     </properties>
                 </struct>
                 <struct ID="0x1A5BA8DA" type="multi">
@@ -349,14 +349,14 @@
                         <property ID="0x4D2AF7B7" type="long">
                             <default>0</default>
                         </property>
-                        <struct ID="0xD736382F" template="Structs/GenericCreatureStructB.xml"/>
-                        <struct ID="0xC64B5256" template="Structs/GenericCreatureStructB.xml"/>
-                        <struct ID="0x7FB089BE" template="Structs/GenericCreatureStructB.xml"/>
-                        <struct ID="0xE4B186A4" template="Structs/GenericCreatureStructB.xml"/>
-                        <struct ID="0x5D4A5D4C" template="Structs/GenericCreatureStructB.xml"/>
+                        <struct ID="0xD736382F" template="dkcr/Structs/GenericCreatureStructB.xml"/>
+                        <struct ID="0xC64B5256" template="dkcr/Structs/GenericCreatureStructB.xml"/>
+                        <struct ID="0x7FB089BE" template="dkcr/Structs/GenericCreatureStructB.xml"/>
+                        <struct ID="0xE4B186A4" template="dkcr/Structs/GenericCreatureStructB.xml"/>
+                        <struct ID="0x5D4A5D4C" template="dkcr/Structs/GenericCreatureStructB.xml"/>
                     </properties>
                 </struct>
-                <struct ID="0x68FD49AE" template="Structs/AnimGridModifierData.xml"/>
+                <struct ID="0x68FD49AE" template="dkcr/Structs/AnimGridModifierData.xml"/>
                 <struct ID="0x5D8916EA" type="multi">
                     <properties>
                         <property ID="0x51E5C747" type="bool">
@@ -409,43 +409,43 @@
         </struct>
         <struct ID="0x55A73403" type="multi">
             <properties>
-                <struct ID="0xAB47975F" template="Structs/GenericCreatureStructA.xml">
+                <struct ID="0xAB47975F" template="dkcr/Structs/GenericCreatureStructA.xml">
                     <properties>
                         <enum ID="0x6403DAED">
                             <default>0xCD3D7CB1</default>
                         </enum>
                     </properties>
                 </struct>
-                <struct ID="0x76D14EDA" template="Structs/GenericCreatureStructA.xml">
+                <struct ID="0x76D14EDA" template="dkcr/Structs/GenericCreatureStructA.xml">
                     <properties>
                         <enum ID="0x6403DAED">
                             <default>0xA819961D</default>
                         </enum>
                     </properties>
                 </struct>
-                <struct ID="0xCB1B2214" template="Structs/GenericCreatureStructA.xml">
+                <struct ID="0xCB1B2214" template="dkcr/Structs/GenericCreatureStructA.xml">
                     <properties>
                         <enum ID="0x6403DAED">
                             <default>0xC58D26AF</default>
                         </enum>
                     </properties>
                 </struct>
-                <struct ID="0x168DFB91" template="Structs/GenericCreatureStructA.xml">
+                <struct ID="0x168DFB91" template="dkcr/Structs/GenericCreatureStructA.xml">
                     <properties>
                         <enum ID="0x6403DAED">
                             <default>0xA177EB37</default>
                         </enum>
                     </properties>
                 </struct>
-                <struct ID="0x6BFEFDC9" template="Structs/GenericCreatureStructA.xml">
+                <struct ID="0x6BFEFDC9" template="dkcr/Structs/GenericCreatureStructA.xml">
                     <properties>
                         <enum ID="0x6403DAED">
                             <default>0xC53C3ED5</default>
                         </enum>
                     </properties>
                 </struct>
-                <struct ID="0xB668244C" template="Structs/GenericCreatureStructA.xml"/>
-                <struct ID="0x0BA24882" template="Structs/GenericCreatureStructA.xml"/>
+                <struct ID="0xB668244C" template="dkcr/Structs/GenericCreatureStructA.xml"/>
+                <struct ID="0x0BA24882" template="dkcr/Structs/GenericCreatureStructA.xml"/>
             </properties>
         </struct>
         <struct ID="0x571EB1EF" type="multi">
@@ -454,9 +454,9 @@
                     <default>0</default>
                     <cook_pref>always</cook_pref>
                 </property>
-                <struct ID="0x975DCEF7" template="Structs/GenericCreatureStructG.xml"/>
-                <struct ID="0x8ABB25C4" template="Structs/GenericCreatureStructF.xml"/>
-                <struct ID="0xF4D39593" template="Structs/TrackObjectModuleData.xml"/>
+                <struct ID="0x975DCEF7" template="dkcr/Structs/GenericCreatureStructG.xml"/>
+                <struct ID="0x8ABB25C4" template="dkcr/Structs/GenericCreatureStructF.xml"/>
+                <struct ID="0xF4D39593" template="dkcr/Structs/TrackObjectModuleData.xml"/>
                 <struct ID="0x9D9CE325" type="multi">
                     <properties>
                         <enum ID="0x411D0552">
@@ -529,7 +529,7 @@
                         <property ID="0x0CD01C0E" type="file" extensions="CAUD"/>
                         <property ID="0xC6F229C6" type="file" extensions="TXTR"/>
                         <property ID="0x1B248C33" type="file" extensions="TXTR"/>
-                        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x337F9524" template="dkcr/Structs/DamageInfo.xml"/>
                         <property ID="0xAA7AE2ED" type="float">
                             <default>1.0</default>
                         </property>
@@ -586,14 +586,14 @@
                         <property ID="0x07F5DA3F" type="long">
                             <default>0</default>
                         </property>
-                        <struct ID="0x6954C4A6" template="Structs/GenericCreatureStructD.xml"/>
-                        <struct ID="0x9B03295E" template="Structs/GenericCreatureStructD.xml"/>
-                        <struct ID="0x7C1E8FC9" template="Structs/GenericCreatureStructD.xml"/>
-                        <struct ID="0xA4DDF4EF" template="Structs/GenericCreatureStructD.xml"/>
-                        <struct ID="0x43C05278" template="Structs/GenericCreatureStructD.xml"/>
-                        <struct ID="0xB197BF80" template="Structs/GenericCreatureStructD.xml"/>
-                        <struct ID="0x568A1917" template="Structs/GenericCreatureStructD.xml"/>
-                        <struct ID="0xDB604F8D" template="Structs/GenericCreatureStructD.xml"/>
+                        <struct ID="0x6954C4A6" template="dkcr/Structs/GenericCreatureStructD.xml"/>
+                        <struct ID="0x9B03295E" template="dkcr/Structs/GenericCreatureStructD.xml"/>
+                        <struct ID="0x7C1E8FC9" template="dkcr/Structs/GenericCreatureStructD.xml"/>
+                        <struct ID="0xA4DDF4EF" template="dkcr/Structs/GenericCreatureStructD.xml"/>
+                        <struct ID="0x43C05278" template="dkcr/Structs/GenericCreatureStructD.xml"/>
+                        <struct ID="0xB197BF80" template="dkcr/Structs/GenericCreatureStructD.xml"/>
+                        <struct ID="0x568A1917" template="dkcr/Structs/GenericCreatureStructD.xml"/>
+                        <struct ID="0xDB604F8D" template="dkcr/Structs/GenericCreatureStructD.xml"/>
                     </properties>
                 </struct>
                 <struct ID="0xD78A4B1F" type="multi">
@@ -601,22 +601,22 @@
                         <property ID="0x682AA3C9" type="long">
                             <default>0</default>
                         </property>
-                        <struct ID="0x124A32A3" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0x56EB17BB" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0x6A8BF4B3" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0xDFA95D8B" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0xE3C9BE83" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0xA7689B9B" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0x9B087893" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0x165CCFAA" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0x2A3C2CA2" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0x20CD397A" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0x1CADDA72" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0x580CFF6A" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0x646C1C62" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0xD14EB55A" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0xED2E5652" template="Structs/GenericCreatureStructE.xml"/>
-                        <struct ID="0xA98F734A" template="Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0x124A32A3" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0x56EB17BB" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0x6A8BF4B3" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0xDFA95D8B" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0xE3C9BE83" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0xA7689B9B" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0x9B087893" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0x165CCFAA" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0x2A3C2CA2" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0x20CD397A" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0x1CADDA72" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0x580CFF6A" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0x646C1C62" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0xD14EB55A" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0xED2E5652" template="dkcr/Structs/GenericCreatureStructE.xml"/>
+                        <struct ID="0xA98F734A" template="dkcr/Structs/GenericCreatureStructE.xml"/>
                     </properties>
                 </struct>
             </properties>

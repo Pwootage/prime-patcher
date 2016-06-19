@@ -2,15 +2,15 @@
 <ScriptTemplate version="4">
     <name>SpawnPoint</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <property ID="0xC0E4521B" type="bool">
             <default>true</default>
         </property>
         <property ID="0xB9C40F92" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0x4C1D4CC9" template="Structs/SpawnPointStruct.xml"/>
-        <struct ID="0x4081BF95" template="Structs/SpawnPointStruct.xml"/>
+        <struct ID="0x4C1D4CC9" template="mp2/Structs/SpawnPointStruct.xml"/>
+        <struct ID="0x4081BF95" template="mp2/Structs/SpawnPointStruct.xml"/>
     </properties>
     <states/>
     <messages/>

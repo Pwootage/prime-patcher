@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>PoiObject</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0x98574EB1" type="multi">
             <properties>
                 <struct ID="0x93A412DD" type="multi">

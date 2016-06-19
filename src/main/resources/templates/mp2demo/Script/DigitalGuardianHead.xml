@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>DigitalGuardianHead</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
@@ -23,7 +23,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
         <struct ID="0x0F4D73B7" type="multi">
             <properties>
                 <property ID="0x07D8CC4F" type="long">
@@ -62,7 +62,7 @@
                 <property ID="0x27464886" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x4EAF615F" template="Structs/DamageInfo.xml">
+                <struct ID="0x4EAF615F" template="mp2demo/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>9</default>
@@ -81,7 +81,7 @@
                 <property ID="0xD669F12C" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x41177AC6" template="Structs/DamageInfo.xml">
+                <struct ID="0x41177AC6" template="mp2demo/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>9</default>
@@ -100,7 +100,7 @@
                 <property ID="0xD187F05C" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0xA8C6106B" template="Structs/DamageInfo.xml">
+                <struct ID="0xA8C6106B" template="mp2demo/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>9</default>
@@ -116,12 +116,12 @@
                 <property ID="0x39C9A901" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x8F6732EA" template="Structs/DigitalGuardianHeadStruct.xml"/>
-                <struct ID="0x8E128141" template="Structs/DigitalGuardianHeadStruct.xml"/>
-                <struct ID="0xEA54B390" template="Structs/DigitalGuardianHeadStruct.xml"/>
-                <struct ID="0xBBD3E7A7" template="Structs/DigitalGuardianHeadStruct.xml"/>
-                <struct ID="0x48B46E55" template="Structs/DigitalGuardianHeadStruct.xml"/>
-                <struct ID="0x7352D60A" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x8F6732EA" template="mp2demo/Structs/DigitalGuardianHeadStruct.xml"/>
+                <struct ID="0x8E128141" template="mp2demo/Structs/DigitalGuardianHeadStruct.xml"/>
+                <struct ID="0xEA54B390" template="mp2demo/Structs/DigitalGuardianHeadStruct.xml"/>
+                <struct ID="0xBBD3E7A7" template="mp2demo/Structs/DigitalGuardianHeadStruct.xml"/>
+                <struct ID="0x48B46E55" template="mp2demo/Structs/DigitalGuardianHeadStruct.xml"/>
+                <struct ID="0x7352D60A" template="mp2demo/Structs/DamageVulnerability.xml"/>
             </properties>
         </struct>
     </properties>

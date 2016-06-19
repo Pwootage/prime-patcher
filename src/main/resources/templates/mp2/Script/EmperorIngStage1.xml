@@ -2,24 +2,24 @@
 <ScriptTemplate version="4">
     <name>EmperorIngStage1</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x4BC4C4D9">
                     <default>2</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <struct ID="0x4A1E493B" type="multi">
             <properties>
                 <struct ID="0xB3C6398F" type="multi">
                     <properties>
-                        <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml"/>
-                        <struct ID="0x29DF61E1" template="Structs/DamageVulnerability.xml"/>
-                        <struct ID="0x8D7378A4" template="Structs/DamageVulnerability.xml"/>
-                        <struct ID="0x6C79054F" template="Structs/DamageVulnerability.xml"/>
-                        <struct ID="0x3C2D2492" template="Structs/DamageVulnerability.xml"/>
+                        <struct ID="0xCF90D15E" template="mp2/Structs/HealthInfo.xml"/>
+                        <struct ID="0x29DF61E1" template="mp2/Structs/DamageVulnerability.xml"/>
+                        <struct ID="0x8D7378A4" template="mp2/Structs/DamageVulnerability.xml"/>
+                        <struct ID="0x6C79054F" template="mp2/Structs/DamageVulnerability.xml"/>
+                        <struct ID="0x3C2D2492" template="mp2/Structs/DamageVulnerability.xml"/>
                         <property ID="0x491C2657" type="float">
                             <default>0.0</default>
                         </property>
@@ -30,13 +30,13 @@
                 </struct>
                 <struct ID="0xF59F9A60" type="multi">
                     <properties>
-                        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x337F9524" template="mp2/Structs/DamageInfo.xml"/>
                     </properties>
                 </struct>
                 <struct ID="0xA1CDA0B6" type="multi">
                     <properties>
                         <property ID="0xEF485DB9" type="file" extensions="WPSC"/>
-                        <struct ID="0x553B1339" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x553B1339" template="mp2/Structs/DamageInfo.xml"/>
                         <property ID="0x8F8C64A0" type="long">
                             <default>-1</default>
                         </property>
@@ -48,7 +48,7 @@
                             <default>-1</default>
                         </property>
                         <property ID="0xF10B6EF6" type="character"/>
-                        <struct ID="0x946016A9" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x946016A9" template="mp2/Structs/DamageInfo.xml"/>
                         <property ID="0xECFAB026" type="long">
                             <default>-1</default>
                         </property>
@@ -71,7 +71,7 @@
                         <property ID="0x01274D6E" type="long">
                             <default>0</default>
                         </property>
-                        <struct ID="0x8F4787CB" template="Structs/ShockWaveInfo.xml"/>
+                        <struct ID="0x8F4787CB" template="mp2/Structs/ShockWaveInfo.xml"/>
                         <property ID="0x25AF490E" type="long">
                             <default>-1</default>
                         </property>
@@ -79,7 +79,7 @@
                 </struct>
                 <struct ID="0x8E6D20EC" type="multi">
                     <properties>
-                        <struct ID="0x1598012A" template="Structs/PlasmaBeamInfo.xml">
+                        <struct ID="0x1598012A" template="mp2/Structs/PlasmaBeamInfo.xml">
                             <properties>
                                 <property ID="0xC26C291C">
                                     <default>500.0</default>
@@ -107,7 +107,7 @@
                                 </property>
                             </properties>
                         </struct>
-                        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x337F9524" template="mp2/Structs/DamageInfo.xml"/>
                         <property ID="0x5F7C352E" type="long">
                             <default>-1</default>
                         </property>
@@ -122,7 +122,7 @@
                 <property ID="0xB826317A" type="float">
                     <default>0.0</default>
                 </property>
-                <struct ID="0x88232388" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x88232388" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0xC36AE5CA" type="float">
                     <default>0.0</default>
                 </property>

@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>Steam</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x77A27411" template="Structs/TriggerInfo.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0x77A27411" template="mp2/Structs/TriggerInfo.xml"/>
         <property ID="0x26346050" type="file" extensions="TXTR"/>
         <property ID="0x4F8F5F5C" type="float">
             <default>0.35</default>

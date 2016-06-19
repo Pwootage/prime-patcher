@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>MinorIng</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <property ID="0x3011B5DF">
                     <default>4.0</default>
@@ -19,10 +19,10 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <struct ID="0xA3A2AC3F" type="multi">
             <properties>
-                <struct ID="0x2C83C012" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x2C83C012" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -59,11 +59,11 @@
                 <property ID="0x6392404E" type="float">
                     <default>5.0</default>
                 </property>
-                <struct ID="0xD756416E" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xD756416E" template="mp3/Structs/DamageInfo.xml"/>
                 <property ID="0x49F4C4EE" type="float">
                     <default>1.0</default>
                 </property>
-                <struct ID="0xA7A47350" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xA7A47350" template="mp3/Structs/DamageInfo.xml"/>
                 <property ID="0x955A61EF" type="float">
                     <default>1.0</default>
                 </property>
@@ -94,9 +94,9 @@
                 <property ID="0x91D5B3CA" type="float">
                     <default>30.0</default>
                 </property>
-                <struct ID="0x5EE136E3" template="Structs/PuddleControlData.xml"/>
-                <struct ID="0xFD6D2B52" template="Structs/PuddleControlData.xml"/>
-                <struct ID="0x17B1C55E" template="Structs/PuddleControlData.xml"/>
+                <struct ID="0x5EE136E3" template="mp3/Structs/PuddleControlData.xml"/>
+                <struct ID="0xFD6D2B52" template="mp3/Structs/PuddleControlData.xml"/>
+                <struct ID="0x17B1C55E" template="mp3/Structs/PuddleControlData.xml"/>
                 <property ID="0x2367F689" type="file" extensions="PART"/>
                 <property ID="0xD473158D" type="file" extensions="PART"/>
                 <property ID="0xCCA298B4" type="file" extensions="PART"/>
@@ -114,8 +114,8 @@
                 <property ID="0x49B30DE2" type="file" extensions="CAUD"/>
                 <property ID="0xDECD5831" type="file" extensions="CAUD"/>
                 <property ID="0x1B412C4B" type="file" extensions="CAUD"/>
-                <struct ID="0x7B71AE90" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0xF609C637" template="Structs/GrappleData.xml">
+                <struct ID="0x7B71AE90" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0xF609C637" template="mp3/Structs/GrappleData.xml">
                     <properties>
                         <property ID="0x5DCF91E1">
                             <default>1</default>

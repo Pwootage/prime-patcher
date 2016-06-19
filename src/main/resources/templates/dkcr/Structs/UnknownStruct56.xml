@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct name="UnknownStruct56" type="multi">
     <properties>
-        <struct ID="0x45D39080" template="Structs/UnknownStruct54.xml"/>
+        <struct ID="0x45D39080" template="dkcr/Structs/UnknownStruct54.xml"/>
         <struct ID="0x445EF669" type="multi">
             <properties>
                 <property ID="0x8A58A7F8" type="long">
@@ -10,14 +10,14 @@
                 <property ID="0xA9AC7DED" type="float">
                     <default>2.0</default>
                 </property>
-                <struct ID="0x17A93807" template="Structs/UnknownStruct52.xml">
+                <struct ID="0x17A93807" template="dkcr/Structs/UnknownStruct52.xml">
                     <properties>
                         <property ID="0xC3BF43BE">
                             <default>4.0</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x8C219932" template="Structs/UnknownStruct52.xml">
+                <struct ID="0x8C219932" template="dkcr/Structs/UnknownStruct52.xml">
                     <properties>
                         <property ID="0xC3BF43BE">
                             <default>5.0</default>
@@ -41,7 +41,7 @@
                     <default>1.0</default>
                 </property>
                 <property ID="0xD3C1390E" type="file" extensions="PART"/>
-                <struct ID="0xAE342F0F" template="Structs/DamageEffectData.xml"/>
+                <struct ID="0xAE342F0F" template="dkcr/Structs/DamageEffectData.xml"/>
             </properties>
         </struct>
         <struct ID="0xCCB08A34" type="multi">

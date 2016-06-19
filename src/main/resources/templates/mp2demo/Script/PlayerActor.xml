@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>PlayerActor</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
         <property ID="0xF344C0B0" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>
@@ -15,13 +15,13 @@
         <property ID="0x2F2AE3E5" type="float">
             <default>0.0</default>
         </property>
-        <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml"/>
-        <struct ID="0x7B71AE90" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0xCF90D15E" template="mp2demo/Structs/HealthInfo.xml"/>
+        <struct ID="0x7B71AE90" template="mp2demo/Structs/DamageVulnerability.xml"/>
         <property ID="0x405E5286" type="long">
             <default>-1</default>
         </property>
         <property ID="0xE25FB08C" type="character"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
         <property ID="0xC08D1B93" type="bool">
             <default>true</default>
         </property>

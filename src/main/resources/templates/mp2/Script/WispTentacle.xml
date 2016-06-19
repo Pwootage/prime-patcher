@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>WispTentacle</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <property ID="0xD82814F2" type="float">
             <default>30.0</default>
         </property>
@@ -15,7 +15,7 @@
         <property ID="0x9BB6CBC7" type="float">
             <default>0.0</default>
         </property>
-        <struct ID="0x66DCAACB" template="Structs/DamageInfo.xml">
+        <struct ID="0x66DCAACB" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>9</default>
@@ -34,8 +34,8 @@
         <property ID="0x0D5A1F1D" type="float">
             <default>0.2</default>
         </property>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

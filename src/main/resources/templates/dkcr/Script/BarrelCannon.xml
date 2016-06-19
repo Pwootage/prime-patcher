@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>BarrelCannon</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0xF344C0B0" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>
@@ -12,9 +12,9 @@
         <property ID="0xC27FFA8F" type="file" extensions="CMDL"/>
         <property ID="0xA3D63F44" type="character"/>
         <property ID="0x1B21EEB2" type="file" extensions="FSMC"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
         <property ID="0x0FC966DC" type="file" extensions="DCLN"/>
-        <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml"/>
+        <struct ID="0xCF90D15E" template="dkcr/Structs/HealthInfo.xml"/>
         <property ID="0xDCD56FE8" type="long">
             <default>200</default>
         </property>
@@ -27,7 +27,7 @@
         <property ID="0xF203BC81" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0x0A9DBF91" template="Structs/PlatformMotionProperties.xml">
+        <struct ID="0x0A9DBF91" template="dkcr/Structs/PlatformMotionProperties.xml">
             <properties>
                 <property ID="0xAE80628F">
                     <default>262176</default>
@@ -117,10 +117,10 @@
                 <property ID="0x2255A13D" type="bool">
                     <default>false</default>
                 </property>
-                <enum ID="0x98501823" template="Enums/BarrelCannonEnum.xml">
+                <enum ID="0x98501823" template="dkcr/Enums/BarrelCannonEnum.xml">
                     <default>0xA61445EB</default>
                 </enum>
-                <enum ID="0x098ECAB6" template="Enums/BarrelCannonEnum.xml">
+                <enum ID="0x098ECAB6" template="dkcr/Enums/BarrelCannonEnum.xml">
                     <default>0x0009FA85</default>
                 </enum>
             </properties>

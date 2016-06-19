@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>SkyboxModInca</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0x37C7D09D" type="color">
             <default>1.0, 1.0, 1.0, 0.0</default>
         </property>

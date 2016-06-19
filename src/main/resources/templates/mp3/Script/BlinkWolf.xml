@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>BlinkWolf</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <struct ID="0x90688474" type="multi">
             <properties>
                 <property ID="0x2B3109A6" type="bool">
@@ -38,7 +38,7 @@
                 <property ID="0xB6055F35" type="long">
                     <default>5</default>
                 </property>
-                <struct ID="0x6DAC116A" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x6DAC116A" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -63,7 +63,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x9AAB30F1" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x9AAB30F1" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -88,7 +88,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x76B1B8E0" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x76B1B8E0" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -113,7 +113,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xFE3B5965" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0xFE3B5965" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -167,7 +167,7 @@
                 <property ID="0x8D518FD5" type="float">
                     <default>15.0</default>
                 </property>
-                <struct ID="0x0F2FA713" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x0F2FA713" template="mp3/Structs/DamageInfo.xml"/>
                 <property ID="0xA42DBD9E" type="float">
                     <default>1.0</default>
                 </property>
@@ -262,7 +262,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -288,7 +288,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

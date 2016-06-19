@@ -8,7 +8,7 @@
         <property ID="0x03" name="Scale" type="vector3f"/>
         <property ID="0x04" name="Collision Scale" type="vector3f"/>
         <property ID="0x05" name="Scan/Collision Offset" type="vector3f"/>
-        <enum ID="0x06" name="Item" template="Enums/Item.xml"/>
+        <enum ID="0x06" name="Item" template="mp1/Enums/Item.xml"/>
         <property ID="0x07" name="Capacity" type="long"/>
         <property ID="0x08" name="Amount" type="long"/>
         <property ID="0x09" name="Drop Rate" type="float"/>
@@ -16,7 +16,7 @@
         <property ID="0x0B" name="Fade Length" type="float"/>
         <property ID="0x0C" name="Model" type="file" extensions="CMDL"/>
         <property ID="0x0D" name="AnimationParameters" type="character"/>
-        <struct ID="0x0E" name="ActorParameters" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x0E" name="ActorParameters" template="mp1/Structs/ActorParameters.xml"/>
         <property ID="0x0F" name="Active" type="bool"/>
         <property ID="0x10" name="Spawn Delay" type="float"/>
         <property ID="0x11" name="Particle" type="file" extensions="PART"/>

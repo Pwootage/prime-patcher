@@ -2,11 +2,11 @@
 <ScriptTemplate version="4">
     <name>Trigger</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <enum ID="0x09ECEE0C" template="Enums/Shape.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
+        <enum ID="0x09ECEE0C" template="dkcr/Enums/Shape.xml">
             <default>0x482B22F1</default>
         </enum>
-        <struct ID="0x77A27411" template="Structs/TriggerInfo.xml"/>
+        <struct ID="0x77A27411" template="dkcr/Structs/TriggerInfo.xml"/>
         <property ID="0x66A43EEF" type="bool">
             <default>false</default>
         </property>

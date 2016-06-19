@@ -13,12 +13,12 @@
         <property ID="0xC4DB42E3" type="bool">
             <default>true</default>
         </property>
-        <struct ID="0x74BFFA78" template="Structs/DamageInfo.xml"/>
-        <struct ID="0xBB7977B9" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x4738C321" template="Structs/DamageInfo.xml"/>
-        <struct ID="0xF4E003C1" template="Structs/DamageInfo.xml"/>
-        <struct ID="0xE0DBF22F" template="Structs/PlasmaBeamInfo.xml"/>
-        <struct ID="0x97321AF1" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x74BFFA78" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0xBB7977B9" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x4738C321" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0xF4E003C1" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0xE0DBF22F" template="mp3/Structs/PlasmaBeamInfo.xml"/>
+        <struct ID="0x97321AF1" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xFD5E7062" type="float">
             <default>25.0</default>
         </property>
@@ -31,7 +31,7 @@
         <property ID="0x1A975A02" type="float">
             <default>10.0</default>
         </property>
-        <struct ID="0x066BC855" template="Structs/LaunchProjectileData.xml">
+        <struct ID="0x066BC855" template="mp3/Structs/LaunchProjectileData.xml">
             <properties>
                 <property ID="0x053AE4A7">
                     <cook_pref>never</cook_pref>
@@ -99,7 +99,7 @@
         <property ID="0xCF111A99" type="float">
             <default>20.0</default>
         </property>
-        <struct ID="0x719FD06B" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x719FD06B" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0x92F0B2C7" type="float">
             <default>20.0</default>
         </property>
@@ -118,7 +118,7 @@
         <property ID="0x24F779CA" type="float">
             <default>0.8</default>
         </property>
-        <struct ID="0xC6BA9753" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0xC6BA9753" template="mp3/Structs/DamageVulnerability.xml"/>
         <property ID="0x83439084" type="float">
             <default>500.0</default>
         </property>
@@ -131,14 +131,14 @@
             <default>1.4</default>
         </property>
         <property ID="0x4AE57FEB" type="file" extensions="CMDL"/>
-        <struct ID="0x4E1D71A1" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x4E1D71A1" template="mp3/Structs/DamageVulnerability.xml"/>
         <property ID="0x69D66EC4" type="float">
             <default>10.0</default>
         </property>
         <property ID="0x299916B2" type="float">
             <default>30.0</default>
         </property>
-        <struct ID="0xFE51924E" template="Structs/LaunchProjectileData.xml">
+        <struct ID="0xFE51924E" template="mp3/Structs/LaunchProjectileData.xml">
             <properties>
                 <property ID="0x053AE4A7">
                     <cook_pref>never</cook_pref>
@@ -163,7 +163,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x9B9C702C" template="Structs/LaunchProjectileData.xml">
+        <struct ID="0x9B9C702C" template="mp3/Structs/LaunchProjectileData.xml">
             <properties>
                 <property ID="0x053AE4A7">
                     <cook_pref>never</cook_pref>
@@ -188,7 +188,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x567BA94A" template="Structs/LaunchProjectileData.xml">
+        <struct ID="0x567BA94A" template="mp3/Structs/LaunchProjectileData.xml">
             <properties>
                 <property ID="0x053AE4A7">
                     <cook_pref>never</cook_pref>
@@ -213,7 +213,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xF4D5150F" template="Structs/LaunchProjectileData.xml">
+        <struct ID="0xF4D5150F" template="mp3/Structs/LaunchProjectileData.xml">
             <properties>
                 <property ID="0x053AE4A7">
                     <cook_pref>never</cook_pref>
@@ -238,7 +238,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x8647C581" template="Structs/LaunchProjectileData.xml">
+        <struct ID="0x8647C581" template="mp3/Structs/LaunchProjectileData.xml">
             <properties>
                 <property ID="0x053AE4A7">
                     <cook_pref>never</cook_pref>
@@ -275,7 +275,7 @@
         <property ID="0x677BD8AB" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0xC6E6300F" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0xC6E6300F" template="mp3/Structs/DamageVulnerability.xml"/>
         <property ID="0x1520568A" type="float">
             <default>100.0</default>
         </property>
@@ -284,14 +284,14 @@
         </property>
         <property ID="0x650BA238" type="file" extensions="CMDL"/>
         <property ID="0x68865410" type="file" extensions="CMDL"/>
-        <struct ID="0x342DAE7A" template="Structs/DamageVulnerability.xml"/>
-        <struct ID="0x200545BD" template="Structs/DamageVulnerability.xml"/>
-        <struct ID="0xF3EA94DC" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x342DAE7A" template="mp3/Structs/DamageVulnerability.xml"/>
+        <struct ID="0x200545BD" template="mp3/Structs/DamageVulnerability.xml"/>
+        <struct ID="0xF3EA94DC" template="mp3/Structs/DamageVulnerability.xml"/>
         <property ID="0xEDF1189F" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0x846533CC" template="Structs/ShockWaveInfo.xml"/>
-        <struct ID="0x2AF1548B" template="Structs/ShockWaveInfo.xml"/>
+        <struct ID="0x846533CC" template="mp3/Structs/ShockWaveInfo.xml"/>
+        <struct ID="0x2AF1548B" template="mp3/Structs/ShockWaveInfo.xml"/>
         <property ID="0x0C1A5644" type="float">
             <default>10.0</default>
         </property>

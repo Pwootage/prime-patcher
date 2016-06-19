@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>Mantha</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
         <struct ID="0x3B2CE084" type="multi">
             <properties>
                 <property ID="0x845EF489" type="float">
@@ -16,14 +16,14 @@
                 <property ID="0xC3A34B9F" type="float">
                     <default>30.0</default>
                 </property>
-                <struct ID="0xEB12BEE4" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xEB12BEE4" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0xDF3A9CAB" type="float">
                     <default>2.5</default>
                 </property>
                 <property ID="0xB756096C" type="bool">
                     <default>true</default>
                 </property>
-                <struct ID="0xA715A718" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xA715A718" template="mp3proto/Structs/DamageInfo.xml"/>
             </properties>
         </struct>
     </properties>

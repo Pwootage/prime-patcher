@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>TriggerEllipsoid</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x77A27411" template="Structs/TriggerInfo.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0x77A27411" template="mp2demo/Structs/TriggerInfo.xml"/>
         <property ID="0x8D33465F" type="bool">
             <default>false</default>
         </property>

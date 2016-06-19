@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>Rundas</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <struct ID="0x9D90D49F" type="multi">
             <properties>
                 <property ID="0x1AEB498D" type="float">
@@ -24,8 +24,8 @@
                 <property ID="0x152658FE" type="file" extensions="CMDL"/>
                 <property ID="0xE22A6DDA" type="file" extensions="CMDL"/>
                 <property ID="0x1EAA8217" type="file" extensions="CMDL"/>
-                <struct ID="0x896D5BD9" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0x8D4A2668" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x896D5BD9" template="mp3proto/Structs/DamageVulnerability.xml"/>
+                <struct ID="0x8D4A2668" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0x199A4CA5" type="file" extensions="PART"/>
                 <property ID="0x9F0E3E0B" type="file" extensions="PART"/>
                 <property ID="0x5452EDAE" type="file" extensions="PART"/>
@@ -38,8 +38,8 @@
                 <property ID="0xF41394F6" type="float">
                     <default>6.0</default>
                 </property>
-                <struct ID="0xB1B44917" template="Structs/DamageInfo.xml"/>
-                <struct ID="0x7FBC7E81" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xB1B44917" template="mp3proto/Structs/DamageInfo.xml"/>
+                <struct ID="0x7FBC7E81" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0xFF944885" type="float">
                     <default>0.5</default>
                 </property>
@@ -53,10 +53,10 @@
                     <default>13.0</default>
                 </property>
                 <property ID="0x4584843B" type="file" extensions="WPSC"/>
-                <struct ID="0x3063BBF1" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x3063BBF1" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0x03304D0B" type="file" extensions="TXTR"/>
                 <property ID="0x17789D1C" type="file" extensions="CMDL"/>
-                <struct ID="0x5997EBE1" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x5997EBE1" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0x8843CE6D" type="file" extensions="PART"/>
                 <property ID="0xC922F0E0" type="float">
                     <default>35.0</default>
@@ -77,7 +77,7 @@
                 <property ID="0x9873172A" type="file" extensions="PART"/>
                 <property ID="0x84C33DA6" type="file" extensions="PART"/>
                 <property ID="0x757060D4" type="file" extensions="WPSC"/>
-                <struct ID="0x78DF0B7D" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x78DF0B7D" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0xE4CD7924" type="float">
                     <default>25.0</default>
                 </property>
@@ -105,10 +105,10 @@
                 <property ID="0x1CC93984" type="float">
                     <default>25.0</default>
                 </property>
-                <struct ID="0xF609C637" template="Structs/GrappleData.xml"/>
+                <struct ID="0xF609C637" template="mp3proto/Structs/GrappleData.xml"/>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml">
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -131,7 +131,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

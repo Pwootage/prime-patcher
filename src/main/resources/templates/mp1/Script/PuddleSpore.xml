@@ -7,8 +7,8 @@
         <property ID="0x02" name="Position" type="vector3f"/>
         <property ID="0x03" name="Rotation" type="vector3f"/>
         <property ID="0x04" name="Scale" type="vector3f"/>
-        <struct ID="0x05" name="PatternedInfo" template="Structs/PatternedInfo.xml"/>
-        <struct ID="0x06" name="ActorParameters" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x05" name="PatternedInfo" template="mp1/Structs/PatternedInfo.xml"/>
+        <struct ID="0x06" name="ActorParameters" template="mp1/Structs/ActorParameters.xml"/>
         <property ID="0x07" name="Unknown 2" type="bool"/>
         <property ID="0x08" name="Particle" type="file" extensions="PART"/>
         <property ID="0x09" name="Unknown 3" type="float"/>
@@ -17,7 +17,7 @@
         <property ID="0x0C" name="Unknown 6" type="float"/>
         <property ID="0x0D" name="Unknown 7" type="float"/>
         <property ID="0x0E" name="WPSC" type="file" extensions="WPSC"/>
-        <struct ID="0x0F" name="DamageInfo" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x0F" name="DamageInfo" template="mp1/Structs/DamageInfo.xml"/>
     </properties>
     <states/>
     <messages/>

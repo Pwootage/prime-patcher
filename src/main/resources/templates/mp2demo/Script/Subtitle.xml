@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>Subtitle</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xE0543E66" template="Structs/TextProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xE0543E66" template="mp2demo/Structs/TextProperties.xml"/>
         <property ID="0xC33A87C7" type="long">
             <default>0</default>
         </property>

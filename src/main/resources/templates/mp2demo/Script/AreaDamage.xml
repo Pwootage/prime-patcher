@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>AreaDamage</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0x337F9524" template="mp2demo/Structs/DamageInfo.xml"/>
         <property ID="0x8E07E9D3" type="float">
             <default>1.0</default>
         </property>

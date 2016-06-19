@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>BallTrigger</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0xB61B1149" type="float">
             <default>20.0</default>
         </property>
@@ -24,7 +24,7 @@
         <property ID="0x66A43EEF" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0xBBFEE93E" template="Structs/TriggerInfo.xml"/>
+        <struct ID="0xBBFEE93E" template="mp3/Structs/TriggerInfo.xml"/>
     </properties>
     <states/>
     <messages/>

@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>SafeZone</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x77A27411" template="Structs/TriggerInfo.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0x77A27411" template="mp2demo/Structs/TriggerInfo.xml"/>
         <property ID="0x8D33465F" type="bool">
             <default>false</default>
         </property>
@@ -34,15 +34,15 @@
         <property ID="0x62BAC460" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0xB4A293C7" template="Structs/SafeZoneStruct.xml"/>
-        <struct ID="0xDAE8C14E" template="Structs/SafeZoneStruct.xml">
+        <struct ID="0xB4A293C7" template="mp2demo/Structs/SafeZoneStruct.xml"/>
+        <struct ID="0xDAE8C14E" template="mp2demo/Structs/SafeZoneStruct.xml">
             <properties>
                 <property ID="0x47B4E863">
                     <default>1.0, 1.0, 0.0, 1.0</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x78A13CA0" template="Structs/DamageInfo.xml">
+        <struct ID="0x78A13CA0" template="mp2demo/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>18</default>

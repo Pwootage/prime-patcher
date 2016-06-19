@@ -28,24 +28,24 @@
         <property ID="0x71BB7BCB" type="float">
             <default>3.0</default>
         </property>
-        <struct ID="0x001DDB4F" template="Structs/UnknownStruct1.xml"/>
-        <struct ID="0x8E870EC0" template="Structs/UnknownStruct1.xml"/>
-        <struct ID="0x8041BD90" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0x29138B6C" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0x9F1294E3" template="Structs/UnknownStruct1.xml"/>
-        <struct ID="0x7BADF58B" template="Structs/UnknownStruct1.xml"/>
-        <struct ID="0x32FA3340" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0x302B3351" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0x165DA321" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0xAE1E9931" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0x7C9F2144" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0x401E3CB3" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0xCFF7D7EC" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0x22761273" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0x73EEFFCB" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0x0547FF5F" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0xEEAB8919" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0x80F2F6DD" template="Structs/UnknownStruct2.xml"/>
-        <struct ID="0x67AB0E8F" template="Structs/UnknownStruct1.xml"/>
+        <struct ID="0x001DDB4F" template="mp2demo/Structs/UnknownStruct1.xml"/>
+        <struct ID="0x8E870EC0" template="mp2demo/Structs/UnknownStruct1.xml"/>
+        <struct ID="0x8041BD90" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0x29138B6C" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0x9F1294E3" template="mp2demo/Structs/UnknownStruct1.xml"/>
+        <struct ID="0x7BADF58B" template="mp2demo/Structs/UnknownStruct1.xml"/>
+        <struct ID="0x32FA3340" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0x302B3351" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0x165DA321" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0xAE1E9931" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0x7C9F2144" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0x401E3CB3" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0xCFF7D7EC" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0x22761273" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0x73EEFFCB" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0x0547FF5F" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0xEEAB8919" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0x80F2F6DD" template="mp2demo/Structs/UnknownStruct2.xml"/>
+        <struct ID="0x67AB0E8F" template="mp2demo/Structs/UnknownStruct1.xml"/>
     </properties>
 </struct>

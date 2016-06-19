@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>Brizgee</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <property ID="0x733BD27C" type="float">
             <default>2.5</default>
         </property>
@@ -29,15 +29,15 @@
         <property ID="0x0B7325EA" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0xF573E11C" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0xF573E11C" template="mp2/Structs/DamageVulnerability.xml"/>
         <property ID="0xAA13253A" type="float">
             <default>2.0</default>
         </property>
-        <struct ID="0xB482E5DD" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xB482E5DD" template="mp2/Structs/DamageInfo.xml"/>
         <property ID="0x80DA8053" type="float">
             <default>1.5</default>
         </property>
-        <struct ID="0x143D18C6" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x143D18C6" template="mp2/Structs/DamageInfo.xml"/>
         <property ID="0xF78947D4" type="float">
             <default>2.0</default>
         </property>

@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>ActorRotate</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <property ID="0xF11C6C2B" type="long">
             <default>20</default>
         </property>

@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>BallTrigger</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml">
             <properties>
                 <struct ID="0x5846524D">
                     <properties>
@@ -13,7 +13,7 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x77A27411" template="Structs/TriggerInfo.xml"/>
+        <struct ID="0x77A27411" template="mp2demo/Structs/TriggerInfo.xml"/>
         <property ID="0xB61B1149" type="float">
             <default>20.0</default>
         </property>

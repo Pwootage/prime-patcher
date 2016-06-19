@@ -29,6 +29,6 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x287F9F45" template="Structs/InterpolationMethod.xml"/>
+        <struct ID="0x287F9F45" template="mp3/Structs/InterpolationMethod.xml"/>
     </properties>
 </struct>

@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>GunTurretTop</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <struct ID="0xA858F4E7" type="multi">
             <properties>
                 <property ID="0x701D65CD" type="bool">
@@ -20,7 +20,7 @@
                 <property ID="0x0BD3794D" type="float">
                     <default>100.0</default>
                 </property>
-                <struct ID="0xCFA1ACE2" template="Structs/StaticGeometryTest.xml"/>
+                <struct ID="0xCFA1ACE2" template="mp3/Structs/StaticGeometryTest.xml"/>
                 <property ID="0xFE6829EC" type="float">
                     <default>180.0</default>
                 </property>
@@ -53,7 +53,7 @@
                 </property>
                 <property ID="0x16E7D74A" type="file" extensions="CRSC"/>
                 <property ID="0x00E9C72C" type="file" extensions="WPSC"/>
-                <struct ID="0xBE7FB5CC" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xBE7FB5CC" template="mp3/Structs/DamageInfo.xml"/>
                 <property ID="0x4173EC53" type="float">
                     <default>10.0</default>
                 </property>
@@ -62,7 +62,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -94,7 +94,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

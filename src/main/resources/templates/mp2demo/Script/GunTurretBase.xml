@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>GunTurretBase</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x66DCAACB" template="Structs/DamageInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0x66DCAACB" template="mp2demo/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>9</default>
@@ -139,8 +139,8 @@
         <property ID="0x20C03692" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

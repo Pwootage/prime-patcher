@@ -2,15 +2,15 @@
 <ScriptTemplate version="4">
     <name>FlyingPirate</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <struct ID="0xB327E803" type="multi">
             <properties>
                 <property ID="0xA8B7379D" type="bool">
@@ -110,9 +110,9 @@
                 </property>
                 <struct ID="0x672B454D" type="multi">
                     <properties>
-                        <struct ID="0x9A892818" template="Structs/StaticGeometryTest.xml"/>
+                        <struct ID="0x9A892818" template="mp3/Structs/StaticGeometryTest.xml"/>
                         <property ID="0xEF485DB9" type="file" extensions="WPSC"/>
-                        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x337F9524" template="mp3/Structs/DamageInfo.xml"/>
                         <property ID="0xA55DACF6" type="file" extensions="CAUD"/>
                         <property ID="0xE9C8E2BD" type="file" extensions="PART"/>
                         <property ID="0x86FFB3F6" type="file" extensions="CAUD"/>
@@ -132,10 +132,10 @@
                 </struct>
                 <struct ID="0x92B304AD" type="multi">
                     <properties>
-                        <struct ID="0x9A892818" template="Structs/StaticGeometryTest.xml"/>
+                        <struct ID="0x9A892818" template="mp3/Structs/StaticGeometryTest.xml"/>
                         <property ID="0xF0D25256" type="file" extensions="WPSC"/>
                         <property ID="0x645E8CC5" type="file" extensions="WPSC"/>
-                        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x337F9524" template="mp3/Structs/DamageInfo.xml"/>
                         <property ID="0xE9C8E2BD" type="file" extensions="PART"/>
                         <property ID="0x86FFB3F6" type="file" extensions="CAUD"/>
                         <property ID="0x053AE4A7" type="float">
@@ -155,16 +155,16 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x2263E77F" template="Structs/SpacePirateWeaponData.xml"/>
-                <struct ID="0x3F07905E" template="Structs/FlyingPirateStruct.xml"/>
-                <struct ID="0x097203AB" template="Structs/FlyingPirateStruct.xml"/>
-                <struct ID="0x4123A3B6" template="Structs/FlyingPirateStruct.xml"/>
+                <struct ID="0x2263E77F" template="mp3/Structs/SpacePirateWeaponData.xml"/>
+                <struct ID="0x3F07905E" template="mp3/Structs/FlyingPirateStruct.xml"/>
+                <struct ID="0x097203AB" template="mp3/Structs/FlyingPirateStruct.xml"/>
+                <struct ID="0x4123A3B6" template="mp3/Structs/FlyingPirateStruct.xml"/>
                 <struct ID="0x70B96A25" type="multi">
                     <properties>
                         <property ID="0xFDE9C4DF" type="bool">
                             <default>false</default>
                         </property>
-                        <struct ID="0xF18384D4" template="Structs/HealthInfo.xml">
+                        <struct ID="0xF18384D4" template="mp3/Structs/HealthInfo.xml">
                             <properties>
                                 <property ID="0xF0668919">
                                     <default>100.0</default>
@@ -174,7 +174,7 @@
                                 </property>
                             </properties>
                         </struct>
-                        <struct ID="0x896D5BD9" template="Structs/DamageVulnerability.xml"/>
+                        <struct ID="0x896D5BD9" template="mp3/Structs/DamageVulnerability.xml"/>
                         <property ID="0x68002BD7" type="file" extensions="CMDL"/>
                         <property ID="0xAD315C7C" type="file" extensions="CMDL"/>
                         <property ID="0x042A25ED" type="file" extensions="CMDL"/>
@@ -203,11 +203,11 @@
                         <property ID="0x2C79052C" type="file" extensions="PART"/>
                         <property ID="0x016B65A9" type="file" extensions="PART"/>
                         <property ID="0xD8A92AAA" type="file" extensions="PART"/>
-                        <struct ID="0x5BF6F8E4" template="Structs/DamageInfo.xml"/>
-                        <struct ID="0x85543E4E" template="Structs/GrappleBlock.xml"/>
+                        <struct ID="0x5BF6F8E4" template="mp3/Structs/DamageInfo.xml"/>
+                        <struct ID="0x85543E4E" template="mp3/Structs/GrappleBlock.xml"/>
                     </properties>
                 </struct>
-                <struct ID="0xE39738EA" template="Structs/RagDollData.xml"/>
+                <struct ID="0xE39738EA" template="mp3/Structs/RagDollData.xml"/>
                 <property ID="0x531A8C85" type="bool">
                     <default>false</default>
                 </property>

@@ -4,7 +4,7 @@
         <property ID="0xDE3E40A3" type="long">
             <default>1</default>
         </property>
-        <enum ID="0xD3AF8D72" template="Enums/Item.xml">
+        <enum ID="0xD3AF8D72" template="mp3proto/Enums/Item.xml">
             <default>0xFB73F2B8</default>
         </enum>
         <property ID="0x03BDEA98" type="long">

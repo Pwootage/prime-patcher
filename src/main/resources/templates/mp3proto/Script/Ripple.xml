@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>Ripple</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <property ID="0x69731A91" type="float">
             <default>-0.1</default>
         </property>

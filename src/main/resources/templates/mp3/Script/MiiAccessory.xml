@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>MiiAccessory</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xD29C031D" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xD29C031D" template="mp3/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

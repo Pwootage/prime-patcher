@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>MetroidPhazeoid</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <struct ID="0xE58A4113" type="multi">
             <properties>
                 <property ID="0x74288EF3" type="bool">
@@ -32,44 +32,44 @@
                 <property ID="0x7FC827A2" type="float">
                     <default>0.5</default>
                 </property>
-                <struct ID="0xCCDD3ACA" template="Structs/FlyerMovementMode.xml"/>
-                <struct ID="0xFA2A173F" template="Structs/FlyerMovementMode.xml"/>
-                <struct ID="0x97EED1F6" template="Structs/FlyerMovementMode.xml"/>
-                <struct ID="0x7B6C604A" template="Structs/FlyerMovementMode.xml">
+                <struct ID="0xCCDD3ACA" template="mp3/Structs/FlyerMovementMode.xml"/>
+                <struct ID="0xFA2A173F" template="mp3/Structs/FlyerMovementMode.xml"/>
+                <struct ID="0x97EED1F6" template="mp3/Structs/FlyerMovementMode.xml"/>
+                <struct ID="0x7B6C604A" template="mp3/Structs/FlyerMovementMode.xml">
                     <properties>
                         <property ID="0x50A9BD0D">
                             <cook_pref>never</cook_pref>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x292754AF" template="Structs/FlyerMovementMode.xml">
+                <struct ID="0x292754AF" template="mp3/Structs/FlyerMovementMode.xml">
                     <properties>
                         <property ID="0x50A9BD0D">
                             <cook_pref>never</cook_pref>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x18B5143A" template="Structs/FlyerMovementMode.xml">
+                <struct ID="0x18B5143A" template="mp3/Structs/FlyerMovementMode.xml">
                     <properties>
                         <property ID="0x50A9BD0D">
                             <cook_pref>never</cook_pref>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xEDD0D40D" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0x8D7E81D6" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0xF68EADC9" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0xDC020DA7" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xEDD0D40D" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0x8D7E81D6" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0xF68EADC9" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0xDC020DA7" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0xA438A3CD" type="float">
                     <default>5.0</default>
                 </property>
-                <struct ID="0x7C187BD0" template="Structs/MetroidPhazeoidStruct.xml"/>
-                <struct ID="0x0C7B243D" template="Structs/MetroidPhazeoidStruct.xml"/>
-                <struct ID="0x33B1809F" template="Structs/MetroidPhazeoidStruct.xml"/>
-                <struct ID="0x0EC6856A" template="Structs/MetroidPhazeoidStruct.xml"/>
-                <struct ID="0x61FAB47A" template="Structs/MetroidPhazeoidStruct.xml"/>
-                <struct ID="0x26AAC761" template="Structs/MetroidPhazeoidStruct.xml"/>
-                <struct ID="0x243AB10D" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x7C187BD0" template="mp3/Structs/MetroidPhazeoidStruct.xml"/>
+                <struct ID="0x0C7B243D" template="mp3/Structs/MetroidPhazeoidStruct.xml"/>
+                <struct ID="0x33B1809F" template="mp3/Structs/MetroidPhazeoidStruct.xml"/>
+                <struct ID="0x0EC6856A" template="mp3/Structs/MetroidPhazeoidStruct.xml"/>
+                <struct ID="0x61FAB47A" template="mp3/Structs/MetroidPhazeoidStruct.xml"/>
+                <struct ID="0x26AAC761" template="mp3/Structs/MetroidPhazeoidStruct.xml"/>
+                <struct ID="0x243AB10D" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0x2DC4AC9C" type="float">
                     <default>1.0</default>
                 </property>
@@ -124,7 +124,7 @@
                 <property ID="0x7CCBA47B" type="float">
                     <default>10.0</default>
                 </property>
-                <struct ID="0x6D417F4C" template="Structs/ElectricBeamInfo.xml">
+                <struct ID="0x6D417F4C" template="mp3/Structs/ElectricBeamInfo.xml">
                     <properties>
                         <property ID="0xC26C291C">
                             <cook_pref>never</cook_pref>
@@ -230,14 +230,14 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <property ID="0x8DB77EE4">
                     <default>50.0</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

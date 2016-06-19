@@ -94,13 +94,13 @@
 		
 		<!--This is a template struct. When a template is specified, the properties will be read in from the specified XML. In this case,
 			they can be left out of the script object XML. Struct type can also be read from the XML, so it can be left out too.-->
-		<struct ID="0x52033302" template="Structs/SomeStruct.xml"/>
+		<struct ID="0x52033302" template="mp1/Structs/ActorParameters.xml"/>
 		
 		<!--This is another template struct, but this time there's a twist. On this one, we actually do specify sub-properties within the
 			script template. The struct template is still read in, but after that the sub-properties are parsed and used to override
 			settings within the struct XML. This can be used to override specific property parameters, such as preventing a specific property
 			from cooking or overriding its default value. You can also override the property's name, but not the ID or type.-->
-		<struct ID="0x55810020" template="Structs/AnotherStruct.xml">
+		<struct ID="0x55810020" template="mp1/Structs/BehaveChance.xml">
 			<properties>
 				<!--This string property is one that's present on most objects that use this struct, but not this one, so we disable
 					cooking to tell the editor not to read or write this property. We override the default value so it shows something
@@ -110,21 +110,21 @@
 					<cook_pref>never</cook_pref>
 				</property>
 				<!--This float property is present for this object, but its default value is overridden in the game's loader, so we override it here too.-->
-				<property ID="0x54040304" name="OverrideName">
+				<property ID="0x00" name="OverrideName">
 					<default>20.0</default>
 				</property>
 				<!--Here we want to override the default value of a property within a sub-struct. This can be done too!-->
-				<struct ID="0x59339201">
-					<properties>
-						<struct ID="0x55120120">
-							<properties>
-								<property ID="0x49392934">
-									<default>100</default>
-								</property>
-							</properties>
-						</struct>
-					</properties>
-				</struct>
+				<!--<struct ID="0x59339201">-->
+					<!--<properties>-->
+						<!--<struct ID="0x55120120">-->
+							<!--<properties>-->
+								<!--<property ID="0x49392934">-->
+									<!--<default>100</default>-->
+								<!--</property>-->
+							<!--</properties>-->
+						<!--</struct>-->
+					<!--</properties>-->
+				<!--</struct>-->
 			</properties>
 		</struct>
 		
@@ -145,7 +145,7 @@
 		
 		<!--Like structs, enums can also be set up to use a template. An enum template only specifies the list of enumerators, so other property parameters
 			still need to be specified on a case-by-case basis.-->
-		<enum ID="0x50301284" template="Enums/EnumTemplate.xml">
+		<enum ID="0x50301284" template="mp1/Enums/Item.xml">
 			<default>0x0</default>
 		</enum>
 		
@@ -163,9 +163,9 @@
 		
 		<!--Like enums and structs, bitfields can use an external template to list its flags. Similarly to enum templates, the bitfield templates only cover the list of
 			flags that are used by the bitfield, so the default value still needs to be set on a case-by-case basis.-->
-		<bitfield ID="0x55555555" name="Bitfield 2" template="Bitfields/BitfieldTemplate.xml">
-			<default>0x3F0F</default>
-		</bitfield>
+		<!--<bitfield ID="0x55555555" name="Bitfield 2" template="Bitfields/BitfieldTemplate.xml">-->
+			<!--<default>0x3F0F</default>-->
+		<!--</bitfield>-->
 		
 		<!--This is an array property. Arrays are structured the same way as a struct, but they don't have a type value (they're all considered single). An array's
 			sub-properties will be repeated for each element of the array. Sub-properties can have a default value assigned, but the default value will be applied to
@@ -182,9 +182,9 @@
 		</array>
 		
 		<!--Again, arrays can use an external template.-->
-		<array ID="0x38129319" name="TemplateArray" template="Arrays/ArrayTemplate.xml"/>
+		<!--<array ID="0x38129319" name="TemplateArray" template="Arrays/ArrayTemplate.xml"/>
 		
-		<!--As you'd expect, array sub-properties can be overridden.-->
+		&lt;!&ndash;As you'd expect, array sub-properties can be overridden.&ndash;&gt;
 		<array ID="0x39192939" name="AnotherTemplateArray" template="Arrays/ArrayTemplate.xml">
 			<properties>
 				<property ID="0x03">
@@ -194,7 +194,7 @@
 					<default>NewDefault</default>
 				</property>
 			</properties>
-		</array>
+		</array>-->
 	</properties>
 	
 	<!--The states/messages block indicate, respectively, what states the object can enter and what messages it's able to receive. This is not used at the moment,

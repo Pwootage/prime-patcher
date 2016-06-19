@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>CameraManager</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0x146E64DE" type="multi">
             <properties>
                 <property ID="0x2E1446F0" type="bool">

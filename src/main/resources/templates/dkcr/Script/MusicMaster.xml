@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>MusicMaster</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0x17A804E1" type="multi">
             <properties>
                 <property ID="0x2E7C745F" type="bool">
@@ -32,10 +32,10 @@
                 <property ID="0x196E17D9" type="float">
                     <default>0.0</default>
                 </property>
-                <enum ID="0xFB8F0B1F" template="Enums/MusicEnumB.xml">
+                <enum ID="0xFB8F0B1F" template="dkcr/Enums/MusicEnumB.xml">
                     <default>0xCBF698CA</default>
                 </enum>
-                <enum ID="0x9558711E" template="Enums/MusicEnumA.xml">
+                <enum ID="0x9558711E" template="dkcr/Enums/MusicEnumA.xml">
                     <default>0x28D5A7D7</default>
                 </enum>
             </properties>

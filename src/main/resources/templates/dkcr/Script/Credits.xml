@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>Credits</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0x6B9F6B7C" type="multi">
             <properties>
                 <property ID="0xC7A734CE" type="float">
@@ -38,14 +38,14 @@
                 <property ID="0x3BC54219" type="float">
                     <default>0.25</default>
                 </property>
-                <struct ID="0xBA717F32" template="Structs/UnknownStruct26.xml"/>
-                <struct ID="0xC344A09A" template="Structs/UnknownStruct26.xml"/>
-                <struct ID="0xD834E949" template="Structs/UnknownStruct26.xml"/>
-                <struct ID="0x917857A0" template="Structs/UnknownStruct26.xml"/>
-                <struct ID="0x7DFAFF15" template="Structs/UnknownStruct26.xml"/>
-                <struct ID="0xE60799C8" template="Structs/UnknownStruct26.xml"/>
-                <struct ID="0x45511F61" template="Structs/UnknownStruct26.xml"/>
-                <struct ID="0x92B39F39" template="Structs/UnknownStruct26.xml"/>
+                <struct ID="0xBA717F32" template="dkcr/Structs/UnknownStruct26.xml"/>
+                <struct ID="0xC344A09A" template="dkcr/Structs/UnknownStruct26.xml"/>
+                <struct ID="0xD834E949" template="dkcr/Structs/UnknownStruct26.xml"/>
+                <struct ID="0x917857A0" template="dkcr/Structs/UnknownStruct26.xml"/>
+                <struct ID="0x7DFAFF15" template="dkcr/Structs/UnknownStruct26.xml"/>
+                <struct ID="0xE60799C8" template="dkcr/Structs/UnknownStruct26.xml"/>
+                <struct ID="0x45511F61" template="dkcr/Structs/UnknownStruct26.xml"/>
+                <struct ID="0x92B39F39" template="dkcr/Structs/UnknownStruct26.xml"/>
                 <property ID="0xB54B9D25" type="float">
                     <default>4.0</default>
                 </property>
@@ -55,7 +55,7 @@
                 <property ID="0x82EDF36A" type="float">
                     <default>0.25</default>
                 </property>
-                <struct ID="0xA45E5B13" template="Structs/UnknownStruct26.xml"/>
+                <struct ID="0xA45E5B13" template="dkcr/Structs/UnknownStruct26.xml"/>
                 <property ID="0x79589BF4" type="file" extensions="STRG"/>
                 <property ID="0x0AF707DF" type="file" extensions="STRG"/>
                 <property ID="0x5CE2A9A9" type="file" extensions="STRG"/>

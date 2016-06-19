@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>ForestBoss</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml">
             <properties>
                 <struct ID="0x5846524D">
                     <properties>
@@ -13,8 +13,8 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="dkcr/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0x7B71AE90">
                     <properties>
@@ -68,19 +68,19 @@
                 <property ID="0x5B604872" type="float">
                     <default>1.0</default>
                 </property>
-                <struct ID="0xCA62889E" template="Structs/ForestBossStructA.xml"/>
-                <struct ID="0xDA392607" template="Structs/ForestBossStructA.xml"/>
-                <struct ID="0x30059956" template="Structs/ForestBossStructA.xml"/>
-                <struct ID="0x81C8CA71" template="Structs/ForestBossStructA.xml"/>
+                <struct ID="0xCA62889E" template="dkcr/Structs/ForestBossStructA.xml"/>
+                <struct ID="0xDA392607" template="dkcr/Structs/ForestBossStructA.xml"/>
+                <struct ID="0x30059956" template="dkcr/Structs/ForestBossStructA.xml"/>
+                <struct ID="0x81C8CA71" template="dkcr/Structs/ForestBossStructA.xml"/>
                 <struct ID="0x645FFAD4" type="multi">
                     <properties>
-                        <struct ID="0x63F77B98" template="Structs/ForestBossStructC.xml"/>
-                        <struct ID="0x8561E02D" template="Structs/ForestBossStructC.xml"/>
+                        <struct ID="0x63F77B98" template="dkcr/Structs/ForestBossStructC.xml"/>
+                        <struct ID="0x8561E02D" template="dkcr/Structs/ForestBossStructC.xml"/>
                     </properties>
                 </struct>
-                <struct ID="0xC99A740E" template="Structs/ForestBossStructB.xml"/>
-                <struct ID="0x663339C4" template="Structs/ForestBossStructB.xml"/>
-                <struct ID="0x03540282" template="Structs/ForestBossStructB.xml"/>
+                <struct ID="0xC99A740E" template="dkcr/Structs/ForestBossStructB.xml"/>
+                <struct ID="0x663339C4" template="dkcr/Structs/ForestBossStructB.xml"/>
+                <struct ID="0x03540282" template="dkcr/Structs/ForestBossStructB.xml"/>
             </properties>
         </struct>
     </properties>

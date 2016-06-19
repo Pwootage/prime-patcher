@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>TextPane</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xE0543E66" template="Structs/TextProperties.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xE0543E66" template="mp2demo/Structs/TextProperties.xml">
             <properties>
                 <property ID="0xEE521DC6">
                     <default>80</default>

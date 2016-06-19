@@ -2,13 +2,13 @@
 <ScriptTemplate version="4">
     <name>DamageableTrigger</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml"/>
-        <struct ID="0x7B71AE90" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
+        <struct ID="0xCF90D15E" template="dkcr/Structs/HealthInfo.xml"/>
+        <struct ID="0x7B71AE90" template="dkcr/Structs/DamageVulnerability.xml"/>
         <property ID="0x6652BDD7" type="bool">
             <default>false</default>
         </property>
-        <enum ID="0x8B9D2123" template="Enums/DamageableTriggerEnum.xml">
+        <enum ID="0x8B9D2123" template="dkcr/Enums/DamageableTriggerEnum.xml">
             <default>0x1DB35D5F</default>
         </enum>
         <property ID="0xCE2CF510" type="bool">

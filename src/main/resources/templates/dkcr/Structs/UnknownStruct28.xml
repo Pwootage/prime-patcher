@@ -15,6 +15,6 @@
         <property ID="0x10922293" type="file" extensions="STRG"/>
         <property ID="0x766E77C9" type="file" extensions="STRG"/>
         <property ID="0xF15823C2" type="file" extensions="STRG"/>
-        <struct ID="0x6A598A9B" template="Structs/UnknownStruct26.xml"/>
+        <struct ID="0x6A598A9B" template="dkcr/Structs/UnknownStruct26.xml"/>
     </properties>
 </struct>

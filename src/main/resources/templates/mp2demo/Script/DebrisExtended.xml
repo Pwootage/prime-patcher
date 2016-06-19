@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>DebrisExtended</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml">
             <properties>
                 <property ID="0x41435456">
                     <default>false</default>
@@ -61,7 +61,7 @@
             <default>0.0, 0.0, 0.0</default>
         </property>
         <property ID="0xC27FFA8F" type="file" extensions="CMDL"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
         <property ID="0x41DD4D40" type="long">
             <default>-1</default>
         </property>

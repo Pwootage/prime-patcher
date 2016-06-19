@@ -27,7 +27,7 @@
                 <property ID="0x0F" name="Unknown 13" type="color"/>
             </properties>
         </struct>
-        <struct ID="0x06" name="DamageInfo" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x06" name="DamageInfo" template="mp1/Structs/DamageInfo.xml"/>
     </properties>
     <states/>
     <messages/>

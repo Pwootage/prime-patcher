@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>AtomicBeta</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x75DBB375">
                     <default>25.0</default>
@@ -53,14 +53,14 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <property ID="0x05439A08" type="long">
             <default>-1</default>
         </property>
         <property ID="0x2CBF989B" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0x13E30E4D" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x13E30E4D" template="mp2/Structs/DamageInfo.xml"/>
         <property ID="0xC271EAF5" type="long">
             <default>-1</default>
         </property>
@@ -73,7 +73,7 @@
         <property ID="0x845EF489" type="float">
             <default>3.0</default>
         </property>
-        <struct ID="0x411938AA" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x411938AA" template="mp2/Structs/DamageVulnerability.xml"/>
         <property ID="0xCE1893CC" type="float">
             <default>1.5</default>
         </property>

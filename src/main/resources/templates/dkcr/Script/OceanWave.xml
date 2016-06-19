@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>OceanWave</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0xC27FFA8F" type="file" extensions="CMDL"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
         <struct ID="0x7CF4790F" type="multi">
             <properties>
                 <property ID="0x672255F7" type="MayaSpline"/>

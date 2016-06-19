@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>SoundModifier</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <property ID="0x44335AFF" type="float">
             <default>5.0</default>
         </property>

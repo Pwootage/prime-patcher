@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>Water</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x77A27411" template="Structs/TriggerInfo.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0x77A27411" template="mp2/Structs/TriggerInfo.xml"/>
         <property ID="0xDE5EA267" type="float">
             <default>0.0</default>
         </property>
@@ -54,7 +54,7 @@
         <property ID="0xB0259D23" type="float">
             <default>0.0</default>
         </property>
-        <struct ID="0x244E9E6D" template="Structs/WaterStruct.xml">
+        <struct ID="0x244E9E6D" template="mp2/Structs/WaterStruct.xml">
             <properties>
                 <property ID="0xE94F7E87">
                     <default>0</default>
@@ -70,7 +70,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xE75248E4" template="Structs/WaterStruct.xml">
+        <struct ID="0xE75248E4" template="mp2/Structs/WaterStruct.xml">
             <properties>
                 <property ID="0xE94F7E87">
                     <default>0</default>
@@ -86,7 +86,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x385E0D43" template="Structs/WaterStruct.xml">
+        <struct ID="0x385E0D43" template="mp2/Structs/WaterStruct.xml">
             <properties>
                 <property ID="0xE94F7E87">
                     <default>0</default>
@@ -102,7 +102,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xD369B640" template="Structs/WaterStruct.xml">
+        <struct ID="0xD369B640" template="mp2/Structs/WaterStruct.xml">
             <properties>
                 <property ID="0xE94F7E87">
                     <default>0</default>
@@ -118,7 +118,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x6DDEA66D" template="Structs/WaterStruct.xml">
+        <struct ID="0x6DDEA66D" template="mp2/Structs/WaterStruct.xml">
             <properties>
                 <property ID="0xE94F7E87">
                     <default>0</default>

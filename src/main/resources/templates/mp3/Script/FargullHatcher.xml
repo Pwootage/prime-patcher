@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>FargullHatcher</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <struct ID="0xF55B70E6" type="multi">
             <properties>
                 <property ID="0x0C36EB18" type="bool">
@@ -17,8 +17,8 @@
                 <property ID="0xF71E971D" type="float">
                     <default>20.0</default>
                 </property>
-                <struct ID="0x537F9F4D" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0x2C746D2C" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x537F9F4D" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0x2C746D2C" template="mp3/Structs/DamageInfo.xml"/>
                 <property ID="0xA5692479" type="float">
                     <default>1.0</default>
                 </property>
@@ -39,7 +39,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -59,7 +59,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

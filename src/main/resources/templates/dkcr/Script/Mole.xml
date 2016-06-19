@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>Mole</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="dkcr/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0x7B71AE90">
                     <properties>
@@ -117,7 +117,7 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x0B16CED2" template="Structs/TrackObjectModuleData.xml"/>
+        <struct ID="0x0B16CED2" template="dkcr/Structs/TrackObjectModuleData.xml"/>
     </properties>
     <states/>
     <messages/>

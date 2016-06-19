@@ -2,16 +2,16 @@
 <ScriptTemplate version="4">
     <name>BeastRider</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <struct ID="0x56C48141" type="multi">
             <properties>
                 <property ID="0xB3A26A80" type="file" extensions="CMDL"/>
-                <struct ID="0xA149701E" template="Structs/RagDollData.xml"/>
+                <struct ID="0xA149701E" template="mp3proto/Structs/RagDollData.xml"/>
                 <property ID="0xC7C3F610" type="file" extensions="CAUD"/>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

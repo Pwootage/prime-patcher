@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>CameraShaker</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <struct ID="0xAD547F96" type="multi">
             <properties>
                 <property ID="0xC3E75C5F" type="long">
@@ -15,9 +15,9 @@
                     <default>1.0</default>
                 </property>
                 <property ID="0xC2ACB79E" type="file" extensions="UNKN"/>
-                <struct ID="0xD9EB71E0" template="Structs/CameraShakerEnvelope.xml"/>
-                <struct ID="0xC5B09632" template="Structs/CameraShakerEnvelope.xml"/>
-                <struct ID="0x21B704E3" template="Structs/CameraShakerEnvelope.xml"/>
+                <struct ID="0xD9EB71E0" template="mp3proto/Structs/CameraShakerEnvelope.xml"/>
+                <struct ID="0xC5B09632" template="mp3proto/Structs/CameraShakerEnvelope.xml"/>
+                <struct ID="0x21B704E3" template="mp3proto/Structs/CameraShakerEnvelope.xml"/>
             </properties>
         </struct>
     </properties>

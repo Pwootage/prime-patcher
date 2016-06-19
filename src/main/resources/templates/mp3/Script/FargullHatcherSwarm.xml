@@ -2,14 +2,14 @@
 <ScriptTemplate version="4">
     <name>FargullHatcherSwarm</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <property ID="0xA244C9D8" type="character"/>
         <property ID="0xC6BB2F45" type="bool">
             <default>true</default>
         </property>
-        <struct ID="0x4CFC46FE" template="Structs/SwarmBasicsData.xml"/>
-        <struct ID="0x99C18702" template="Structs/FlyerSwarmData.xml"/>
+        <struct ID="0x4CFC46FE" template="mp3/Structs/SwarmBasicsData.xml"/>
+        <struct ID="0x99C18702" template="mp3/Structs/FlyerSwarmData.xml"/>
         <struct ID="0x146F75D9" type="multi">
             <properties>
                 <property ID="0x3109E1C7" type="float">

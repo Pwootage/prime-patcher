@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>GroundPoundDetector</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml">
             <properties>
                 <struct ID="0x5846524D">
                     <properties>
@@ -20,7 +20,7 @@
                 </property>
                 <struct ID="0xBB2C54E1" type="multi">
                     <properties>
-                        <enum ID="0x09ECEE0C" template="Enums/Shape.xml">
+                        <enum ID="0x09ECEE0C" template="dkcr/Enums/Shape.xml">
                             <default>0x482B22F1</default>
                         </enum>
                     </properties>

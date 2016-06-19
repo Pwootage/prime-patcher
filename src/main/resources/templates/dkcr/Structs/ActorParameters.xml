@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct name="ActorParameters" type="multi">
     <properties>
-        <struct ID="0xB028DB0E" template="Structs/LightParameters.xml"/>
+        <struct ID="0xB028DB0E" template="dkcr/Structs/LightParameters.xml"/>
         <property ID="0x1499803C" type="bool">
             <default>true</default>
         </property>
@@ -17,7 +17,7 @@
         <property ID="0xED3A6E87" type="bool">
             <default>true</default>
         </property>
-        <enum ID="0xE315EE72" template="Enums/UnknownEnum1.xml">
+        <enum ID="0xE315EE72" template="dkcr/Enums/UnknownEnum1.xml">
             <default>0xD086634A</default>
         </enum>
         <property ID="0x6DA86200" type="bool">

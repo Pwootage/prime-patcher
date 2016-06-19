@@ -19,7 +19,7 @@
         <property ID="0x0F" name="Unknown 12" type="color"/>
         <property ID="0x10" name="Unknown 13" type="color"/>
         <property ID="0x11" name="WPSC" type="file" extensions="WPSC"/>
-        <struct ID="0x12" name="DamageInfo 1" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x12" name="DamageInfo 1" template="mp1/Structs/DamageInfo.xml"/>
         <struct ID="0x13" name="PrimeStruct5" type="multi">
             <properties>
                 <property ID="0x00" name="Unknown 14" type="file" extensions="Unkn"/>
@@ -33,6 +33,6 @@
             </properties>
         </struct>
         <property ID="0x14" name="Unknown 22" type="float"/>
-        <struct ID="0x15" name="DamageInfo 2" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x15" name="DamageInfo 2" template="mp1/Structs/DamageInfo.xml"/>
     </properties>
 </struct>

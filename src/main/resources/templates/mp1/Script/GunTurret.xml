@@ -10,9 +10,9 @@
         <property ID="0x05" name="Unknown 2" type="vector3f"/>
         <property ID="0x06" name="Scan Offset" type="vector3f"/>
         <property ID="0x07" name="AnimationParameters" type="character"/>
-        <struct ID="0x08" name="ActorParameters" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x09" name="HealthInfo" template="Structs/HealthInfo.xml"/>
-        <struct ID="0x0A" name="DamageVulnerability" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x08" name="ActorParameters" template="mp1/Structs/ActorParameters.xml"/>
+        <struct ID="0x09" name="HealthInfo" template="mp1/Structs/HealthInfo.xml"/>
+        <struct ID="0x0A" name="DamageVulnerability" template="mp1/Structs/DamageVulnerability.xml"/>
         <property ID="0x0B" name="Unknown 3" type="float"/>
         <property ID="0x0C" name="Unknown 4" type="float"/>
         <property ID="0x0D" name="Unknown 5" type="float"/>
@@ -29,7 +29,7 @@
         <property ID="0x18" name="Unknown 16" type="float"/>
         <property ID="0x19" name="Unknown 17" type="bool"/>
         <property ID="0x1A" name="Unknown 18" type="file" extensions="WPSC"/>
-        <struct ID="0x1B" name="DamageInfo" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x1B" name="DamageInfo" template="mp1/Structs/DamageInfo.xml"/>
         <property ID="0x1C" name="Particle 1" type="file" extensions="PART"/>
         <property ID="0x1D" name="Particle 2" type="file" extensions="PART"/>
         <property ID="0x1E" name="Particle 3" type="file" extensions="PART"/>

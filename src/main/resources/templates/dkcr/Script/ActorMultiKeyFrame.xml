@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>ActorMultiKeyframe</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0x1FE44C3A" type="bool">
             <default>false</default>
         </property>
@@ -11,26 +11,26 @@
                 <property ID="0x8DAA8422" type="long">
                     <default>0</default>
                 </property>
-                <struct ID="0xE2DB9114" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0x085D4C76" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0xE70FFA97" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0x0621F0F3" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0xE9734612" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0x03F59B70" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0xECA72D91" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0x1AD889F9" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0xF58A3F18" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0xDA6BA7AD" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0x3539114C" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0xDFBFCC2E" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0x30ED7ACF" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0xD1C370AB" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0x3E91C64A" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0xD4171B28" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0x3B45ADC9" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0xCD3A09A1" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0x2268BF40" template="Structs/ActorMultiKeyframeStruct.xml"/>
-                <struct ID="0x793D2104" template="Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0xE2DB9114" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0x085D4C76" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0xE70FFA97" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0x0621F0F3" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0xE9734612" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0x03F59B70" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0xECA72D91" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0x1AD889F9" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0xF58A3F18" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0xDA6BA7AD" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0x3539114C" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0xDFBFCC2E" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0x30ED7ACF" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0xD1C370AB" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0x3E91C64A" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0xD4171B28" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0x3B45ADC9" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0xCD3A09A1" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0x2268BF40" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
+                <struct ID="0x793D2104" template="dkcr/Structs/ActorMultiKeyframeStruct.xml"/>
             </properties>
         </struct>
     </properties>

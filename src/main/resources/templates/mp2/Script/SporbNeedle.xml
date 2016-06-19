@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>SporbNeedle</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <property ID="0xC27FFA8F" type="file" extensions="CMDL"/>
         <property ID="0xCB14D97C" type="float">
             <default>60.0</default>
@@ -11,7 +11,7 @@
         <property ID="0x75DBB375" type="float">
             <default>1.0</default>
         </property>
-        <struct ID="0x66DCAACB" template="Structs/DamageInfo.xml">
+        <struct ID="0x66DCAACB" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>9</default>

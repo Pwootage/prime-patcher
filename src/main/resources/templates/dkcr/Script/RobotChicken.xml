@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>RobotChicken</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml">
             <properties>
                 <struct ID="0x5846524D">
                     <properties>
@@ -13,8 +13,8 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="dkcr/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0x7B71AE90">
                     <properties>
@@ -147,10 +147,10 @@
                         <property ID="0xADFD4C91" type="long">
                             <default>1</default>
                         </property>
-                        <struct ID="0x8792726D" template="Structs/RobotChickenStructA.xml"/>
-                        <struct ID="0x229A1901" template="Structs/RobotChickenStructA.xml"/>
-                        <struct ID="0x419DC025" template="Structs/RobotChickenStructA.xml"/>
-                        <struct ID="0xB3FBC998" template="Structs/RobotChickenStructA.xml"/>
+                        <struct ID="0x8792726D" template="dkcr/Structs/RobotChickenStructA.xml"/>
+                        <struct ID="0x229A1901" template="dkcr/Structs/RobotChickenStructA.xml"/>
+                        <struct ID="0x419DC025" template="dkcr/Structs/RobotChickenStructA.xml"/>
+                        <struct ID="0xB3FBC998" template="dkcr/Structs/RobotChickenStructA.xml"/>
                     </properties>
                 </struct>
                 <struct ID="0xAAC2F8DA" type="multi">
@@ -226,19 +226,19 @@
                 </struct>
                 <struct ID="0x17C3E3EC" type="multi">
                     <properties>
-                        <enum ID="0x97D30F8B" template="Enums/RobotChickenEnum.xml">
+                        <enum ID="0x97D30F8B" template="dkcr/Enums/RobotChickenEnum.xml">
                             <default>0x8C665F9A</default>
                         </enum>
                         <property ID="0xF0668919" type="float">
                             <default>3.0</default>
                         </property>
-                        <struct ID="0xFD1BC54F" template="Structs/RobotChickenStructB.xml"/>
-                        <struct ID="0x8BFEFC72" template="Structs/RobotChickenStructB.xml"/>
-                        <struct ID="0x108D16A6" template="Structs/RobotChickenStructB.xml"/>
-                        <struct ID="0x66348E08" template="Structs/RobotChickenStructB.xml"/>
-                        <struct ID="0xFD4764DC" template="Structs/RobotChickenStructB.xml"/>
-                        <struct ID="0x8BA25DE1" template="Structs/RobotChickenStructB.xml"/>
-                        <struct ID="0x10D1B735" template="Structs/RobotChickenStructB.xml"/>
+                        <struct ID="0xFD1BC54F" template="dkcr/Structs/RobotChickenStructB.xml"/>
+                        <struct ID="0x8BFEFC72" template="dkcr/Structs/RobotChickenStructB.xml"/>
+                        <struct ID="0x108D16A6" template="dkcr/Structs/RobotChickenStructB.xml"/>
+                        <struct ID="0x66348E08" template="dkcr/Structs/RobotChickenStructB.xml"/>
+                        <struct ID="0xFD4764DC" template="dkcr/Structs/RobotChickenStructB.xml"/>
+                        <struct ID="0x8BA25DE1" template="dkcr/Structs/RobotChickenStructB.xml"/>
+                        <struct ID="0x10D1B735" template="dkcr/Structs/RobotChickenStructB.xml"/>
                     </properties>
                 </struct>
             </properties>

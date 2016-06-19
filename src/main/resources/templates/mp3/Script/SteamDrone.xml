@@ -2,13 +2,13 @@
 <ScriptTemplate version="4">
     <name>SteamDrone</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <struct ID="0xA23F161C" type="multi">
             <properties>
-                <struct ID="0xCCDD3ACA" template="Structs/FlyerMovementMode.xml"/>
-                <struct ID="0xFA2A173F" template="Structs/FlyerMovementMode.xml"/>
+                <struct ID="0xCCDD3ACA" template="mp3/Structs/FlyerMovementMode.xml"/>
+                <struct ID="0xFA2A173F" template="mp3/Structs/FlyerMovementMode.xml"/>
                 <property ID="0x635B60AA" type="file" extensions="PART"/>
                 <property ID="0x88FA2ACF" type="float">
                     <default>20.0</default>
@@ -40,7 +40,7 @@
                 <property ID="0x271E49B4" type="float">
                     <default>1.0</default>
                 </property>
-                <struct ID="0x72989547" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x72989547" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -65,7 +65,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x53EAC4BA" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x53EAC4BA" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -99,7 +99,7 @@
                 <property ID="0x04D03B18" type="float">
                     <default>2.0</default>
                 </property>
-                <struct ID="0xF609C637" template="Structs/GrappleData.xml">
+                <struct ID="0xF609C637" template="mp3/Structs/GrappleData.xml">
                     <properties>
                         <property ID="0x5DCF91E1">
                             <default>1</default>

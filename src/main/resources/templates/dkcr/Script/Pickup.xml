@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>Pickup</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x16D9A75D" template="Structs/LayerID.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
+        <struct ID="0x16D9A75D" template="dkcr/Structs/LayerID.xml"/>
         <property ID="0x3A3E03BA" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>
@@ -14,10 +14,10 @@
         <property ID="0xA244C9D8" type="character"/>
         <property ID="0x2CF40978" type="file" extensions="unknown"/>
         <property ID="0x3128976F" type="character"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
         <struct ID="0xD545F36B" type="multi">
             <properties>
-                <enum ID="0xA02EF0C4" template="Enums/Item.xml">
+                <enum ID="0xA02EF0C4" template="dkcr/Enums/Item.xml">
                     <default>0xB22FD89B</default>
                 </enum>
                 <property ID="0x28C71B54" type="long">
@@ -112,7 +112,7 @@
                 <property ID="0xD5417338" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0xD756416E" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xD756416E" template="dkcr/Structs/DamageInfo.xml"/>
                 <property ID="0xD5E7B11E" type="float">
                     <default>1.0</default>
                 </property>

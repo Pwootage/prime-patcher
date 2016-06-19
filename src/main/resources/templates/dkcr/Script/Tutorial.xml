@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>Tutorial</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xD29C031D" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x56ABB3B8" template="Structs/UnknownStruct6.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
+        <struct ID="0xD29C031D" template="dkcr/Structs/ActorParameters.xml"/>
+        <struct ID="0x56ABB3B8" template="dkcr/Structs/UnknownStruct6.xml"/>
         <struct ID="0x76AA6D55" type="multi">
             <properties>
                 <enum ID="0xC5C91839">

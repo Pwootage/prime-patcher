@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>Water</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x77A27411" template="Structs/TriggerInfo.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0x77A27411" template="mp2demo/Structs/TriggerInfo.xml"/>
         <property ID="0xDE5EA267" type="float">
             <default>0.0</default>
         </property>
@@ -54,11 +54,11 @@
         <property ID="0xB0259D23" type="float">
             <default>0.0</default>
         </property>
-        <struct ID="0x244E9E6D" template="Structs/LayerInfo.xml"/>
-        <struct ID="0xE75248E4" template="Structs/LayerInfo.xml"/>
-        <struct ID="0x385E0D43" template="Structs/LayerInfo.xml"/>
-        <struct ID="0xD369B640" template="Structs/LayerInfo.xml"/>
-        <struct ID="0x6DDEA66D" template="Structs/LayerInfo.xml"/>
+        <struct ID="0x244E9E6D" template="mp2demo/Structs/LayerInfo.xml"/>
+        <struct ID="0xE75248E4" template="mp2demo/Structs/LayerInfo.xml"/>
+        <struct ID="0x385E0D43" template="mp2demo/Structs/LayerInfo.xml"/>
+        <struct ID="0xD369B640" template="mp2demo/Structs/LayerInfo.xml"/>
+        <struct ID="0x6DDEA66D" template="mp2demo/Structs/LayerInfo.xml"/>
         <property ID="0xF14E3A14" type="float">
             <default>10.0</default>
         </property>

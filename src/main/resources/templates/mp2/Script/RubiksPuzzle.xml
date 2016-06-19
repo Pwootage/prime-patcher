@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>RubiksPuzzle</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <struct ID="0x9FCD4E38" type="multi">
             <properties>
                 <property ID="0x11CD076F" type="float">

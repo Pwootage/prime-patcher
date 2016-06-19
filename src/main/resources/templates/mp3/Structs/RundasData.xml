@@ -22,14 +22,14 @@
         <property ID="0x57F0A2A7" type="float">
             <default>5.0</default>
         </property>
-        <struct ID="0xD1522831" template="Structs/DamageVulnerability.xml"/>
-        <struct ID="0x896D5BD9" template="Structs/DamageVulnerability.xml"/>
-        <struct ID="0x8D4A2668" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xD1522831" template="mp3/Structs/DamageVulnerability.xml"/>
+        <struct ID="0x896D5BD9" template="mp3/Structs/DamageVulnerability.xml"/>
+        <struct ID="0x8D4A2668" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xF41394F6" type="float">
             <default>6.0</default>
         </property>
-        <struct ID="0xB1B44917" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x7FBC7E81" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xB1B44917" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x7FBC7E81" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xFF944885" type="float">
             <default>0.5</default>
         </property>
@@ -42,8 +42,8 @@
         <property ID="0xE36C178F" type="float">
             <default>100.0</default>
         </property>
-        <struct ID="0x3063BBF1" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x5997EBE1" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x3063BBF1" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x5997EBE1" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xC922F0E0" type="float">
             <default>35.0</default>
         </property>
@@ -68,7 +68,7 @@
         <property ID="0x3F196C78" type="float">
             <default>25.0</default>
         </property>
-        <struct ID="0x78DF0B7D" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x78DF0B7D" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xCA04D756" type="long">
             <default>1</default>
         </property>

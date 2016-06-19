@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>Rezbit</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
@@ -23,7 +23,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <struct ID="0x8716D656" type="multi">
             <properties>
                 <property ID="0xED69488F" type="float">
@@ -56,17 +56,17 @@
                 <property ID="0xA41F75EF" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0xA34E2D84" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x8C598E41" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0xF4491ED5" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x7D832158" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xA34E2D84" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x8C598E41" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xF4491ED5" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x7D832158" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0xAD120AD7" type="float">
                     <default>12.0</default>
                 </property>
                 <property ID="0xE70EF8A3" type="float">
                     <default>1.2</default>
                 </property>
-                <struct ID="0x6BF2FF60" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x6BF2FF60" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0x70E597D4" type="float">
                     <default>2.0</default>
                 </property>
@@ -94,7 +94,7 @@
                 <property ID="0x54F2892E" type="float">
                     <default>40.0</default>
                 </property>
-                <struct ID="0x600C5F40" template="Structs/DamageInfo.xml">
+                <struct ID="0x600C5F40" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -119,7 +119,7 @@
                 <property ID="0xC7A69A59" type="float">
                     <default>0.5</default>
                 </property>
-                <struct ID="0xBD3EB001" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xBD3EB001" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0x9EDE657F" type="float">
                     <default>0.0</default>
                 </property>
@@ -129,7 +129,7 @@
                 <property ID="0x4A7D3B04" type="float">
                     <default>6.0</default>
                 </property>
-                <struct ID="0x16869B57" template="Structs/DamageInfo.xml">
+                <struct ID="0x16869B57" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -157,7 +157,7 @@
                 <property ID="0x376181E9" type="float">
                     <default>40.0</default>
                 </property>
-                <struct ID="0xBB58C088" template="Structs/DamageInfo.xml">
+                <struct ID="0xBB58C088" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -170,8 +170,8 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x7864CA32" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x59764DBB" template="Structs/PlasmaBeamInfo.xml">
+                <struct ID="0x7864CA32" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x59764DBB" template="mp2/Structs/PlasmaBeamInfo.xml">
                     <properties>
                         <property ID="0xC26C291C">
                             <default>500.0</default>
@@ -199,7 +199,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xD34F1323" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xD34F1323" template="mp2/Structs/DamageVulnerability.xml"/>
             </properties>
         </struct>
     </properties>

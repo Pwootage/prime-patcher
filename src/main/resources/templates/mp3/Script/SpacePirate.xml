@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>SpacePirate</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x43BBB1DD" template="Structs/PatternedAI.xml">
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
+        <struct ID="0x43BBB1DD" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0xD756416E">
                     <properties>
@@ -72,7 +72,7 @@
                 <property ID="0xC1D1E465" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0xA149701E" template="Structs/RagDollData.xml"/>
+                <struct ID="0xA149701E" template="mp3/Structs/RagDollData.xml"/>
                 <property ID="0xBF443451" type="bool">
                     <default>false</default>
                 </property>
@@ -111,15 +111,15 @@
                 </property>
                 <property ID="0x51253BA3" type="file" extensions="WPSC"/>
                 <property ID="0x10E3EFDD" type="file" extensions="CAUD"/>
-                <struct ID="0xCEA30138" template="Structs/DamageInfo.xml">
+                <struct ID="0xCEA30138" template="mp3/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0xF2D02613">
                             <default>5.0</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x785C41F5" template="Structs/StaticGeometryTest.xml"/>
-                <struct ID="0xFC5A0A21" template="Structs/StaticGeometryTest.xml"/>
+                <struct ID="0x785C41F5" template="mp3/Structs/StaticGeometryTest.xml"/>
+                <struct ID="0xFC5A0A21" template="mp3/Structs/StaticGeometryTest.xml"/>
                 <property ID="0xFC34473F" type="file" extensions="BFRC"/>
                 <property ID="0x50340852" type="file" extensions="CMDL"/>
                 <property ID="0x2EA013A6" type="bool">
@@ -222,7 +222,7 @@
                 <property ID="0x6BC22735" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0xA5912430" template="Structs/DamageInfo.xml">
+                <struct ID="0xA5912430" template="mp3/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0xF2D02613">
                             <default>10.0</default>
@@ -343,23 +343,23 @@
                 <property ID="0x34E20697" type="float">
                     <default>1.5</default>
                 </property>
-                <struct ID="0xC3B6103B" template="Structs/SpacePirateWeaponData.xml"/>
-                <struct ID="0x4FDAB367" template="Structs/SpacePirateStruct.xml"/>
-                <struct ID="0x37212693" template="Structs/SpacePirateStruct.xml"/>
-                <struct ID="0x91B4CB73" template="Structs/SpacePirateStruct.xml"/>
+                <struct ID="0xC3B6103B" template="mp3/Structs/SpacePirateWeaponData.xml"/>
+                <struct ID="0x4FDAB367" template="mp3/Structs/SpacePirateStruct.xml"/>
+                <struct ID="0x37212693" template="mp3/Structs/SpacePirateStruct.xml"/>
+                <struct ID="0x91B4CB73" template="mp3/Structs/SpacePirateStruct.xml"/>
                 <property ID="0x07C1DE29" type="bool">
                     <default>false</default>
                 </property>
                 <property ID="0x4AEE5C47" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0xD34F1323" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0x8255F594" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xD34F1323" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0x8255F594" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0x0D1D1648" type="float">
                     <default>100.0</default>
                 </property>
                 <property ID="0xC699AD35" type="character"/>
-                <struct ID="0xBE1AFBC0" template="Structs/GrappleData.xml">
+                <struct ID="0xBE1AFBC0" template="mp3/Structs/GrappleData.xml">
                     <properties>
                         <property ID="0x5DCF91E1">
                             <default>1</default>
@@ -467,7 +467,7 @@
                 <property ID="0xFDE9C4DF" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0xF18384D4" template="Structs/HealthInfo.xml">
+                <struct ID="0xF18384D4" template="mp3/Structs/HealthInfo.xml">
                     <properties>
                         <property ID="0xF0668919">
                             <default>100.0</default>
@@ -477,8 +477,8 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x896D5BD9" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0xC13A3E1F" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x896D5BD9" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0xC13A3E1F" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0x7579CC86" type="file" extensions="CMDL"/>
                 <property ID="0x65D86552" type="file" extensions="CSKR"/>
                 <property ID="0x68002BD7" type="file" extensions="CMDL"/>

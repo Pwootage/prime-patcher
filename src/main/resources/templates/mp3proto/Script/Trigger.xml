@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>Trigger</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <enum ID="0x09ECEE0C">
             <default>0x482B22F1</default>
             <enumerators>
@@ -12,7 +12,7 @@
                 <enumerator ID="0x39ED7B8E" name="Cylinder"/>
             </enumerators>
         </enum>
-        <struct ID="0x77A27411" template="Structs/TriggerInfo.xml"/>
+        <struct ID="0x77A27411" template="mp3proto/Structs/TriggerInfo.xml"/>
     </properties>
     <states/>
     <messages/>

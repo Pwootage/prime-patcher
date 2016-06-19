@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>StreamedAudioModifier</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0x63694C13" type="long">
             <default>250</default>
         </property>

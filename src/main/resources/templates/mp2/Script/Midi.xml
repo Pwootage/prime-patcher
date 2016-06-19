@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>Midi</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <property ID="0x9D1A67A8" type="file" extensions="STRM"/>
         <property ID="0x90AA341F" type="float">
             <default>0.0</default>

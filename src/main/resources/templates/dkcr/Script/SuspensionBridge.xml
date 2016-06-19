@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>SuspensionBridge</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
         <property ID="0x0FC966DC" type="file" extensions="DCLN"/>
         <property ID="0xA3D63F44" type="character"/>
         <property ID="0x1B21EEB2" type="file" extensions="FSMC"/>
@@ -34,8 +34,8 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xF6555670" template="Structs/SuspensionBridgeStruct.xml"/>
-                <struct ID="0x7CB2693B" template="Structs/SuspensionBridgeStruct.xml"/>
+                <struct ID="0xF6555670" template="dkcr/Structs/SuspensionBridgeStruct.xml"/>
+                <struct ID="0x7CB2693B" template="dkcr/Structs/SuspensionBridgeStruct.xml"/>
             </properties>
         </struct>
     </properties>

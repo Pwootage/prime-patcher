@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>StreamedAudio</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
         <property ID="0xF6F3DE1C" type="string"/>
         <property ID="0x34B152C4" type="bool">
             <default>false</default>

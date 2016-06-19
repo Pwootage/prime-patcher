@@ -2,10 +2,10 @@
 <ScriptTemplate version="4">
     <name>GhorLowerBody</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml"/>
-        <struct ID="0x42691490" template="Structs/AiDifficultySettings.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0x42691490" template="mp3/Structs/AiDifficultySettings.xml"/>
         <struct ID="0x99FD196F" type="multi">
             <properties>
                 <property ID="0x531A8C85" type="bool">
@@ -19,14 +19,14 @@
                 <property ID="0x5D1949B5" type="string"/>
                 <struct ID="0xAEC7546E" type="multi">
                     <properties>
-                        <struct ID="0x8B5DB983" template="Structs/GhorStructA.xml"/>
-                        <struct ID="0x04CDC6A6" template="Structs/GhorStructA.xml"/>
-                        <struct ID="0xE451D02C" template="Structs/GhorStructA.xml"/>
-                        <struct ID="0x72F708F2" template="Structs/GhorStructA.xml"/>
-                        <struct ID="0x8CB41734" template="Structs/GhorStructA.xml"/>
+                        <struct ID="0x8B5DB983" template="mp3/Structs/GhorStructA.xml"/>
+                        <struct ID="0x04CDC6A6" template="mp3/Structs/GhorStructA.xml"/>
+                        <struct ID="0xE451D02C" template="mp3/Structs/GhorStructA.xml"/>
+                        <struct ID="0x72F708F2" template="mp3/Structs/GhorStructA.xml"/>
+                        <struct ID="0x8CB41734" template="mp3/Structs/GhorStructA.xml"/>
                     </properties>
                 </struct>
-                <struct ID="0x810EC49A" template="Structs/GhorStructC.xml"/>
+                <struct ID="0x810EC49A" template="mp3/Structs/GhorStructC.xml"/>
                 <property ID="0x9B98F8CE" type="MayaSpline"/>
                 <property ID="0x3D14FB8E" type="MayaSpline"/>
                 <property ID="0x13D02889" type="string"/>
@@ -37,8 +37,8 @@
                 <property ID="0xD0475191" type="float">
                     <default>14.0</default>
                 </property>
-                <struct ID="0x56C192F3" template="Structs/ShockWaveInfo.xml"/>
-                <struct ID="0xF55A1548" template="Structs/ShockWaveInfo.xml"/>
+                <struct ID="0x56C192F3" template="mp3/Structs/ShockWaveInfo.xml"/>
+                <struct ID="0xF55A1548" template="mp3/Structs/ShockWaveInfo.xml"/>
                 <property ID="0x8554E360" type="float">
                     <default>15.0</default>
                 </property>

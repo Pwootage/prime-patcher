@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>BouncyTire</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
         <struct ID="0xC4D5BFDE" type="multi">
             <properties>
                 <property ID="0xA3D63F44" type="character"/>
@@ -22,8 +22,8 @@
                 <property ID="0x2F524FD4" type="float">
                     <default>3.1402</default>
                 </property>
-                <struct ID="0x19287737" template="Structs/BouncyTireStruct.xml"/>
-                <struct ID="0x6A3AFC9E" template="Structs/BouncyTireStruct.xml"/>
+                <struct ID="0x19287737" template="dkcr/Structs/BouncyTireStruct.xml"/>
+                <struct ID="0x6A3AFC9E" template="dkcr/Structs/BouncyTireStruct.xml"/>
                 <property ID="0x83A5293A" type="float">
                     <default>9.0</default>
                 </property>

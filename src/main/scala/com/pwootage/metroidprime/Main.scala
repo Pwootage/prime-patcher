@@ -1,9 +1,11 @@
 package com.pwootage.metroidprime
 
 import java.io.{FileWriter, RandomAccessFile}
+import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Paths}
 
 import com.pwootage.metroidprime.dump._
+import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.mrea.MREA
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
@@ -54,6 +56,11 @@ object Main {
     }
     addSubcommand(randomize)
 
+    val fixTemplateXmls = new Subcommand("fixTemplateXmls") {
+      val dir = trailArg[String]()
+    }
+    addSubcommand(fixTemplateXmls)
+
     val test = new Subcommand("test") {
 
     }
@@ -62,6 +69,19 @@ object Main {
     verify()
   }
 
+
+  def fixTemplateUrls(conf: PatcherConf): Unit = {
+    import better.files._
+    val dir = Paths.get(conf.fixTemplateXmls.dir()).toFile.toScala
+    for (d <- dir.list.filter(_.isDirectory)) {
+      val base = d.name
+      for (file <- d.listRecursively.filter(_.isRegularFile)) {
+        val start = new String(file.loadBytes, StandardCharsets.UTF_8)
+        val dest = start.replaceAll("""template\s*=\s*"([^\"]+)"""", s"""template="$base/$$1"""")
+        file.writeBytes(dest.getBytes(StandardCharsets.UTF_8).iterator)
+      }
+    }
+  }
 
   def main(args: Array[String]) {
     val conf = new PatcherConf(args)
@@ -79,6 +99,7 @@ object Main {
       case conf.repack => repack(conf)
       case conf.patch => patch(conf)
       case conf.test => test()
+      case conf.fixTemplateXmls => fixTemplateUrls(conf)
     }
   }
 

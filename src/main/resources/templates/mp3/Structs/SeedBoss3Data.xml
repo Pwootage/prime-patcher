@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct name="SeedBoss3Data" type="multi">
     <properties>
-        <struct ID="0x0E995010" template="Structs/DamageInfo.xml">
+        <struct ID="0x0E995010" template="mp3/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0xF2D02613">
                     <default>0.05</default>
@@ -14,7 +14,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xDF636C4B" template="Structs/DamageInfo.xml">
+        <struct ID="0xDF636C4B" template="mp3/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0xF2D02613">
                     <default>2.0</default>
@@ -27,7 +27,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x1D5FB7D6" template="Structs/DamageInfo.xml">
+        <struct ID="0x1D5FB7D6" template="mp3/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0xF2D02613">
                     <default>2.0</default>
@@ -40,7 +40,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xC2FFF029" template="Structs/DamageInfo.xml">
+        <struct ID="0xC2FFF029" template="mp3/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0xF2D02613">
                     <default>10.0</default>
@@ -53,7 +53,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x3CE6E482" template="Structs/ShockWaveInfo.xml">
+        <struct ID="0x3CE6E482" template="mp3/Structs/ShockWaveInfo.xml">
             <properties>
                 <struct ID="0x337F9524">
                     <properties>
@@ -88,7 +88,7 @@
         <property ID="0x8E2A47CE" type="float">
             <default>1.0</default>
         </property>
-        <struct ID="0x2AB7E3CC" template="Structs/DamageInfo.xml">
+        <struct ID="0x2AB7E3CC" template="mp3/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0xF2D02613">
                     <default>1.0</default>
@@ -101,7 +101,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xC1F06D19" template="Structs/LaunchProjectileData.xml">
+        <struct ID="0xC1F06D19" template="mp3/Structs/LaunchProjectileData.xml">
             <properties>
                 <struct ID="0x337F9524">
                     <properties>
@@ -152,7 +152,7 @@
         </property>
         <struct ID="0x40A2FE3E" type="multi">
             <properties>
-                <struct ID="0x337F9524" template="Structs/DamageInfo.xml">
+                <struct ID="0x337F9524" template="mp3/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0xF2D02613">
                             <default>5.0</default>
@@ -186,7 +186,7 @@
             </properties>
         </struct>
         <property ID="0x859C432C" type="file" extensions="CAUD"/>
-        <struct ID="0x1A25A969" template="Structs/LaunchProjectileData.xml">
+        <struct ID="0x1A25A969" template="mp3/Structs/LaunchProjectileData.xml">
             <properties>
                 <struct ID="0x337F9524">
                     <properties>
@@ -218,7 +218,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x29A8B77D" template="Structs/HoverThenHomeProjectile.xml">
+        <struct ID="0x29A8B77D" template="mp3/Structs/HoverThenHomeProjectile.xml">
             <properties>
                 <property ID="0x452426BB">
                     <default>20.0</default>
@@ -226,7 +226,7 @@
             </properties>
         </struct>
         <property ID="0xB87C2C9B" type="file" extensions="PART"/>
-        <struct ID="0xBE7EA088" template="Structs/DamageInfo.xml">
+        <struct ID="0xBE7EA088" template="mp3/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0xF2D02613">
                     <default>0.05</default>
@@ -243,7 +243,7 @@
         <property ID="0x980C9FDC" type="float">
             <default>500.0</default>
         </property>
-        <struct ID="0xA171456D" template="Structs/DamageInfo.xml">
+        <struct ID="0xA171456D" template="mp3/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0xF2D02613">
                     <default>1.0</default>
@@ -265,7 +265,7 @@
         <property ID="0xAD422D66" type="float">
             <default>0.75</default>
         </property>
-        <struct ID="0x761D4BF4" template="Structs/DamageInfo.xml">
+        <struct ID="0x761D4BF4" template="mp3/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0xF2D02613">
                     <default>10.0</default>
@@ -301,9 +301,9 @@
                 <property ID="0xF0668919" type="float">
                     <default>750.0</default>
                 </property>
-                <struct ID="0xF064B3BC" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0x0D9230D1" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0xED7EDCA3" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xF064B3BC" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0x0D9230D1" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0xED7EDCA3" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0x5BDD1E4C" type="float">
                     <default>80.0</default>
                 </property>
@@ -337,7 +337,7 @@
                 <property ID="0xDAC05EB5" type="float">
                     <default>5.0</default>
                 </property>
-                <struct ID="0xF609C637" template="Structs/GrappleData.xml">
+                <struct ID="0xF609C637" template="mp3/Structs/GrappleData.xml">
                     <properties>
                         <property ID="0x5DCF91E1">
                             <default>1</default>
@@ -487,7 +487,7 @@
                 <property ID="0x61E664CC" type="float">
                     <default>25.0</default>
                 </property>
-                <struct ID="0xB348C46B" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0xB348C46B" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <struct ID="0x337F9524">
                             <properties>
@@ -546,10 +546,10 @@
                 <property ID="0xC5407757" type="float">
                     <default>1.05</default>
                 </property>
-                <struct ID="0x0D9230D1" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0xED7EDCA3" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0x295CF609" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0x23DDBB55" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x0D9230D1" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0xED7EDCA3" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0x295CF609" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0x23DDBB55" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0x5BDD1E4C" type="float">
                     <default>80.0</default>
                 </property>
@@ -616,7 +616,7 @@
                         <property ID="0x442BDDAB" type="long">
                             <default>6</default>
                         </property>
-                        <struct ID="0x37304F48" template="Structs/DamageInfo.xml">
+                        <struct ID="0x37304F48" template="mp3/Structs/DamageInfo.xml">
                             <properties>
                                 <property ID="0xF2D02613">
                                     <default>20.0</default>
@@ -629,7 +629,7 @@
                                 </property>
                             </properties>
                         </struct>
-                        <struct ID="0xC5528A8D" template="Structs/DamageInfo.xml">
+                        <struct ID="0xC5528A8D" template="mp3/Structs/DamageInfo.xml">
                             <properties>
                                 <property ID="0xF2D02613">
                                     <default>20.0</default>
@@ -702,9 +702,9 @@
                 <property ID="0xC5407757" type="float">
                     <default>1.1</default>
                 </property>
-                <struct ID="0xF064B3BC" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0x0D9230D1" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0xED7EDCA3" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xF064B3BC" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0x0D9230D1" template="mp3/Structs/DamageVulnerability.xml"/>
+                <struct ID="0xED7EDCA3" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0x5BDD1E4C" type="float">
                     <default>80.0</default>
                 </property>
@@ -717,7 +717,7 @@
                 <property ID="0x9B78F170" type="float">
                     <default>11.25</default>
                 </property>
-                <struct ID="0x24B933D3" template="Structs/DamageInfo.xml">
+                <struct ID="0x24B933D3" template="mp3/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0xF2D02613">
                             <default>3.0</default>
@@ -754,7 +754,7 @@
                 <property ID="0xBC9BBAF9" type="float">
                     <default>44.0</default>
                 </property>
-                <struct ID="0x9C32D0A0" template="Structs/ShockWaveInfo.xml">
+                <struct ID="0x9C32D0A0" template="mp3/Structs/ShockWaveInfo.xml">
                     <properties>
                         <struct ID="0x337F9524">
                             <properties>
@@ -783,7 +783,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x4EA6C6A9" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x4EA6C6A9" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <struct ID="0x337F9524">
                             <properties>

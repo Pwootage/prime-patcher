@@ -2,14 +2,14 @@
 <ScriptTemplate version="4">
     <name>GuiMenu</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml">
             <properties>
                 <property ID="0x41435456">
                     <default>false</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x91CEFA1E" template="Structs/GuiWidgetProperties.xml"/>
+        <struct ID="0x91CEFA1E" template="mp3proto/Structs/GuiWidgetProperties.xml"/>
         <property ID="0xA714D574" type="long">
             <default>0</default>
         </property>

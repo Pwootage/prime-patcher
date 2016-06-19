@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>Door</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <property ID="0xF344C0B0" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>
@@ -12,8 +12,8 @@
         <property ID="0xEE808240" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml"/>
-        <struct ID="0x7B71AE90" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0xCF90D15E" template="mp3proto/Structs/HealthInfo.xml"/>
+        <struct ID="0x7B71AE90" template="mp3proto/Structs/DamageVulnerability.xml"/>
         <property ID="0x1B46B39B" type="bool">
             <default>true</default>
         </property>
@@ -27,7 +27,7 @@
             <default>0.0, 1.0, 1.0, 1.0</default>
         </property>
         <property ID="0x2589C3F0" type="file" extensions="TXTR"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
         <property ID="0x850115E4" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>
@@ -61,7 +61,7 @@
         <property ID="0xC29765EA" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0x9EC62712" template="Structs/ScannableParameters.xml"/>
+        <struct ID="0x9EC62712" template="mp3proto/Structs/ScannableParameters.xml"/>
     </properties>
     <states/>
     <messages/>

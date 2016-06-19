@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>ShipCommandIcon</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <property ID="0x8B9B584C" type="bool">
             <default>true</default>
         </property>
@@ -12,7 +12,7 @@
         <property ID="0xC39F8936" type="file" extensions="TXTR"/>
         <property ID="0x222CF8EC" type="file" extensions="TXTR"/>
         <property ID="0x0BF00EB1" type="file" extensions="TXTR"/>
-        <enum ID="0x08072DA5" template="Enums/Item.xml">
+        <enum ID="0x08072DA5" template="mp3proto/Enums/Item.xml">
             <default>0xFB73F2B8</default>
         </enum>
     </properties>

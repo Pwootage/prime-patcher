@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct name="UnknownStruct44" type="multi">
     <properties>
-        <struct ID="0x3C38498D" template="Structs/UnknownStruct45.xml"/>
+        <struct ID="0x3C38498D" template="dkcr/Structs/UnknownStruct45.xml"/>
         <struct ID="0x7FB7E8B1" type="multi">
             <properties>
                 <property ID="0xA6B75D03" type="bool">
@@ -60,7 +60,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xF07BEC6D" template="Structs/MinecartStructA.xml"/>
+        <struct ID="0xF07BEC6D" template="dkcr/Structs/MinecartStructA.xml"/>
         <struct ID="0xF3D8DCB1" type="multi">
             <properties>
                 <property ID="0x39E9FA35" type="long">
@@ -107,8 +107,8 @@
         </struct>
         <struct ID="0x5D89056A" type="multi">
             <properties>
-                <struct ID="0xE29BF306" template="Structs/UnknownStruct43.xml"/>
-                <struct ID="0xB0C8B06F" template="Structs/UnknownStruct43.xml"/>
+                <struct ID="0xE29BF306" template="dkcr/Structs/UnknownStruct43.xml"/>
+                <struct ID="0xB0C8B06F" template="dkcr/Structs/UnknownStruct43.xml"/>
                 <property ID="0xCF03CB0C" type="float">
                     <default>450.0</default>
                 </property>
@@ -171,9 +171,9 @@
         </struct>
         <struct ID="0x9F1EF2F3" type="multi">
             <properties>
-                <struct ID="0x4D2FF46B" template="Structs/UnknownStruct37.xml"/>
-                <struct ID="0x1EB5AFEF" template="Structs/UnknownStruct37.xml"/>
-                <struct ID="0x991364AC" template="Structs/UnknownStruct37.xml"/>
+                <struct ID="0x4D2FF46B" template="dkcr/Structs/UnknownStruct37.xml"/>
+                <struct ID="0x1EB5AFEF" template="dkcr/Structs/UnknownStruct37.xml"/>
+                <struct ID="0x991364AC" template="dkcr/Structs/UnknownStruct37.xml"/>
             </properties>
         </struct>
         <struct ID="0xBBCA7365" type="multi">
@@ -187,7 +187,7 @@
                     <default>4.5</default>
                 </property>
                 <property ID="0x6B4ED718" type="file" extensions="CAUD"/>
-                <struct ID="0x9583EE9A" template="Structs/UnknownStruct39.xml"/>
+                <struct ID="0x9583EE9A" template="dkcr/Structs/UnknownStruct39.xml"/>
                 <property ID="0xE06D7B15" type="file" extensions="PART"/>
                 <property ID="0x4364525D" type="file" extensions="PART"/>
                 <property ID="0x2ABD7E71" type="file" extensions="PART"/>
@@ -251,8 +251,8 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x856F56A7" template="Structs/UnknownStruct38.xml"/>
-        <struct ID="0xF5E908D1" template="Structs/UnknownStruct38.xml"/>
+        <struct ID="0x856F56A7" template="dkcr/Structs/UnknownStruct38.xml"/>
+        <struct ID="0xF5E908D1" template="dkcr/Structs/UnknownStruct38.xml"/>
         <struct ID="0x36453107" type="multi">
             <properties>
                 <property ID="0x46322287" type="vector3f">
@@ -273,7 +273,7 @@
                 <property ID="0x386D9AD7" type="float">
                     <default>4.6</default>
                 </property>
-                <struct ID="0x9583EE9A" template="Structs/UnknownStruct39.xml"/>
+                <struct ID="0x9583EE9A" template="dkcr/Structs/UnknownStruct39.xml"/>
                 <property ID="0x16B261F8" type="float">
                     <default>0.5</default>
                 </property>
@@ -425,16 +425,16 @@
                 <property ID="0xD7C19141" type="long">
                     <default>0</default>
                 </property>
-                <struct ID="0x576D9946" template="Structs/UnknownStruct25.xml"/>
-                <struct ID="0xB83F2FA7" template="Structs/UnknownStruct25.xml"/>
-                <struct ID="0x52B9F2C5" template="Structs/UnknownStruct25.xml"/>
-                <struct ID="0xBDEB4424" template="Structs/UnknownStruct25.xml"/>
-                <struct ID="0x5CC54E40" template="Structs/UnknownStruct25.xml"/>
-                <struct ID="0xB397F8A1" template="Structs/UnknownStruct25.xml"/>
-                <struct ID="0x591125C3" template="Structs/UnknownStruct25.xml"/>
-                <struct ID="0xB6439322" template="Structs/UnknownStruct25.xml"/>
-                <struct ID="0x403C374A" template="Structs/UnknownStruct25.xml"/>
-                <struct ID="0xAF6E81AB" template="Structs/UnknownStruct25.xml"/>
+                <struct ID="0x576D9946" template="dkcr/Structs/UnknownStruct25.xml"/>
+                <struct ID="0xB83F2FA7" template="dkcr/Structs/UnknownStruct25.xml"/>
+                <struct ID="0x52B9F2C5" template="dkcr/Structs/UnknownStruct25.xml"/>
+                <struct ID="0xBDEB4424" template="dkcr/Structs/UnknownStruct25.xml"/>
+                <struct ID="0x5CC54E40" template="dkcr/Structs/UnknownStruct25.xml"/>
+                <struct ID="0xB397F8A1" template="dkcr/Structs/UnknownStruct25.xml"/>
+                <struct ID="0x591125C3" template="dkcr/Structs/UnknownStruct25.xml"/>
+                <struct ID="0xB6439322" template="dkcr/Structs/UnknownStruct25.xml"/>
+                <struct ID="0x403C374A" template="dkcr/Structs/UnknownStruct25.xml"/>
+                <struct ID="0xAF6E81AB" template="dkcr/Structs/UnknownStruct25.xml"/>
             </properties>
         </struct>
         <struct ID="0xE38134FC" type="multi">
@@ -518,9 +518,9 @@
                 <property ID="0x4CC4E39D" type="file" extensions="CAUD"/>
             </properties>
         </struct>
-        <struct ID="0x978E5BD8" template="Structs/VehicleStructA.xml"/>
-        <struct ID="0x7F681411" template="Structs/VehicleStructB.xml"/>
-        <struct ID="0x249DC50A" template="Structs/GenericCreatureStructG.xml"/>
+        <struct ID="0x978E5BD8" template="dkcr/Structs/VehicleStructA.xml"/>
+        <struct ID="0x7F681411" template="dkcr/Structs/VehicleStructB.xml"/>
+        <struct ID="0x249DC50A" template="dkcr/Structs/GenericCreatureStructG.xml"/>
         <struct ID="0x29C83997" type="multi">
             <properties>
                 <property ID="0xE488B89E" type="float">
@@ -557,7 +557,7 @@
                 <property ID="0x4868549D" type="file" extensions="CAUD"/>
                 <struct ID="0xA5B20D17" type="multi">
                     <properties>
-                        <enum ID="0x9F1BD46D" template="Enums/UnknownEnum3.xml">
+                        <enum ID="0x9F1BD46D" template="dkcr/Enums/UnknownEnum3.xml">
                             <default>0x82B6A62A</default>
                         </enum>
                         <property ID="0x0DB9F8B6" type="file" extensions="FONT"/>
@@ -631,7 +631,7 @@
                 <property ID="0x4A3BCEB4" type="float">
                     <default>0.0</default>
                 </property>
-                <struct ID="0xA0647DF6" template="Structs/Convergence.xml"/>
+                <struct ID="0xA0647DF6" template="dkcr/Structs/Convergence.xml"/>
             </properties>
         </struct>
         <struct ID="0xE31814DB" type="multi">
@@ -723,8 +723,8 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x8ABB25C4" template="Structs/GenericCreatureStructF.xml"/>
-        <struct ID="0x98EFC863" template="Structs/MinecartStructD.xml"/>
+        <struct ID="0x8ABB25C4" template="dkcr/Structs/GenericCreatureStructF.xml"/>
+        <struct ID="0x98EFC863" template="dkcr/Structs/MinecartStructD.xml"/>
         <struct ID="0x39B0B057" type="multi">
             <properties>
                 <property ID="0x56299562" type="file" extensions="CAUD"/>
@@ -755,16 +755,16 @@
                 <property ID="0x5A15D127" type="long">
                     <default>1</default>
                 </property>
-                <struct ID="0xCD420D23" template="Structs/UnknownStruct42.xml"/>
-                <struct ID="0xBBA7341E" template="Structs/UnknownStruct42.xml"/>
-                <struct ID="0x20D4DECA" template="Structs/UnknownStruct42.xml"/>
-                <struct ID="0x566D4664" template="Structs/UnknownStruct42.xml"/>
-                <struct ID="0xCD1EACB0" template="Structs/UnknownStruct42.xml"/>
-                <struct ID="0xBBFB958D" template="Structs/UnknownStruct42.xml"/>
-                <struct ID="0x20887F59" template="Structs/UnknownStruct42.xml"/>
-                <struct ID="0x5688A4D1" template="Structs/UnknownStruct42.xml"/>
-                <struct ID="0xCDFB4E05" template="Structs/UnknownStruct42.xml"/>
-                <struct ID="0xEC7B7C4D" template="Structs/UnknownStruct42.xml"/>
+                <struct ID="0xCD420D23" template="dkcr/Structs/UnknownStruct42.xml"/>
+                <struct ID="0xBBA7341E" template="dkcr/Structs/UnknownStruct42.xml"/>
+                <struct ID="0x20D4DECA" template="dkcr/Structs/UnknownStruct42.xml"/>
+                <struct ID="0x566D4664" template="dkcr/Structs/UnknownStruct42.xml"/>
+                <struct ID="0xCD1EACB0" template="dkcr/Structs/UnknownStruct42.xml"/>
+                <struct ID="0xBBFB958D" template="dkcr/Structs/UnknownStruct42.xml"/>
+                <struct ID="0x20887F59" template="dkcr/Structs/UnknownStruct42.xml"/>
+                <struct ID="0x5688A4D1" template="dkcr/Structs/UnknownStruct42.xml"/>
+                <struct ID="0xCDFB4E05" template="dkcr/Structs/UnknownStruct42.xml"/>
+                <struct ID="0xEC7B7C4D" template="dkcr/Structs/UnknownStruct42.xml"/>
             </properties>
         </struct>
     </properties>

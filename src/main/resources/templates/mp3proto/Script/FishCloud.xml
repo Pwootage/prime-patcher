@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>FishCloud</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <property ID="0x7990A3B6" type="file" extensions="CMDL"/>
         <property ID="0xA244C9D8" type="character"/>
         <property ID="0x2264062E" type="long">

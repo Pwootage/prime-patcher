@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>EyePod</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB718B831" template="Structs/WallCrawlerData.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xB718B831" template="mp3/Structs/WallCrawlerData.xml"/>
         <struct ID="0x9214A518" type="multi">
             <properties>
                 <property ID="0x25474550" type="float">
@@ -47,8 +47,8 @@
                 </property>
                 <property ID="0xE8C819E6" type="file" extensions="WPSC"/>
                 <property ID="0xB14FEA52" type="file" extensions="WPSC"/>
-                <struct ID="0xC93109E7" template="Structs/DamageInfo.xml"/>
-                <struct ID="0x37A6F562" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xC93109E7" template="mp3/Structs/DamageInfo.xml"/>
+                <struct ID="0x37A6F562" template="mp3/Structs/DamageInfo.xml"/>
                 <property ID="0xD75F9CF2" type="float">
                     <default>5.0</default>
                 </property>
@@ -61,19 +61,19 @@
                 <property ID="0x190CB8D7" type="float">
                     <default>2.0</default>
                 </property>
-                <struct ID="0x5B0A8C8A" template="Structs/EyePodStruct.xml"/>
-                <struct ID="0x0CE679BB" template="Structs/EyePodStruct.xml"/>
-                <struct ID="0xF9BBCC33" template="Structs/EyePodStruct.xml"/>
+                <struct ID="0x5B0A8C8A" template="mp3/Structs/EyePodStruct.xml"/>
+                <struct ID="0x0CE679BB" template="mp3/Structs/EyePodStruct.xml"/>
+                <struct ID="0xF9BBCC33" template="mp3/Structs/EyePodStruct.xml"/>
                 <property ID="0xF1C247FF" type="bool">
                     <default>false</default>
                 </property>
                 <property ID="0xA1ED5408" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0x511961D4" template="Structs/StaticGeometryTest.xml"/>
+                <struct ID="0x511961D4" template="mp3/Structs/StaticGeometryTest.xml"/>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -105,7 +105,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

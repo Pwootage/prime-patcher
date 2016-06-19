@@ -10,12 +10,12 @@
         <property ID="0x05" name="Scan Offset" type="vector3f"/>
         <property ID="0x06" name="Model" type="file" extensions="CMDL"/>
         <property ID="0x07" name="AnimationParameters" type="character"/>
-        <struct ID="0x08" name="ActorParameters" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x08" name="ActorParameters" template="mp1/Structs/ActorParameters.xml"/>
         <property ID="0x09" name="Unknown 2" type="float"/>
         <property ID="0x0A" name="Active" type="bool"/>
         <property ID="0x0B" name="DCLN" type="file" extensions="DCLN"/>
-        <struct ID="0x0C" name="HealthInfo" template="Structs/HealthInfo.xml"/>
-        <struct ID="0x0D" name="DamageVulnerability" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x0C" name="HealthInfo" template="mp1/Structs/HealthInfo.xml"/>
+        <struct ID="0x0D" name="DamageVulnerability" template="mp1/Structs/DamageVulnerability.xml"/>
         <property ID="0x0E" name="Unknown 3" type="bool"/>
         <property ID="0x0F" name="Unknown 4" type="float"/>
         <property ID="0x10" name="Unknown 5" type="bool"/>

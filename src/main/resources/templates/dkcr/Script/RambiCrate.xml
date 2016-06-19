@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>RambiCrate</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
         <struct ID="0xDD65D9B6" type="multi">
             <properties>
                 <property ID="0xA3D63F44" type="character"/>
@@ -14,7 +14,7 @@
                 <property ID="0x456B0545" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x7B71AE90" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x7B71AE90" template="dkcr/Structs/DamageVulnerability.xml"/>
                 <property ID="0xFA8CA261" type="float">
                     <default>15.0</default>
                 </property>

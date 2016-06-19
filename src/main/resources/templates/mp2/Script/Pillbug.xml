@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>Pillbug</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <property ID="0xDE7E9F94" type="long">
             <default>0</default>
         </property>
@@ -20,8 +20,8 @@
         <property ID="0xA72530E8" type="float">
             <default>200.0</default>
         </property>
-        <struct ID="0x5D84ED71" template="Structs/DamageVulnerability.xml"/>
-        <struct ID="0xF382DFF7" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x5D84ED71" template="mp2/Structs/DamageVulnerability.xml"/>
+        <struct ID="0xF382DFF7" template="mp2/Structs/DamageVulnerability.xml"/>
         <property ID="0xAD98E16D" type="float">
             <default>0.35</default>
         </property>

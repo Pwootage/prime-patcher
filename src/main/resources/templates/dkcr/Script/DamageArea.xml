@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>DamageArea</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
+        <struct ID="0x337F9524" template="dkcr/Structs/DamageInfo.xml"/>
     </properties>
     <states/>
     <messages/>

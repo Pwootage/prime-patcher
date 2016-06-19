@@ -7,9 +7,9 @@
         <property ID="0x02" name="Position" type="vector3f"/>
         <property ID="0x03" name="Rotation" type="vector3f"/>
         <property ID="0x04" name="Scale" type="vector3f"/>
-        <struct ID="0x05" name="PatternedInfo" template="Structs/PatternedInfo.xml"/>
-        <struct ID="0x06" name="ActorParameters" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x07" name="GrappleParameters" template="Structs/GrappleParameters.xml"/>
+        <struct ID="0x05" name="PatternedInfo" template="mp1/Structs/PatternedInfo.xml"/>
+        <struct ID="0x06" name="ActorParameters" template="mp1/Structs/ActorParameters.xml"/>
+        <struct ID="0x07" name="GrappleParameters" template="mp1/Structs/GrappleParameters.xml"/>
     </properties>
     <states/>
     <messages/>

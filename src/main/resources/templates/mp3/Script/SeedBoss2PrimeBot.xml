@@ -2,14 +2,14 @@
 <ScriptTemplate version="4">
     <name>SeedBoss2PrimeBot</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <struct ID="0x96782873" type="multi">
             <properties>
                 <property ID="0x90AEFEE1" type="bool">
                     <default>true</default>
                 </property>
                 <property ID="0x4C64D3A6" type="character"/>
-                <struct ID="0x00DD06CC" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x00DD06CC" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0xB64ED093" type="file" extensions="PART"/>
                 <property ID="0xC7DC6D3E" type="file" extensions="UNKN"/>
                 <property ID="0x41481F90" type="file" extensions="UNKN"/>
@@ -34,7 +34,7 @@
                 <property ID="0x6B6606B8" type="file" extensions="ELSC"/>
                 <property ID="0x3B6CDADB" type="file" extensions="PART"/>
                 <property ID="0xA6E942ED" type="file" extensions="PART"/>
-                <struct ID="0x21EC3D21" template="Structs/PlasmaBeamInfo.xml"/>
+                <struct ID="0x21EC3D21" template="mp3/Structs/PlasmaBeamInfo.xml"/>
                 <property ID="0x82EE63C8" type="file" extensions="PART"/>
                 <property ID="0xAB0A66DA" type="file" extensions="PART"/>
                 <property ID="0x5B67A4E7" type="file" extensions="TXTR"/>
@@ -52,13 +52,13 @@
                 <property ID="0xA959B017" type="file" extensions="CAUD"/>
             </properties>
         </struct>
-        <struct ID="0xB1461BC0" template="Structs/SeedBoss2PrimeBotData.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml"/>
-        <struct ID="0xD578F188" template="Structs/SeedBoss2PrimeBotData.xml"/>
-        <struct ID="0x1464AE05" template="Structs/PatternedAI.xml"/>
-        <struct ID="0xE3585B48" template="Structs/SeedBoss2PrimeBotData.xml"/>
-        <struct ID="0x24D00673" template="Structs/PatternedAI.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0xB1461BC0" template="mp3/Structs/SeedBoss2PrimeBotData.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0xD578F188" template="mp3/Structs/SeedBoss2PrimeBotData.xml"/>
+        <struct ID="0x1464AE05" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0xE3585B48" template="mp3/Structs/SeedBoss2PrimeBotData.xml"/>
+        <struct ID="0x24D00673" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

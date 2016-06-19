@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>Water</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xBBFEE93E" template="Structs/TriggerInfo.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xBBFEE93E" template="mp3/Structs/TriggerInfo.xml"/>
         <struct ID="0x274D1E54" type="multi">
             <properties>
                 <enum ID="0xBE253B54">
@@ -80,11 +80,11 @@
                 <property ID="0x33EECDFD" type="float">
                     <default>0.0</default>
                 </property>
-                <struct ID="0x244E9E6D" template="Structs/LayerInfo.xml"/>
-                <struct ID="0xE75248E4" template="Structs/LayerInfo.xml"/>
-                <struct ID="0x385E0D43" template="Structs/LayerInfo.xml"/>
-                <struct ID="0xD369B640" template="Structs/LayerInfo.xml"/>
-                <struct ID="0x6DDEA66D" template="Structs/LayerInfo.xml"/>
+                <struct ID="0x244E9E6D" template="mp3/Structs/LayerInfo.xml"/>
+                <struct ID="0xE75248E4" template="mp3/Structs/LayerInfo.xml"/>
+                <struct ID="0x385E0D43" template="mp3/Structs/LayerInfo.xml"/>
+                <struct ID="0xD369B640" template="mp3/Structs/LayerInfo.xml"/>
+                <struct ID="0x6DDEA66D" template="mp3/Structs/LayerInfo.xml"/>
                 <property ID="0x13B56C22" type="color">
                     <default>1.0, 1.0, 1.0, 1.0</default>
                 </property>

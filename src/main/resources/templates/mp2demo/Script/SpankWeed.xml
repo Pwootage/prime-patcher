@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>SpankWeed</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml">
             <properties>
                 <struct ID="0xD756416E">
                     <properties>
@@ -30,7 +30,7 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
         <property ID="0x5CDC877D" type="bool">
             <default>true</default>
         </property>

@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>SpiderBallWaypoint</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0x5D817483" type="long">
             <default>0</default>
         </property>

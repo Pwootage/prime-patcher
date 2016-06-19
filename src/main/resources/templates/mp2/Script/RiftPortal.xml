@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>RiftPortal</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <property ID="0xC27FFA8F" type="file" extensions="CMDL"/>
         <property ID="0xE25FB08C" type="character"/>
         <property ID="0x90C42387" type="long">

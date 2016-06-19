@@ -25,14 +25,14 @@
                         <enumerator ID="0xDA0E9904" name="Unknown 3"/>
                     </enumerators>
                 </enum>
-                <enum ID="0x474BCCE3" template="Enums/UnknownEnum4.xml">
+                <enum ID="0x474BCCE3" template="dkcr/Enums/UnknownEnum4.xml">
                     <default>0x25234BDB</default>
                 </enum>
             </properties>
         </struct>
-        <struct ID="0x1D366D8E" template="Structs/UnknownStruct51.xml"/>
-        <struct ID="0x525191C2" template="Structs/UnknownStruct51.xml"/>
-        <struct ID="0x1B80811C" template="Structs/UnknownStruct51.xml"/>
-        <struct ID="0xED21C295" template="Structs/UnknownStruct51.xml"/>
+        <struct ID="0x1D366D8E" template="dkcr/Structs/UnknownStruct51.xml"/>
+        <struct ID="0x525191C2" template="dkcr/Structs/UnknownStruct51.xml"/>
+        <struct ID="0x1B80811C" template="dkcr/Structs/UnknownStruct51.xml"/>
+        <struct ID="0xED21C295" template="dkcr/Structs/UnknownStruct51.xml"/>
     </properties>
 </struct>

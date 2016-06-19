@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>ReactiveObject</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0x6C447FF0" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>
@@ -11,7 +11,7 @@
         </property>
         <property ID="0xC27FFA8F" type="file" extensions="CMDL"/>
         <property ID="0x7BC2F6CF" type="character"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
         <property ID="0x2F7C59DC" type="bool">
             <default>true</default>
         </property>
@@ -23,12 +23,12 @@
                 <property ID="0xC07FA9BE" type="long">
                     <default>0</default>
                 </property>
-                <struct ID="0x8EA67C4F" template="Structs/ReactiveObjectStruct.xml"/>
-                <struct ID="0xB7DED10F" template="Structs/ReactiveObjectStruct.xml"/>
-                <struct ID="0xA0F6B5CF" template="Structs/ReactiveObjectStruct.xml"/>
-                <struct ID="0xC52F8B8F" template="Structs/ReactiveObjectStruct.xml"/>
-                <struct ID="0xD207EF4F" template="Structs/ReactiveObjectStruct.xml"/>
-                <struct ID="0xEB7F420F" template="Structs/ReactiveObjectStruct.xml"/>
+                <struct ID="0x8EA67C4F" template="dkcr/Structs/ReactiveObjectStruct.xml"/>
+                <struct ID="0xB7DED10F" template="dkcr/Structs/ReactiveObjectStruct.xml"/>
+                <struct ID="0xA0F6B5CF" template="dkcr/Structs/ReactiveObjectStruct.xml"/>
+                <struct ID="0xC52F8B8F" template="dkcr/Structs/ReactiveObjectStruct.xml"/>
+                <struct ID="0xD207EF4F" template="dkcr/Structs/ReactiveObjectStruct.xml"/>
+                <struct ID="0xEB7F420F" template="dkcr/Structs/ReactiveObjectStruct.xml"/>
             </properties>
         </struct>
     </properties>

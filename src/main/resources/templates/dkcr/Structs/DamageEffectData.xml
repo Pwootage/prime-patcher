@@ -7,7 +7,7 @@
         <property ID="0x418D52D4" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x337F9524" template="dkcr/Structs/DamageInfo.xml"/>
         <property ID="0x8B51E23F" type="float">
             <default>5.0</default>
         </property>
@@ -70,6 +70,6 @@
         <property ID="0x818D8DAE" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0xB028DB0E" template="Structs/LightParameters.xml"/>
+        <struct ID="0xB028DB0E" template="dkcr/Structs/LightParameters.xml"/>
     </properties>
 </struct>

@@ -17,7 +17,7 @@
         <property ID="0x992C7B48" type="float">
             <default>50.0</default>
         </property>
-        <struct ID="0x76293001" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x76293001" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xC3A06AE1" type="float">
             <default>0.7</default>
         </property>
@@ -43,6 +43,6 @@
             <default>3.0</default>
         </property>
         <property ID="0x26B752E1" type="character"/>
-        <struct ID="0xDC89CC3C" template="Structs/SpacePirateWeaponData.xml"/>
+        <struct ID="0xDC89CC3C" template="mp3/Structs/SpacePirateWeaponData.xml"/>
     </properties>
 </struct>

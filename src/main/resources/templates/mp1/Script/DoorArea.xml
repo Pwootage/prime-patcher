@@ -7,7 +7,7 @@
         <property ID="0x02" name="Rotation" type="vector3f"/>
         <property ID="0x03" name="Scale" type="vector3f"/>
         <property ID="0x04" name="AnimationParameters" type="character"/>
-        <struct ID="0x05" name="ActorParameters" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x05" name="ActorParameters" template="mp1/Structs/ActorParameters.xml"/>
         <property ID="0x06" name="Scan Offset" type="vector3f"/>
         <property ID="0x07" name="Collision Size" type="vector3f"/>
         <property ID="0x08" name="Collision Offset" type="vector3f"/>

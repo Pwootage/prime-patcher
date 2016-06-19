@@ -2,18 +2,18 @@
 <ScriptTemplate version="4">
     <name>DarkSamusEcho</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x6D8A6608" template="Structs/DarkSamusEchoData.xml"/>
-        <struct ID="0x35C49DDD" template="Structs/DarkSamusEchoData.xml"/>
-        <struct ID="0xA1178BCF" template="Structs/DarkSamusEchoData.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
+        <struct ID="0x6D8A6608" template="mp3/Structs/DarkSamusEchoData.xml"/>
+        <struct ID="0x35C49DDD" template="mp3/Structs/DarkSamusEchoData.xml"/>
+        <struct ID="0xA1178BCF" template="mp3/Structs/DarkSamusEchoData.xml"/>
     </properties>
     <states/>
     <messages/>

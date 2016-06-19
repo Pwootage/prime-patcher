@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>BloomEffect</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0x882E9F47" type="multi">
             <properties>
                 <property ID="0xDCBFA4E6" type="MayaSpline"/>

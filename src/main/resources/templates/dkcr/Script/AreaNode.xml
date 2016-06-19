@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>AreaNode</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0x4DEF7B9B" type="bool">
             <default>false</default>
         </property>
@@ -42,7 +42,7 @@
         <property ID="0xA244C9D8" type="character"/>
         <property ID="0xB7CD213C" type="character"/>
         <property ID="0x9F93BC3F" type="character"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
         <property ID="0x6A789BE3" type="file" extensions="MLVL"/>
         <struct ID="0xA9D29E32" type="multi">
             <properties>

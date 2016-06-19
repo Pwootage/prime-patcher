@@ -2,10 +2,10 @@
 <ScriptTemplate version="4">
     <name>WeaponGenerator</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <struct ID="0x3F003133" type="multi">
             <properties>
-                <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x337F9524" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0x9EF6B290" type="file" extensions="WPSC"/>
                 <property ID="0x4E83F4A7" type="file" extensions="CAUD"/>
                 <enum ID="0xBADA8DEA">
@@ -23,7 +23,7 @@
                         <enumerator ID="0x2B9C9A74" name="Unknown 4"/>
                     </enumerators>
                 </enum>
-                <struct ID="0xFB0F9549" template="Structs/StaticGeometryTest.xml"/>
+                <struct ID="0xFB0F9549" template="mp3proto/Structs/StaticGeometryTest.xml"/>
             </properties>
         </struct>
     </properties>

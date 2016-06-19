@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>SurfaceCamera</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
         <property ID="0x1FFC65D8" type="long">
             <default>2</default>
         </property>
@@ -13,11 +13,11 @@
         <property ID="0x1D8B933F" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>
-        <struct ID="0x33E4685B" template="Structs/SplineType.xml"/>
+        <struct ID="0x33E4685B" template="mp2demo/Structs/SplineType.xml"/>
         <property ID="0x431769C6" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0x5604D304" template="Structs/SplineType.xml"/>
+        <struct ID="0x5604D304" template="mp2demo/Structs/SplineType.xml"/>
         <property ID="0x33B4F106" type="bool">
             <default>false</default>
         </property>

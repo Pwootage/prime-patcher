@@ -25,7 +25,7 @@
         <property ID="0x14" name="Unknown 15" type="bool"/>
         <property ID="0x15" name="Unknown 16" type="bool"/>
         <property ID="0x16" name="Unknown 17" type="bool"/>
-        <struct ID="0x17" name="LightParameters" template="Structs/LightParameters.xml"/>
+        <struct ID="0x17" name="LightParameters" template="mp1/Structs/LightParameters.xml"/>
     </properties>
     <states/>
     <messages/>

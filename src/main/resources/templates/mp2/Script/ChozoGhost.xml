@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>ChozoGhost</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>720.0</default>
@@ -51,7 +51,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <property ID="0xED69488F" type="float">
             <default>20.0</default>
         </property>
@@ -67,7 +67,7 @@
         <property ID="0x54151870" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0xFFCDA1F8" template="Structs/DamageInfo.xml">
+        <struct ID="0xFFCDA1F8" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0xF2D02613">
                     <default>10.0</default>
@@ -77,14 +77,14 @@
         <property ID="0x3A58089C" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0x1FF047A9" template="Structs/DamageInfo.xml">
+        <struct ID="0x1FF047A9" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0xF2D02613">
                     <default>5.0</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0xE832241F" template="Structs/BehaveChance.xml">
+        <struct ID="0xE832241F" template="mp2/Structs/BehaveChance.xml">
             <properties>
                 <property ID="0xD3A313A5">
                     <default>20.0</default>
@@ -103,7 +103,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x1E2C8483" template="Structs/BehaveChance.xml">
+        <struct ID="0x1E2C8483" template="mp2/Structs/BehaveChance.xml">
             <properties>
                 <property ID="0xD3A313A5">
                     <default>20.0</default>
@@ -128,7 +128,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x78D76034" template="Structs/BehaveChance.xml">
+        <struct ID="0x78D76034" template="mp2/Structs/BehaveChance.xml">
             <properties>
                 <property ID="0x1AF89F4B">
                     <default>100.0</default>

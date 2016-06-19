@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>MetroidHopper</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <struct ID="0xD9488FBD" type="multi">
             <properties>
                 <property ID="0xC5407757" type="float">
@@ -34,15 +34,15 @@
                 <property ID="0x68E4097E" type="float">
                     <default>0.5</default>
                 </property>
-                <struct ID="0x2B76B9F1" template="Structs/DamageInfo.xml"/>
-                <struct ID="0x9EF4A101" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x2B76B9F1" template="mp3/Structs/DamageInfo.xml"/>
+                <struct ID="0x9EF4A101" template="mp3/Structs/DamageInfo.xml"/>
                 <property ID="0x500683FC" type="float">
                     <default>0.1</default>
                 </property>
                 <property ID="0x0708D3BF" type="float">
                     <default>20.0</default>
                 </property>
-                <struct ID="0xF9EF8D5D" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0xF9EF8D5D" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -73,16 +73,16 @@
                 <property ID="0x2A7D0101" type="float">
                     <default>0.3</default>
                 </property>
-                <struct ID="0xD5A8E2DA" template="Structs/MetroidHopperStruct.xml"/>
-                <struct ID="0x184991DA" template="Structs/MetroidHopperStruct.xml"/>
-                <struct ID="0x7B07ACA3" template="Structs/MetroidHopperStruct.xml"/>
+                <struct ID="0xD5A8E2DA" template="mp3/Structs/MetroidHopperStruct.xml"/>
+                <struct ID="0x184991DA" template="mp3/Structs/MetroidHopperStruct.xml"/>
+                <struct ID="0x7B07ACA3" template="mp3/Structs/MetroidHopperStruct.xml"/>
                 <property ID="0x5DDE5B25" type="file" extensions="ELSC"/>
                 <property ID="0xF95D2033" type="file" extensions="CAUD"/>
                 <property ID="0x1DA1B117" type="float">
                     <default>5.0</default>
                 </property>
                 <property ID="0xE0700022" type="file" extensions="PART"/>
-                <struct ID="0xD1F6C520" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xD1F6C520" template="mp3/Structs/DamageInfo.xml"/>
                 <struct ID="0xFB648831" type="multi">
                     <properties>
                         <enum ID="0x94D97B5A">

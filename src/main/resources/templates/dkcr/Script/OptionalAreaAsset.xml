@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>OptionalAreaAsset</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0x0FF44A68" type="multi">
             <properties>
                 <property ID="0x5BFE128F" type="long">

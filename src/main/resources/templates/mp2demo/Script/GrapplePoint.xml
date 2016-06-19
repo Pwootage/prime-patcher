@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>GrapplePoint</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x6A2872D8" template="Structs/GrappleParameters.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0x6A2872D8" template="mp2demo/Structs/GrappleParameters.xml"/>
     </properties>
     <states/>
     <messages/>

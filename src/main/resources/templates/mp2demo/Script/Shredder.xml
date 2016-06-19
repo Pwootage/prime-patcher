@@ -2,21 +2,21 @@
 <ScriptTemplate version="4">
     <name>Shredder</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x4BC4C4D9">
                     <default>1</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
         <struct ID="0xAB24A926" type="multi">
             <properties>
                 <property ID="0x46D866D1" type="long">
                     <default>10</default>
                 </property>
-                <struct ID="0xDEFF74EA" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xDEFF74EA" template="mp2demo/Structs/DamageInfo.xml"/>
                 <property ID="0xC6C4232C" type="float">
                     <default>4.0</default>
                 </property>

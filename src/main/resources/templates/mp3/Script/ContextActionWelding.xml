@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>ContextActionWelding</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <struct ID="0x2F74DC89" type="multi">
             <properties>
                 <property ID="0x6ADE8B91" type="character"/>

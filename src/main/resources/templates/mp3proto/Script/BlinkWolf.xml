@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>BlinkWolf</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <struct ID="0x90688474" type="multi">
             <properties>
                 <property ID="0x2B3109A6" type="bool">
@@ -35,10 +35,10 @@
                 <property ID="0xB6055F35" type="long">
                     <default>5</default>
                 </property>
-                <struct ID="0x6DAC116A" template="Structs/LaunchProjectileData.xml"/>
-                <struct ID="0x9AAB30F1" template="Structs/LaunchProjectileData.xml"/>
-                <struct ID="0x76B1B8E0" template="Structs/LaunchProjectileData.xml"/>
-                <struct ID="0xFE3B5965" template="Structs/LaunchProjectileData.xml"/>
+                <struct ID="0x6DAC116A" template="mp3proto/Structs/LaunchProjectileData.xml"/>
+                <struct ID="0x9AAB30F1" template="mp3proto/Structs/LaunchProjectileData.xml"/>
+                <struct ID="0x76B1B8E0" template="mp3proto/Structs/LaunchProjectileData.xml"/>
+                <struct ID="0xFE3B5965" template="mp3proto/Structs/LaunchProjectileData.xml"/>
                 <property ID="0xE68CEBB0" type="float">
                     <default>70.0</default>
                 </property>
@@ -57,7 +57,7 @@
                 <property ID="0x8D518FD5" type="float">
                     <default>15.0</default>
                 </property>
-                <struct ID="0x0F2FA713" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x0F2FA713" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0xA42DBD9E" type="float">
                     <default>1.0</default>
                 </property>
@@ -131,7 +131,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml">
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -157,7 +157,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

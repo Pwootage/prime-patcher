@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>MediumIng</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
@@ -23,7 +23,7 @@
         <property ID="0xC96AE3DF" type="long">
             <default>0</default>
         </property>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <property ID="0x9579B1F2" type="float">
             <default>50.0</default>
         </property>
@@ -36,15 +36,15 @@
         <property ID="0xF3EA2DEF" type="float">
             <default>20.0</default>
         </property>
-        <struct ID="0xC9416034" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xC9416034" template="mp2/Structs/DamageInfo.xml"/>
         <property ID="0x636F11E5" type="float">
             <default>10.0</default>
         </property>
-        <struct ID="0xD2254430" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xD2254430" template="mp2/Structs/DamageInfo.xml"/>
         <property ID="0xB787F412" type="float">
             <default>10.0</default>
         </property>
-        <struct ID="0x49C8D0C7" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x49C8D0C7" template="mp2/Structs/DamageVulnerability.xml"/>
         <property ID="0x15294900" type="float">
             <default>2.0</default>
         </property>
@@ -67,10 +67,10 @@
             <default>0.5</default>
         </property>
         <property ID="0x7A9F8249" type="character"/>
-        <struct ID="0x38CF133B" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x38CF133B" template="mp2/Structs/ActorParameters.xml"/>
         <property ID="0x0767060D" type="MayaSpline"/>
-        <struct ID="0x0E6B1E70" template="Structs/CameraShakerData.xml"/>
-        <struct ID="0xF683FE08" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x0E6B1E70" template="mp2/Structs/CameraShakerData.xml"/>
+        <struct ID="0xF683FE08" template="mp2/Structs/DamageInfo.xml"/>
         <property ID="0xA77F6212" type="float">
             <default>25.0</default>
         </property>

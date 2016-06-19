@@ -14,10 +14,10 @@
         <property ID="0x0A" name="Leash Radius" type="float"/>
         <property ID="0x0B" name="Player Leash Radius" type="float"/>
         <property ID="0x0C" name="Player Leash Time" type="float"/>
-        <struct ID="0x0D" name="ContactDamage" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x0D" name="ContactDamage" template="mp1/Structs/DamageInfo.xml"/>
         <property ID="0x0E" name="Damage Wait Time" type="float"/>
-        <struct ID="0x0F" name="HealthInfo" template="Structs/HealthInfo.xml"/>
-        <struct ID="0x10" name="Vulnerability" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x0F" name="HealthInfo" template="mp1/Structs/HealthInfo.xml"/>
+        <struct ID="0x10" name="Vulnerability" template="mp1/Structs/DamageVulnerability.xml"/>
         <property ID="0x11" name="Unknown 1" type="float"/>
         <property ID="0x12" name="Unknown 2" type="float"/>
         <property ID="0x13" name="Unknown 3" type="vector3f"/>

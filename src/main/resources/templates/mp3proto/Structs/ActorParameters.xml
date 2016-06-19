@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct name="ActorParameters" type="multi">
     <properties>
-        <struct ID="0xB028DB0E" template="Structs/LightParameters.xml"/>
-        <struct ID="0x375BFD7C" template="Structs/ScannableParameters.xml"/>
+        <struct ID="0xB028DB0E" template="mp3proto/Structs/LightParameters.xml"/>
+        <struct ID="0x375BFD7C" template="mp3proto/Structs/ScannableParameters.xml"/>
         <property ID="0xC0BA9E18" type="file" extensions="UNKN"/>
         <property ID="0x9F027D91" type="file" extensions="UNKN"/>
         <property ID="0x6B1FBC3A" type="file" extensions="UNKN"/>
@@ -16,7 +16,7 @@
         <property ID="0x7C269EBC" type="float">
             <default>1.0</default>
         </property>
-        <struct ID="0x05AD250E" template="Structs/VisorParameters.xml"/>
+        <struct ID="0x05AD250E" template="mp3proto/Structs/VisorParameters.xml"/>
         <property ID="0xCD4C81A1" type="bool">
             <default>false</default>
         </property>

@@ -2,12 +2,12 @@
 <ScriptTemplate version="4">
     <name>IngPuddle</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <struct ID="0xD520975D" type="multi">
             <properties>
                 <property ID="0x55744160" type="file" extensions="AFSM"/>
-                <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml">
+                <struct ID="0xCF90D15E" template="mp2/Structs/HealthInfo.xml">
                     <properties>
                         <property ID="0x3A2D17E4">
                             <default>2.0</default>
@@ -42,7 +42,7 @@
                 <property ID="0x4489935E" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x7B71AE90" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x7B71AE90" template="mp2/Structs/DamageVulnerability.xml"/>
             </properties>
         </struct>
     </properties>

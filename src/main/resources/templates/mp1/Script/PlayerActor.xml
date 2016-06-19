@@ -10,11 +10,11 @@
         <property ID="0x05" name="Scan Offset" type="vector3f"/>
         <property ID="0x06" name="Unknown 2" type="float"/>
         <property ID="0x07" name="Unknown 3" type="float"/>
-        <struct ID="0x08" name="HealthInfo" template="Structs/HealthInfo.xml"/>
-        <struct ID="0x09" name="DamageVulnerability" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x08" name="HealthInfo" template="mp1/Structs/HealthInfo.xml"/>
+        <struct ID="0x09" name="DamageVulnerability" template="mp1/Structs/DamageVulnerability.xml"/>
         <property ID="0x0A" name="Model" type="file" extensions="CMDL"/>
         <property ID="0x0B" name="AnimationParameters" type="character"/>
-        <struct ID="0x0C" name="ActorParameters" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x0C" name="ActorParameters" template="mp1/Structs/ActorParameters.xml"/>
         <property ID="0x0D" name="Loop Animation" type="bool"/>
         <property ID="0x0E" name="Unknown 5" type="bool"/>
         <property ID="0x0F" name="Disable Movement?" type="bool"/>

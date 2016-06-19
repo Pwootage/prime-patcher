@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>Grenchler</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x3FAE47EB">
                     <default>100.0</default>
@@ -22,11 +22,11 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
         <property ID="0x33408E7F" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0x0A7326A3" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x0A7326A3" template="mp2demo/Structs/DamageVulnerability.xml"/>
         <property ID="0xA18F626B" type="character"/>
         <property ID="0x0ABEF809" type="character"/>
         <property ID="0x4F3A4566" type="long">
@@ -56,7 +56,7 @@
         <property ID="0x49632B31" type="float">
             <default>6.0</default>
         </property>
-        <struct ID="0xDF636C4B" template="Structs/DamageInfo.xml">
+        <struct ID="0xDF636C4B" template="mp2demo/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>9</default>
@@ -79,7 +79,7 @@
             <default>3.0</default>
         </property>
         <property ID="0x49FAE143" type="file" extensions="ELSC"/>
-        <struct ID="0x13E30E4D" template="Structs/DamageInfo.xml">
+        <struct ID="0x13E30E4D" template="mp2demo/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>9</default>
@@ -110,7 +110,7 @@
         <property ID="0x7EF9AA67" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0x5285DB00" template="Structs/DamageInfo.xml">
+        <struct ID="0x5285DB00" template="mp2demo/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>9</default>
@@ -135,7 +135,7 @@
         <property ID="0xF0E4D621" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0xEDD43636" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xEDD43636" template="mp2demo/Structs/DamageInfo.xml"/>
         <property ID="0x05439A08" type="long">
             <default>-1</default>
         </property>

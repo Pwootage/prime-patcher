@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>CameraModifier</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0x106AB581" type="multi">
             <properties>
                 <enum ID="0x3CC85F81">

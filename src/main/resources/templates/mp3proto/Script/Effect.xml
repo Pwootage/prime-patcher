@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>Effect</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <property ID="0x0A479D6F" type="file" extensions="PART,ELSC,SWHC"/>
         <property ID="0x3217DFF8" type="bool">
             <default>true</default>
@@ -58,11 +58,11 @@
         <property ID="0x2FA4E5D7" type="long">
             <default>0</default>
         </property>
-        <struct ID="0xB028DB0E" template="Structs/LightParameters.xml"/>
+        <struct ID="0xB028DB0E" template="mp3proto/Structs/LightParameters.xml"/>
         <property ID="0x3D7406AF" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0x493D6A2D" template="Structs/SplineType.xml"/>
+        <struct ID="0x493D6A2D" template="mp3proto/Structs/SplineType.xml"/>
         <property ID="0x27E5F874" type="MayaSpline"/>
         <property ID="0xFD1E2F56" type="float">
             <default>10.0</default>

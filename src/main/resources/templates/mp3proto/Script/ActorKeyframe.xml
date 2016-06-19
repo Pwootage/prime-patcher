@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>ActorKeyframe</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <property ID="0x1CCD0586" type="long">
             <default>-1</default>
             <cook_pref>never</cook_pref>

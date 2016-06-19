@@ -20,10 +20,18 @@ object ScriptProperty {
           case ScriptPropertyType.VECTOR3F.identifier => new Vector3FScriptProperty
           case ScriptPropertyType.COLOR.identifier => new ColorScriptProperty
           case ScriptPropertyType.FILE.identifier => new FileScriptProperty
+          case ScriptPropertyType.STRING.identifier => new StringScriptProperty
+          case "" => new StringScriptProperty
+          case null => new StringScriptProperty
           case _ =>
             println(n)
             null
         }
+      case "struct" => new StructScriptProperty
+      case "enum" => new EnumScriptProperty
+      case "array" => new ArrayScriptProperty
+      case "bitfield" => new BitfieldScriptProperty
+      case _ => null
     }
   }
 
@@ -44,7 +52,8 @@ abstract class ScriptProperty[T] extends XmlSerializable {
 
   override def fromXml(v: NodeSeq): Unit = {
     ID = (v \ "@ID").text
-    name = (v \ "@name").headOption.map(_.text).getOrElse(ScriptTemplates.nameForProperty(ID))
+    name = (v \ "@name").headOption.map(_.text)
+      .orElse(ScriptTemplates.nameForProperty(ID)).getOrElse(name)
     description = (v \ "description").optionalText
     default = (v \ "default").headOption
       .map(parseValue _)
@@ -143,22 +152,47 @@ class BooleanScriptProperty extends ScriptProperty[Boolean] {
 abstract class TemplatedScriptProperty[T] extends ScriptProperty[T] {
   var template: Option[String] = None
 
-  //TODO: TEMPLATE HANDLING
+  override def fromXml(v: NodeSeq): Unit = {
+    (v \ "@template").headOption.map(_.text).foreach(templ => {
+      template = Some(templ)
+      val xml = ScriptTemplates.loadTemplateXml(templ)
+      fromXml(xml)
+    })
+    super.fromXml(v)
+  }
 }
 
 class StructScriptProperty extends TemplatedScriptProperty[ScriptObjectStructValue] {
-  var typ: Option[ScriptPropertyStructType] = None
+  var typ: ScriptPropertyStructType = ScriptPropertyStructType.SINGLE
 
-  var properties = Seq[ScriptProperty[_]]()
+  var properties = Map[String, ScriptProperty[_]]()
   default = None
 
   override def parseValue(node: NodeSeq): ScriptObjectStructValue = ???
+  override def fromXml(v: NodeSeq): Unit = {
+    super.fromXml(v)
+
+    typ = (v \ "@type").headOption.map(_.text)
+      .map(ScriptPropertyStructType.fromIdentifier)
+      .getOrElse(typ)
+
+    (v \ "properties" \ "_").foreach(prop => {
+      val id = (prop \ "@ID").text.trim
+      if (properties.contains(id)) {
+        properties(id).fromXml(prop)
+      } else {
+        val parsed = prop.as(ScriptProperty.determineType _)
+        properties += parsed.ID -> parsed
+      }
+      //Merge into existing property
+    })
+  }
 }
 
-class EnumScriptProperty extends TemplatedScriptProperty[ScriptObjectEnumValue] {
+class EnumScriptProperty extends TemplatedScriptProperty[Int] {
   var enumerators = Seq[Enumerator]()
 
-  override def parseValue(node: NodeSeq): ScriptObjectEnumValue = ???
+  override def parseValue(node: NodeSeq): Int = DataTypeConversion.stringToLong(node.text).toInt
 }
 
 class BitfieldScriptProperty extends TemplatedScriptProperty[Int] {
@@ -172,7 +206,10 @@ class BitfieldScriptProperty extends TemplatedScriptProperty[Int] {
 class ArrayScriptProperty extends TemplatedScriptProperty[ScriptObjectArrayValue] {
   var properties = Seq[ScriptProperty[_]]()
 
-  override def parseValue(node: NodeSeq): ScriptObjectArrayValue = ???
+  //Not sure how to do defaults here....
+  //Also, no templated arrays are ever used, but they *should* work
+
+  override def parseValue(node: NodeSeq): ScriptObjectArrayValue = new ScriptObjectArrayValue
 }
 
 class GameVersion extends XmlSerializable {

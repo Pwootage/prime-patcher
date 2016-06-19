@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>SafeZoneCrystal</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xD29C031D" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xD29C031D" template="mp2/Structs/ActorParameters.xml"/>
         <property ID="0x9B8B3323" type="file" extensions="SCAN"/>
         <property ID="0xE36E20A7" type="file" extensions="SCAN"/>
         <property ID="0xAC794DA8" type="file" extensions="SCAN"/>

@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>Cable</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <struct ID="0x93B93DB9" type="multi">
             <properties>
                 <property ID="0xFFE83B77" type="file" extensions="SWHC"/>
@@ -52,13 +52,13 @@
                 <property ID="0x11A73408" type="float">
                     <default>4.0</default>
                 </property>
-                <enum ID="0x44EF4DAB" template="Enums/CableEnum.xml">
+                <enum ID="0x44EF4DAB" template="mp3/Enums/CableEnum.xml">
                     <default>0x80DD21B4</default>
                 </enum>
-                <enum ID="0x034F377B" template="Enums/CableEnum.xml">
+                <enum ID="0x034F377B" template="mp3/Enums/CableEnum.xml">
                     <default>0x23363FD3</default>
                 </enum>
-                <enum ID="0x3E2F1ECB" template="Enums/CableEnum.xml">
+                <enum ID="0x3E2F1ECB" template="mp3/Enums/CableEnum.xml">
                     <default>0x24CF38F1</default>
                 </enum>
                 <property ID="0x833E4985" type="float">
@@ -70,7 +70,7 @@
                 <property ID="0xDDB5E1D1" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0x84843807" template="Structs/RagDollData.xml">
+                <struct ID="0x84843807" template="mp3/Structs/RagDollData.xml">
                     <properties>
                         <property ID="0xA99A0E33">
                             <default>false</default>

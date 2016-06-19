@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>IngSpiderballGuardian</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
@@ -23,19 +23,19 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <struct ID="0xA1389799" type="multi">
             <properties>
-                <struct ID="0x152DB484" template="Structs/IngSpiderballGuardianStruct.xml"/>
-                <struct ID="0x2D163FF7" template="Structs/IngSpiderballGuardianStruct.xml"/>
-                <struct ID="0x8C2FBB19" template="Structs/IngSpiderballGuardianStruct.xml"/>
-                <struct ID="0x5D612911" template="Structs/IngSpiderballGuardianStruct.xml"/>
-                <struct ID="0xFC58ADFF" template="Structs/IngSpiderballGuardianStruct.xml"/>
-                <struct ID="0xC463268C" template="Structs/IngSpiderballGuardianStruct.xml"/>
+                <struct ID="0x152DB484" template="mp2/Structs/IngSpiderballGuardianStruct.xml"/>
+                <struct ID="0x2D163FF7" template="mp2/Structs/IngSpiderballGuardianStruct.xml"/>
+                <struct ID="0x8C2FBB19" template="mp2/Structs/IngSpiderballGuardianStruct.xml"/>
+                <struct ID="0x5D612911" template="mp2/Structs/IngSpiderballGuardianStruct.xml"/>
+                <struct ID="0xFC58ADFF" template="mp2/Structs/IngSpiderballGuardianStruct.xml"/>
+                <struct ID="0xC463268C" template="mp2/Structs/IngSpiderballGuardianStruct.xml"/>
                 <property ID="0x0F598739" type="float">
                     <default>2.0</default>
                 </property>
-                <struct ID="0xBA78D281" template="Structs/DamageInfo.xml">
+                <struct ID="0xBA78D281" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -51,12 +51,12 @@
                 <property ID="0x32133B39" type="float">
                     <default>20.0</default>
                 </property>
-                <struct ID="0xAED23ABC" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x3A5E2F52" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0xCEE38F10" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x796FA303" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0xD5F3E9C4" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x44C1F241" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xAED23ABC" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x3A5E2F52" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xCEE38F10" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x796FA303" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xD5F3E9C4" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x44C1F241" template="mp2/Structs/AudioPlaybackParms.xml"/>
             </properties>
         </struct>
     </properties>

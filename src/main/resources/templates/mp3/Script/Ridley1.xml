@@ -2,14 +2,14 @@
 <ScriptTemplate version="4">
     <name>Ridley1</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <struct ID="0x5FD3DE4E" type="multi">
             <properties>
                 <property ID="0xCCF0CC68" type="file" extensions="PART"/>
                 <property ID="0x9CF6186B" type="file" extensions="PART"/>
                 <property ID="0xAFA0D295" type="file" extensions="PART"/>
                 <property ID="0xB93E46E5" type="file" extensions="WPSC"/>
-                <struct ID="0x1AAE3DB5" template="Structs/PlasmaBeamInfo.xml"/>
+                <struct ID="0x1AAE3DB5" template="mp3/Structs/PlasmaBeamInfo.xml"/>
                 <property ID="0xBF4F8D8C" type="file" extensions="TXTR"/>
                 <property ID="0xAB46A8C3" type="float">
                     <default>100.0</default>
@@ -55,13 +55,13 @@
                 <property ID="0x1A058C4F" type="file" extensions="UNKN"/>
             </properties>
         </struct>
-        <struct ID="0x3A80D135" template="Structs/Ridley1Data.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml"/>
-        <struct ID="0x1C1698F5" template="Structs/Ridley1Data.xml"/>
-        <struct ID="0x1464AE05" template="Structs/PatternedAI.xml"/>
-        <struct ID="0x1CF90C26" template="Structs/Ridley1Data.xml"/>
-        <struct ID="0x24D00673" template="Structs/PatternedAI.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x3A80D135" template="mp3/Structs/Ridley1Data.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0x1C1698F5" template="mp3/Structs/Ridley1Data.xml"/>
+        <struct ID="0x1464AE05" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0x1CF90C26" template="mp3/Structs/Ridley1Data.xml"/>
+        <struct ID="0x24D00673" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

@@ -2,16 +2,16 @@
 <ScriptTemplate version="4">
     <name>SeedBoss1</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <struct ID="0xF6E66110" type="multi">
             <properties>
                 <property ID="0xD3AD55B6" type="float">
                     <default>0.0</default>
                 </property>
-                <struct ID="0xB33EB533" template="Structs/HealthInfo.xml"/>
-                <struct ID="0x26FA460B" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xB33EB533" template="mp3/Structs/HealthInfo.xml"/>
+                <struct ID="0x26FA460B" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0xAD0DE5AC" type="file" extensions="CMDL"/>
                 <property ID="0xFC128C15" type="file" extensions="CMDL"/>
                 <property ID="0x299B8D33" type="file" extensions="CMDL"/>
@@ -35,33 +35,33 @@
                 <property ID="0x6AD6CBBA" type="file" extensions="CMDL"/>
                 <property ID="0x3AB79847" type="file" extensions="CMDL"/>
                 <property ID="0x27B30D35" type="file" extensions="CMDL"/>
-                <struct ID="0xEC37E2FA" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xEC37E2FA" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0xCCCA3249" type="float">
                     <default>0.0</default>
                 </property>
-                <struct ID="0x3CE6E482" template="Structs/ShockWaveInfo.xml"/>
+                <struct ID="0x3CE6E482" template="mp3/Structs/ShockWaveInfo.xml"/>
                 <struct ID="0x72E00501" type="multi">
                     <properties>
                         <property ID="0x2C51A676" type="float">
                             <default>1.0</default>
                         </property>
                         <property ID="0xB68C6D96" type="file" extensions="PART"/>
-                        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x337F9524" template="mp3/Structs/DamageInfo.xml"/>
                         <property ID="0x3A3E03BA" type="vector3f">
                             <default>0.0, 0.0, 0.0</default>
                         </property>
                         <property ID="0xA55DACF6" type="file" extensions="CAUD"/>
                     </properties>
                 </struct>
-                <struct ID="0x1598012A" template="Structs/PlasmaBeamInfo.xml"/>
-                <struct ID="0x98821996" template="Structs/DamageInfo.xml"/>
-                <struct ID="0xDD34C3C0" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x1598012A" template="mp3/Structs/PlasmaBeamInfo.xml"/>
+                <struct ID="0x98821996" template="mp3/Structs/DamageInfo.xml"/>
+                <struct ID="0xDD34C3C0" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0x547B9A9A" type="file" extensions="PART"/>
                 <property ID="0xEAF93057" type="file" extensions="CAUD"/>
                 <property ID="0x36C067C2" type="file" extensions="WPSC"/>
-                <struct ID="0x261EEFE7" template="Structs/DamageInfo.xml"/>
-                <struct ID="0x818F810B" template="Structs/ShockWaveInfo.xml"/>
-                <struct ID="0x7C9C3B51" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x261EEFE7" template="mp3/Structs/DamageInfo.xml"/>
+                <struct ID="0x818F810B" template="mp3/Structs/ShockWaveInfo.xml"/>
+                <struct ID="0x7C9C3B51" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -86,7 +86,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x730FE427" template="Structs/HoverThenHomeProjectile.xml"/>
+                <struct ID="0x730FE427" template="mp3/Structs/HoverThenHomeProjectile.xml"/>
                 <property ID="0x050924D3" type="vector3f">
                     <default>0.0, 0.0, 0.0</default>
                 </property>
@@ -96,7 +96,7 @@
                 <property ID="0x2A7A2DA7" type="float">
                     <default>0.0</default>
                 </property>
-                <struct ID="0x4392C34A" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x4392C34A" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -121,7 +121,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x868E4192" template="Structs/HoverThenHomeProjectile.xml"/>
+                <struct ID="0x868E4192" template="mp3/Structs/HoverThenHomeProjectile.xml"/>
                 <property ID="0xC8E16555" type="vector3f">
                     <default>0.0, 0.0, 0.0</default>
                 </property>
@@ -133,8 +133,8 @@
                 </property>
                 <property ID="0xAEA60F24" type="file" extensions="PART"/>
                 <property ID="0x38786921" type="file" extensions="UNKN"/>
-                <struct ID="0x9E63065F" template="Structs/DamageInfo.xml"/>
-                <struct ID="0x50AE6E55" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x9E63065F" template="mp3/Structs/DamageInfo.xml"/>
+                <struct ID="0x50AE6E55" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -161,14 +161,14 @@
                 </struct>
                 <struct ID="0xC69F691A" type="multi">
                     <properties>
-                        <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml"/>
-                        <struct ID="0x7B71AE90" template="Structs/DamageVulnerability.xml"/>
+                        <struct ID="0xCF90D15E" template="mp3/Structs/HealthInfo.xml"/>
+                        <struct ID="0x7B71AE90" template="mp3/Structs/DamageVulnerability.xml"/>
                         <property ID="0x71A5A198" type="character"/>
                         <property ID="0x55744160" type="file" extensions="AFSM"/>
-                        <struct ID="0xA30EE999" template="Structs/ActorParameters.xml"/>
+                        <struct ID="0xA30EE999" template="mp3/Structs/ActorParameters.xml"/>
                         <property ID="0xD8C6D15C" type="file" extensions="PART"/>
                         <property ID="0x9A094814" type="file" extensions="CAUD"/>
-                        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x337F9524" template="mp3/Structs/DamageInfo.xml"/>
                         <property ID="0x053AE4A7" type="float">
                             <default>20.0</default>
                         </property>
@@ -198,10 +198,10 @@
                 <property ID="0xD6FA5A52" type="float">
                     <default>0.0</default>
                 </property>
-                <struct ID="0x45694DB0" template="Structs/SeedBoss1Stage.xml"/>
-                <struct ID="0x338C748D" template="Structs/SeedBoss1Stage.xml"/>
-                <struct ID="0xA8FF9E59" template="Structs/SeedBoss1Stage.xml"/>
-                <struct ID="0xDE4606F7" template="Structs/SeedBoss1Stage.xml"/>
+                <struct ID="0x45694DB0" template="mp3/Structs/SeedBoss1Stage.xml"/>
+                <struct ID="0x338C748D" template="mp3/Structs/SeedBoss1Stage.xml"/>
+                <struct ID="0xA8FF9E59" template="mp3/Structs/SeedBoss1Stage.xml"/>
+                <struct ID="0xDE4606F7" template="mp3/Structs/SeedBoss1Stage.xml"/>
                 <struct ID="0x2883F972" type="multi">
                     <properties>
                         <property ID="0xDCE1A940" type="file" extensions="CMDL"/>
@@ -221,7 +221,7 @@
                         <property ID="0x1176C469" type="file" extensions="CMDL"/>
                     </properties>
                 </struct>
-                <struct ID="0x40AC1FD4" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x40AC1FD4" template="mp3/Structs/DamageInfo.xml"/>
                 <property ID="0x64588114" type="float">
                     <default>0.0</default>
                 </property>
@@ -235,7 +235,7 @@
                     <default>0.0</default>
                 </property>
                 <property ID="0xC2BE328D" type="MayaSpline"/>
-                <struct ID="0x022FDCA5" template="Structs/ScannableParameters.xml"/>
+                <struct ID="0x022FDCA5" template="mp3/Structs/ScannableParameters.xml"/>
             </properties>
         </struct>
     </properties>

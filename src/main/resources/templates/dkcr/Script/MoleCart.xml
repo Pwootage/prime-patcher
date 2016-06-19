@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>MoleCart</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml">
             <properties>
                 <struct ID="0x5846524D">
                     <properties>
@@ -19,7 +19,7 @@
         <property ID="0x2E686C2A" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
         <property ID="0xC27FFA8F" type="file" extensions="CMDL"/>
         <property ID="0x0FC966DC" type="file" extensions="DCLN"/>
         <property ID="0xA3D63F44" type="character"/>
@@ -45,11 +45,11 @@
                 <property ID="0xC686AF51" type="long">
                     <default>2</default>
                 </property>
-                <struct ID="0x5DF3F980" template="Structs/MoleCartStruct.xml"/>
-                <struct ID="0x2B16C0BD" template="Structs/MoleCartStruct.xml"/>
-                <struct ID="0xB0652A69" template="Structs/MoleCartStruct.xml"/>
-                <struct ID="0xC6DCB2C7" template="Structs/MoleCartStruct.xml"/>
-                <struct ID="0x5DAF5813" template="Structs/MoleCartStruct.xml"/>
+                <struct ID="0x5DF3F980" template="dkcr/Structs/MoleCartStruct.xml"/>
+                <struct ID="0x2B16C0BD" template="dkcr/Structs/MoleCartStruct.xml"/>
+                <struct ID="0xB0652A69" template="dkcr/Structs/MoleCartStruct.xml"/>
+                <struct ID="0xC6DCB2C7" template="dkcr/Structs/MoleCartStruct.xml"/>
+                <struct ID="0x5DAF5813" template="dkcr/Structs/MoleCartStruct.xml"/>
             </properties>
         </struct>
     </properties>

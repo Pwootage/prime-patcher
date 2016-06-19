@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>PlayerController</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml">
             <properties>
                 <struct ID="0x5846524D">
                     <properties>
@@ -18,7 +18,7 @@
         </property>
         <property ID="0xC27FFA8F" type="file" extensions="UNKN"/>
         <property ID="0xA244C9D8" type="character"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
         <property ID="0xCA56A18A" type="long">
             <default>0</default>
         </property>

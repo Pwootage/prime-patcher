@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>ActorKeyframe</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0xC215A24F" type="long">
             <default>-1</default>
             <cook_pref>always</cook_pref>
@@ -26,7 +26,7 @@
         <property ID="0x6F8D34CA" type="float">
             <default>1.0</default>
         </property>
-        <enum ID="0xED1F8AAB" template="Enums/AnimEnum.xml">
+        <enum ID="0xED1F8AAB" template="dkcr/Enums/AnimEnum.xml">
             <default>0x8B3D86DC</default>
         </enum>
     </properties>

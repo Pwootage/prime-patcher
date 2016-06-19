@@ -2,11 +2,11 @@
 <ScriptTemplate version="4">
     <name>MetroidAlpha</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x411938AA" template="Structs/DamageVulnerability.xml"/>
-        <struct ID="0xD86EE93F" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
+        <struct ID="0x411938AA" template="mp2demo/Structs/DamageVulnerability.xml"/>
+        <struct ID="0xD86EE93F" template="mp2demo/Structs/DamageVulnerability.xml"/>
         <property ID="0x72439B39" type="float">
             <default>5.0</default>
         </property>

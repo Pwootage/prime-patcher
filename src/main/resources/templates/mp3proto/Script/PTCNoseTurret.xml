@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>PTCNoseTurret</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <struct ID="0x3E5DD208" type="multi">
             <properties>
                 <property ID="0x395B81EF" type="float">
@@ -45,7 +45,7 @@
                     <default>-45.0</default>
                 </property>
                 <property ID="0xEF485DB9" type="file" extensions="WPSC"/>
-                <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x337F9524" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0xEB903473" type="float">
                     <default>1.0</default>
                 </property>
@@ -64,7 +64,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml">
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -99,7 +99,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

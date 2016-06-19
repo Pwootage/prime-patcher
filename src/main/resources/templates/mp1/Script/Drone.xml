@@ -8,19 +8,19 @@
         <property ID="0x03" name="Rotation" type="vector3f"/>
         <property ID="0x04" name="Scale" type="vector3f"/>
         <property ID="0x05" name="Unknown 2" type="float"/>
-        <struct ID="0x06" name="PatternedInfo" template="Structs/PatternedInfo.xml"/>
-        <struct ID="0x07" name="ActorParameters" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x08" name="DamageInfo 1" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x06" name="PatternedInfo" template="mp1/Structs/PatternedInfo.xml"/>
+        <struct ID="0x07" name="ActorParameters" template="mp1/Structs/ActorParameters.xml"/>
+        <struct ID="0x08" name="DamageInfo 1" template="mp1/Structs/DamageInfo.xml"/>
         <property ID="0x09" name="Unknown 3" type="long"/>
-        <struct ID="0x0A" name="DamageInfo 2" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x0A" name="DamageInfo 2" template="mp1/Structs/DamageInfo.xml"/>
         <property ID="0x0B" name="Unknown 4" type="long"/>
         <property ID="0x0C" name="Unknown 5" type="long"/>
         <property ID="0x0D" name="Unknown 6" type="long"/>
-        <struct ID="0x0E" name="FlareDef 1" template="Structs/FlareDef.xml"/>
-        <struct ID="0x0F" name="FlareDef 2" template="Structs/FlareDef.xml"/>
-        <struct ID="0x10" name="FlareDef 3" template="Structs/FlareDef.xml"/>
-        <struct ID="0x11" name="FlareDef 4" template="Structs/FlareDef.xml"/>
-        <struct ID="0x12" name="FlareDef 5" template="Structs/FlareDef.xml"/>
+        <struct ID="0x0E" name="FlareDef 1" template="mp1/Structs/FlareDef.xml"/>
+        <struct ID="0x0F" name="FlareDef 2" template="mp1/Structs/FlareDef.xml"/>
+        <struct ID="0x10" name="FlareDef 3" template="mp1/Structs/FlareDef.xml"/>
+        <struct ID="0x11" name="FlareDef 4" template="mp1/Structs/FlareDef.xml"/>
+        <struct ID="0x12" name="FlareDef 5" template="mp1/Structs/FlareDef.xml"/>
         <property ID="0x13" name="Unknown 7" type="float"/>
         <property ID="0x14" name="Unknown 8" type="float"/>
         <property ID="0x15" name="Unknown 9" type="float"/>

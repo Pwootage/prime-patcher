@@ -15,7 +15,7 @@
         </enum>
         <struct ID="0x79DE4BA5" type="multi">
             <properties>
-                <struct ID="0x7FCD6908" template="Structs/AreaPathStructA.xml">
+                <struct ID="0x7FCD6908" template="dkcr/Structs/AreaPathStructA.xml">
                     <properties>
                         <enum ID="0xF4AC7CAA">
                             <default>0x8C1B1D20</default>
@@ -24,6 +24,6 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x287F9F45" template="Structs/InterpolationMethod.xml"/>
+        <struct ID="0x287F9F45" template="dkcr/Structs/InterpolationMethod.xml"/>
     </properties>
 </struct>

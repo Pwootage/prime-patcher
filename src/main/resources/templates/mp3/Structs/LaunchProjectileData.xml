@@ -2,7 +2,7 @@
 <struct name="LaunchProjectileData" type="multi">
     <properties>
         <property ID="0xEF485DB9" type="file" extensions="WPSC"/>
-        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x337F9524" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xF726E5DA" type="vector3f">
             <default>1.0, 1.0, 1.0</default>
         </property>

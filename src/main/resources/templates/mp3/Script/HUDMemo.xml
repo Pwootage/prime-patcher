@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>HUDMemo</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0x1A26C1CC" type="float">
             <default>3.0</default>
         </property>

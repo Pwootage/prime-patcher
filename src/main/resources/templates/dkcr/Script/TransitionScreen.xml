@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>TransitionScreen</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <enum ID="0xF5E86958">
             <default>0x4B079432</default>
             <enumerators>

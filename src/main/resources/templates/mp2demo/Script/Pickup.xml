@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>Pickup</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
         <property ID="0x3A3E03BA" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>
@@ -32,7 +32,7 @@
         </property>
         <property ID="0xC27FFA8F" type="file" extensions="CMDL"/>
         <property ID="0xE25FB08C" type="character"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
         <property ID="0xE585F166" type="float">
             <default>0.0</default>
         </property>

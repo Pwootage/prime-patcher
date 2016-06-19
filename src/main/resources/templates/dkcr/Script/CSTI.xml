@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>CSTI</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0x67A984CB" type="long">
             <default>3</default>
             <cook_pref>always</cook_pref>
@@ -13,9 +13,9 @@
         <property ID="0x382A1973" type="float">
             <default>135.0</default>
         </property>
-        <struct ID="0x84335E71" template="Structs/MotionInterpolationMethod.xml"/>
-        <struct ID="0x1DF8D319" template="Structs/OrientationInterpolationMethod.xml"/>
-        <struct ID="0x31FAF024" template="Structs/FOVInterpolationMethod.xml"/>
+        <struct ID="0x84335E71" template="dkcr/Structs/MotionInterpolationMethod.xml"/>
+        <struct ID="0x1DF8D319" template="dkcr/Structs/OrientationInterpolationMethod.xml"/>
+        <struct ID="0x31FAF024" template="dkcr/Structs/FOVInterpolationMethod.xml"/>
     </properties>
     <states/>
     <messages/>

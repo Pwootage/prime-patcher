@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>EyeBall</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <property ID="0xD0D88EA6" type="float">
             <default>3.0</default>
         </property>
@@ -12,7 +12,7 @@
             <default>3.0</default>
         </property>
         <property ID="0xEF485DB9" type="file" extensions="WPSC"/>
-        <struct ID="0x22A9F2D2" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x22A9F2D2" template="mp2/Structs/DamageInfo.xml"/>
         <property ID="0xBC19549C" type="long">
             <default>-1</default>
         </property>

@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>CameraFilterKeyframe</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0x7975DB5B" type="long">
             <default>0</default>
         </property>

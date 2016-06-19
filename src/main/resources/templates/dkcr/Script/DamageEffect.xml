@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>DamageEffect</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xEAF272DD" template="Structs/DamageEffectData.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
+        <struct ID="0xEAF272DD" template="dkcr/Structs/DamageEffectData.xml"/>
     </properties>
     <states/>
     <messages/>

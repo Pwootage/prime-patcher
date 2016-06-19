@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>DefenseMechanoid</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml">
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -14,7 +14,7 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
         <struct ID="0x5231ED05" type="multi">
             <properties>
                 <property ID="0x77259804" type="bool">
@@ -28,7 +28,7 @@
                 <property ID="0x05E140B1" type="float">
                     <default>100.0</default>
                 </property>
-                <struct ID="0xDCF5AB0F" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xDCF5AB0F" template="mp3proto/Structs/DamageVulnerability.xml"/>
                 <property ID="0x9D7B5570" type="float">
                     <default>10.0</default>
                 </property>
@@ -39,11 +39,11 @@
                 <property ID="0x5CECA2A6" type="float">
                     <default>100.0</default>
                 </property>
-                <struct ID="0xFF8C4056" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xFF8C4056" template="mp3proto/Structs/DamageVulnerability.xml"/>
                 <property ID="0x537F8382" type="file" extensions="PART"/>
                 <property ID="0x98D5883D" type="file" extensions="PART"/>
                 <property ID="0xAD17A036" type="file" extensions="PART"/>
-                <struct ID="0x99BBC2DE" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x99BBC2DE" template="mp3proto/Structs/DamageVulnerability.xml"/>
                 <property ID="0xDF6A1706" type="float">
                     <default>30.0</default>
                 </property>
@@ -93,13 +93,13 @@
                     <default>10.0</default>
                 </property>
                 <property ID="0x70E97166" type="file" extensions="WPSC"/>
-                <struct ID="0x258CFB4D" template="Structs/DamageInfo.xml"/>
-                <struct ID="0xE17C3B6E" template="Structs/ShockWaveInfo.xml"/>
+                <struct ID="0x258CFB4D" template="mp3proto/Structs/DamageInfo.xml"/>
+                <struct ID="0xE17C3B6E" template="mp3proto/Structs/ShockWaveInfo.xml"/>
                 <property ID="0x7AF488B1" type="file" extensions="PART"/>
                 <property ID="0x1CC93984" type="float">
                     <default>25.0</default>
                 </property>
-                <struct ID="0xF609C637" template="Structs/GrappleData.xml"/>
+                <struct ID="0xF609C637" template="mp3proto/Structs/GrappleData.xml"/>
             </properties>
         </struct>
     </properties>

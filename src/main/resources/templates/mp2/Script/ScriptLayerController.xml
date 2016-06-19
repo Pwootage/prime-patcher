@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>ScriptLayerController</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x8249F6C7" template="Structs/LayerSwitch.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0x8249F6C7" template="mp2/Structs/LayerSwitch.xml"/>
         <property ID="0x12A7D8B2" type="bool">
             <default>false</default>
         </property>

@@ -2,13 +2,13 @@
 <ScriptTemplate version="4">
     <name>MysteryFlyer</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <struct ID="0x44080565" type="multi">
             <properties>
                 <property ID="0x51253BA3" type="file" extensions="WPSC"/>
-                <struct ID="0xCEA30138" template="Structs/DamageInfo.xml">
+                <struct ID="0xCEA30138" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>

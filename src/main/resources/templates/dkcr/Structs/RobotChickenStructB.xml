@@ -54,7 +54,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x634FDDD1" template="Structs/UnknownStruct50.xml"/>
+        <struct ID="0x634FDDD1" template="dkcr/Structs/UnknownStruct50.xml"/>
         <struct ID="0xD1989E0D" type="multi">
             <properties>
                 <property ID="0xB335DB07" type="float">
@@ -76,26 +76,26 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB4C4FD1C" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0xB61AFA3B" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0xB7AF0726" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0xB3A6F475" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0xB2130968" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0xB0CD0E4F" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0xB178F352" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0xB8DEE8E9" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0xB96B15F4" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0xB7A4789F" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0x4508EB0E" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0x47D6EC29" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0x46631134" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0x426AE267" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0x43DF1F7A" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0x4101185D" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0x40B4E540" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0x4912FEFB" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0x48A703E6" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0x44ECC5C1" template="Structs/UnknownStruct50.xml"/>
-        <struct ID="0x468B1161" template="Structs/UnknownStruct50.xml"/>
+        <struct ID="0xB4C4FD1C" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0xB61AFA3B" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0xB7AF0726" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0xB3A6F475" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0xB2130968" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0xB0CD0E4F" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0xB178F352" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0xB8DEE8E9" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0xB96B15F4" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0xB7A4789F" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0x4508EB0E" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0x47D6EC29" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0x46631134" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0x426AE267" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0x43DF1F7A" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0x4101185D" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0x40B4E540" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0x4912FEFB" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0x48A703E6" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0x44ECC5C1" template="dkcr/Structs/UnknownStruct50.xml"/>
+        <struct ID="0x468B1161" template="dkcr/Structs/UnknownStruct50.xml"/>
     </properties>
 </struct>

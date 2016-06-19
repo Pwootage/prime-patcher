@@ -19,16 +19,16 @@
         <property ID="0x7B0CC30D" type="float">
             <default>60.0</default>
         </property>
-        <struct ID="0x742B3336" template="Structs/DamageVulnerability.xml"/>
-        <struct ID="0x0D9230D1" template="Structs/DamageVulnerability.xml"/>
-        <struct ID="0x243AB10D" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x742B3336" template="mp3/Structs/DamageVulnerability.xml"/>
+        <struct ID="0x0D9230D1" template="mp3/Structs/DamageVulnerability.xml"/>
+        <struct ID="0x243AB10D" template="mp3/Structs/DamageVulnerability.xml"/>
         <property ID="0x012115A2" type="float">
             <default>1.0</default>
         </property>
         <property ID="0xA12A4409" type="float">
             <default>0.1</default>
         </property>
-        <struct ID="0x9F0FF852" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x9F0FF852" template="mp3/Structs/DamageVulnerability.xml"/>
         <property ID="0xB9E0C90D" type="float">
             <default>20.0</default>
         </property>
@@ -119,7 +119,7 @@
         <property ID="0x3FEE1BA4" type="float">
             <default>0.5</default>
         </property>
-        <struct ID="0xCFACFF53" template="Structs/DamageInfo.xml">
+        <struct ID="0xCFACFF53" template="mp3/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0xF2D02613">
                     <default>30.0</default>
@@ -168,7 +168,7 @@
         <property ID="0x2BCA8395" type="float">
             <default>10.0</default>
         </property>
-        <struct ID="0xCCDD3ACA" template="Structs/FlyerMovementMode.xml">
+        <struct ID="0xCCDD3ACA" template="mp3/Structs/FlyerMovementMode.xml">
             <properties>
                 <property ID="0x6392404E">
                     <default>3.0</default>
@@ -199,7 +199,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xC845D3C0" template="Structs/FlyerMovementMode.xml">
+        <struct ID="0xC845D3C0" template="mp3/Structs/FlyerMovementMode.xml">
             <properties>
                 <property ID="0x6392404E">
                     <default>3.0</default>
@@ -224,7 +224,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xCC7D2E98" template="Structs/FlyerMovementMode.xml">
+        <struct ID="0xCC7D2E98" template="mp3/Structs/FlyerMovementMode.xml">
             <properties>
                 <property ID="0x6392404E">
                     <default>3.0</default>
@@ -246,7 +246,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB9C3DB94" template="Structs/FlyerMovementMode.xml">
+        <struct ID="0xB9C3DB94" template="mp3/Structs/FlyerMovementMode.xml">
             <properties>
                 <property ID="0x6392404E">
                     <default>0.1</default>
@@ -283,7 +283,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x6CA56014" template="Structs/FlyerMovementMode.xml">
+        <struct ID="0x6CA56014" template="mp3/Structs/FlyerMovementMode.xml">
             <properties>
                 <property ID="0x6392404E">
                     <default>30.0</default>
@@ -314,7 +314,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xE20E51C3" template="Structs/FlyerMovementMode.xml">
+        <struct ID="0xE20E51C3" template="mp3/Structs/FlyerMovementMode.xml">
             <properties>
                 <property ID="0x6392404E">
                     <default>30.0</default>
@@ -348,7 +348,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x25A68A0E" template="Structs/FlyerMovementMode.xml">
+        <struct ID="0x25A68A0E" template="mp3/Structs/FlyerMovementMode.xml">
             <properties>
                 <property ID="0x6392404E">
                     <default>1.0</default>
@@ -373,7 +373,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xD9B5D506" template="Structs/FlyerMovementMode.xml">
+        <struct ID="0xD9B5D506" template="mp3/Structs/FlyerMovementMode.xml">
             <properties>
                 <property ID="0x6392404E">
                     <default>30.0</default>
@@ -401,7 +401,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x8BB1C3A2" template="Structs/FlyerMovementMode.xml">
+        <struct ID="0x8BB1C3A2" template="mp3/Structs/FlyerMovementMode.xml">
             <properties>
                 <property ID="0x6392404E">
                     <default>1.0</default>
@@ -426,7 +426,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x389CB515" template="Structs/FlyerMovementMode.xml">
+        <struct ID="0x389CB515" template="mp3/Structs/FlyerMovementMode.xml">
             <properties>
                 <property ID="0x6392404E">
                     <default>5.0</default>
@@ -454,7 +454,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xFB2DDFAD" template="Structs/FlyerMovementMode.xml">
+        <struct ID="0xFB2DDFAD" template="mp3/Structs/FlyerMovementMode.xml">
             <properties>
                 <property ID="0x6392404E">
                     <default>5.0</default>
@@ -488,7 +488,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xC558BC0D" template="Structs/FlyerMovementMode.xml">
+        <struct ID="0xC558BC0D" template="mp3/Structs/FlyerMovementMode.xml">
             <properties>
                 <property ID="0x6392404E">
                     <default>40.0</default>
@@ -519,7 +519,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x5FE13A7B" template="Structs/FlyerMovementMode.xml">
+        <struct ID="0x5FE13A7B" template="mp3/Structs/FlyerMovementMode.xml">
             <properties>
                 <property ID="0x39FB7978">
                     <default>20.0</default>

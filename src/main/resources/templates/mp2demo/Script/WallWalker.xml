@@ -2,16 +2,16 @@
 <ScriptTemplate version="4">
     <name>WallWalker</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x4BC4C4D9">
                     <default>1</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x9F0FF852" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
+        <struct ID="0x9F0FF852" template="mp2demo/Structs/DamageVulnerability.xml"/>
         <property ID="0x733BD27C" type="float">
             <default>2.5</default>
         </property>
@@ -24,7 +24,7 @@
         <property ID="0xA72530E8" type="float">
             <default>40.0</default>
         </property>
-        <struct ID="0xF6206A12" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xF6206A12" template="mp2demo/Structs/DamageInfo.xml"/>
         <property ID="0x1319E077" type="file" extensions="PART"/>
         <property ID="0xD207FF0F" type="file" extensions="PART"/>
         <property ID="0x2B31C882" type="file" extensions="PART"/>
@@ -50,11 +50,11 @@
             <default>5.0</default>
         </property>
         <property ID="0xEF485DB9" type="file" extensions="WPSC"/>
-        <struct ID="0x553B1339" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x553B1339" template="mp2demo/Structs/DamageInfo.xml"/>
         <property ID="0x68DC4D11" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0x22BBDD0A" template="Structs/CameraShakerData.xml"/>
+        <struct ID="0x22BBDD0A" template="mp2demo/Structs/CameraShakerData.xml"/>
     </properties>
     <states/>
     <messages/>

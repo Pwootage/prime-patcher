@@ -2,16 +2,16 @@
 <ScriptTemplate version="4">
     <name>GellSac</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <property ID="0x8DB77EE4">
                     <default>10.0</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xE6861167" template="Structs/WallCrawlerData.xml">
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
+        <struct ID="0xE6861167" template="mp3/Structs/WallCrawlerData.xml">
             <properties>
                 <property ID="0x5A3A30F4">
                     <default>0.2</default>
@@ -55,7 +55,7 @@
                 </property>
                 <property ID="0x1A9C4C4C" type="file" extensions="PART"/>
                 <property ID="0x098536DD" type="file" extensions="UNKN"/>
-                <struct ID="0xF6206A12" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xF6206A12" template="mp3/Structs/DamageInfo.xml"/>
                 <property ID="0xA233ACCD" type="file" extensions="PART"/>
             </properties>
         </struct>

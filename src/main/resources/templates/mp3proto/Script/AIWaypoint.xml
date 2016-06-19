@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>AIWaypoint</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <property ID="0x6392404E" type="float">
             <default>1.0</default>
         </property>

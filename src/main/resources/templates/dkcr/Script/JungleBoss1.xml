@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>JungleBoss1</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml">
             <properties>
                 <struct ID="0x5846524D">
                     <properties>
@@ -13,9 +13,9 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0xBF81C83E" template="Structs/ShadowData.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0xBF81C83E" template="dkcr/Structs/ShadowData.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="dkcr/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0x7B71AE90">
                     <properties>
@@ -61,19 +61,19 @@
                         <property ID="0x06EFDAB2" type="long">
                             <default>0</default>
                         </property>
-                        <struct ID="0xD4292680" template="Structs/JungleBossStructB.xml"/>
-                        <struct ID="0x90880398" template="Structs/JungleBossStructB.xml"/>
-                        <struct ID="0xACE8E090" template="Structs/JungleBossStructB.xml"/>
-                        <struct ID="0x19CA49A8" template="Structs/JungleBossStructB.xml"/>
-                        <struct ID="0x25AAAAA0" template="Structs/JungleBossStructB.xml"/>
-                        <struct ID="0x610B8FB8" template="Structs/JungleBossStructB.xml"/>
+                        <struct ID="0xD4292680" template="dkcr/Structs/JungleBossStructB.xml"/>
+                        <struct ID="0x90880398" template="dkcr/Structs/JungleBossStructB.xml"/>
+                        <struct ID="0xACE8E090" template="dkcr/Structs/JungleBossStructB.xml"/>
+                        <struct ID="0x19CA49A8" template="dkcr/Structs/JungleBossStructB.xml"/>
+                        <struct ID="0x25AAAAA0" template="dkcr/Structs/JungleBossStructB.xml"/>
+                        <struct ID="0x610B8FB8" template="dkcr/Structs/JungleBossStructB.xml"/>
                     </properties>
                 </struct>
                 <struct ID="0xEF3E4DA5" type="multi">
                     <properties>
-                        <struct ID="0xD9BBA58A" template="Structs/JungleBossStructA.xml"/>
-                        <struct ID="0x2BEC4872" template="Structs/JungleBossStructA.xml"/>
-                        <struct ID="0xCCF1EEE5" template="Structs/JungleBossStructA.xml"/>
+                        <struct ID="0xD9BBA58A" template="dkcr/Structs/JungleBossStructA.xml"/>
+                        <struct ID="0x2BEC4872" template="dkcr/Structs/JungleBossStructA.xml"/>
+                        <struct ID="0xCCF1EEE5" template="dkcr/Structs/JungleBossStructA.xml"/>
                     </properties>
                 </struct>
                 <struct ID="0x45C4C44C" type="multi">
@@ -107,18 +107,18 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x9E8F9696" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x9E8F9696" template="dkcr/Structs/DamageInfo.xml"/>
                 <struct ID="0xCD9DE8CC" type="multi">
                     <properties>
-                        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-                        <struct ID="0xA5CC2982" template="Structs/ProjectileData.xml"/>
-                        <struct ID="0xD90DAB09" template="Structs/ProjectileRenderData.xml"/>
-                        <struct ID="0x58D9785F" template="Structs/ProjectileCollisionData.xml"/>
-                        <struct ID="0x90DCEF98" template="Structs/ProjectileMotionData.xml"/>
+                        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
+                        <struct ID="0xA5CC2982" template="dkcr/Structs/ProjectileData.xml"/>
+                        <struct ID="0xD90DAB09" template="dkcr/Structs/ProjectileRenderData.xml"/>
+                        <struct ID="0x58D9785F" template="dkcr/Structs/ProjectileCollisionData.xml"/>
+                        <struct ID="0x90DCEF98" template="dkcr/Structs/ProjectileMotionData.xml"/>
                         <property ID="0xCC4284A2" type="bool">
                             <default>false</default>
                         </property>
-                        <struct ID="0x50A7E94B" template="Structs/ProjectileBounceData.xml"/>
+                        <struct ID="0x50A7E94B" template="dkcr/Structs/ProjectileBounceData.xml"/>
                         <property ID="0xF726E5DA" type="vector3f">
                             <default>1.0, 1.0, 1.0</default>
                         </property>
@@ -127,9 +127,9 @@
                                 <property ID="0xFC8227A7" type="long">
                                     <default>1</default>
                                 </property>
-                                <struct ID="0x6E3800D3" template="Structs/JungleBossStructC.xml"/>
-                                <struct ID="0xBDA31C28" template="Structs/JungleBossStructC.xml"/>
-                                <struct ID="0xF32A1781" template="Structs/JungleBossStructC.xml"/>
+                                <struct ID="0x6E3800D3" template="dkcr/Structs/JungleBossStructC.xml"/>
+                                <struct ID="0xBDA31C28" template="dkcr/Structs/JungleBossStructC.xml"/>
+                                <struct ID="0xF32A1781" template="dkcr/Structs/JungleBossStructC.xml"/>
                             </properties>
                         </struct>
                         <property ID="0x3180D4F3" type="float">

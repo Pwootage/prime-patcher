@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>DistanceFog</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml">
             <properties>
                 <property ID="0x41435456">
                     <default>false</default>
@@ -22,11 +22,11 @@
         <property ID="0x37C7D09D" type="color">
             <default>0.0, 1.0, 0.0, 1.0</default>
         </property>
-        <struct ID="0x652008DA" template="Structs/Vector2f.xml"/>
+        <struct ID="0x652008DA" template="mp3/Structs/Vector2f.xml"/>
         <property ID="0x29AB4727" type="float">
             <default>0.0</default>
         </property>
-        <struct ID="0xCC8E0F98" template="Structs/Vector2f.xml"/>
+        <struct ID="0xCC8E0F98" template="mp3/Structs/Vector2f.xml"/>
         <property ID="0xC5935B67" type="bool">
             <default>false</default>
         </property>
@@ -36,11 +36,11 @@
         <property ID="0xB7246843" type="color">
             <default>0.0, 1.0, 0.0, 1.0</default>
         </property>
-        <struct ID="0x520D1DD5" template="Structs/Vector2f.xml"/>
+        <struct ID="0x520D1DD5" template="mp3/Structs/Vector2f.xml"/>
         <property ID="0xBC86052A" type="float">
             <default>0.0</default>
         </property>
-        <struct ID="0xFBA31A97" template="Structs/Vector2f.xml"/>
+        <struct ID="0xFBA31A97" template="mp3/Structs/Vector2f.xml"/>
     </properties>
     <states/>
     <messages/>

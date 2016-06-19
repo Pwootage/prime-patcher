@@ -2,32 +2,32 @@
 <ScriptTemplate version="4">
     <name>SpindleCamera</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <property ID="0x3BF4EBA8" type="long">
             <default>6400</default>
         </property>
-        <struct ID="0xE56495FB" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0x239DEBFC" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0x27E8D703" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0x2F914525" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0x23AA31B7" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0xE9E388AF" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0xDE5A2C87" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0x1B3B2394" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0xF5666B6E" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0x66C618AA" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0xB36D0FB6" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0xCBB013CB" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0x4ABFB789" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0xFB6A407A" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0x3AE66F80" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0x6654AE92" template="Structs/SpindleCameraStruct.xml"/>
-        <struct ID="0x5604D304" template="Structs/UnknownStruct1.xml"/>
+        <struct ID="0xE56495FB" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0x239DEBFC" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0x27E8D703" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0x2F914525" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0x23AA31B7" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0xE9E388AF" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0xDE5A2C87" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0x1B3B2394" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0xF5666B6E" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0x66C618AA" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0xB36D0FB6" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0xCBB013CB" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0x4ABFB789" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0xFB6A407A" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0x3AE66F80" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0x6654AE92" template="mp2/Structs/SpindleCameraStruct.xml"/>
+        <struct ID="0x5604D304" template="mp2/Structs/UnknownStruct1.xml"/>
         <property ID="0x33B4F106" type="bool">
             <default>false</default>
         </property>
         <property ID="0xC4DFBFA7" type="MayaSpline"/>
-        <struct ID="0x33E4685B" template="Structs/UnknownStruct1.xml"/>
+        <struct ID="0x33E4685B" template="mp2/Structs/UnknownStruct1.xml"/>
         <property ID="0x431769C6" type="bool">
             <default>false</default>
         </property>

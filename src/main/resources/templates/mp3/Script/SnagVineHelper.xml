@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>SnagVineHelper</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0xF5221F0D" type="float">
             <default>2.0</default>
         </property>

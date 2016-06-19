@@ -2,10 +2,10 @@
 <ScriptTemplate version="4">
     <name>KorbaMaw</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <struct ID="0x33D8EDE3" type="multi">
             <properties>
-                <struct ID="0xDF636C4B" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xDF636C4B" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0x200F67E7" type="float">
                     <default>0.5</default>
                 </property>
@@ -17,7 +17,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml">
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -46,7 +46,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

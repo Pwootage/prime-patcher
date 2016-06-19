@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>CameraHint</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <property ID="0x42087650" type="long">
             <default>50</default>
         </property>
@@ -19,9 +19,9 @@
         <property ID="0x21D720A9" type="long">
             <default>286</default>
         </property>
-        <struct ID="0x456D05C6" template="Structs/CameraHintStructB.xml"/>
-        <struct ID="0xF5521FFA" template="Structs/CameraHintStructB.xml"/>
-        <struct ID="0x89658A06" template="Structs/CameraHintStructB.xml"/>
+        <struct ID="0x456D05C6" template="mp2/Structs/CameraHintStructB.xml"/>
+        <struct ID="0xF5521FFA" template="mp2/Structs/CameraHintStructB.xml"/>
+        <struct ID="0x89658A06" template="mp2/Structs/CameraHintStructB.xml"/>
         <struct ID="0x8D0A9113" type="multi">
             <properties>
                 <property ID="0x7FF86EE2" type="bool">
@@ -45,8 +45,8 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x664C450A" template="Structs/CameraHintStructC.xml"/>
-        <struct ID="0xC82395FA" template="Structs/CameraHintStructC.xml"/>
+        <struct ID="0x664C450A" template="mp2/Structs/CameraHintStructC.xml"/>
+        <struct ID="0xC82395FA" template="mp2/Structs/CameraHintStructC.xml"/>
         <struct ID="0x645EB009" type="multi">
             <properties>
                 <property ID="0x7FF86EE2" type="bool">
@@ -76,7 +76,7 @@
         <property ID="0xC91EF813" type="float">
             <default>1.0</default>
         </property>
-        <struct ID="0x934E392C" template="Structs/CameraHintStructA.xml"/>
+        <struct ID="0x934E392C" template="mp2/Structs/CameraHintStructA.xml"/>
         <struct ID="0x9E8631F1" type="multi">
             <properties>
                 <property ID="0xF53DCDD6" type="long">
@@ -84,7 +84,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x138729A7" template="Structs/CameraHintStructA.xml"/>
+        <struct ID="0x138729A7" template="mp2/Structs/CameraHintStructA.xml"/>
     </properties>
     <states/>
     <messages/>

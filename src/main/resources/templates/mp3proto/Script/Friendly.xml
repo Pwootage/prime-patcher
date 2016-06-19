@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>Friendly</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml">
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml">
             <properties>
                 <property ID="0xD9355674">
                     <default>1.0</default>
@@ -35,7 +35,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xBF9BA6CC" template="Structs/FriendlyData.xml"/>
+        <struct ID="0xBF9BA6CC" template="mp3proto/Structs/FriendlyData.xml"/>
         <struct ID="0xBCC2FDDF" type="multi">
             <properties>
                 <property ID="0x2C30379B" type="bool">

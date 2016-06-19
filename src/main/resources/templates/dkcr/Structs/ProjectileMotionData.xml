@@ -106,7 +106,7 @@
         </struct>
         <struct ID="0xFE9257CE" type="multi">
             <properties>
-                <struct ID="0x20091B54" template="Structs/SplineType.xml"/>
+                <struct ID="0x20091B54" template="dkcr/Structs/SplineType.xml"/>
                 <property ID="0x13EB5A7D" type="MayaSpline"/>
             </properties>
         </struct>

@@ -2,24 +2,24 @@
 <ScriptTemplate version="4">
     <name>EmperorIngStage1</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x4BC4C4D9">
                     <default>2</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
         <struct ID="0x4A1E493B" type="multi">
             <properties>
                 <struct ID="0xB3C6398F" type="multi">
                     <properties>
-                        <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml"/>
-                        <struct ID="0x29DF61E1" template="Structs/DamageVulnerability.xml"/>
-                        <struct ID="0x8D7378A4" template="Structs/DamageVulnerability.xml"/>
-                        <struct ID="0x6C79054F" template="Structs/DamageVulnerability.xml"/>
-                        <struct ID="0x3C2D2492" template="Structs/DamageVulnerability.xml"/>
+                        <struct ID="0xCF90D15E" template="mp2demo/Structs/HealthInfo.xml"/>
+                        <struct ID="0x29DF61E1" template="mp2demo/Structs/DamageVulnerability.xml"/>
+                        <struct ID="0x8D7378A4" template="mp2demo/Structs/DamageVulnerability.xml"/>
+                        <struct ID="0x6C79054F" template="mp2demo/Structs/DamageVulnerability.xml"/>
+                        <struct ID="0x3C2D2492" template="mp2demo/Structs/DamageVulnerability.xml"/>
                         <property ID="0x491C2657" type="float">
                             <default>0.0</default>
                         </property>
@@ -27,13 +27,13 @@
                 </struct>
                 <struct ID="0xF59F9A60" type="multi">
                     <properties>
-                        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x337F9524" template="mp2demo/Structs/DamageInfo.xml"/>
                     </properties>
                 </struct>
                 <struct ID="0xA1CDA0B6" type="multi">
                     <properties>
                         <property ID="0xEF485DB9" type="file" extensions="WPSC"/>
-                        <struct ID="0x553B1339" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x553B1339" template="mp2demo/Structs/DamageInfo.xml"/>
                     </properties>
                 </struct>
                 <property ID="0xA588AFD1" type="float">

@@ -10,7 +10,7 @@
         <property ID="0x7E2EA16C" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0xDEFF74EA" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xDEFF74EA" template="dkcr/Structs/DamageInfo.xml"/>
         <property ID="0xEBEFB1A9" type="bool">
             <default>false</default>
         </property>
@@ -45,9 +45,9 @@
         </property>
         <struct ID="0x0183DC71" type="multi">
             <properties>
-                <struct ID="0xD6554C1A" template="Structs/UnknownStruct47.xml"/>
-                <struct ID="0xE59C4016" template="Structs/UnknownStruct47.xml"/>
-                <struct ID="0x2416759C" template="Structs/UnknownStruct47.xml"/>
+                <struct ID="0xD6554C1A" template="dkcr/Structs/UnknownStruct47.xml"/>
+                <struct ID="0xE59C4016" template="dkcr/Structs/UnknownStruct47.xml"/>
+                <struct ID="0x2416759C" template="dkcr/Structs/UnknownStruct47.xml"/>
             </properties>
         </struct>
     </properties>

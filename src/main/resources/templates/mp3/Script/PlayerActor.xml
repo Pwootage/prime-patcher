@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>PlayerActor</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0xF344C0B0" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>
@@ -15,11 +15,11 @@
         <property ID="0x2F2AE3E5" type="float">
             <default>0.0</default>
         </property>
-        <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml"/>
-        <struct ID="0x7B71AE90" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0xCF90D15E" template="mp3/Structs/HealthInfo.xml"/>
+        <struct ID="0x7B71AE90" template="mp3/Structs/DamageVulnerability.xml"/>
         <property ID="0x405E5286" type="file" extensions="UNKN"/>
         <property ID="0xA3D63F44" type="character"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <property ID="0xC08D1B93" type="bool">
             <default>true</default>
         </property>
@@ -45,15 +45,15 @@
         <property ID="0xBC0952D8" type="file" extensions="CSKR"/>
         <property ID="0xA8778E57" type="file" extensions="CMDL"/>
         <property ID="0x1CB10DBE" type="file" extensions="CSKR"/>
-        <struct ID="0x1098D091" template="Structs/PlayerActorStruct.xml"/>
-        <struct ID="0xC7385390" template="Structs/PlayerActorStruct.xml"/>
+        <struct ID="0x1098D091" template="mp3/Structs/PlayerActorStruct.xml"/>
+        <struct ID="0xC7385390" template="mp3/Structs/PlayerActorStruct.xml"/>
         <property ID="0x33507998" type="long">
             <default>16388</default>
         </property>
         <property ID="0xB6832840" type="long">
             <default>0</default>
         </property>
-        <struct ID="0xA21B515A" template="Structs/UnknownStruct5.xml"/>
+        <struct ID="0xA21B515A" template="mp3/Structs/UnknownStruct5.xml"/>
     </properties>
     <states/>
     <messages/>

@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>Shrieker</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x58434916">
                     <default>4.5</default>
@@ -22,12 +22,12 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xD7732923" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
+        <struct ID="0xD7732923" template="mp2/Structs/DamageVulnerability.xml"/>
         <property ID="0x281CE55D" type="float">
             <default>0.1</default>
         </property>
-        <struct ID="0x5C072FD0" template="Structs/DamageInfo.xml">
+        <struct ID="0x5C072FD0" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>11</default>
@@ -46,7 +46,7 @@
         <property ID="0x0F676BD9" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0x553B1339" template="Structs/DamageInfo.xml">
+        <struct ID="0x553B1339" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>11</default>
@@ -66,7 +66,7 @@
         <property ID="0x69EC9107" type="long">
             <default>100</default>
         </property>
-        <struct ID="0xC9416034" template="Structs/DamageInfo.xml">
+        <struct ID="0xC9416034" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>11</default>

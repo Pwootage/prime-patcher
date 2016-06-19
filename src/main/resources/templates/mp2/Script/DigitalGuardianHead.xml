@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>DigitalGuardianHead</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
@@ -23,7 +23,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <struct ID="0x0F4D73B7" type="multi">
             <properties>
                 <property ID="0x4EAF47D7" type="long">
@@ -59,16 +59,16 @@
                 <property ID="0xD919FB13" type="float">
                     <default>15.0</default>
                 </property>
-                <struct ID="0x0A693A04" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x0A693A04" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0x1CC6D870" type="float">
                     <default>5.0</default>
                 </property>
                 <property ID="0x5FF0B26C" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x50BAEE63" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0xA5E1EC03" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x8D6053CB" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x50BAEE63" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xA5E1EC03" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x8D6053CB" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0xC91EF399" type="long">
                     <default>-1</default>
                 </property>
@@ -84,25 +84,25 @@
                 <property ID="0xCF98F423" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x76EEDD2A" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0xA5ECBE17" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0xB1FC705F" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x2BC2677A" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x7F5B82B2" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x331FD5F7" template="Structs/EchoParameters.xml"/>
+                <struct ID="0x76EEDD2A" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xA5ECBE17" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xB1FC705F" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x2BC2677A" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x7F5B82B2" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x331FD5F7" template="mp2/Structs/EchoParameters.xml"/>
                 <property ID="0x8317610F" type="float">
                     <default>30.0</default>
                 </property>
                 <property ID="0x321C97A9" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0xD5CC7E71" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0xA62C0EA7" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0xFD9F5486" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xD5CC7E71" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xA62C0EA7" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xFD9F5486" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0x27464886" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x4EAF615F" template="Structs/DamageInfo.xml">
+                <struct ID="0x4EAF615F" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <enum ID="0x119FBD31">
                             <default>0x0000000B</default>
@@ -118,7 +118,7 @@
                 <property ID="0xD669F12C" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x41177AC6" template="Structs/DamageInfo.xml">
+                <struct ID="0x41177AC6" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <enum ID="0x119FBD31">
                             <default>0x0000000B</default>
@@ -140,7 +140,7 @@
                 <property ID="0xAD151546" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0xC7CF5DB1" template="Structs/PlasmaBeamInfo.xml">
+                <struct ID="0xC7CF5DB1" template="mp2/Structs/PlasmaBeamInfo.xml">
                     <properties>
                         <property ID="0xC26C291C">
                             <default>500.0</default>
@@ -171,7 +171,7 @@
                 <property ID="0xD187F05C" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0xA8C6106B" template="Structs/DamageInfo.xml">
+                <struct ID="0xA8C6106B" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <enum ID="0x119FBD31">
                             <default>0x0000000B</default>
@@ -187,7 +187,7 @@
                 <property ID="0x0B5498D6" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x45EF2EDC" template="Structs/DamageInfo.xml">
+                <struct ID="0x45EF2EDC" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <enum ID="0x119FBD31">
                             <default>0x0000000B</default>
@@ -200,7 +200,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x47C8115E" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x47C8115E" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0x4AB23FFE" type="float">
                     <default>15.0</default>
                 </property>
@@ -213,14 +213,14 @@
                 <property ID="0xE5BC88B7" type="float">
                     <default>0.15</default>
                 </property>
-                <struct ID="0x8F6732EA" template="Structs/DigitalGuardianHeadStruct.xml"/>
-                <struct ID="0x8E128141" template="Structs/DigitalGuardianHeadStruct.xml"/>
-                <struct ID="0xEA54B390" template="Structs/DigitalGuardianHeadStruct.xml"/>
-                <struct ID="0xBBD3E7A7" template="Structs/DigitalGuardianHeadStruct.xml"/>
-                <struct ID="0x2DD88764" template="Structs/DigitalGuardianHeadStruct.xml"/>
-                <struct ID="0x48B46E55" template="Structs/DigitalGuardianHeadStruct.xml"/>
-                <struct ID="0x7352D60A" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0x1B2AA049" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x8F6732EA" template="mp2/Structs/DigitalGuardianHeadStruct.xml"/>
+                <struct ID="0x8E128141" template="mp2/Structs/DigitalGuardianHeadStruct.xml"/>
+                <struct ID="0xEA54B390" template="mp2/Structs/DigitalGuardianHeadStruct.xml"/>
+                <struct ID="0xBBD3E7A7" template="mp2/Structs/DigitalGuardianHeadStruct.xml"/>
+                <struct ID="0x2DD88764" template="mp2/Structs/DigitalGuardianHeadStruct.xml"/>
+                <struct ID="0x48B46E55" template="mp2/Structs/DigitalGuardianHeadStruct.xml"/>
+                <struct ID="0x7352D60A" template="mp2/Structs/DamageVulnerability.xml"/>
+                <struct ID="0x1B2AA049" template="mp2/Structs/DamageVulnerability.xml"/>
             </properties>
         </struct>
     </properties>

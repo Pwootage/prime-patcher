@@ -9,6 +9,6 @@
                 <enumerator ID="0x84F1CB89" name="Unknown 3"/>
             </enumerators>
         </enum>
-        <struct ID="0x9F90014C" template="Structs/InterpolationMethod.xml"/>
+        <struct ID="0x9F90014C" template="mp3/Structs/InterpolationMethod.xml"/>
     </properties>
 </struct>

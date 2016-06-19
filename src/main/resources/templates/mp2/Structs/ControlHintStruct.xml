@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct name="ControlHintStruct" type="multi">
     <properties>
-        <struct ID="0x359C7AAF" template="Structs/ControllerActionStruct.xml">
+        <struct ID="0x359C7AAF" template="mp2/Structs/ControllerActionStruct.xml">
             <properties>
                 <property ID="0x94BA5737">
                     <default>-2143184152</default>

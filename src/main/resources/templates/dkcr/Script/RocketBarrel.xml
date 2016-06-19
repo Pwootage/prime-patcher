@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>RocketBarrel</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml">
             <properties>
                 <struct ID="0x5846524D">
                     <properties>
@@ -13,7 +13,7 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0xB3774750" template="dkcr/Structs/PatternedAI.xml">
             <properties>
                 <property ID="0x8A6AB139">
                     <default>0.5</default>
@@ -23,12 +23,12 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xBF81C83E" template="Structs/ShadowData.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x0063F638" template="Structs/UnknownStruct.xml"/>
-        <struct ID="0x3C38498D" template="Structs/UnknownStruct45.xml"/>
-        <struct ID="0x978E5BD8" template="Structs/VehicleStructA.xml"/>
-        <struct ID="0x7F681411" template="Structs/VehicleStructB.xml"/>
+        <struct ID="0xBF81C83E" template="dkcr/Structs/ShadowData.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
+        <struct ID="0x0063F638" template="dkcr/Structs/UnknownStruct.xml"/>
+        <struct ID="0x3C38498D" template="dkcr/Structs/UnknownStruct45.xml"/>
+        <struct ID="0x978E5BD8" template="dkcr/Structs/VehicleStructA.xml"/>
+        <struct ID="0x7F681411" template="dkcr/Structs/VehicleStructB.xml"/>
         <struct ID="0x15F240A8" type="multi">
             <properties>
                 <property ID="0x07567A08" type="float">

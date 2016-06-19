@@ -2,12 +2,12 @@
 <ScriptTemplate version="4">
     <name>AtomicAlpha</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml"/>
         <property ID="0x1720B91F" type="file" extensions="WPSC"/>
         <property ID="0xC75F9516" type="file" extensions="CMDL"/>
-        <struct ID="0xB48D5FE6" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xB48D5FE6" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0x66BA009C" type="float">
             <default>3.0</default>
         </property>

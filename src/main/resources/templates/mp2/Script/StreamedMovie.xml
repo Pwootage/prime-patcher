@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>StreamedMovie</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <property ID="0x582B84A8" type="string"/>
         <property ID="0xEDA47FF6" type="bool">
             <default>false</default>

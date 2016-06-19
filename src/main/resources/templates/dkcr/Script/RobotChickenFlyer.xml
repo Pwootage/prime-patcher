@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>RobotChickenFlyer</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml">
             <properties>
                 <struct ID="0x5846524D">
                     <properties>
@@ -13,8 +13,8 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="dkcr/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0x7B71AE90">
                     <properties>
@@ -95,10 +95,10 @@
                 <property ID="0xBBD7C692" type="float">
                     <default>13.0</default>
                 </property>
-                <struct ID="0xE84AA51C" template="Structs/RobotChickenFlyerStructA.xml"/>
-                <struct ID="0xA152F46F" template="Structs/RobotChickenFlyerStructA.xml"/>
-                <struct ID="0x1F59E2C1" template="Structs/RobotChickenFlyerStructA.xml"/>
-                <struct ID="0xC4D0E557" template="Structs/RobotChickenFlyerStructA.xml"/>
+                <struct ID="0xE84AA51C" template="dkcr/Structs/RobotChickenFlyerStructA.xml"/>
+                <struct ID="0xA152F46F" template="dkcr/Structs/RobotChickenFlyerStructA.xml"/>
+                <struct ID="0x1F59E2C1" template="dkcr/Structs/RobotChickenFlyerStructA.xml"/>
+                <struct ID="0xC4D0E557" template="dkcr/Structs/RobotChickenFlyerStructA.xml"/>
                 <struct ID="0xF8011EC5" type="multi">
                     <properties>
                         <property ID="0x348C9D90" type="float">
@@ -120,22 +120,22 @@
                         <property ID="0xBE5F118D" type="file" extensions="CAUD"/>
                     </properties>
                 </struct>
-                <struct ID="0x68FD49AE" template="Structs/AnimGridModifierData.xml"/>
+                <struct ID="0x68FD49AE" template="dkcr/Structs/AnimGridModifierData.xml"/>
                 <struct ID="0x420151F6" type="multi">
                     <properties>
-                        <enum ID="0x97D30F8B" template="Enums/RobotChickenEnum.xml">
+                        <enum ID="0x97D30F8B" template="dkcr/Enums/RobotChickenEnum.xml">
                             <default>0x8C665F9A</default>
                         </enum>
                         <property ID="0xF0668919" type="float">
                             <default>3.0</default>
                         </property>
-                        <struct ID="0x002CFE87" template="Structs/RobotChickenFlyerStructB.xml"/>
-                        <struct ID="0x76C9C7BA" template="Structs/RobotChickenFlyerStructB.xml"/>
-                        <struct ID="0xEDBA2D6E" template="Structs/RobotChickenFlyerStructB.xml"/>
-                        <struct ID="0x9B03B5C0" template="Structs/RobotChickenFlyerStructB.xml"/>
-                        <struct ID="0x00705F14" template="Structs/RobotChickenFlyerStructB.xml"/>
-                        <struct ID="0x76956629" template="Structs/RobotChickenFlyerStructB.xml"/>
-                        <struct ID="0xEDE68CFD" template="Structs/RobotChickenFlyerStructB.xml"/>
+                        <struct ID="0x002CFE87" template="dkcr/Structs/RobotChickenFlyerStructB.xml"/>
+                        <struct ID="0x76C9C7BA" template="dkcr/Structs/RobotChickenFlyerStructB.xml"/>
+                        <struct ID="0xEDBA2D6E" template="dkcr/Structs/RobotChickenFlyerStructB.xml"/>
+                        <struct ID="0x9B03B5C0" template="dkcr/Structs/RobotChickenFlyerStructB.xml"/>
+                        <struct ID="0x00705F14" template="dkcr/Structs/RobotChickenFlyerStructB.xml"/>
+                        <struct ID="0x76956629" template="dkcr/Structs/RobotChickenFlyerStructB.xml"/>
+                        <struct ID="0xEDE68CFD" template="dkcr/Structs/RobotChickenFlyerStructB.xml"/>
                     </properties>
                 </struct>
             </properties>

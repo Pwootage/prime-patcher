@@ -112,19 +112,19 @@
         <property ID="0x0DF4B149" type="float">
             <default>21.0</default>
         </property>
-        <struct ID="0xC9416034" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x414046A8" template="Structs/DamageInfo.xml"/>
-        <struct ID="0xA0E0D7F8" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x429C17BD" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x995AA633" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x55571199" template="Structs/ShockWaveInfo.xml"/>
-        <struct ID="0x598C0005" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xC9416034" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x414046A8" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0xA0E0D7F8" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x429C17BD" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x995AA633" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x55571199" template="mp3/Structs/ShockWaveInfo.xml"/>
+        <struct ID="0x598C0005" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0x4BC4AE5C" type="float">
             <default>360.0</default>
         </property>
-        <struct ID="0x93ECF945" template="Structs/DamageInfo.xml"/>
-        <struct ID="0xAEF2F857" template="Structs/DamageInfo.xml"/>
-        <struct ID="0xD74FC76C" template="Structs/DamageInfo.xml"/>
-        <struct ID="0xCAA6ECEE" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x93ECF945" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0xAEF2F857" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0xD74FC76C" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0xCAA6ECEE" template="mp3/Structs/DamageInfo.xml"/>
     </properties>
 </struct>

@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>SpacePirate</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x43BBB1DD" template="Structs/PatternedAITypedef.xml">
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
+        <struct ID="0x43BBB1DD" template="mp3proto/Structs/PatternedAITypedef.xml">
             <properties>
                 <struct ID="0xD756416E">
                     <properties>
@@ -61,7 +61,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xE677AF2C" template="Structs/FriendlyData.xml"/>
+        <struct ID="0xE677AF2C" template="mp3proto/Structs/FriendlyData.xml"/>
         <struct ID="0xDDA1CACE" type="multi">
             <properties>
                 <property ID="0xA40CB847" type="bool">
@@ -122,7 +122,7 @@
                 <property ID="0x6BC22735" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0xA5912430" template="Structs/DamageInfo.xml">
+                <struct ID="0xA5912430" template="mp3proto/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0xF2D02613">
                             <default>10.0</default>
@@ -174,27 +174,27 @@
                 <property ID="0x8A36B5D5" type="long">
                     <default>10000</default>
                 </property>
-                <struct ID="0xC3B6103B" template="Structs/SpacePirateWeaponData.xml"/>
+                <struct ID="0xC3B6103B" template="mp3proto/Structs/SpacePirateWeaponData.xml"/>
                 <property ID="0x07C1DE29" type="bool">
                     <default>false</default>
                 </property>
                 <property ID="0x4AEE5C47" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0xD34F1323" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xD34F1323" template="mp3proto/Structs/DamageVulnerability.xml"/>
                 <property ID="0xC699AD35" type="character"/>
-                <struct ID="0xBE1AFBC0" template="Structs/GrappleData.xml">
+                <struct ID="0xBE1AFBC0" template="mp3proto/Structs/GrappleData.xml">
                     <properties>
                         <property ID="0x5DCF91E1">
                             <default>1</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x9D24604F" template="Structs/GrappleBlock.xml"/>
+                <struct ID="0x9D24604F" template="mp3proto/Structs/GrappleBlock.xml"/>
                 <property ID="0xFDE9C4DF" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0xF18384D4" template="Structs/HealthInfo.xml">
+                <struct ID="0xF18384D4" template="mp3proto/Structs/HealthInfo.xml">
                     <properties>
                         <property ID="0xF0668919">
                             <default>100.0</default>
@@ -204,7 +204,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x896D5BD9" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x896D5BD9" template="mp3proto/Structs/DamageVulnerability.xml"/>
                 <property ID="0x36950BCB" type="bool">
                     <default>false</default>
                 </property>

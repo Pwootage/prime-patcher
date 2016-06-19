@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>DigitalGuardian</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
@@ -23,7 +23,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
         <struct ID="0xC55918CC" type="multi">
             <properties>
                 <property ID="0x0FAF6A8E" type="float">
@@ -35,7 +35,7 @@
                 <property ID="0x304B47EE" type="float">
                     <default>5.0</default>
                 </property>
-                <struct ID="0xEFACFA50" template="Structs/DamageInfo.xml">
+                <struct ID="0xEFACFA50" template="mp2demo/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>9</default>
@@ -48,7 +48,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x8F4787CB" template="Structs/ShockWaveInfo.xml"/>
+                <struct ID="0x8F4787CB" template="mp2demo/Structs/ShockWaveInfo.xml"/>
                 <property ID="0x76527E01" type="float">
                     <default>5.0</default>
                 </property>
@@ -67,7 +67,7 @@
                 <property ID="0x93A74A46" type="float">
                     <default>20.0</default>
                 </property>
-                <struct ID="0x5CA612AA" template="Structs/DamageInfo.xml">
+                <struct ID="0x5CA612AA" template="mp2demo/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>9</default>
@@ -104,8 +104,8 @@
                 <property ID="0x71F0C674" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x6DBAD233" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0xF1259E3A" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x6DBAD233" template="mp2demo/Structs/DamageVulnerability.xml"/>
+                <struct ID="0xF1259E3A" template="mp2demo/Structs/DamageVulnerability.xml"/>
             </properties>
         </struct>
     </properties>

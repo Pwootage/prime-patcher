@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>SwampBossStage2</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x75DBB375">
                     <default>25.0</default>
@@ -56,8 +56,8 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xE61748ED" template="Structs/IngPossessionData.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
+        <struct ID="0xE61748ED" template="mp2/Structs/IngPossessionData.xml"/>
         <struct ID="0xB31B771D" type="multi">
             <properties>
                 <property ID="0x845EF489" type="float">
@@ -70,10 +70,10 @@
                 <property ID="0xCABE6B96" type="float">
                     <default>1.0</default>
                 </property>
-                <struct ID="0x7FA9256A" template="Structs/SwampBossStage2Struct.xml"/>
-                <struct ID="0x8B884B8E" template="Structs/SwampBossStage2Struct.xml"/>
-                <struct ID="0x04B7A789" template="Structs/SwampBossStage2Struct.xml"/>
-                <struct ID="0xF096C96D" template="Structs/SwampBossStage2Struct.xml"/>
+                <struct ID="0x7FA9256A" template="mp2/Structs/SwampBossStage2Struct.xml"/>
+                <struct ID="0x8B884B8E" template="mp2/Structs/SwampBossStage2Struct.xml"/>
+                <struct ID="0x04B7A789" template="mp2/Structs/SwampBossStage2Struct.xml"/>
+                <struct ID="0xF096C96D" template="mp2/Structs/SwampBossStage2Struct.xml"/>
                 <property ID="0x7E192395" type="float">
                     <default>30.0</default>
                 </property>
@@ -81,7 +81,7 @@
                     <default>2</default>
                 </property>
                 <property ID="0xCFE37EBF" type="file" extensions="WPSC"/>
-                <struct ID="0xDA3C9B32" template="Structs/DamageInfo.xml">
+                <struct ID="0xDA3C9B32" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -98,7 +98,7 @@
                 <property ID="0xDADC5BC9" type="float">
                     <default>2.0</default>
                 </property>
-                <struct ID="0x294E9516" template="Structs/DamageInfo.xml">
+                <struct ID="0x294E9516" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -142,7 +142,7 @@
                 <property ID="0xFE97E835" type="float">
                     <default>50.0</default>
                 </property>
-                <struct ID="0x6C0F7AA3" template="Structs/ShockWaveInfo.xml"/>
+                <struct ID="0x6C0F7AA3" template="mp2/Structs/ShockWaveInfo.xml"/>
                 <property ID="0x9807497C" type="float">
                     <default>2.0</default>
                 </property>
@@ -173,7 +173,7 @@
                     </properties>
                 </struct>
                 <property ID="0xB7DC6C65" type="file" extensions="PART"/>
-                <struct ID="0xF1F0C73D" template="Structs/DamageInfo.xml">
+                <struct ID="0xF1F0C73D" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -192,24 +192,24 @@
                 <property ID="0x6D67C284" type="float">
                     <default>30.0</default>
                 </property>
-                <struct ID="0x87B30E02" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x427A116A" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0xC05D5C7A" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x2B3C923A" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x87B30E02" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x427A116A" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xC05D5C7A" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x2B3C923A" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0x8FE0BF01" type="float">
                     <default>15.0</default>
                 </property>
-                <struct ID="0x23087520" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x23087520" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0xA3131519" type="float">
                     <default>0.8</default>
                 </property>
-                <struct ID="0xB53087CC" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x878A6522" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xB53087CC" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x878A6522" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0x19849710" type="float">
                     <default>4.0</default>
                 </property>
-                <struct ID="0x692FA63C" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0xBE3D39AA" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x692FA63C" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xBE3D39AA" template="mp2/Structs/AudioPlaybackParms.xml"/>
             </properties>
         </struct>
     </properties>

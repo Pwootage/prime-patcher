@@ -2,11 +2,11 @@
 <ScriptTemplate version="4">
     <name>Sandworm</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <property ID="0x06DEE4C5" type="long">
             <default>0</default>
         </property>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x8DB77EE4">
                     <default>32.0</default>
@@ -34,7 +34,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <property ID="0x3DB583AE" type="float">
             <default>1.0</default>
         </property>
@@ -69,7 +69,7 @@
             <default>30.0</default>
         </property>
         <property ID="0xEF485DB9" type="file" extensions="WPSC"/>
-        <struct ID="0x553B1339" template="Structs/DamageInfo.xml">
+        <struct ID="0x553B1339" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <enum ID="0x119FBD31">
                     <default>0x0000000B</default>
@@ -97,7 +97,7 @@
         <property ID="0xF59AF01A" type="float">
             <default>15.0</default>
         </property>
-        <struct ID="0xF8FD6885" template="Structs/DamageInfo.xml">
+        <struct ID="0xF8FD6885" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <enum ID="0x119FBD31">
                     <default>0x0000000B</default>
@@ -107,7 +107,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x449233BC" template="Structs/DamageInfo.xml">
+        <struct ID="0x449233BC" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <enum ID="0x119FBD31">
                     <default>0x0000000B</default>
@@ -150,7 +150,7 @@
         <property ID="0xD24A1751" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0x4461A8AD" template="Structs/DamageInfo.xml">
+        <struct ID="0x4461A8AD" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <enum ID="0x119FBD31">
                     <default>0x0000000B</default>
@@ -175,12 +175,12 @@
         <property ID="0xEFEF7B45" type="float">
             <default>10.0</default>
         </property>
-        <struct ID="0xB8C15F15" template="Structs/SandwormStruct.xml"/>
-        <struct ID="0xCE246628" template="Structs/SandwormStruct.xml"/>
-        <struct ID="0x55578CFC" template="Structs/SandwormStruct.xml"/>
-        <struct ID="0x23EE1452" template="Structs/SandwormStruct.xml"/>
-        <struct ID="0xB89DFE86" template="Structs/SandwormStruct.xml"/>
-        <struct ID="0xE61748ED" template="Structs/IngPossessionData.xml"/>
+        <struct ID="0xB8C15F15" template="mp2/Structs/SandwormStruct.xml"/>
+        <struct ID="0xCE246628" template="mp2/Structs/SandwormStruct.xml"/>
+        <struct ID="0x55578CFC" template="mp2/Structs/SandwormStruct.xml"/>
+        <struct ID="0x23EE1452" template="mp2/Structs/SandwormStruct.xml"/>
+        <struct ID="0xB89DFE86" template="mp2/Structs/SandwormStruct.xml"/>
+        <struct ID="0xE61748ED" template="mp2/Structs/IngPossessionData.xml"/>
     </properties>
     <states/>
     <messages/>

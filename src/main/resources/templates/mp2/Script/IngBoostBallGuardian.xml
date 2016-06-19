@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>IngBoostBallGuardian</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
@@ -23,7 +23,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <struct ID="0x22E574AA" type="multi">
             <properties>
                 <property ID="0x01789ABD" type="long">
@@ -128,7 +128,7 @@
                 <property ID="0x9579B1F2" type="float">
                     <default>10.0</default>
                 </property>
-                <struct ID="0x915DA374" template="Structs/DamageInfo.xml">
+                <struct ID="0x915DA374" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -141,7 +141,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xAB258F6B" template="Structs/DamageInfo.xml">
+                <struct ID="0xAB258F6B" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -196,7 +196,7 @@
                 <property ID="0x4051FD1A" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x424A6D37" template="Structs/DamageInfo.xml">
+                <struct ID="0x424A6D37" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -209,7 +209,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x9C170968" template="Structs/PlasmaBeamInfo.xml">
+                <struct ID="0x9C170968" template="mp2/Structs/PlasmaBeamInfo.xml">
                     <properties>
                         <property ID="0xC26C291C">
                             <default>500.0</default>
@@ -243,7 +243,7 @@
                 <property ID="0xD24B888F" type="float">
                     <default>5.0</default>
                 </property>
-                <struct ID="0x1B96FF8B" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x1B96FF8B" template="mp2/Structs/DamageVulnerability.xml"/>
             </properties>
         </struct>
         <struct ID="0x78656D1E" type="multi">
@@ -258,7 +258,7 @@
                     <default>0.5</default>
                 </property>
                 <property ID="0xA25B96E1" type="MayaSpline"/>
-                <struct ID="0x0E1A78BD" template="Structs/DamageInfo.xml">
+                <struct ID="0x0E1A78BD" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>7</default>
@@ -274,7 +274,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x19C3D263" template="Structs/DamageInfo.xml">
+                <struct ID="0x19C3D263" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>7</default>
@@ -326,7 +326,7 @@
                 <property ID="0xBF42C3EC" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x42ECA523" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x42ECA523" template="mp2/Structs/DamageVulnerability.xml"/>
                 <property ID="0xEE69B993" type="long">
                     <default>2</default>
                 </property>
@@ -339,7 +339,7 @@
                 <property ID="0xB0E85D53" type="float">
                     <default>0.2</default>
                 </property>
-                <struct ID="0x5616D5F1" template="Structs/DamageInfo.xml">
+                <struct ID="0x5616D5F1" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -352,7 +352,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xED685533" template="Structs/DamageInfo.xml">
+                <struct ID="0xED685533" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -374,7 +374,7 @@
                 <property ID="0x62AB33A2" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0xBAB98497" template="Structs/IngBoostBallGuardianStruct.xml">
+                <struct ID="0xBAB98497" template="mp2/Structs/IngBoostBallGuardianStruct.xml">
                     <properties>
                         <property ID="0x25D02BC5">
                             <default>15.0</default>
@@ -420,7 +420,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xFE18A18F" template="Structs/IngBoostBallGuardianStruct.xml">
+                <struct ID="0xFE18A18F" template="mp2/Structs/IngBoostBallGuardianStruct.xml">
                     <properties>
                         <property ID="0x25D02BC5">
                             <default>15.0</default>
@@ -466,7 +466,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xC2784287" template="Structs/IngBoostBallGuardianStruct.xml">
+                <struct ID="0xC2784287" template="mp2/Structs/IngBoostBallGuardianStruct.xml">
                     <properties>
                         <property ID="0x25D02BC5">
                             <default>15.0</default>

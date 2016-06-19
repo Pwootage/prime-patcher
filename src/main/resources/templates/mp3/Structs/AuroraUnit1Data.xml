@@ -9,7 +9,7 @@
         </property>
         <property ID="0x073842E7" type="file" extensions="CMDL"/>
         <property ID="0xDDD72AAD" type="file" extensions="CMDL"/>
-        <struct ID="0x243AB10D" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x243AB10D" template="mp3/Structs/DamageVulnerability.xml"/>
         <property ID="0x7B4C8A7F" type="float">
             <default>700.0</default>
         </property>
@@ -22,7 +22,7 @@
                 <property ID="0xA6C47CD3" type="float">
                     <default>100.0</default>
                 </property>
-                <struct ID="0x0FCE03CA" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x0FCE03CA" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0xA4B62AA9" type="float">
                     <default>3.0</default>
                 </property>
@@ -52,7 +52,7 @@
                     <default>2</default>
                 </property>
                 <property ID="0x2EA31F83" type="file" extensions="WPSC"/>
-                <struct ID="0x258CFB4D" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x258CFB4D" template="mp3/Structs/DamageInfo.xml"/>
                 <property ID="0x7BECDB66" type="float">
                     <default>100.0</default>
                 </property>
@@ -130,7 +130,7 @@
                 <property ID="0x04721A06" type="float">
                     <default>0.5</default>
                 </property>
-                <struct ID="0xD8579BA3" template="Structs/UnknownStruct6.xml">
+                <struct ID="0xD8579BA3" template="mp3/Structs/UnknownStruct6.xml">
                     <cook_pref>never</cook_pref>
                     <properties>
                         <property ID="0xA14433C3">
@@ -178,7 +178,7 @@
                 <property ID="0x6509D9B2" type="float">
                     <default>50.0</default>
                 </property>
-                <struct ID="0xDC89CC3C" template="Structs/SpacePirateWeaponData.xml"/>
+                <struct ID="0xDC89CC3C" template="mp3/Structs/SpacePirateWeaponData.xml"/>
             </properties>
         </struct>
         <struct ID="0x97D16AA1" type="multi">
@@ -190,8 +190,8 @@
         </struct>
         <struct ID="0xFAED98DB" type="multi">
             <properties>
-                <struct ID="0x1598012A" template="Structs/PlasmaBeamInfo.xml"/>
-                <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x1598012A" template="mp3/Structs/PlasmaBeamInfo.xml"/>
+                <struct ID="0x337F9524" template="mp3/Structs/DamageInfo.xml"/>
                 <property ID="0x16342C18" type="float">
                     <default>8.0</default>
                 </property>
@@ -245,10 +245,10 @@
                 <property ID="0xB7D4B884" type="float">
                     <default>150.0</default>
                 </property>
-                <struct ID="0x85543E4E" template="Structs/GrappleBlock.xml"/>
+                <struct ID="0x85543E4E" template="mp3/Structs/GrappleBlock.xml"/>
             </properties>
         </struct>
-        <struct ID="0x7CC2A36E" template="Structs/UnknownStruct6.xml">
+        <struct ID="0x7CC2A36E" template="mp3/Structs/UnknownStruct6.xml">
             <properties>
                 <property ID="0xA14433C3">
                     <default>40.0</default>
@@ -264,7 +264,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x12D3165C" template="Structs/UnknownStruct6.xml">
+        <struct ID="0x12D3165C" template="mp3/Structs/UnknownStruct6.xml">
             <properties>
                 <property ID="0xA14433C3">
                     <default>20.0</default>
@@ -292,6 +292,6 @@
         <property ID="0x1A79E5D6" type="float">
             <default>0.5</default>
         </property>
-        <struct ID="0xB4C02854" template="Structs/ModIncaData.xml"/>
+        <struct ID="0xB4C02854" template="mp3/Structs/ModIncaData.xml"/>
     </properties>
 </struct>

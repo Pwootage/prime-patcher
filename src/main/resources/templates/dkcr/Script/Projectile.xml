@@ -2,16 +2,16 @@
 <ScriptTemplate version="4">
     <name>Projectile</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xA5CC2982" template="Structs/ProjectileData.xml"/>
-        <struct ID="0xD90DAB09" template="Structs/ProjectileRenderData.xml"/>
-        <struct ID="0x58D9785F" template="Structs/ProjectileCollisionData.xml"/>
-        <struct ID="0x90DCEF98" template="Structs/ProjectileMotionData.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
+        <struct ID="0xA5CC2982" template="dkcr/Structs/ProjectileData.xml"/>
+        <struct ID="0xD90DAB09" template="dkcr/Structs/ProjectileRenderData.xml"/>
+        <struct ID="0x58D9785F" template="dkcr/Structs/ProjectileCollisionData.xml"/>
+        <struct ID="0x90DCEF98" template="dkcr/Structs/ProjectileMotionData.xml"/>
         <property ID="0xCC4284A2" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0x50A7E94B" template="Structs/ProjectileBounceData.xml"/>
+        <struct ID="0x50A7E94B" template="dkcr/Structs/ProjectileBounceData.xml"/>
     </properties>
     <states/>
     <messages/>

@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>PointOfInterest</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xBDBEC295" template="Structs/ScannableParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xBDBEC295" template="mp3/Structs/ScannableParameters.xml"/>
         <property ID="0x863C16E3" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>

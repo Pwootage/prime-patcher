@@ -11,7 +11,7 @@
             <default>false</default>
         </property>
         <property ID="0xFA873A67" type="MayaSpline"/>
-        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x337F9524" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0x20927E9B" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>

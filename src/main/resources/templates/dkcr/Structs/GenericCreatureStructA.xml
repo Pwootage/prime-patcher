@@ -131,22 +131,22 @@
         </struct>
         <struct ID="0x50F0D548" type="multi">
             <properties>
-                <struct ID="0xFF0A98A3" template="Structs/UnknownStruct1.xml"/>
-                <struct ID="0x0A62C650" template="Structs/UnknownStruct1.xml">
+                <struct ID="0xFF0A98A3" template="dkcr/Structs/UnknownStruct1.xml"/>
+                <struct ID="0x0A62C650" template="dkcr/Structs/UnknownStruct1.xml">
                     <properties>
                         <enum ID="0x9721D02B">
                             <default>0xB2A31497</default>
                         </enum>
                     </properties>
                 </struct>
-                <struct ID="0x954E50D4" template="Structs/UnknownStruct1.xml">
+                <struct ID="0x954E50D4" template="dkcr/Structs/UnknownStruct1.xml">
                     <properties>
                         <enum ID="0x9721D02B">
                             <default>0xBD71A966</default>
                         </enum>
                     </properties>
                 </struct>
-                <struct ID="0x229D79FE" template="Structs/UnknownStruct1.xml">
+                <struct ID="0x229D79FE" template="dkcr/Structs/UnknownStruct1.xml">
                     <properties>
                         <enum ID="0x9721D02B">
                             <default>0x81864B79</default>
@@ -155,7 +155,7 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x3FF111B9" template="Structs/UnknownStruct2.xml"/>
+        <struct ID="0x3FF111B9" template="dkcr/Structs/UnknownStruct2.xml"/>
         <struct ID="0x6D2C073F" type="multi">
             <properties>
                 <property ID="0x020C78BB" type="float">
@@ -395,7 +395,7 @@
                 <property ID="0x9A1287D4" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0x1296E316" template="Structs/UnknownStruct3.xml"/>
+                <struct ID="0x1296E316" template="dkcr/Structs/UnknownStruct3.xml"/>
                 <property ID="0x938C651F" type="bool">
                     <default>false</default>
                 </property>
@@ -456,8 +456,8 @@
                 <property ID="0xF2B3C5A1" type="long">
                     <default>2</default>
                 </property>
-                <struct ID="0xCB560763" template="Structs/UnknownStruct4.xml"/>
-                <struct ID="0xBCC8D593" template="Structs/UnknownStruct4.xml">
+                <struct ID="0xCB560763" template="dkcr/Structs/UnknownStruct4.xml"/>
+                <struct ID="0xBCC8D593" template="dkcr/Structs/UnknownStruct4.xml">
                     <properties>
                         <property ID="0xC2BE030D">
                             <default>2.0</default>
@@ -467,9 +467,9 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x276D99FC" template="Structs/UnknownStruct4.xml"/>
-                <struct ID="0x53F57073" template="Structs/UnknownStruct4.xml"/>
-                <struct ID="0xC8503C1C" template="Structs/UnknownStruct4.xml"/>
+                <struct ID="0x276D99FC" template="dkcr/Structs/UnknownStruct4.xml"/>
+                <struct ID="0x53F57073" template="dkcr/Structs/UnknownStruct4.xml"/>
+                <struct ID="0xC8503C1C" template="dkcr/Structs/UnknownStruct4.xml"/>
                 <property ID="0x36F3D4FA" type="float">
                     <default>1.0</default>
                 </property>
@@ -592,9 +592,9 @@
                 <property ID="0xE3F96A88" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0x3E0121C3" template="Structs/DamageEffectData.xml"/>
-                <struct ID="0x7F313285" template="Structs/DamageEffectData.xml"/>
-                <struct ID="0xF897F9C6" template="Structs/DamageEffectData.xml"/>
+                <struct ID="0x3E0121C3" template="dkcr/Structs/DamageEffectData.xml"/>
+                <struct ID="0x7F313285" template="dkcr/Structs/DamageEffectData.xml"/>
+                <struct ID="0xF897F9C6" template="dkcr/Structs/DamageEffectData.xml"/>
                 <property ID="0x5318357D" type="bool">
                     <default>false</default>
                 </property>
@@ -922,7 +922,7 @@
                         <enumerator ID="0x67047FAB" name="Unknown 2"/>
                     </enumerators>
                 </enum>
-                <struct ID="0x6F7A3416" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x6F7A3416" template="dkcr/Structs/DamageInfo.xml"/>
                 <property ID="0x267EDD84" type="float">
                     <default>3.0</default>
                 </property>
@@ -972,22 +972,22 @@
         </struct>
         <struct ID="0xC962CB9C" type="multi">
             <properties>
-                <struct ID="0xFF0A98A3" template="Structs/UnknownStruct1.xml"/>
-                <struct ID="0x0A62C650" template="Structs/UnknownStruct1.xml">
+                <struct ID="0xFF0A98A3" template="dkcr/Structs/UnknownStruct1.xml"/>
+                <struct ID="0x0A62C650" template="dkcr/Structs/UnknownStruct1.xml">
                     <properties>
                         <enum ID="0x9721D02B">
                             <default>0xB2A31497</default>
                         </enum>
                     </properties>
                 </struct>
-                <struct ID="0x954E50D4" template="Structs/UnknownStruct1.xml">
+                <struct ID="0x954E50D4" template="dkcr/Structs/UnknownStruct1.xml">
                     <properties>
                         <enum ID="0x9721D02B">
                             <default>0xBD71A966</default>
                         </enum>
                     </properties>
                 </struct>
-                <struct ID="0x229D79FE" template="Structs/UnknownStruct1.xml">
+                <struct ID="0x229D79FE" template="dkcr/Structs/UnknownStruct1.xml">
                     <properties>
                         <enum ID="0x9721D02B">
                             <default>0x81864B79</default>
@@ -1154,70 +1154,70 @@
                 <property ID="0x60F7E83F" type="bool">
                     <default>true</default>
                 </property>
-                <struct ID="0x36A054C3" template="Structs/UnknownStruct5.xml">
+                <struct ID="0x36A054C3" template="dkcr/Structs/UnknownStruct5.xml">
                     <properties>
                         <property ID="0x462D3C4D">
                             <default>-2.0</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x40456DFE" template="Structs/UnknownStruct5.xml">
+                <struct ID="0x40456DFE" template="dkcr/Structs/UnknownStruct5.xml">
                     <properties>
                         <property ID="0x462D3C4D">
                             <default>-4.0</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xDB36872A" template="Structs/UnknownStruct5.xml">
+                <struct ID="0xDB36872A" template="dkcr/Structs/UnknownStruct5.xml">
                     <properties>
                         <property ID="0x462D3C4D">
                             <default>-6.0</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xAD8F1F84" template="Structs/UnknownStruct5.xml">
+                <struct ID="0xAD8F1F84" template="dkcr/Structs/UnknownStruct5.xml">
                     <properties>
                         <property ID="0x462D3C4D">
                             <default>-8.0</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x36FCF550" template="Structs/UnknownStruct5.xml">
+                <struct ID="0x36FCF550" template="dkcr/Structs/UnknownStruct5.xml">
                     <properties>
                         <property ID="0x462D3C4D">
                             <default>-10.0</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x4019CC6D" template="Structs/UnknownStruct5.xml">
+                <struct ID="0x4019CC6D" template="dkcr/Structs/UnknownStruct5.xml">
                     <properties>
                         <property ID="0x462D3C4D">
                             <default>2.0</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xDB6A26B9" template="Structs/UnknownStruct5.xml">
+                <struct ID="0xDB6A26B9" template="dkcr/Structs/UnknownStruct5.xml">
                     <properties>
                         <property ID="0x462D3C4D">
                             <default>4.0</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xAD6AFD31" template="Structs/UnknownStruct5.xml">
+                <struct ID="0xAD6AFD31" template="dkcr/Structs/UnknownStruct5.xml">
                     <properties>
                         <property ID="0x462D3C4D">
                             <default>6.0</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x361917E5" template="Structs/UnknownStruct5.xml">
+                <struct ID="0x361917E5" template="dkcr/Structs/UnknownStruct5.xml">
                     <properties>
                         <property ID="0x462D3C4D">
                             <default>8.0</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x30C93088" template="Structs/UnknownStruct5.xml">
+                <struct ID="0x30C93088" template="dkcr/Structs/UnknownStruct5.xml">
                     <properties>
                         <property ID="0x462D3C4D">
                             <default>10.0</default>
@@ -1226,7 +1226,7 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x311759A0" template="Structs/UnknownStruct2.xml"/>
+        <struct ID="0x311759A0" template="dkcr/Structs/UnknownStruct2.xml"/>
         <struct ID="0x5FCE6A84" type="multi">
             <properties>
                 <enum ID="0xB8F60F9A">

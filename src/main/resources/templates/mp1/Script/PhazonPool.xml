@@ -12,7 +12,7 @@
         <property ID="0x07" name="Particle 1" type="file" extensions="PART"/>
         <property ID="0x08" name="Particle 2" type="file" extensions="PART"/>
         <property ID="0x09" name="Unknown 2" type="long"/>
-        <struct ID="0x0A" name="DamageInfo" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x0A" name="DamageInfo" template="mp1/Structs/DamageInfo.xml"/>
         <property ID="0x0B" name="Unknown 3" type="vector3f"/>
         <property ID="0x0C" name="Unknown 4" type="long"/>
         <property ID="0x0D" name="Unknown 5" type="float"/>

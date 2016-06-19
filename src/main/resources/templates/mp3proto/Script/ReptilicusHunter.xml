@@ -2,15 +2,15 @@
 <ScriptTemplate version="4">
     <name>ReptilicusHunter</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml">
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
         <struct ID="0x3B7085AD" type="multi">
             <properties>
                 <property ID="0xE9553FFA" type="bool">
@@ -47,7 +47,7 @@
                 </property>
                 <struct ID="0x87B10A69" type="multi">
                     <properties>
-                        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x337F9524" template="mp3proto/Structs/DamageInfo.xml"/>
                         <property ID="0x2ED25F50" type="float">
                             <default>5.0</default>
                         </property>
@@ -63,7 +63,7 @@
                 <struct ID="0xD7548E97" type="multi">
                     <properties>
                         <property ID="0x5C1FFC8D" type="character"/>
-                        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x337F9524" template="mp3proto/Structs/DamageInfo.xml"/>
                         <property ID="0x894C2B5D" type="float">
                             <default>2.5</default>
                         </property>
@@ -82,7 +82,7 @@
                         <property ID="0x1A092829" type="file" extensions="CAUD"/>
                         <property ID="0xE33A996D" type="file" extensions="CAUD"/>
                         <property ID="0xDF64C67A" type="file" extensions="CAUD"/>
-                        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x337F9524" template="mp3proto/Structs/DamageInfo.xml"/>
                         <property ID="0x6392404E" type="float">
                             <default>50.0</default>
                         </property>

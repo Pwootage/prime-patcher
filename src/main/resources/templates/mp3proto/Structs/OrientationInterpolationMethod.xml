@@ -11,6 +11,6 @@
                 <enumerator ID="0x3F448DD2" name="Unknown 5"/>
             </enumerators>
         </enum>
-        <struct ID="0x8654B081" template="Structs/InterpolationMethod.xml"/>
+        <struct ID="0x8654B081" template="mp3proto/Structs/InterpolationMethod.xml"/>
     </properties>
 </struct>

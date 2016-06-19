@@ -6,7 +6,7 @@
         <property ID="0x01" name="Position" type="vector3f"/>
         <property ID="0x02" name="Rotation" type="vector3f"/>
         <property ID="0x03" name="Active" type="bool"/>
-        <struct ID="0x04" name="ScannableParameters" template="Structs/ScannableParameters.xml"/>
+        <struct ID="0x04" name="ScannableParameters" template="mp1/Structs/ScannableParameters.xml"/>
         <property ID="0x05" name="Unknown" type="float">
             <description>Affects the size of the scan point.</description>
         </property>

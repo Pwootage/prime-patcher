@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>Metaree</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>240.0</default>
@@ -45,8 +45,8 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x086D58DD" template="Structs/DamageInfo.xml">
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
+        <struct ID="0x086D58DD" template="mp2demo/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>9</default>

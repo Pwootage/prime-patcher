@@ -2,11 +2,11 @@
 <ScriptTemplate version="4">
     <name>Rambi</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xBF81C83E" template="Structs/ShadowData.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x0063F638" template="Structs/UnknownStruct.xml"/>
-        <struct ID="0x43BBB1DD" template="Structs/PatternedAI.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
+        <struct ID="0xBF81C83E" template="dkcr/Structs/ShadowData.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
+        <struct ID="0x0063F638" template="dkcr/Structs/UnknownStruct.xml"/>
+        <struct ID="0x43BBB1DD" template="dkcr/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -20,7 +20,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x6F7438CF" template="Structs/UnknownStruct44.xml"/>
+        <struct ID="0x6F7438CF" template="dkcr/Structs/UnknownStruct44.xml"/>
     </properties>
     <states/>
     <messages/>

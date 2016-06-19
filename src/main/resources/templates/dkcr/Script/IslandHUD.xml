@@ -2,13 +2,13 @@
 <ScriptTemplate version="4">
     <name>IslandHUD</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0x0F94806A" type="file" extensions="CMDL"/>
         <property ID="0xD02FB1A1" type="file" extensions="CMDL"/>
         <property ID="0xA74065CE" type="file" extensions="CMDL"/>
         <struct ID="0x1743B770" type="multi">
             <properties>
-                <struct ID="0xD85524DB" template="Structs/UnknownStruct35.xml"/>
+                <struct ID="0xD85524DB" template="dkcr/Structs/UnknownStruct35.xml"/>
                 <struct ID="0xBAB90759" type="multi">
                     <properties>
                         <property ID="0x806052CB" type="file" extensions="FRME"/>
@@ -38,19 +38,19 @@
                         <property ID="0xA40D410E" type="file" extensions="STRG"/>
                         <property ID="0xEACBA755" type="file" extensions="STRG"/>
                         <property ID="0xA18EDF2D" type="file" extensions="STRG"/>
-                        <struct ID="0x73E2819B" template="Structs/UnknownStruct27.xml"/>
+                        <struct ID="0x73E2819B" template="dkcr/Structs/UnknownStruct27.xml"/>
                         <property ID="0xE119319B" type="file" extensions="TXTR"/>
                     </properties>
                 </struct>
                 <struct ID="0x2C7916EC" type="multi">
                     <properties>
                         <property ID="0x806052CB" type="file" extensions="FRME"/>
-                        <struct ID="0x1145AE1B" template="Structs/UnknownStruct29.xml"/>
-                        <struct ID="0x67A7C770" template="Structs/UnknownStruct28.xml"/>
+                        <struct ID="0x1145AE1B" template="dkcr/Structs/UnknownStruct29.xml"/>
+                        <struct ID="0x67A7C770" template="dkcr/Structs/UnknownStruct28.xml"/>
                         <struct ID="0x308B92DD" type="multi">
                             <properties>
-                                <struct ID="0x44F57507" template="Structs/UnknownStruct29.xml"/>
-                                <struct ID="0x73E2819B" template="Structs/UnknownStruct27.xml"/>
+                                <struct ID="0x44F57507" template="dkcr/Structs/UnknownStruct29.xml"/>
+                                <struct ID="0x73E2819B" template="dkcr/Structs/UnknownStruct27.xml"/>
                                 <property ID="0x013180F0" type="file" extensions="STRG"/>
                                 <property ID="0xA4F20C17" type="file" extensions="STRG"/>
                                 <property ID="0xE9336455" type="file" extensions="STRG"/>
@@ -62,7 +62,7 @@
                                 <property ID="0xA0C913A9" type="file" extensions="CAUD"/>
                             </properties>
                         </struct>
-                        <struct ID="0x73E2819B" template="Structs/UnknownStruct27.xml"/>
+                        <struct ID="0x73E2819B" template="dkcr/Structs/UnknownStruct27.xml"/>
                         <property ID="0x4D4749A8" type="file" extensions="CAUD"/>
                         <property ID="0xDEBFBD6E" type="file" extensions="CAUD"/>
                         <property ID="0xC9E1C63A" type="file" extensions="CAUD"/>
@@ -87,7 +87,7 @@
                 <struct ID="0x4CEA53F4" type="multi">
                     <properties>
                         <property ID="0x806052CB" type="file" extensions="FRME"/>
-                        <struct ID="0x73E2819B" template="Structs/UnknownStruct27.xml"/>
+                        <struct ID="0x73E2819B" template="dkcr/Structs/UnknownStruct27.xml"/>
                         <property ID="0xA4F20C17" type="file" extensions="STRG"/>
                         <property ID="0xA099CA34" type="file" extensions="STRG"/>
                         <property ID="0xE8BF8BB4" type="file" extensions="STRG"/>
@@ -97,14 +97,14 @@
                         <property ID="0x8ED65283" type="file" extensions="CAUD,STRG"/>
                         <property ID="0xA40D410E" type="file" extensions="STRG"/>
                         <property ID="0xE119319B" type="file" extensions="TXTR"/>
-                        <struct ID="0x07BAA11B" template="Structs/UnknownStruct31.xml"/>
-                        <struct ID="0xCB2FF702" template="Structs/UnknownStruct30.xml"/>
+                        <struct ID="0x07BAA11B" template="dkcr/Structs/UnknownStruct31.xml"/>
+                        <struct ID="0xCB2FF702" template="dkcr/Structs/UnknownStruct30.xml"/>
                     </properties>
                 </struct>
                 <struct ID="0x90A6AE10" type="multi">
                     <properties>
                         <property ID="0x806052CB" type="file" extensions="FRME"/>
-                        <struct ID="0x73E2819B" template="Structs/UnknownStruct27.xml"/>
+                        <struct ID="0x73E2819B" template="dkcr/Structs/UnknownStruct27.xml"/>
                         <property ID="0xA4F20C17" type="file" extensions="STRG"/>
                         <property ID="0x1CE76B90" type="file" extensions="STRG"/>
                         <property ID="0xBB19D2F3" type="file" extensions="STRG"/>
@@ -112,12 +112,12 @@
                         <property ID="0xE9336455" type="file" extensions="STRG"/>
                         <property ID="0x770BCD3B" type="file" extensions="STRG"/>
                         <property ID="0xE119319B" type="file" extensions="TXTR"/>
-                        <struct ID="0x800073B8" template="Structs/IslandHudStruct.xml"/>
-                        <struct ID="0x5F71338F" template="Structs/IslandHudStruct.xml"/>
-                        <struct ID="0x01BE492E" template="Structs/IslandHudStruct.xml"/>
+                        <struct ID="0x800073B8" template="dkcr/Structs/IslandHudStruct.xml"/>
+                        <struct ID="0x5F71338F" template="dkcr/Structs/IslandHudStruct.xml"/>
+                        <struct ID="0x01BE492E" template="dkcr/Structs/IslandHudStruct.xml"/>
                         <struct ID="0x98E01824" type="multi">
                             <properties>
-                                <struct ID="0x305B3232" template="Structs/UnknownStruct29.xml"/>
+                                <struct ID="0x305B3232" template="dkcr/Structs/UnknownStruct29.xml"/>
                                 <property ID="0x17C847C0" type="file" extensions="STRG"/>
                                 <property ID="0x37FD1913" type="file" extensions="STRG"/>
                                 <property ID="0xA14F34CA" type="file" extensions="STRG"/>
@@ -131,7 +131,7 @@
                         </struct>
                         <struct ID="0xF8E5788C" type="multi">
                             <properties>
-                                <struct ID="0x305B3232" template="Structs/UnknownStruct29.xml"/>
+                                <struct ID="0x305B3232" template="dkcr/Structs/UnknownStruct29.xml"/>
                                 <property ID="0x17C847C0" type="file" extensions="STRG"/>
                                 <property ID="0x37FD1913" type="file" extensions="STRG"/>
                                 <property ID="0xA14F34CA" type="file" extensions="STRG"/>
@@ -143,7 +143,7 @@
                         </struct>
                         <struct ID="0x4983B29A" type="multi">
                             <properties>
-                                <struct ID="0x305B3232" template="Structs/UnknownStruct29.xml"/>
+                                <struct ID="0x305B3232" template="dkcr/Structs/UnknownStruct29.xml"/>
                                 <property ID="0x119E75AC" type="file" extensions="STRG"/>
                                 <property ID="0xE9336455" type="file" extensions="STRG"/>
                                 <property ID="0x770BCD3B" type="file" extensions="STRG"/>
@@ -158,7 +158,7 @@
                         </struct>
                         <struct ID="0x851BE4BE" type="multi">
                             <properties>
-                                <struct ID="0x305B3232" template="Structs/UnknownStruct29.xml"/>
+                                <struct ID="0x305B3232" template="dkcr/Structs/UnknownStruct29.xml"/>
                                 <property ID="0x17C847C0" type="file" extensions="STRG"/>
                                 <property ID="0x37FD1913" type="file" extensions="STRG"/>
                                 <property ID="0xA14F34CA" type="file" extensions="STRG"/>
@@ -173,7 +173,7 @@
                 <struct ID="0x6362F910" type="multi">
                     <properties>
                         <property ID="0x806052CB" type="file" extensions="FRME"/>
-                        <struct ID="0x73E2819B" template="Structs/UnknownStruct27.xml"/>
+                        <struct ID="0x73E2819B" template="dkcr/Structs/UnknownStruct27.xml"/>
                         <property ID="0xA4F20C17" type="file" extensions="STRG"/>
                         <property ID="0xAB783F75" type="file" extensions="STRG"/>
                         <property ID="0x951DA97E" type="file" extensions="STRG"/>
@@ -200,14 +200,14 @@
                         <property ID="0xB0D747B5" type="file" extensions="STRG"/>
                         <property ID="0x4ECA6603" type="file" extensions="STRG"/>
                         <property ID="0x6AF2A9FB" type="file" extensions="STRG"/>
-                        <struct ID="0x5365CF39" template="Structs/UnknownStruct28.xml"/>
+                        <struct ID="0x5365CF39" template="dkcr/Structs/UnknownStruct28.xml"/>
                         <property ID="0xE119319B" type="file" extensions="TXTR"/>
                     </properties>
                 </struct>
                 <struct ID="0x372866D4" type="multi">
                     <properties>
                         <property ID="0x806052CB" type="file" extensions="FRME"/>
-                        <struct ID="0x73E2819B" template="Structs/UnknownStruct27.xml"/>
+                        <struct ID="0x73E2819B" template="dkcr/Structs/UnknownStruct27.xml"/>
                         <property ID="0xA4F20C17" type="file" extensions="STRG"/>
                         <property ID="0x31449704" type="file" extensions="STRG"/>
                         <property ID="0x46DA45F4" type="file" extensions="STRG"/>
@@ -220,14 +220,14 @@
                         <property ID="0x4F1BC10E" type="file" extensions="CAUD"/>
                         <property ID="0xCAC25316" type="file" extensions="CAUD"/>
                         <property ID="0xEA119B2C" type="file" extensions="CAUD"/>
-                        <struct ID="0x8C9C574C" template="Structs/UnknownStruct28.xml"/>
+                        <struct ID="0x8C9C574C" template="dkcr/Structs/UnknownStruct28.xml"/>
                         <property ID="0xE119319B" type="file" extensions="TXTR"/>
                     </properties>
                 </struct>
                 <struct ID="0xEA2F750A" type="multi">
                     <properties>
                         <property ID="0x806052CB" type="file" extensions="FRME"/>
-                        <struct ID="0x73E2819B" template="Structs/UnknownStruct27.xml"/>
+                        <struct ID="0x73E2819B" template="dkcr/Structs/UnknownStruct27.xml"/>
                         <property ID="0xC8B7DBD5" type="file" extensions="STRG"/>
                         <property ID="0x46993681" type="file" extensions="STRG"/>
                         <property ID="0xACE4067E" type="file" extensions="STRG"/>
@@ -239,7 +239,7 @@
                         <property ID="0xA01E0887" type="file" extensions="STRG"/>
                     </properties>
                 </struct>
-                <struct ID="0x51ADB968" template="Structs/UnknownStruct34.xml"/>
+                <struct ID="0x51ADB968" template="dkcr/Structs/UnknownStruct34.xml"/>
                 <struct ID="0xD8BA1E9A" type="multi">
                     <properties>
                         <property ID="0x806052CB" type="file" extensions="FRME"/>
@@ -249,12 +249,12 @@
                 </struct>
                 <struct ID="0x2AA48723" type="multi">
                     <properties>
-                        <struct ID="0xC68BC9EC" template="Structs/UnknownStruct28.xml"/>
-                        <struct ID="0x569D9045" template="Structs/UnknownStruct28.xml"/>
-                        <struct ID="0x67A7C770" template="Structs/UnknownStruct28.xml"/>
-                        <struct ID="0x8C9C574C" template="Structs/UnknownStruct28.xml"/>
+                        <struct ID="0xC68BC9EC" template="dkcr/Structs/UnknownStruct28.xml"/>
+                        <struct ID="0x569D9045" template="dkcr/Structs/UnknownStruct28.xml"/>
+                        <struct ID="0x67A7C770" template="dkcr/Structs/UnknownStruct28.xml"/>
+                        <struct ID="0x8C9C574C" template="dkcr/Structs/UnknownStruct28.xml"/>
                         <property ID="0x806052CB" type="file" extensions="FRME"/>
-                        <struct ID="0x73E2819B" template="Structs/UnknownStruct27.xml"/>
+                        <struct ID="0x73E2819B" template="dkcr/Structs/UnknownStruct27.xml"/>
                         <property ID="0x9BF39933" type="file" extensions="CAUD"/>
                         <property ID="0x7F33C52C" type="file" extensions="CAUD"/>
                         <property ID="0xD239B11F" type="file" extensions="CAUD"/>
@@ -292,7 +292,7 @@
                 <struct ID="0xC6476C7D" type="multi">
                     <properties>
                         <property ID="0x806052CB" type="file" extensions="FRME"/>
-                        <struct ID="0x73E2819B" template="Structs/UnknownStruct27.xml"/>
+                        <struct ID="0x73E2819B" template="dkcr/Structs/UnknownStruct27.xml"/>
                         <property ID="0xA4F20C17" type="file" extensions="STRG"/>
                         <property ID="0x78A2B4B0" type="file" extensions="STRG"/>
                         <property ID="0x314CDC24" type="file" extensions="STRG"/>
@@ -306,9 +306,9 @@
                 <struct ID="0xBC2379A9" type="multi">
                     <properties>
                         <property ID="0xF2299ED6" type="file" extensions="FRME"/>
-                        <struct ID="0x73E2819B" template="Structs/UnknownStruct27.xml"/>
-                        <struct ID="0x67A7C770" template="Structs/UnknownStruct28.xml"/>
-                        <struct ID="0xC68BC9EC" template="Structs/UnknownStruct28.xml"/>
+                        <struct ID="0x73E2819B" template="dkcr/Structs/UnknownStruct27.xml"/>
+                        <struct ID="0x67A7C770" template="dkcr/Structs/UnknownStruct28.xml"/>
+                        <struct ID="0xC68BC9EC" template="dkcr/Structs/UnknownStruct28.xml"/>
                         <property ID="0x9BE6A5D6" type="float">
                             <default>5.0</default>
                         </property>
@@ -340,7 +340,7 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x3F88E900" template="Structs/UnknownStruct36.xml"/>
+        <struct ID="0x3F88E900" template="dkcr/Structs/UnknownStruct36.xml"/>
         <struct ID="0xEB7C1BF2" type="multi">
             <properties>
                 <property ID="0x472BF35F" type="file" extensions="STRG"/>
@@ -351,11 +351,11 @@
                 <property ID="0xE2E62EE5" type="file" extensions="STRG"/>
             </properties>
         </struct>
-        <struct ID="0xC68BC9EC" template="Structs/UnknownStruct28.xml"/>
-        <struct ID="0x6BDD8B7A" template="Structs/UnknownStruct28.xml"/>
-        <struct ID="0xCC53C738" template="Structs/UnknownStruct28.xml"/>
-        <struct ID="0xBCF93A2A" template="Structs/UnknownStruct28.xml"/>
-        <struct ID="0x6549E3F9" template="Structs/UnknownStruct28.xml"/>
+        <struct ID="0xC68BC9EC" template="dkcr/Structs/UnknownStruct28.xml"/>
+        <struct ID="0x6BDD8B7A" template="dkcr/Structs/UnknownStruct28.xml"/>
+        <struct ID="0xCC53C738" template="dkcr/Structs/UnknownStruct28.xml"/>
+        <struct ID="0xBCF93A2A" template="dkcr/Structs/UnknownStruct28.xml"/>
+        <struct ID="0x6549E3F9" template="dkcr/Structs/UnknownStruct28.xml"/>
     </properties>
     <states/>
     <messages/>

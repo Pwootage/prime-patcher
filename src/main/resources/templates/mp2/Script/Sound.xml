@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>Sound</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <property ID="0x5F7C352E" type="long">
             <default>-1</default>
         </property>

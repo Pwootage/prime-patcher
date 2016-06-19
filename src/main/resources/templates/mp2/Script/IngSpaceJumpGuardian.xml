@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>IngSpaceJumpGuardian</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
@@ -23,7 +23,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <struct ID="0xF9837AB3" type="multi">
             <properties>
                 <property ID="0xCC5A4918" type="long">
@@ -32,10 +32,10 @@
                 <property ID="0x46E902E8" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x5E1D1931" template="Structs/IngSpaceJumpGuardianStruct.xml"/>
-                <struct ID="0x6B08E2E5" template="Structs/IngSpaceJumpGuardianStruct.xml"/>
-                <struct ID="0xF223AA76" template="Structs/IngSpaceJumpGuardianStruct.xml"/>
-                <struct ID="0xD0DB5F7A" template="Structs/IngSpaceJumpGuardianStruct.xml"/>
+                <struct ID="0x5E1D1931" template="mp2/Structs/IngSpaceJumpGuardianStruct.xml"/>
+                <struct ID="0x6B08E2E5" template="mp2/Structs/IngSpaceJumpGuardianStruct.xml"/>
+                <struct ID="0xF223AA76" template="mp2/Structs/IngSpaceJumpGuardianStruct.xml"/>
+                <struct ID="0xD0DB5F7A" template="mp2/Structs/IngSpaceJumpGuardianStruct.xml"/>
                 <property ID="0xBD3EFE7D" type="color">
                     <default>1.0, 1.0, 1.0, 1.0</default>
                 </property>
@@ -48,7 +48,7 @@
                 <property ID="0x4051FD1A" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x424A6D37" template="Structs/DamageInfo.xml">
+                <struct ID="0x424A6D37" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -61,7 +61,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x9C170968" template="Structs/PlasmaBeamInfo.xml">
+                <struct ID="0x9C170968" template="mp2/Structs/PlasmaBeamInfo.xml">
                     <properties>
                         <property ID="0xC26C291C">
                             <default>500.0</default>
@@ -89,7 +89,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x8F4787CB" template="Structs/ShockWaveInfo.xml"/>
+                <struct ID="0x8F4787CB" template="mp2/Structs/ShockWaveInfo.xml"/>
             </properties>
         </struct>
     </properties>

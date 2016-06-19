@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>EyePod</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <struct ID="0xB718B831" type="multi">
             <properties>
                 <property ID="0x8A6AB139" type="float">
@@ -83,14 +83,14 @@
                 </property>
                 <property ID="0xE8C819E6" type="file" extensions="WPSC"/>
                 <property ID="0xB14FEA52" type="file" extensions="WPSC"/>
-                <struct ID="0xC93109E7" template="Structs/DamageInfo.xml"/>
-                <struct ID="0x37A6F562" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xC93109E7" template="mp3proto/Structs/DamageInfo.xml"/>
+                <struct ID="0x37A6F562" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0xD75F9CF2" type="float">
                     <default>5.0</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml">
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -110,7 +110,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

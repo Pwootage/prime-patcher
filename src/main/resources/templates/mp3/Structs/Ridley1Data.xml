@@ -16,37 +16,37 @@
         <property ID="0xBC1564B9" type="float">
             <default>1000.0</default>
         </property>
-        <struct ID="0xE82166DB" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x36307B98" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xE82166DB" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x36307B98" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xF616D87B" type="float">
             <default>15.0</default>
         </property>
-        <struct ID="0xFAB0199E" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x54031E21" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xFAB0199E" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x54031E21" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xB5194095" type="float">
             <default>15.0</default>
         </property>
-        <struct ID="0xD55917A9" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xD55917A9" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xDDD0212A" type="float">
             <default>15.0</default>
         </property>
-        <struct ID="0x6BB8E35C" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x6BB8E35C" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xF4C13980" type="float">
             <default>15.0</default>
         </property>
-        <struct ID="0x47D4427E" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x47D4427E" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xA4CB7B3C" type="float">
             <default>15.0</default>
         </property>
-        <struct ID="0x742287F5" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x742287F5" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0xBE3B8E93" type="float">
             <default>15.0</default>
         </property>
-        <struct ID="0x78F4A916" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x76F0F23B" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x77EDD892" template="Structs/DamageInfo.xml"/>
-        <struct ID="0xB6C739D2" template="Structs/DamageInfo.xml"/>
-        <struct ID="0x79350AC0" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x78F4A916" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x76F0F23B" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x77EDD892" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0xB6C739D2" template="mp3/Structs/DamageInfo.xml"/>
+        <struct ID="0x79350AC0" template="mp3/Structs/DamageInfo.xml"/>
         <property ID="0x4FA2BCE1" type="float">
             <default>8.0</default>
         </property>

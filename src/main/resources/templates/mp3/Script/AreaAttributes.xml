@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>AreaAttributes</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml">
             <properties>
                 <property ID="0x494E414D">
                     <cook_pref>never</cook_pref>
@@ -48,7 +48,7 @@
                     <default>50.0</default>
                 </property>
                 <property ID="0x3399D65B" type="file" extensions="UNKN"/>
-                <struct ID="0x8476C57C" template="Structs/LayerInfo.xml"/>
+                <struct ID="0x8476C57C" template="mp3/Structs/LayerInfo.xml"/>
                 <property ID="0x5DEB4D57" type="bool">
                     <default>true</default>
                 </property>
@@ -90,7 +90,7 @@
             <default>false</default>
         </property>
         <property ID="0xFA873A67" type="MayaSpline"/>
-        <struct ID="0xE7A0E69B" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xE7A0E69B" template="mp3/Structs/DamageInfo.xml"/>
     </properties>
     <states/>
     <messages/>

@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>SeedBoss2BotSwarm</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <struct ID="0xD6CC62CB" type="multi">
             <properties>
                 <property ID="0xBEA74138" type="long">
@@ -17,7 +17,7 @@
                     <default>4.0</default>
                 </property>
                 <property ID="0x4C64D3A6" type="character"/>
-                <struct ID="0x00DD06CC" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x00DD06CC" template="mp3/Structs/DamageVulnerability.xml"/>
                 <property ID="0xB64ED093" type="file" extensions="PART"/>
                 <property ID="0x8FE03C41" type="float">
                     <default>0.1</default>
@@ -25,8 +25,8 @@
                 <property ID="0xC90CDA8C" type="file" extensions="PART"/>
                 <property ID="0x4D9ED8E1" type="file" extensions="PART"/>
                 <property ID="0x21DC4C35" type="file" extensions="WPSC"/>
-                <struct ID="0x18F91880" template="Structs/DamageInfo.xml"/>
-                <struct ID="0xFCB5A8C3" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x18F91880" template="mp3/Structs/DamageInfo.xml"/>
+                <struct ID="0xFCB5A8C3" template="mp3/Structs/DamageInfo.xml"/>
                 <property ID="0xE9C8E2BD" type="file" extensions="PART"/>
                 <property ID="0x86FFB3F6" type="file" extensions="CAUD"/>
             </properties>

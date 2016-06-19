@@ -2,17 +2,17 @@
 <ScriptTemplate version="4">
     <name>BeatUpHandler</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0x50228364" type="multi">
             <properties>
-                <struct ID="0xF6AE5D7C" template="Structs/ControlCommands.xml">
+                <struct ID="0xF6AE5D7C" template="dkcr/Structs/ControlCommands.xml">
                     <properties>
                         <enum ID="0x418B3422">
                             <default>0x6AD40029</default>
                         </enum>
                     </properties>
                 </struct>
-                <struct ID="0xD2FD4F74" template="Structs/ControlCommands.xml">
+                <struct ID="0xD2FD4F74" template="dkcr/Structs/ControlCommands.xml">
                     <properties>
                         <enum ID="0x418B3422">
                             <default>0xE08296BA</default>
@@ -43,9 +43,9 @@
                 <property ID="0xB12E58B8" type="long">
                     <default>100</default>
                 </property>
-                <struct ID="0x4289B15B" template="Structs/BeatUpHandlerStruct.xml"/>
-                <struct ID="0x351763AB" template="Structs/BeatUpHandlerStruct.xml"/>
-                <struct ID="0xAEB22FC4" template="Structs/BeatUpHandlerStruct.xml"/>
+                <struct ID="0x4289B15B" template="dkcr/Structs/BeatUpHandlerStruct.xml"/>
+                <struct ID="0x351763AB" template="dkcr/Structs/BeatUpHandlerStruct.xml"/>
+                <struct ID="0xAEB22FC4" template="dkcr/Structs/BeatUpHandlerStruct.xml"/>
                 <property ID="0x552DB72C" type="file" extensions="CAUD"/>
             </properties>
         </struct>

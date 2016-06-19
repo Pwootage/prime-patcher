@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct name="SwarmBasicsData" type="multi">
     <properties>
-        <struct ID="0xD756416E" template="Structs/DamageInfo.xml">
+        <struct ID="0xD756416E" template="mp3/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0xEE1BE914">
                     <default>5.0</default>
@@ -71,7 +71,7 @@
         <property ID="0x88DF3EA8" type="float">
             <default>0.0</default>
         </property>
-        <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml">
+        <struct ID="0xCF90D15E" template="mp3/Structs/HealthInfo.xml">
             <properties>
                 <property ID="0xF0668919">
                     <default>2.0</default>
@@ -81,7 +81,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x382E406E" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x382E406E" template="mp3/Structs/DamageVulnerability.xml"/>
         <property ID="0x7D462930" type="file" extensions="PART"/>
         <property ID="0x84F81F55" type="long">
             <default>5</default>
@@ -105,12 +105,12 @@
         <property ID="0xB02DE555" type="float">
             <default>0.0</default>
         </property>
-        <struct ID="0x80BBA072" template="Structs/SwarmSoundData.xml"/>
-        <struct ID="0x49CFBA93" template="Structs/SwarmSoundData.xml"/>
-        <struct ID="0x2646819A" template="Structs/SwarmSoundData.xml"/>
-        <struct ID="0x373BEBE3" template="Structs/SwarmSoundData.xml"/>
-        <struct ID="0x9C417339" template="Structs/SwarmSoundData.xml"/>
-        <struct ID="0x8D3C1940" template="Structs/SwarmSoundData.xml"/>
+        <struct ID="0x80BBA072" template="mp3/Structs/SwarmSoundData.xml"/>
+        <struct ID="0x49CFBA93" template="mp3/Structs/SwarmSoundData.xml"/>
+        <struct ID="0x2646819A" template="mp3/Structs/SwarmSoundData.xml"/>
+        <struct ID="0x373BEBE3" template="mp3/Structs/SwarmSoundData.xml"/>
+        <struct ID="0x9C417339" template="mp3/Structs/SwarmSoundData.xml"/>
+        <struct ID="0x8D3C1940" template="mp3/Structs/SwarmSoundData.xml"/>
         <property ID="0xC7C3F610" type="file" extensions="CAUD"/>
         <property ID="0x56C0D040" type="long">
             <default>0</default>

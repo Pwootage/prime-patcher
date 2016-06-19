@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>Puffer</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x75DBB375">
                     <default>25.0</default>
@@ -53,12 +53,12 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
         <property ID="0x845EF489" type="float">
             <default>3.0</default>
         </property>
         <property ID="0x670B9A1F" type="file" extensions="PART"/>
-        <struct ID="0xE8619082" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xE8619082" template="mp2demo/Structs/DamageInfo.xml"/>
         <property ID="0x1AA418F4" type="file" extensions="TXTR"/>
         <property ID="0xC9A55479" type="float">
             <default>0.5</default>
@@ -72,7 +72,7 @@
         <property ID="0x86C887A5" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0xDEFF74EA" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xDEFF74EA" template="mp2demo/Structs/DamageInfo.xml"/>
         <property ID="0x1F80154D" type="long">
             <default>-1</default>
         </property>

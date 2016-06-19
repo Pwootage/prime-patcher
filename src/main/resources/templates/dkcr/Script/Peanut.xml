@@ -2,14 +2,14 @@
 <ScriptTemplate version="4">
     <name>Peanut</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml">
             <properties>
                 <property ID="0x41435456">
                     <default>false</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
         <struct ID="0x5F058F67" type="multi">
             <properties>
                 <property ID="0x97AB7629" type="bool">
@@ -49,12 +49,12 @@
                 <property ID="0x3BDD2FED" type="bool">
                     <default>true</default>
                 </property>
-                <struct ID="0xF5DD4690" template="Structs/DebrisPropertiesOrientationEnum.xml"/>
+                <struct ID="0xF5DD4690" template="dkcr/Structs/DebrisPropertiesOrientationEnum.xml"/>
                 <property ID="0x217C37C2" type="file" extensions="PART"/>
                 <property ID="0x60D6BF8E" type="vector3f">
                     <default>1.0, 1.0, 1.0</default>
                 </property>
-                <struct ID="0xCE59EBFF" template="Structs/UnknownStruct17.xml"/>
+                <struct ID="0xCE59EBFF" template="dkcr/Structs/UnknownStruct17.xml"/>
                 <property ID="0xE93B1A2F" type="file" extensions="PART"/>
                 <property ID="0x71D494F4" type="file" extensions="PART"/>
                 <property ID="0xBD1A42AF" type="file" extensions="PART"/>
@@ -68,14 +68,14 @@
                 <property ID="0x05A79779" type="long">
                     <default>0</default>
                 </property>
-                <struct ID="0xE8D26BAE" template="Structs/PeanutStruct.xml"/>
-                <struct ID="0xD1AAC6EE" template="Structs/PeanutStruct.xml"/>
-                <struct ID="0xC682A22E" template="Structs/PeanutStruct.xml"/>
-                <struct ID="0xA35B9C6E" template="Structs/PeanutStruct.xml"/>
-                <struct ID="0xB473F8AE" template="Structs/PeanutStruct.xml"/>
-                <struct ID="0x8D0B55EE" template="Structs/PeanutStruct.xml"/>
-                <struct ID="0x9A23312E" template="Structs/PeanutStruct.xml"/>
-                <struct ID="0x46B9296E" template="Structs/PeanutStruct.xml"/>
+                <struct ID="0xE8D26BAE" template="dkcr/Structs/PeanutStruct.xml"/>
+                <struct ID="0xD1AAC6EE" template="dkcr/Structs/PeanutStruct.xml"/>
+                <struct ID="0xC682A22E" template="dkcr/Structs/PeanutStruct.xml"/>
+                <struct ID="0xA35B9C6E" template="dkcr/Structs/PeanutStruct.xml"/>
+                <struct ID="0xB473F8AE" template="dkcr/Structs/PeanutStruct.xml"/>
+                <struct ID="0x8D0B55EE" template="dkcr/Structs/PeanutStruct.xml"/>
+                <struct ID="0x9A23312E" template="dkcr/Structs/PeanutStruct.xml"/>
+                <struct ID="0x46B9296E" template="dkcr/Structs/PeanutStruct.xml"/>
             </properties>
         </struct>
     </properties>

@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>FactorySwitch</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0x6CA453B1" type="file" extensions="CMDL"/>
         <property ID="0xB6D34CBE" type="file" extensions="CMDL"/>
         <property ID="0x66E64EBA" type="bool">
@@ -11,8 +11,8 @@
         <property ID="0x8A1FD661" type="float">
             <default>0.6</default>
         </property>
-        <struct ID="0xEFE4EA57" template="Structs/RotationSplines.xml"/>
-        <struct ID="0x692267EA" template="Structs/TranslationSplines.xml"/>
+        <struct ID="0xEFE4EA57" template="dkcr/Structs/RotationSplines.xml"/>
+        <struct ID="0x692267EA" template="dkcr/Structs/TranslationSplines.xml"/>
         <property ID="0x36F96F54" type="file" extensions="unknown"/>
         <property ID="0x465159A3" type="file" extensions="unknown"/>
         <property ID="0x25C9C68F" type="bool">
@@ -24,7 +24,7 @@
         <property ID="0x7357FBAC" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>DamageableTriggerOrientated</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml"/>
-        <struct ID="0x7B71AE90" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xCF90D15E" template="mp3/Structs/HealthInfo.xml"/>
+        <struct ID="0x7B71AE90" template="mp3/Structs/DamageVulnerability.xml"/>
         <property ID="0x704B5369" type="bool">
             <default>false</default>
         </property>
@@ -17,11 +17,11 @@
         <property ID="0xF0E07A4B" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0x05AD250E" template="Structs/VisorParameters.xml"/>
-        <enum ID="0x8B9D2123" template="Enums/DamageableTriggerEnum.xml">
+        <struct ID="0x05AD250E" template="mp3/Structs/VisorParameters.xml"/>
+        <enum ID="0x8B9D2123" template="mp3/Enums/DamageableTriggerEnum.xml">
             <default>0x1DB35D5F</default>
         </enum>
-        <struct ID="0xBBFEE93E" template="Structs/TriggerInfo.xml"/>
+        <struct ID="0xBBFEE93E" template="mp3/Structs/TriggerInfo.xml"/>
         <property ID="0x701B61B3" type="bool">
             <default>false</default>
         </property>

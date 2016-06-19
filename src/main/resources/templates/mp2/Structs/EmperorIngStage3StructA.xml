@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct name="EmperorIngStage3StructA" type="multi">
     <properties>
-        <struct ID="0x1598012A" template="Structs/PlasmaBeamInfo.xml">
+        <struct ID="0x1598012A" template="mp2/Structs/PlasmaBeamInfo.xml">
             <properties>
                 <property ID="0xC26C291C">
                     <default>500.0</default>
@@ -29,7 +29,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x337F9524" template="mp2/Structs/DamageInfo.xml"/>
         <property ID="0xF6F185D6" type="long">
             <default>-1</default>
         </property>

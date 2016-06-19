@@ -2,50 +2,50 @@
 <ScriptTemplate version="4">
     <name>EmperorIngStage3</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x4BC4C4D9">
                     <default>2</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <struct ID="0x30DE1A5B" type="multi">
             <properties>
                 <property ID="0x293A0C19" type="float">
                     <default>0.0</default>
                 </property>
-                <struct ID="0x8A3F760C" template="Structs/HealthInfo.xml"/>
-                <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml"/>
+                <struct ID="0x8A3F760C" template="mp2/Structs/HealthInfo.xml"/>
+                <struct ID="0xCF90D15E" template="mp2/Structs/HealthInfo.xml"/>
                 <property ID="0x69BC5CD4" type="float">
                     <default>0.0</default>
                 </property>
                 <property ID="0xB110E539" type="float">
                     <default>0.0</default>
                 </property>
-                <struct ID="0x8D70D67A" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0x89C142F7" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0x8855C118" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0xC9416034" template="Structs/DamageInfo.xml"/>
-                <struct ID="0x1440D152" template="Structs/DamageInfo.xml"/>
-                <struct ID="0xEF582BD6" template="Structs/DamageInfo.xml"/>
-                <struct ID="0x4738C321" template="Structs/DamageInfo.xml"/>
-                <struct ID="0x98E311C1" template="Structs/EmperorIngStage3StructA.xml"/>
-                <struct ID="0x93DAE216" template="Structs/EmperorIngStage3StructA.xml"/>
+                <struct ID="0x8D70D67A" template="mp2/Structs/DamageVulnerability.xml"/>
+                <struct ID="0x89C142F7" template="mp2/Structs/DamageVulnerability.xml"/>
+                <struct ID="0x8855C118" template="mp2/Structs/DamageVulnerability.xml"/>
+                <struct ID="0xC9416034" template="mp2/Structs/DamageInfo.xml"/>
+                <struct ID="0x1440D152" template="mp2/Structs/DamageInfo.xml"/>
+                <struct ID="0xEF582BD6" template="mp2/Structs/DamageInfo.xml"/>
+                <struct ID="0x4738C321" template="mp2/Structs/DamageInfo.xml"/>
+                <struct ID="0x98E311C1" template="mp2/Structs/EmperorIngStage3StructA.xml"/>
+                <struct ID="0x93DAE216" template="mp2/Structs/EmperorIngStage3StructA.xml"/>
                 <property ID="0x4F82B9E5" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x043E9C2E" template="Structs/BasicSwarmProperties.xml"/>
-                <struct ID="0x91001508" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x03552953" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x043E9C2E" template="mp2/Structs/BasicSwarmProperties.xml"/>
+                <struct ID="0x91001508" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x03552953" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <struct ID="0xAF7E3033" type="multi">
                     <properties>
                         <property ID="0xB68C6D96" type="file" extensions="PART"/>
                         <property ID="0x1A66BED7" type="long">
                             <default>-1</default>
                         </property>
-                        <struct ID="0x553B1339" template="Structs/DamageInfo.xml">
+                        <struct ID="0x553B1339" template="mp2/Structs/DamageInfo.xml">
                             <properties>
                                 <property ID="0x119FBD31">
                                     <default>11</default>
@@ -58,7 +58,7 @@
                                 </property>
                             </properties>
                         </struct>
-                        <struct ID="0x1598012A" template="Structs/PlasmaBeamInfo.xml">
+                        <struct ID="0x1598012A" template="mp2/Structs/PlasmaBeamInfo.xml">
                             <properties>
                                 <property ID="0xC26C291C">
                                     <default>500.0</default>
@@ -88,14 +88,14 @@
                         </struct>
                     </properties>
                 </struct>
-                <struct ID="0xAB4ED456" template="Structs/ShockWaveInfo.xml"/>
+                <struct ID="0xAB4ED456" template="mp2/Structs/ShockWaveInfo.xml"/>
                 <property ID="0x985F72FD" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0xE843417F" template="Structs/EmperorIngStage3StructB.xml"/>
-                <struct ID="0xD13BEC3F" template="Structs/EmperorIngStage3StructB.xml"/>
-                <struct ID="0xC61388FF" template="Structs/EmperorIngStage3StructB.xml"/>
-                <struct ID="0xA3CAB6BF" template="Structs/EmperorIngStage3StructB.xml"/>
+                <struct ID="0xE843417F" template="mp2/Structs/EmperorIngStage3StructB.xml"/>
+                <struct ID="0xD13BEC3F" template="mp2/Structs/EmperorIngStage3StructB.xml"/>
+                <struct ID="0xC61388FF" template="mp2/Structs/EmperorIngStage3StructB.xml"/>
+                <struct ID="0xA3CAB6BF" template="mp2/Structs/EmperorIngStage3StructB.xml"/>
             </properties>
         </struct>
     </properties>

@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>CameraShaker</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml">
             <properties>
                 <property ID="0x5D298A43">
                     <default>1</default>
@@ -22,9 +22,9 @@
                     <default>1.0</default>
                 </property>
                 <property ID="0xC2ACB79E" type="file" extensions="unknown"/>
-                <struct ID="0xD9EB71E0" template="Structs/CameraShakerEnvelope.xml"/>
-                <struct ID="0xC5B09632" template="Structs/CameraShakerEnvelope.xml"/>
-                <struct ID="0x21B704E3" template="Structs/CameraShakerEnvelope.xml"/>
+                <struct ID="0xD9EB71E0" template="dkcr/Structs/CameraShakerEnvelope.xml"/>
+                <struct ID="0xC5B09632" template="dkcr/Structs/CameraShakerEnvelope.xml"/>
+                <struct ID="0x21B704E3" template="dkcr/Structs/CameraShakerEnvelope.xml"/>
             </properties>
         </struct>
     </properties>

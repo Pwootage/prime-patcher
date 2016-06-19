@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>SplineModifierVolume</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0x7AF6F162" type="MayaSpline"/>
     </properties>
     <states/>

@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>Splinter</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x8DB77EE4">
                     <default>32.0</default>
@@ -22,7 +22,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <property ID="0x72EDEB7D" type="float">
             <default>0.0</default>
         </property>
@@ -44,7 +44,7 @@
         <property ID="0x376E909F" type="long">
             <default>2</default>
         </property>
-        <struct ID="0x66DCAACB" template="Structs/DamageInfo.xml">
+        <struct ID="0x66DCAACB" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>11</default>
@@ -62,15 +62,15 @@
         <property ID="0x630D93A1" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0x4436A388" template="Structs/DamageInfo.xml"/>
-        <struct ID="0xE61748ED" template="Structs/IngPossessionData.xml"/>
+        <struct ID="0x4436A388" template="mp2/Structs/DamageInfo.xml"/>
+        <struct ID="0xE61748ED" template="mp2/Structs/IngPossessionData.xml"/>
         <property ID="0x7DC82F46" type="bool">
             <default>false</default>
         </property>
         <property ID="0x42518359" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0x02FD0913" template="Structs/DamageInfo.xml">
+        <struct ID="0x02FD0913" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>11</default>

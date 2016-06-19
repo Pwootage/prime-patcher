@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>MinorIng</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x58434916">
                     <default>4.5</default>
@@ -19,8 +19,8 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x553B1339" template="Structs/DamageInfo.xml">
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
+        <struct ID="0x553B1339" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>11</default>
@@ -75,7 +75,7 @@
         </property>
         <struct ID="0x07E9D446" type="multi">
             <properties>
-                <struct ID="0x337F9524" template="Structs/DamageInfo.xml">
+                <struct ID="0x337F9524" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -137,13 +137,13 @@
                 <property ID="0xD55938D2" type="float">
                     <default>0.2</default>
                 </property>
-                <struct ID="0x7B71AE90" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x7B71AE90" template="mp2/Structs/DamageVulnerability.xml"/>
             </properties>
         </struct>
         <struct ID="0x3DA35851" type="multi">
             <properties>
-                <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml"/>
-                <struct ID="0x337F9524" template="Structs/DamageInfo.xml">
+                <struct ID="0xCF90D15E" template="mp2/Structs/HealthInfo.xml"/>
+                <struct ID="0x337F9524" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>9</default>

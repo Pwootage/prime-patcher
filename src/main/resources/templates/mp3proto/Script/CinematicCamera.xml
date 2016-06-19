@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>CinematicCamera</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <enum ID="0xB1AC9176">
             <default>0xC1A4F436</default>
             <enumerators>
@@ -15,9 +15,9 @@
         </enum>
         <struct ID="0x9EC65273" type="multi">
             <properties>
-                <struct ID="0xB5C367E9" template="Structs/MotionInterpolationMethod.xml"/>
-                <struct ID="0xF74F8C89" template="Structs/OrientationInterpolationMethod.xml"/>
-                <struct ID="0x18E6BED2" template="Structs/FOVInterpolationMethod.xml"/>
+                <struct ID="0xB5C367E9" template="mp3proto/Structs/MotionInterpolationMethod.xml"/>
+                <struct ID="0xF74F8C89" template="mp3proto/Structs/OrientationInterpolationMethod.xml"/>
+                <struct ID="0x18E6BED2" template="mp3proto/Structs/FOVInterpolationMethod.xml"/>
             </properties>
         </struct>
         <enum ID="0x974A961F">
@@ -37,7 +37,7 @@
         </property>
         <property ID="0x27E5F874" type="MayaSpline"/>
         <property ID="0xC4DFBFA7" type="MayaSpline"/>
-        <struct ID="0x65FC11FF" template="Structs/CameraOrientation.xml">
+        <struct ID="0x65FC11FF" template="mp3proto/Structs/CameraOrientation.xml">
             <properties>
                 <enum ID="0x5C72A964">
                     <default>0x26AD4A6B</default>

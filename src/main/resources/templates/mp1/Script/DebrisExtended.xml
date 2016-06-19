@@ -23,7 +23,7 @@
         <property ID="0x12" name="Unknown 15" type="float"/>
         <property ID="0x13" name="Unknown 16" type="vector3f"/>
         <property ID="0x14" name="Model" type="file" extensions="CMDL"/>
-        <struct ID="0x15" name="ActorParameters" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x15" name="ActorParameters" template="mp1/Structs/ActorParameters.xml"/>
         <property ID="0x16" name="Particle 1" type="file" extensions="PART"/>
         <property ID="0x17" name="Unknown 17" type="vector3f"/>
         <property ID="0x18" name="Unknown 18" type="bool"/>

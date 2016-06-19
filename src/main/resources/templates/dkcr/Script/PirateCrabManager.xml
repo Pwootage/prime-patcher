@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>PirateCrabManager</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0x5ECB9A6B" type="multi">
             <properties>
                 <enum ID="0xF864FAD8">

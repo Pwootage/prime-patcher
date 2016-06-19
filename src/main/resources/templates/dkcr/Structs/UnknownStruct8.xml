@@ -7,8 +7,8 @@
         <property ID="0x6351A049" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0xDAA9D4BE" template="Structs/UnknownStruct7.xml"/>
-        <struct ID="0xF361604C" template="Structs/UnknownStruct7.xml"/>
-        <struct ID="0x5D09F1DD" template="Structs/UnknownStruct7.xml"/>
+        <struct ID="0xDAA9D4BE" template="dkcr/Structs/UnknownStruct7.xml"/>
+        <struct ID="0xF361604C" template="dkcr/Structs/UnknownStruct7.xml"/>
+        <struct ID="0x5D09F1DD" template="dkcr/Structs/UnknownStruct7.xml"/>
     </properties>
 </struct>

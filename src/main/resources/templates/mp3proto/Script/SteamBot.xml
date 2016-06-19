@@ -2,11 +2,11 @@
 <ScriptTemplate version="4">
     <name>SteamBot</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <struct ID="0x11375EC0" type="multi">
             <properties>
                 <property ID="0xBE5E86B9" type="character"/>
-                <struct ID="0xAB247451" template="Structs/LaunchProjectileData.xml"/>
+                <struct ID="0xAB247451" template="mp3proto/Structs/LaunchProjectileData.xml"/>
                 <property ID="0x55C19435" type="float">
                     <default>100.0</default>
                 </property>
@@ -16,7 +16,7 @@
                 <property ID="0x0588C742" type="float">
                     <default>5.0</default>
                 </property>
-                <struct ID="0xB98CBA47" template="Structs/LaunchProjectileData.xml"/>
+                <struct ID="0xB98CBA47" template="mp3proto/Structs/LaunchProjectileData.xml"/>
                 <property ID="0x296B1195" type="float">
                     <default>30.0</default>
                 </property>
@@ -29,7 +29,7 @@
                 <property ID="0xD7B53CDB" type="long">
                     <default>1</default>
                 </property>
-                <struct ID="0x8DBAEEF2" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x8DBAEEF2" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0x582B9B3B" type="float">
                     <default>5.0</default>
                 </property>
@@ -39,7 +39,7 @@
                 <property ID="0xEBB134B5" type="float">
                     <default>0.0</default>
                 </property>
-                <struct ID="0xCA91ECB0" template="Structs/LaunchProjectileData.xml"/>
+                <struct ID="0xCA91ECB0" template="mp3proto/Structs/LaunchProjectileData.xml"/>
                 <property ID="0xA296206A" type="float">
                     <default>5.0</default>
                 </property>
@@ -88,8 +88,8 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

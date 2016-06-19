@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>MultiModelActor</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0xF344C0B0" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>
@@ -22,18 +22,18 @@
                 <property ID="0xD4124C4C" type="float">
                     <default>0.0</default>
                 </property>
-                <struct ID="0x681C4457" template="Structs/MultiModelActorStruct.xml"/>
-                <struct ID="0xC674D5C6" template="Structs/MultiModelActorStruct.xml"/>
-                <struct ID="0x3B8D2DB3" template="Structs/MultiModelActorStruct.xml"/>
-                <struct ID="0x95E5BC22" template="Structs/MultiModelActorStruct.xml"/>
-                <struct ID="0xBC2D08D0" template="Structs/MultiModelActorStruct.xml"/>
-                <struct ID="0x12459941" template="Structs/MultiModelActorStruct.xml"/>
-                <struct ID="0x9CAFFE7B" template="Structs/MultiModelActorStruct.xml"/>
-                <struct ID="0x32C76FEA" template="Structs/MultiModelActorStruct.xml"/>
-                <struct ID="0x681AAA77" template="Structs/MultiModelActorStruct.xml"/>
+                <struct ID="0x681C4457" template="mp3/Structs/MultiModelActorStruct.xml"/>
+                <struct ID="0xC674D5C6" template="mp3/Structs/MultiModelActorStruct.xml"/>
+                <struct ID="0x3B8D2DB3" template="mp3/Structs/MultiModelActorStruct.xml"/>
+                <struct ID="0x95E5BC22" template="mp3/Structs/MultiModelActorStruct.xml"/>
+                <struct ID="0xBC2D08D0" template="mp3/Structs/MultiModelActorStruct.xml"/>
+                <struct ID="0x12459941" template="mp3/Structs/MultiModelActorStruct.xml"/>
+                <struct ID="0x9CAFFE7B" template="mp3/Structs/MultiModelActorStruct.xml"/>
+                <struct ID="0x32C76FEA" template="mp3/Structs/MultiModelActorStruct.xml"/>
+                <struct ID="0x681AAA77" template="mp3/Structs/MultiModelActorStruct.xml"/>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <property ID="0xA09D4A1F" type="bool">
             <default>false</default>
         </property>

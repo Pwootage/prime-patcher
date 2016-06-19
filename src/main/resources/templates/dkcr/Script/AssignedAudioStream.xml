@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>AssignedAudioStream</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <enum ID="0xE7D8D823" template="Enums/MusicEnumB.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
+        <enum ID="0xE7D8D823" template="dkcr/Enums/MusicEnumB.xml">
             <default>0xCBF698CA</default>
         </enum>
         <property ID="0x05C9246C" type="bool">

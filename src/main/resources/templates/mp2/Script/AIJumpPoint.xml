@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>AIJumpPoint</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <property ID="0xF2782501" type="float">
             <default>3.0</default>
         </property>

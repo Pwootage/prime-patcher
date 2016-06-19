@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>PhazonLeech</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <struct ID="0xCA34B83E" type="multi">
             <properties>
                 <property ID="0x2A9A1751" type="bool">
@@ -65,13 +65,13 @@
                 <property ID="0x13BFC5DD" type="float">
                     <default>7.0</default>
                 </property>
-                <struct ID="0x3546F14F" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x3546F14F" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0x8976D3F6" type="float">
                     <default>0.5</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml">
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -94,7 +94,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

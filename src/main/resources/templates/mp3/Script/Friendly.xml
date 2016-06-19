@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>Friendly</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <property ID="0xD9355674">
                     <default>1.0</default>
@@ -40,7 +40,7 @@
                 <property ID="0xC1D1E465" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0xA149701E" template="Structs/RagDollData.xml"/>
+                <struct ID="0xA149701E" template="mp3/Structs/RagDollData.xml"/>
                 <property ID="0xBF443451" type="bool">
                     <default>false</default>
                 </property>
@@ -79,15 +79,15 @@
                 </property>
                 <property ID="0x51253BA3" type="file" extensions="WPSC"/>
                 <property ID="0x10E3EFDD" type="file" extensions="CAUD"/>
-                <struct ID="0xCEA30138" template="Structs/DamageInfo.xml">
+                <struct ID="0xCEA30138" template="mp3/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0xF2D02613">
                             <default>5.0</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x785C41F5" template="Structs/StaticGeometryTest.xml"/>
-                <struct ID="0xFC5A0A21" template="Structs/StaticGeometryTest.xml"/>
+                <struct ID="0x785C41F5" template="mp3/Structs/StaticGeometryTest.xml"/>
+                <struct ID="0xFC5A0A21" template="mp3/Structs/StaticGeometryTest.xml"/>
                 <property ID="0xFC34473F" type="file" extensions="BFRC"/>
                 <property ID="0x50340852" type="file" extensions="CMDL"/>
                 <property ID="0x2EA013A6" type="bool">

@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>ShadowProjector</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0x1D011A39" type="float">
             <default>1.0</default>
         </property>
@@ -24,7 +24,7 @@
         <property ID="0x606E341C" type="long">
             <default>128</default>
         </property>
-        <struct ID="0xA21B515A" template="Structs/UnknownStruct5.xml"/>
+        <struct ID="0xA21B515A" template="mp3/Structs/UnknownStruct5.xml"/>
     </properties>
     <states/>
     <messages/>

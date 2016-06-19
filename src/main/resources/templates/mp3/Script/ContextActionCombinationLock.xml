@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>ContextActionCombinationLock</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0x39BD0F70" type="float">
             <default>2.0</default>
         </property>
@@ -22,9 +22,9 @@
         <property ID="0xC68AFC16" type="file" extensions="CAUD"/>
         <property ID="0x69DBAA2E" type="file" extensions="CAUD"/>
         <property ID="0x0ED5BC96" type="file" extensions="CAUD"/>
-        <struct ID="0x657D1325" template="Structs/ContextActionCombinationLockStruct.xml"/>
-        <struct ID="0x5090A576" template="Structs/ContextActionCombinationLockStruct.xml"/>
-        <struct ID="0xF51B3578" template="Structs/ContextActionCombinationLockStruct.xml"/>
+        <struct ID="0x657D1325" template="mp3/Structs/ContextActionCombinationLockStruct.xml"/>
+        <struct ID="0x5090A576" template="mp3/Structs/ContextActionCombinationLockStruct.xml"/>
+        <struct ID="0xF51B3578" template="mp3/Structs/ContextActionCombinationLockStruct.xml"/>
     </properties>
     <states/>
     <messages/>

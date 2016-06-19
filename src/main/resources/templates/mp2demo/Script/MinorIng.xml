@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>MinorIng</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x58434916">
                     <default>4.5</default>
@@ -19,8 +19,8 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x553B1339" template="Structs/DamageInfo.xml">
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
+        <struct ID="0x553B1339" template="mp2demo/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>9</default>
@@ -54,7 +54,7 @@
         </property>
         <struct ID="0x07E9D446" type="multi">
             <properties>
-                <struct ID="0x337F9524" template="Structs/DamageInfo.xml">
+                <struct ID="0x337F9524" template="mp2demo/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>9</default>
@@ -107,13 +107,13 @@
                 <property ID="0xE160B593" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x7B71AE90" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x7B71AE90" template="mp2demo/Structs/DamageVulnerability.xml"/>
             </properties>
         </struct>
         <struct ID="0x3DA35851" type="multi">
             <properties>
-                <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml"/>
-                <struct ID="0x337F9524" template="Structs/DamageInfo.xml">
+                <struct ID="0xCF90D15E" template="mp2demo/Structs/HealthInfo.xml"/>
+                <struct ID="0x337F9524" template="mp2demo/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>9</default>
@@ -186,7 +186,7 @@
                 <property ID="0xBEA96FB7" type="float">
                     <default>0.5</default>
                 </property>
-                <struct ID="0xE18DC6FC" template="Structs/DamageInfo.xml">
+                <struct ID="0xE18DC6FC" template="mp2demo/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>9</default>
@@ -224,7 +224,7 @@
                 <property ID="0xEE492513" type="float">
                     <default>1.5</default>
                 </property>
-                <struct ID="0x07184C29" template="Structs/DamageInfo.xml">
+                <struct ID="0x07184C29" template="mp2demo/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>9</default>

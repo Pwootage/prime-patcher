@@ -2,10 +2,10 @@
 <ScriptTemplate version="4">
     <name>Sprite</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <struct ID="0xD42B76FF" type="multi">
             <properties>
-                <struct ID="0xCCDD3ACA" template="Structs/FlyerMovementMode.xml">
+                <struct ID="0xCCDD3ACA" template="mp3/Structs/FlyerMovementMode.xml">
                     <properties>
                         <property ID="0x6392404E">
                             <default>1.0</default>
@@ -21,9 +21,9 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x2CBB438B" template="Structs/SpriteStruct.xml"/>
-                <struct ID="0xA80227E6" template="Structs/SpriteStruct.xml"/>
-                <struct ID="0x34799811" template="Structs/SpriteStruct.xml"/>
+                <struct ID="0x2CBB438B" template="mp3/Structs/SpriteStruct.xml"/>
+                <struct ID="0xA80227E6" template="mp3/Structs/SpriteStruct.xml"/>
+                <struct ID="0x34799811" template="mp3/Structs/SpriteStruct.xml"/>
                 <property ID="0x26945E20" type="float">
                     <default>0.0</default>
                 </property>
@@ -47,14 +47,14 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <property ID="0x8DB77EE4">
                     <default>50.0</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

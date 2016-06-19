@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>CommandoPirate</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
@@ -57,8 +57,8 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xE61748ED" template="Structs/IngPossessionData.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
+        <struct ID="0xE61748ED" template="mp2/Structs/IngPossessionData.xml"/>
         <property ID="0x7ABED4CE" type="long">
             <default>0</default>
         </property>
@@ -89,7 +89,7 @@
         <property ID="0x467C3D94" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0xA5912430" template="Structs/DamageInfo.xml">
+        <struct ID="0xA5912430" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>11</default>
@@ -103,7 +103,7 @@
             </properties>
         </struct>
         <property ID="0xEF485DB9" type="file" extensions="WPSC"/>
-        <struct ID="0x553B1339" template="Structs/DamageInfo.xml">
+        <struct ID="0x553B1339" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>11</default>
@@ -136,7 +136,7 @@
                 <property ID="0x765E3A20" type="float">
                     <default>50.0</default>
                 </property>
-                <struct ID="0x14D1A3A8" template="Structs/DamageInfo.xml">
+                <struct ID="0x14D1A3A8" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -183,7 +183,7 @@
         </struct>
         <struct ID="0x388E16C9" type="multi">
             <properties>
-                <struct ID="0x4DA4A894" template="Structs/DamageInfo.xml">
+                <struct ID="0x4DA4A894" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -196,7 +196,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xD34F1323" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xD34F1323" template="mp2/Structs/DamageVulnerability.xml"/>
                 <property ID="0xC1D9DBC6" type="float">
                     <default>15.0</default>
                 </property>

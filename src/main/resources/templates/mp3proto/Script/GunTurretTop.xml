@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>GunTurretTop</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <struct ID="0xA858F4E7" type="multi">
             <properties>
                 <property ID="0x701D65CD" type="bool">
@@ -34,22 +34,22 @@
                 </property>
                 <property ID="0x16E7D74A" type="file" extensions="CRSC"/>
                 <property ID="0x00E9C72C" type="file" extensions="WPSC"/>
-                <struct ID="0xBE7FB5CC" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xBE7FB5CC" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0x4173EC53" type="float">
                     <default>10.0</default>
                 </property>
                 <property ID="0xD75F9CF2" type="float">
                     <default>5.0</default>
                 </property>
-                <struct ID="0xAD85924E" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xAD85924E" template="mp3proto/Structs/DamageVulnerability.xml"/>
                 <property ID="0xF5915FF7" type="float">
                     <default>1.0</default>
                 </property>
                 <property ID="0x83A413D9" type="file" extensions="UNKN"/>
-                <struct ID="0xF609C637" template="Structs/GrappleData.xml"/>
+                <struct ID="0xF609C637" template="mp3proto/Structs/GrappleData.xml"/>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml">
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -81,7 +81,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

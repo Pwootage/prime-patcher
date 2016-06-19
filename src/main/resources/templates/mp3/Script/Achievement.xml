@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>Achievement</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <struct ID="0x7AAC9E22" type="multi">
             <properties>
                 <enum ID="0xFF5DE1DA">

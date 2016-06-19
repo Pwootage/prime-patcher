@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>OceanBridge</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0xC27FFA8F" type="file" extensions="CMDL"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
         <struct ID="0xB33F8CE5" type="multi">
             <properties>
                 <property ID="0xE993145F" type="long">
@@ -131,46 +131,46 @@
                 <property ID="0xEBA1B5F1" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0x66A86577" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0xFDDB8FA3" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x8B3EB69E" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x104D5C4A" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x66F4C4E4" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0xFD872E30" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x8B62170D" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x1011FDD9" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x66112651" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0xFD62CC85" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x17A09D5F" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x8CD3778B" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0xFA364EB6" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x6145A462" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x17FC3CCC" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x8C8FD618" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0xFA6AEF25" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x611905F1" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x1719DE79" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0x8C6A34AD" template="Structs/OceanBridgeStructA.xml"/>
-                <struct ID="0xDAFE5D7A" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0x418DB7AE" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0x37688E93" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0xAC1B6447" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0xDAA2FCE9" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0x41D1163D" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0x37342F00" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0xAC47C5D4" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0xDA471E5C" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0x4134F488" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0x3CE60D48" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0xA795E79C" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0xD170DEA1" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0x4A033475" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0x3CBAACDB" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0xA7C9460F" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0xD12C7F32" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0x4A5F95E6" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0x3C5F4E6E" template="Structs/OceanBridgeStructB.xml"/>
-                <struct ID="0xA72CA4BA" template="Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0x66A86577" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0xFDDB8FA3" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x8B3EB69E" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x104D5C4A" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x66F4C4E4" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0xFD872E30" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x8B62170D" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x1011FDD9" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x66112651" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0xFD62CC85" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x17A09D5F" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x8CD3778B" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0xFA364EB6" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x6145A462" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x17FC3CCC" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x8C8FD618" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0xFA6AEF25" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x611905F1" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x1719DE79" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0x8C6A34AD" template="dkcr/Structs/OceanBridgeStructA.xml"/>
+                <struct ID="0xDAFE5D7A" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0x418DB7AE" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0x37688E93" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0xAC1B6447" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0xDAA2FCE9" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0x41D1163D" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0x37342F00" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0xAC47C5D4" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0xDA471E5C" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0x4134F488" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0x3CE60D48" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0xA795E79C" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0xD170DEA1" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0x4A033475" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0x3CBAACDB" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0xA7C9460F" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0xD12C7F32" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0x4A5F95E6" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0x3C5F4E6E" template="dkcr/Structs/OceanBridgeStructB.xml"/>
+                <struct ID="0xA72CA4BA" template="dkcr/Structs/OceanBridgeStructB.xml"/>
                 <property ID="0xAAA1256D" type="float">
                     <default>1.0</default>
                 </property>

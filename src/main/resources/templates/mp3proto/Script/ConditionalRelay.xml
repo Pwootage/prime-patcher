@@ -2,29 +2,29 @@
 <ScriptTemplate version="4">
     <name>ConditionalRelay</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <property ID="0x44DB8AF2" type="bool">
             <default>false</default>
         </property>
         <property ID="0x2CC54E77" type="long">
             <default>7680</default>
         </property>
-        <struct ID="0xCEC16932" template="Structs/ConditionalTest.xml"/>
-        <struct ID="0xE709DDC0" template="Structs/ConditionalTest.xml">
+        <struct ID="0xCEC16932" template="mp3proto/Structs/ConditionalTest.xml"/>
+        <struct ID="0xE709DDC0" template="mp3proto/Structs/ConditionalTest.xml">
             <properties>
                 <property ID="0xDE3E40A3">
                     <default>0</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x49614C51" template="Structs/ConditionalTest.xml">
+        <struct ID="0x49614C51" template="mp3proto/Structs/ConditionalTest.xml">
             <properties>
                 <property ID="0xDE3E40A3">
                     <default>0</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB498B424" template="Structs/ConditionalTest.xml">
+        <struct ID="0xB498B424" template="mp3proto/Structs/ConditionalTest.xml">
             <properties>
                 <property ID="0xDE3E40A3">
                     <default>0</default>

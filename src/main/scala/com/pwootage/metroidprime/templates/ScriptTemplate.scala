@@ -15,6 +15,6 @@ class ScriptTemplate extends XmlSerializable {
   override def fromXml(v: NodeSeq): Unit = {
     name = (v \ "name").text
     versions = (v \ "versions" \ "version").array(() => new GameVersion)
-    properties = (v \ "properties" \ "property").array(n => ScriptProperty.determineType(n))
+    properties = (v \ "properties" \ "_").array(n => ScriptProperty.determineType(n))
   }
 }

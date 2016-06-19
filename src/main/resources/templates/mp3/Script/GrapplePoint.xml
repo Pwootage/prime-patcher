@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>GrapplePoint</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <struct ID="0x6A2872D8" type="multi">
             <properties>
                 <property ID="0x2BA7FABC" type="float">
@@ -22,7 +22,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xF609C637" template="Structs/GrappleData.xml">
+        <struct ID="0xF609C637" template="mp3/Structs/GrappleData.xml">
             <properties>
                 <struct ID="0x3F3A2EEB">
                     <cook_pref>never</cook_pref>

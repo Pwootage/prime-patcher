@@ -32,7 +32,7 @@
         <property ID="0x6FF7392E" type="float">
             <default>0.0</default>
         </property>
-        <struct ID="0x32468C89" template="Structs/PathDetermination.xml"/>
+        <struct ID="0x32468C89" template="dkcr/Structs/PathDetermination.xml"/>
         <property ID="0xC3BF43BE" type="float">
             <default>0.0</default>
         </property>
@@ -45,7 +45,7 @@
                 <enumerator ID="0xE195171C" name="Unknown 4"/>
             </enumerators>
         </enum>
-        <struct ID="0xDA54B3E9" template="Structs/Convergence.xml">
+        <struct ID="0xDA54B3E9" template="dkcr/Structs/Convergence.xml">
             <properties>
                 <enum ID="0x2EF22401">
                     <default>0x0BCC8352</default>
@@ -73,15 +73,15 @@
             </properties>
         </struct>
         <property ID="0xC4DFBFA7" type="MayaSpline"/>
-        <struct ID="0x0E1F2094" template="Structs/UnknownStruct13.xml"/>
+        <struct ID="0x0E1F2094" template="dkcr/Structs/UnknownStruct13.xml"/>
         <struct ID="0x86BC03D3" type="multi">
             <properties>
                 <property ID="0x1B4962BF" type="long">
                     <default>786432</default>
                     <cook_pref>always</cook_pref>
                 </property>
-                <struct ID="0x609C0608" template="Structs/SpindlePositionInterpolant.xml"/>
-                <struct ID="0xF6C828C0" template="Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0x609C0608" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0xF6C828C0" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
             </properties>
         </struct>
         <struct ID="0xE1DEEE27" type="multi">
@@ -94,7 +94,7 @@
         </struct>
         <struct ID="0xF6BB44EA" type="multi">
             <properties>
-                <struct ID="0x43A6DED6" template="Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0x43A6DED6" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
             </properties>
         </struct>
     </properties>

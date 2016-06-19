@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>BirdBoss</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml">
             <properties>
                 <struct ID="0x5846524D">
                     <properties>
@@ -13,8 +13,8 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="dkcr/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0x7B71AE90">
                     <properties>
@@ -131,10 +131,10 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x3E67CC4A" template="Structs/BirdBossStruct.xml"/>
-                <struct ID="0xD4E11128" template="Structs/BirdBossStruct.xml"/>
-                <struct ID="0x3BB3A7C9" template="Structs/BirdBossStruct.xml"/>
-                <struct ID="0xDA9DADAD" template="Structs/BirdBossStruct.xml"/>
+                <struct ID="0x3E67CC4A" template="dkcr/Structs/BirdBossStruct.xml"/>
+                <struct ID="0xD4E11128" template="dkcr/Structs/BirdBossStruct.xml"/>
+                <struct ID="0x3BB3A7C9" template="dkcr/Structs/BirdBossStruct.xml"/>
+                <struct ID="0xDA9DADAD" template="dkcr/Structs/BirdBossStruct.xml"/>
             </properties>
         </struct>
     </properties>

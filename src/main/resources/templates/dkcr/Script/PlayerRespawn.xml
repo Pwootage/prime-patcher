@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>PlayerRespawn</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0x650016ED" type="bool">
             <default>true</default>
         </property>
@@ -74,7 +74,7 @@
                 <property ID="0x2BD2AE32" type="string"/>
             </properties>
         </struct>
-        <struct ID="0x416BD9EB" template="Structs/UnknownStruct24.xml"/>
+        <struct ID="0x416BD9EB" template="dkcr/Structs/UnknownStruct24.xml"/>
         <property ID="0xF8B3ABE0" type="character"/>
         <property ID="0x563F35C8" type="long">
             <default>-1</default>

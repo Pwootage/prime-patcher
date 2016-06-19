@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>SteamLord</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <struct ID="0x01D5823C" type="multi">
             <properties>
                 <property ID="0xE9553FFA" type="bool">
@@ -56,8 +56,8 @@
                 <property ID="0xFB72F91E" type="float">
                     <default>5.0</default>
                 </property>
-                <struct ID="0xFE138B07" template="Structs/DamageInfo.xml"/>
-                <struct ID="0xAA19D1DC" template="Structs/DamageInfo.xml"/>
+                <struct ID="0xFE138B07" template="mp3/Structs/DamageInfo.xml"/>
+                <struct ID="0xAA19D1DC" template="mp3/Structs/DamageInfo.xml"/>
             </properties>
         </struct>
     </properties>

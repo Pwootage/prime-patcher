@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>MetroidHatcher</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <property ID="0x75DBB375">
                     <default>1000.0</default>
@@ -54,7 +54,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x5C056CEF" template="Structs/PatternedAI.xml">
+        <struct ID="0x5C056CEF" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <property ID="0x75DBB375">
                     <default>1000.0</default>
@@ -105,7 +105,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x8BE7ECB7" template="Structs/PatternedAI.xml">
+        <struct ID="0x8BE7ECB7" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <property ID="0x75DBB375">
                     <default>1000.0</default>
@@ -156,10 +156,10 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x42E95705" template="Structs/MetroidHatcherData.xml"/>
-        <struct ID="0x266B7D6B" template="Structs/MetroidHatcherData.xml"/>
-        <struct ID="0xF189FD33" template="Structs/MetroidHatcherData.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x42E95705" template="mp3/Structs/MetroidHatcherData.xml"/>
+        <struct ID="0x266B7D6B" template="mp3/Structs/MetroidHatcherData.xml"/>
+        <struct ID="0xF189FD33" template="mp3/Structs/MetroidHatcherData.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

@@ -2,11 +2,11 @@
 <ScriptTemplate version="4">
     <name>Beam</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <struct ID="0xED3C4F85" type="multi">
             <properties>
-                <struct ID="0x1598012A" template="Structs/PlasmaBeamInfo.xml"/>
-                <struct ID="0x13E30E4D" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x1598012A" template="mp3/Structs/PlasmaBeamInfo.xml"/>
+                <struct ID="0x13E30E4D" template="mp3/Structs/DamageInfo.xml"/>
             </properties>
         </struct>
     </properties>

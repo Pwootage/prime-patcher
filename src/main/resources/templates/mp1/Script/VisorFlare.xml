@@ -11,11 +11,11 @@
         <property ID="0x06" name="Unknown 5" type="float"/>
         <property ID="0x07" name="Unknown 6" type="float"/>
         <property ID="0x08" name="Unknown 7" type="long"/>
-        <struct ID="0x09" name="FlareDef 1" template="Structs/FlareDef.xml"/>
-        <struct ID="0x0A" name="FlareDef 2" template="Structs/FlareDef.xml"/>
-        <struct ID="0x0B" name="FlareDef 3" template="Structs/FlareDef.xml"/>
-        <struct ID="0x0C" name="FlareDef 4" template="Structs/FlareDef.xml"/>
-        <struct ID="0x0D" name="FlareDef 5" template="Structs/FlareDef.xml"/>
+        <struct ID="0x09" name="FlareDef 1" template="mp1/Structs/FlareDef.xml"/>
+        <struct ID="0x0A" name="FlareDef 2" template="mp1/Structs/FlareDef.xml"/>
+        <struct ID="0x0B" name="FlareDef 3" template="mp1/Structs/FlareDef.xml"/>
+        <struct ID="0x0C" name="FlareDef 4" template="mp1/Structs/FlareDef.xml"/>
+        <struct ID="0x0D" name="FlareDef 5" template="mp1/Structs/FlareDef.xml"/>
     </properties>
     <states/>
     <messages/>

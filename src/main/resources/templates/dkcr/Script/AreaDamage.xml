@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>AreaDamage</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml">
             <properties>
                 <struct ID="0x5846524D">
                     <properties>
@@ -13,7 +13,7 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x337F9524" template="dkcr/Structs/DamageInfo.xml"/>
         <property ID="0x8E07E9D3" type="float">
             <default>1.0</default>
         </property>

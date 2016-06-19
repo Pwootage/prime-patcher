@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>ControllerAction</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x4C6EEFAE" template="Structs/ControllerActionStruct.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0x4C6EEFAE" template="mp2/Structs/ControllerActionStruct.xml">
             <properties>
                 <property ID="0x94BA5737">
                     <default>1</default>

@@ -11,9 +11,9 @@
         <property ID="0xE02022D5" type="float">
             <default>135.0</default>
         </property>
-        <struct ID="0xA738790A" template="Structs/MotionInterpolationMethod.xml"/>
-        <struct ID="0xA768A18E" template="Structs/OrientationInterpolationMethod.xml"/>
-        <struct ID="0x3B8C7CB4" template="Structs/FOVInterpolationMethod.xml"/>
+        <struct ID="0xA738790A" template="dkcr/Structs/MotionInterpolationMethod.xml"/>
+        <struct ID="0xA768A18E" template="dkcr/Structs/OrientationInterpolationMethod.xml"/>
+        <struct ID="0x3B8C7CB4" template="dkcr/Structs/FOVInterpolationMethod.xml"/>
         <property ID="0x058C1B1D" type="long">
             <default>3</default>
             <cook_pref>always</cook_pref>
@@ -24,7 +24,7 @@
         <property ID="0x3127E68A" type="float">
             <default>135.0</default>
         </property>
-        <struct ID="0x7FAC732A" template="Structs/MotionInterpolationMethod.xml">
+        <struct ID="0x7FAC732A" template="dkcr/Structs/MotionInterpolationMethod.xml">
             <properties>
                 <struct ID="0x287F9F45">
                     <properties>
@@ -35,8 +35,8 @@
                 </struct>
             </properties>
         </struct>
-        <struct ID="0xDFAB73B6" template="Structs/OrientationInterpolationMethod.xml"/>
-        <struct ID="0xF391EDBC" template="Structs/FOVInterpolationMethod.xml"/>
+        <struct ID="0xDFAB73B6" template="dkcr/Structs/OrientationInterpolationMethod.xml"/>
+        <struct ID="0xF391EDBC" template="dkcr/Structs/FOVInterpolationMethod.xml"/>
         <property ID="0x07A6C22C" type="long">
             <default>3</default>
             <cook_pref>always</cook_pref>
@@ -47,8 +47,8 @@
         <property ID="0x28B3B4B5" type="float">
             <default>135.0</default>
         </property>
-        <struct ID="0xBC723CAC" template="Structs/MotionInterpolationMethod.xml"/>
-        <struct ID="0xBE093676" template="Structs/OrientationInterpolationMethod.xml"/>
-        <struct ID="0x70754E15" template="Structs/FOVInterpolationMethod.xml"/>
+        <struct ID="0xBC723CAC" template="dkcr/Structs/MotionInterpolationMethod.xml"/>
+        <struct ID="0xBE093676" template="dkcr/Structs/OrientationInterpolationMethod.xml"/>
+        <struct ID="0x70754E15" template="dkcr/Structs/FOVInterpolationMethod.xml"/>
     </properties>
 </struct>

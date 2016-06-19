@@ -52,7 +52,7 @@
                         <enumerator ID="0x0D640823" name="Unknown 4"/>
                     </enumerators>
                 </enum>
-                <enum ID="0x474BCCE3" template="Enums/UnknownEnum4.xml">
+                <enum ID="0x474BCCE3" template="dkcr/Enums/UnknownEnum4.xml">
                     <default>0x25234BDB</default>
                 </enum>
             </properties>

@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>DarkTrooper</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x3FAE47EB">
                     <default>100.0</default>
@@ -22,7 +22,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
         <property ID="0xC1D1E465" type="bool">
             <default>false</default>
         </property>
@@ -32,14 +32,14 @@
         <property ID="0xFEE28A96" type="float">
             <default>5.0</default>
         </property>
-        <struct ID="0x4D790EE9" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x4D790EE9" template="mp2demo/Structs/DamageInfo.xml"/>
         <property ID="0x51223A03" type="float">
             <default>5.0</default>
         </property>
         <property ID="0x116D4275" type="float">
             <default>18.0</default>
         </property>
-        <struct ID="0x98F9A308" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x98F9A308" template="mp2demo/Structs/DamageInfo.xml"/>
         <property ID="0xB8432896" type="long">
             <default>-1</default>
         </property>

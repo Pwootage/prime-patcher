@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>GenericCreatureGroup</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0xED1AD712" type="multi">
             <properties>
                 <property ID="0x168710AD" type="bool">

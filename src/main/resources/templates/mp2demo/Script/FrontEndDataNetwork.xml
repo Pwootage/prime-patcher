@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>FrontEndDataNetwork</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
         <property ID="0x5C3C9E4A" type="bool">
             <default>false</default>
         </property>

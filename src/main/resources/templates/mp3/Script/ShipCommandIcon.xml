@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>ShipCommandIcon</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0x11234A3F" type="bool">
             <default>false</default>
         </property>
@@ -21,7 +21,7 @@
         <property ID="0x6D10C987" type="character"/>
         <property ID="0x97ADB194" type="character"/>
         <property ID="0xA797679C" type="character"/>
-        <enum ID="0x08072DA5" template="Enums/Item.xml">
+        <enum ID="0x08072DA5" template="mp3/Enums/Item.xml">
             <default>0xFB73F2B8</default>
         </enum>
         <enum ID="0x48EF8ADE">

@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>SequenceTimer</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
         <array ID="0xEF5C94E9">
             <element_name>Connection</element_name>
             <properties>

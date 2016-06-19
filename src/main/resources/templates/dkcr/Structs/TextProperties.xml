@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct name="TextProperties" type="multi">
     <properties>
-        <enum ID="0x9F1BD46D" template="Enums/UnknownEnum3.xml">
+        <enum ID="0x9F1BD46D" template="dkcr/Enums/UnknownEnum3.xml">
             <default>0x82B6A62A</default>
         </enum>
         <property ID="0xEE521DC6" type="long">

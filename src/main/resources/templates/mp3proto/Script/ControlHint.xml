@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>ControlHint</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <property ID="0x42087650" type="long">
             <default>10</default>
         </property>
@@ -24,14 +24,14 @@
         <property ID="0x9A78A8BB" type="long">
             <default>0</default>
         </property>
-        <struct ID="0xA0840DD7" template="Structs/CommandData.xml"/>
-        <struct ID="0xD71ADF27" template="Structs/CommandData.xml"/>
-        <struct ID="0x4CBF9348" template="Structs/CommandData.xml"/>
-        <struct ID="0x38277AC7" template="Structs/CommandData.xml"/>
-        <struct ID="0xA38236A8" template="Structs/CommandData.xml"/>
-        <struct ID="0xD41CE458" template="Structs/CommandData.xml"/>
-        <struct ID="0x4FB9A837" template="Structs/CommandData.xml"/>
-        <struct ID="0x3D2D3746" template="Structs/CommandData.xml"/>
+        <struct ID="0xA0840DD7" template="mp3proto/Structs/CommandData.xml"/>
+        <struct ID="0xD71ADF27" template="mp3proto/Structs/CommandData.xml"/>
+        <struct ID="0x4CBF9348" template="mp3proto/Structs/CommandData.xml"/>
+        <struct ID="0x38277AC7" template="mp3proto/Structs/CommandData.xml"/>
+        <struct ID="0xA38236A8" template="mp3proto/Structs/CommandData.xml"/>
+        <struct ID="0xD41CE458" template="mp3proto/Structs/CommandData.xml"/>
+        <struct ID="0x4FB9A837" template="mp3proto/Structs/CommandData.xml"/>
+        <struct ID="0x3D2D3746" template="mp3proto/Structs/CommandData.xml"/>
     </properties>
     <states/>
     <messages/>

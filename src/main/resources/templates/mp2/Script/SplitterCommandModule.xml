@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>SplitterCommandModule</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>60.0</default>
@@ -26,7 +26,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <struct ID="0x560CF813" type="multi">
             <properties>
                 <property ID="0xBD80FD94" type="long">
@@ -56,7 +56,7 @@
                 <property ID="0x4D77B7AA" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0xB763EB10" template="Structs/DamageInfo.xml">
+                <struct ID="0xB763EB10" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -84,7 +84,7 @@
                 <property ID="0x5FF006D1" type="float">
                     <default>45.0</default>
                 </property>
-                <struct ID="0x1BD017CE" template="Structs/DamageInfo.xml">
+                <struct ID="0x1BD017CE" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>11</default>
@@ -94,7 +94,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x4A37C437" template="Structs/PlasmaBeamInfo.xml">
+                <struct ID="0x4A37C437" template="mp2/Structs/PlasmaBeamInfo.xml">
                     <properties>
                         <property ID="0xC26C291C">
                             <default>500.0</default>
@@ -171,9 +171,9 @@
                 <property ID="0x2FF5A809" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0xE61748ED" template="Structs/IngPossessionData.xml"/>
-                <struct ID="0x80A8EF3B" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0xA21C90EA" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xE61748ED" template="mp2/Structs/IngPossessionData.xml"/>
+                <struct ID="0x80A8EF3B" template="mp2/Structs/DamageVulnerability.xml"/>
+                <struct ID="0xA21C90EA" template="mp2/Structs/DamageVulnerability.xml"/>
             </properties>
         </struct>
     </properties>

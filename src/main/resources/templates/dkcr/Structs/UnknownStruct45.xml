@@ -7,7 +7,7 @@
         <property ID="0x1878FA08" type="float">
             <default>1.0</default>
         </property>
-        <struct ID="0x013E35FB" template="Structs/UnknownStruct6.xml"/>
+        <struct ID="0x013E35FB" template="dkcr/Structs/UnknownStruct6.xml"/>
         <property ID="0xA21FB5CE" type="float">
             <default>0.95</default>
         </property>

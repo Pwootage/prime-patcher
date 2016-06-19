@@ -14,6 +14,16 @@ object XMLUtils {
       res
     }
 
+    def as[T <: XmlSerializable](create: (NodeSeq) => T): T = {
+      val res = create(node)
+      if (res == null) {
+        println(s"Not handling $node")
+      } else {
+        res.fromXml(node)
+      }
+      res
+    }
+
     def array[T <: XmlSerializable](create: () => T): Seq[T] = {
       node.map(n => {
         val res = create()
@@ -25,8 +35,11 @@ object XMLUtils {
     def array[T <: XmlSerializable](create: NodeSeq => T): Seq[T] = {
       node.map(n => {
         val res = create(n)
-        //TODO: Remove this check
-        if (res != null) res.fromXml(n)
+        if (res == null) {
+          println(s"Not handling $n")
+        } else {
+          res.fromXml(n)
+        }
         res
       })
     }

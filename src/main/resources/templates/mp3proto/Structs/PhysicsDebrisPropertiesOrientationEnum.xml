@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct name="PhysicsDebrisPropertiesOrientationEnum" type="multi">
     <properties>
-        <enum ID="0xF4BF6637" template="Enums/Orientation.xml">
+        <enum ID="0xF4BF6637" template="mp3proto/Enums/Orientation.xml">
             <default>0x76A5FBFD</default>
         </enum>
     </properties>

@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>DamageActor</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x337F9524" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
+        <struct ID="0x337F9524" template="mp3proto/Structs/DamageInfo.xml"/>
     </properties>
     <states/>
     <messages/>

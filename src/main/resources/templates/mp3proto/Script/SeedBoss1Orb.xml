@@ -2,14 +2,14 @@
 <ScriptTemplate version="4">
     <name>SeedBoss1Orb</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
         <struct ID="0xEE53EBE7" type="multi">
             <properties>
-                <struct ID="0x29DF61E1" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0xD34F1323" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0x922EF2CD" template="Structs/GrappleBlock.xml"/>
+                <struct ID="0x29DF61E1" template="mp3proto/Structs/DamageVulnerability.xml"/>
+                <struct ID="0xD34F1323" template="mp3proto/Structs/DamageVulnerability.xml"/>
+                <struct ID="0x922EF2CD" template="mp3proto/Structs/GrappleBlock.xml"/>
                 <property ID="0x9F4149AF" type="color">
                     <default>0.0, 0.0, 0.0, 0.0</default>
                 </property>

@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>ElitePirate</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0xB0CFE015">
                     <default>3.5</default>
@@ -16,8 +16,8 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xC9416034" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
+        <struct ID="0xC9416034" template="mp2demo/Structs/DamageInfo.xml"/>
         <property ID="0x9873A1C1" type="float">
             <default>9.0</default>
         </property>
@@ -64,8 +64,8 @@
         <property ID="0xF82D1272" type="float">
             <default>3.0</default>
         </property>
-        <struct ID="0xB2EBBFC6" template="Structs/ShockWaveInfo.xml"/>
-        <struct ID="0x09250DB2" template="Structs/ShockWaveInfo.xml"/>
+        <struct ID="0xB2EBBFC6" template="mp2demo/Structs/ShockWaveInfo.xml"/>
+        <struct ID="0x09250DB2" template="mp2demo/Structs/ShockWaveInfo.xml"/>
         <property ID="0x28B39197" type="float">
             <default>1.0</default>
         </property>
@@ -81,7 +81,7 @@
         <property ID="0xF199F553" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0x4063D45C" template="Structs/DamageInfo.xml">
+        <struct ID="0x4063D45C" template="mp2demo/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>9</default>
@@ -118,7 +118,7 @@
         <property ID="0x23F5E1EE" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0x62C744CD" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x62C744CD" template="mp2demo/Structs/ActorParameters.xml"/>
         <property ID="0xB92B481D" type="character"/>
         <property ID="0xBD321538" type="file" extensions="ELSC"/>
         <property ID="0x58A492EF" type="long">

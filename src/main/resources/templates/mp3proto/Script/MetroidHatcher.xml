@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>MetroidHatcher</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <struct ID="0x42E95705" type="multi">
             <properties>
                 <property ID="0x25474550" type="float">
@@ -14,7 +14,7 @@
                 <property ID="0xF8B0C2BB" type="float">
                     <default>10.0</default>
                 </property>
-                <struct ID="0xF609C637" template="Structs/GrappleData.xml"/>
+                <struct ID="0xF609C637" template="mp3proto/Structs/GrappleData.xml"/>
                 <property ID="0xAED07218" type="float">
                     <default>5.0</default>
                 </property>
@@ -30,7 +30,7 @@
                 <property ID="0xFE4588A1" type="float">
                     <default>50.0</default>
                 </property>
-                <struct ID="0x742B3336" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x742B3336" template="mp3proto/Structs/DamageVulnerability.xml"/>
                 <property ID="0xC2688B41" type="float">
                     <default>0.5</default>
                 </property>
@@ -78,7 +78,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAITypedef.xml">
+        <struct ID="0xB3774750" template="mp3proto/Structs/PatternedAITypedef.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -98,7 +98,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>PirateDrone</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <struct ID="0x16E8D4E8" type="multi">
             <properties>
                 <property ID="0xDFD70CCC" type="bool">
@@ -11,10 +11,10 @@
                 <property ID="0x7E922362" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0x4D7F9852" template="Structs/HyperModeData.xml"/>
-                <struct ID="0x37B432D6" template="Structs/HyperModeData.xml"/>
-                <struct ID="0xAE27B368" template="Structs/HyperModeData.xml"/>
-                <struct ID="0x4B1BC354" template="Structs/FlyerMovementMode.xml"/>
+                <struct ID="0x4D7F9852" template="mp3/Structs/HyperModeData.xml"/>
+                <struct ID="0x37B432D6" template="mp3/Structs/HyperModeData.xml"/>
+                <struct ID="0xAE27B368" template="mp3/Structs/HyperModeData.xml"/>
+                <struct ID="0x4B1BC354" template="mp3/Structs/FlyerMovementMode.xml"/>
                 <property ID="0xB740584D" type="float">
                     <default>0.7</default>
                 </property>
@@ -33,7 +33,7 @@
                 <property ID="0x413A3189" type="float">
                     <default>0.0</default>
                 </property>
-                <struct ID="0x0D1DC128" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x0D1DC128" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -64,7 +64,7 @@
                 <property ID="0x08DB3464" type="float">
                     <default>0.5</default>
                 </property>
-                <struct ID="0x7C018C6C" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x7C018C6C" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -89,7 +89,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xD640CF23" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0xD640CF23" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -114,7 +114,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x1D2C74A8" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x1D2C74A8" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -142,18 +142,18 @@
                 <property ID="0xC3680C31" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0xCCDD3ACA" template="Structs/FlyerMovementMode.xml"/>
-                <struct ID="0xFA2A173F" template="Structs/FlyerMovementMode.xml"/>
-                <struct ID="0xF9F1C1B1" template="Structs/FlyerMovementMode.xml"/>
-                <struct ID="0x1C9C4D2B" template="Structs/FlyerMovementMode.xml"/>
-                <struct ID="0xA55D4C94" template="Structs/FlyerMovementMode.xml">
+                <struct ID="0xCCDD3ACA" template="mp3/Structs/FlyerMovementMode.xml"/>
+                <struct ID="0xFA2A173F" template="mp3/Structs/FlyerMovementMode.xml"/>
+                <struct ID="0xF9F1C1B1" template="mp3/Structs/FlyerMovementMode.xml"/>
+                <struct ID="0x1C9C4D2B" template="mp3/Structs/FlyerMovementMode.xml"/>
+                <struct ID="0xA55D4C94" template="mp3/Structs/FlyerMovementMode.xml">
                     <properties>
                         <property ID="0x50A9BD0D">
                             <cook_pref>never</cook_pref>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x89A18334" template="Structs/FlyerMovementMode.xml">
+                <struct ID="0x89A18334" template="mp3/Structs/FlyerMovementMode.xml">
                     <properties>
                         <property ID="0x50A9BD0D">
                             <cook_pref>never</cook_pref>
@@ -292,10 +292,10 @@
                 <property ID="0xE201A83D" type="float">
                     <default>10.0</default>
                 </property>
-                <struct ID="0x79F06459" template="Structs/ScanBeamInfo.xml"/>
+                <struct ID="0x79F06459" template="mp3/Structs/ScanBeamInfo.xml"/>
             </properties>
         </struct>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -321,7 +321,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

@@ -2,13 +2,13 @@
 <ScriptTemplate version="4">
     <name>PlantScarabSwarm</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <property ID="0xA244C9D8" type="character"/>
         <property ID="0xC6BB2F45" type="bool">
             <default>true</default>
         </property>
-        <struct ID="0x4CFC46FE" template="Structs/SwarmBasicsData.xml"/>
+        <struct ID="0x4CFC46FE" template="mp3/Structs/SwarmBasicsData.xml"/>
         <property ID="0xE44C130C" type="long">
             <default>-1</default>
         </property>
@@ -24,7 +24,7 @@
         <property ID="0x6C0A2BC8" type="float">
             <default>1.0</default>
         </property>
-        <struct ID="0xC3B6103B" template="Structs/SpacePirateWeaponData.xml"/>
+        <struct ID="0xC3B6103B" template="mp3/Structs/SpacePirateWeaponData.xml"/>
         <property ID="0x16962C9B" type="float">
             <default>1.0</default>
         </property>

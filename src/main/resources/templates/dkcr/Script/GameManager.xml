@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>GameManager</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0x4E92C60D" type="multi">
             <properties>
                 <enum ID="0x42B84BB2">

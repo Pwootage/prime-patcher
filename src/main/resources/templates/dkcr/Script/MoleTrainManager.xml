@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>MoleTrainManager</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml">
             <properties>
                 <struct ID="0x5846524D">
                     <properties>
@@ -27,11 +27,11 @@
                         <property ID="0x65ECEB7A" type="long">
                             <default>1</default>
                         </property>
-                        <struct ID="0x62E1522A" template="Structs/MoleTrainManagerStructA.xml"/>
-                        <struct ID="0xD1757FE9" template="Structs/MoleTrainManagerStructA.xml"/>
-                        <struct ID="0xBFF964A8" template="Structs/MoleTrainManagerStructA.xml"/>
-                        <struct ID="0x6D2C222E" template="Structs/MoleTrainManagerStructA.xml"/>
-                        <struct ID="0x03A0396F" template="Structs/MoleTrainManagerStructA.xml"/>
+                        <struct ID="0x62E1522A" template="dkcr/Structs/MoleTrainManagerStructA.xml"/>
+                        <struct ID="0xD1757FE9" template="dkcr/Structs/MoleTrainManagerStructA.xml"/>
+                        <struct ID="0xBFF964A8" template="dkcr/Structs/MoleTrainManagerStructA.xml"/>
+                        <struct ID="0x6D2C222E" template="dkcr/Structs/MoleTrainManagerStructA.xml"/>
+                        <struct ID="0x03A0396F" template="dkcr/Structs/MoleTrainManagerStructA.xml"/>
                     </properties>
                 </struct>
                 <struct ID="0xE5915E70" type="multi">
@@ -51,10 +51,10 @@
                         <property ID="0x65ECEB7A" type="long">
                             <default>1</default>
                         </property>
-                        <struct ID="0x9AECDC44" template="Structs/MoleTrainManagerStructB.xml"/>
-                        <struct ID="0x2978F187" template="Structs/MoleTrainManagerStructB.xml"/>
-                        <struct ID="0x47F4EAC6" template="Structs/MoleTrainManagerStructB.xml"/>
-                        <struct ID="0x9521AC40" template="Structs/MoleTrainManagerStructB.xml"/>
+                        <struct ID="0x9AECDC44" template="dkcr/Structs/MoleTrainManagerStructB.xml"/>
+                        <struct ID="0x2978F187" template="dkcr/Structs/MoleTrainManagerStructB.xml"/>
+                        <struct ID="0x47F4EAC6" template="dkcr/Structs/MoleTrainManagerStructB.xml"/>
+                        <struct ID="0x9521AC40" template="dkcr/Structs/MoleTrainManagerStructB.xml"/>
                     </properties>
                 </struct>
                 <struct ID="0x84855E0F" type="multi">

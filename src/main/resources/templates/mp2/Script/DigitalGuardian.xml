@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>DigitalGuardian</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
@@ -23,7 +23,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <struct ID="0xC55918CC" type="multi">
             <properties>
                 <property ID="0x2AA63FC4" type="file" extensions="SCAN"/>
@@ -36,7 +36,7 @@
                 <property ID="0x304B47EE" type="float">
                     <default>5.0</default>
                 </property>
-                <struct ID="0xEFACFA50" template="Structs/DamageInfo.xml">
+                <struct ID="0xEFACFA50" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <enum ID="0x119FBD31">
                             <default>0x0000000B</default>
@@ -54,12 +54,12 @@
                 </property>
                 <property ID="0xBB06DD83" type="file" extensions="CMDL"/>
                 <property ID="0x783635A6" type="file" extensions="PART"/>
-                <struct ID="0x13845A66" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0xA305DCBA" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0xC6EC1630" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x98419EAC" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x4691C9AB" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x8F4787CB" template="Structs/ShockWaveInfo.xml"/>
+                <struct ID="0x13845A66" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xA305DCBA" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xC6EC1630" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x98419EAC" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x4691C9AB" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x8F4787CB" template="mp2/Structs/ShockWaveInfo.xml"/>
                 <property ID="0x76527E01" type="float">
                     <default>5.0</default>
                 </property>
@@ -75,7 +75,7 @@
                 <property ID="0x93A74A46" type="float">
                     <default>20.0</default>
                 </property>
-                <struct ID="0x5CA612AA" template="Structs/DamageInfo.xml">
+                <struct ID="0x5CA612AA" template="mp2/Structs/DamageInfo.xml">
                     <properties>
                         <enum ID="0x119FBD31">
                             <default>0x0000000B</default>
@@ -97,16 +97,16 @@
                 <property ID="0x4F5D725C" type="float">
                     <default>100.0</default>
                 </property>
-                <struct ID="0x7BFAB420" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x7BFAB420" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0xC0A86488" type="file" extensions="CMDL"/>
                 <property ID="0x8DDD85CA" type="file" extensions="CMDL"/>
                 <property ID="0xE3DD61E6" type="float">
                     <default>100.0</default>
                 </property>
-                <struct ID="0x91D2A042" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x9386D22B" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x91D2A042" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x9386D22B" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0x5EF8B288" type="file" extensions="CMDL"/>
-                <struct ID="0x7B5B7312" template="Structs/EchoParameters.xml"/>
+                <struct ID="0x7B5B7312" template="mp2/Structs/EchoParameters.xml"/>
                 <property ID="0xA324E26C" type="float">
                     <default>2.0</default>
                 </property>
@@ -130,20 +130,20 @@
                 </property>
                 <property ID="0x5796A143" type="file" extensions="CMDL"/>
                 <property ID="0x3FA7DF1C" type="file" extensions="PART"/>
-                <struct ID="0x021B6F9D" template="Structs/EchoParameters.xml"/>
-                <struct ID="0x55A8011C" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x7AE73FB3" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0xA9E55C8E" template="Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x021B6F9D" template="mp2/Structs/EchoParameters.xml"/>
+                <struct ID="0x55A8011C" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x7AE73FB3" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0xA9E55C8E" template="mp2/Structs/AudioPlaybackParms.xml"/>
                 <property ID="0x4F6D27D3" type="float">
                     <default>500.0</default>
                 </property>
                 <property ID="0x71F0C674" type="file" extensions="PART"/>
                 <property ID="0xC8EC315B" type="file" extensions="PART"/>
-                <struct ID="0xEED5B990" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x535F6FEC" template="Structs/AudioPlaybackParms.xml"/>
-                <struct ID="0x6DBAD233" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0xF1259E3A" template="Structs/DamageVulnerability.xml"/>
-                <struct ID="0xF14F3237" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xEED5B990" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x535F6FEC" template="mp2/Structs/AudioPlaybackParms.xml"/>
+                <struct ID="0x6DBAD233" template="mp2/Structs/DamageVulnerability.xml"/>
+                <struct ID="0xF1259E3A" template="mp2/Structs/DamageVulnerability.xml"/>
+                <struct ID="0xF14F3237" template="mp2/Structs/DamageVulnerability.xml"/>
             </properties>
         </struct>
     </properties>

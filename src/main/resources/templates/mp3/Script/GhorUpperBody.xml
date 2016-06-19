@@ -2,10 +2,10 @@
 <ScriptTemplate version="4">
     <name>GhorUpperBody</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml"/>
-        <struct ID="0x42691490" template="Structs/AiDifficultySettings.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0x42691490" template="mp3/Structs/AiDifficultySettings.xml"/>
         <struct ID="0xFC135E9B" type="multi">
             <properties>
                 <property ID="0x531A8C85" type="bool">
@@ -16,13 +16,13 @@
                         <property ID="0xA8D0EE16" type="bool">
                             <default>false</default>
                         </property>
-                        <struct ID="0xA82B5DAA" template="Structs/GhorStructC.xml"/>
-                        <struct ID="0xC97013D0" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0xA82B5DAA" template="mp3/Structs/GhorStructC.xml"/>
+                        <struct ID="0xC97013D0" template="mp3/Structs/DamageInfo.xml"/>
                     </properties>
                 </struct>
                 <struct ID="0xA0D0963B" type="multi">
                     <properties>
-                        <struct ID="0xFDEA5D06" template="Structs/GhorStructC.xml"/>
+                        <struct ID="0xFDEA5D06" template="mp3/Structs/GhorStructC.xml"/>
                         <property ID="0x2BCD1D77" type="float">
                             <default>10.0</default>
                         </property>
@@ -40,20 +40,20 @@
                 </struct>
                 <struct ID="0x81CC0D22" type="multi">
                     <properties>
-                        <struct ID="0x17386C2C" template="Structs/GhorStructA.xml"/>
-                        <struct ID="0xD171838C" template="Structs/GhorStructA.xml"/>
-                        <struct ID="0x017549CB" template="Structs/GhorStructA.xml"/>
-                        <struct ID="0x08F6BDC5" template="Structs/GhorStructA.xml"/>
-                        <struct ID="0x7B589DD6" template="Structs/GhorStructA.xml"/>
+                        <struct ID="0x17386C2C" template="mp3/Structs/GhorStructA.xml"/>
+                        <struct ID="0xD171838C" template="mp3/Structs/GhorStructA.xml"/>
+                        <struct ID="0x017549CB" template="mp3/Structs/GhorStructA.xml"/>
+                        <struct ID="0x08F6BDC5" template="mp3/Structs/GhorStructA.xml"/>
+                        <struct ID="0x7B589DD6" template="mp3/Structs/GhorStructA.xml"/>
                         <property ID="0x9CE31FFA" type="string"/>
-                        <struct ID="0x7B71AE90" template="Structs/DamageVulnerability.xml"/>
+                        <struct ID="0x7B71AE90" template="mp3/Structs/DamageVulnerability.xml"/>
                     </properties>
                 </struct>
-                <struct ID="0xD345F07F" template="Structs/GhorStructC.xml"/>
+                <struct ID="0xD345F07F" template="mp3/Structs/GhorStructC.xml"/>
                 <property ID="0xC59D1A2D" type="string"/>
-                <struct ID="0x391A32AE" template="Structs/GhorStructC.xml"/>
-                <struct ID="0xAFB9313A" template="Structs/GhorStructC.xml"/>
-                <struct ID="0xBA4AD147" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x391A32AE" template="mp3/Structs/GhorStructC.xml"/>
+                <struct ID="0xAFB9313A" template="mp3/Structs/GhorStructC.xml"/>
+                <struct ID="0xBA4AD147" template="mp3/Structs/DamageVulnerability.xml"/>
                 <struct ID="0x305CDAD2" type="multi">
                     <properties>
                         <property ID="0xC2376579" type="file" extensions="CMDL"/>
@@ -87,7 +87,7 @@
                         <property ID="0x68A51ABB" type="file" extensions="CAUD"/>
                     </properties>
                 </struct>
-                <struct ID="0x810EC49A" template="Structs/GhorStructC.xml"/>
+                <struct ID="0x810EC49A" template="mp3/Structs/GhorStructC.xml"/>
                 <struct ID="0x5B772F6D" type="multi">
                     <properties>
                         <property ID="0xEA4B88C8" type="float">
@@ -154,7 +154,7 @@
                             <default>12.0</default>
                         </property>
                         <property ID="0x095080D9" type="file" extensions="CAUD"/>
-                        <struct ID="0x0CFD3139" template="Structs/DamageInfo.xml"/>
+                        <struct ID="0x0CFD3139" template="mp3/Structs/DamageInfo.xml"/>
                         <property ID="0x8062D2F8" type="string"/>
                         <property ID="0xBF26FCFB" type="float">
                             <default>40.0</default>
@@ -167,14 +167,14 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x0E07B299" template="Structs/GhorStructB.xml"/>
-                <struct ID="0x73E98B8F" template="Structs/GhorStructB.xml"/>
+                <struct ID="0x0E07B299" template="mp3/Structs/GhorStructB.xml"/>
+                <struct ID="0x73E98B8F" template="mp3/Structs/GhorStructB.xml"/>
                 <property ID="0x15E3F283" type="file" extensions="CAUD"/>
                 <property ID="0x79BFD886" type="string"/>
                 <property ID="0x337C4056" type="string"/>
-                <struct ID="0x3D43820C" template="Structs/HealthInfo.xml"/>
-                <struct ID="0x6ED9D988" template="Structs/HealthInfo.xml"/>
-                <struct ID="0xE97F12CB" template="Structs/HealthInfo.xml"/>
+                <struct ID="0x3D43820C" template="mp3/Structs/HealthInfo.xml"/>
+                <struct ID="0x6ED9D988" template="mp3/Structs/HealthInfo.xml"/>
+                <struct ID="0xE97F12CB" template="mp3/Structs/HealthInfo.xml"/>
                 <property ID="0xD16B54F9" type="float">
                     <default>10.0</default>
                 </property>

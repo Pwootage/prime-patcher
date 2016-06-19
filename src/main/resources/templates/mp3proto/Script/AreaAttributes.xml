@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>AreaAttributes</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml">
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml">
             <properties>
                 <property ID="0x494E414D">
                     <cook_pref>never</cook_pref>

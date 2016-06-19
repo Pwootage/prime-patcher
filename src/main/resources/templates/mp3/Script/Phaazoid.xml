@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>Phaazoid</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <struct ID="0xA92BFE03" type="multi">
             <properties>
                 <property ID="0xB25774E2" type="long">
@@ -40,9 +40,9 @@
                 <property ID="0xD04A6E1C" type="float">
                     <default>7.0</default>
                 </property>
-                <struct ID="0x12B8E543" template="Structs/ShockWaveInfo.xml"/>
+                <struct ID="0x12B8E543" template="mp3/Structs/ShockWaveInfo.xml"/>
                 <property ID="0xE8CD9627" type="file" extensions="WPSC"/>
-                <struct ID="0x1DC69E38" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x1DC69E38" template="mp3/Structs/DamageInfo.xml"/>
             </properties>
         </struct>
     </properties>

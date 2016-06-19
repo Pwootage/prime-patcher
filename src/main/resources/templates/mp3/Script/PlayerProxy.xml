@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>PlayerProxy</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <enum ID="0x9654AF0E">
             <default>0xD43A816B</default>
             <enumerators>

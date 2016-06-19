@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>Checkpoint</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0xB9A97FEE" type="multi">
             <properties>
                 <property ID="0x178EAB57" type="bool">
@@ -23,7 +23,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x416BD9EB" template="Structs/UnknownStruct24.xml"/>
+        <struct ID="0x416BD9EB" template="dkcr/Structs/UnknownStruct24.xml"/>
     </properties>
     <states/>
     <messages/>

@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>IslandArea</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0xF344C0B0" type="vector3f">
             <default>0.0, 0.0, 0.0</default>
         </property>
@@ -12,7 +12,7 @@
         <property ID="0xC27FFA8F" type="file" extensions="CMDL"/>
         <property ID="0x0FC966DC" type="file" extensions="DCLN"/>
         <property ID="0xA244C9D8" type="character"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
         <property ID="0x3B83DD31" type="file" extensions="STRG"/>
         <property ID="0x6A02F05F" type="string"/>
         <enum ID="0x28E29F9B">
@@ -37,49 +37,49 @@
                 <property ID="0x241839D4" type="file" extensions="STRG"/>
                 <property ID="0xF9529B46" type="file" extensions="STRG"/>
                 <property ID="0x1359360D" type="file" extensions="STRG"/>
-                <struct ID="0x57CB6052" template="Structs/IslandAreaStruct.xml">
+                <struct ID="0x57CB6052" template="dkcr/Structs/IslandAreaStruct.xml">
                     <properties>
                         <property ID="0x5FED5C9D">
                             <default>1</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x4C256CD9" template="Structs/IslandAreaStruct.xml">
+                <struct ID="0x4C256CD9" template="dkcr/Structs/IslandAreaStruct.xml">
                     <properties>
                         <property ID="0x5FED5C9D">
                             <default>30</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xFA4DC52C" template="Structs/IslandAreaStruct.xml">
+                <struct ID="0xFA4DC52C" template="dkcr/Structs/IslandAreaStruct.xml">
                     <properties>
                         <property ID="0x5FED5C9D">
                             <default>10</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x7803AE46" template="Structs/IslandAreaStruct.xml">
+                <struct ID="0x7803AE46" template="dkcr/Structs/IslandAreaStruct.xml">
                     <properties>
                         <property ID="0x5FED5C9D">
                             <default>20</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x2ED30BDD" template="Structs/IslandAreaStruct.xml">
+                <struct ID="0x2ED30BDD" template="dkcr/Structs/IslandAreaStruct.xml">
                     <properties>
                         <property ID="0x5FED5C9D">
                             <default>7</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xCFBDCF70" template="Structs/IslandAreaStruct.xml">
+                <struct ID="0xCFBDCF70" template="dkcr/Structs/IslandAreaStruct.xml">
                     <properties>
                         <property ID="0x5FED5C9D">
                             <default>20</default>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xD611406B" template="Structs/IslandAreaStruct.xml">
+                <struct ID="0xD611406B" template="dkcr/Structs/IslandAreaStruct.xml">
                     <properties>
                         <property ID="0x5FED5C9D">
                             <default>40</default>

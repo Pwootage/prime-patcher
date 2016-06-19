@@ -32,17 +32,17 @@
                         <enumerator ID="0x25DCCDF3" name="Unknown 5"/>
                     </enumerators>
                 </enum>
-                <struct ID="0x0AED5C7D" template="Structs/PathDetermination.xml"/>
+                <struct ID="0x0AED5C7D" template="dkcr/Structs/PathDetermination.xml"/>
                 <property ID="0xC3BF43BE" type="float">
                     <default>4.0</default>
                 </property>
                 <property ID="0x32F835EC" type="float">
                     <default>3.0</default>
                 </property>
-                <struct ID="0x959108A5" template="Structs/Convergence.xml"/>
+                <struct ID="0x959108A5" template="dkcr/Structs/Convergence.xml"/>
                 <property ID="0x27E5F874" type="MayaSpline"/>
                 <property ID="0x12861F7D" type="MayaSpline"/>
-                <struct ID="0x0E1F2094" template="Structs/UnknownStruct13.xml"/>
+                <struct ID="0x0E1F2094" template="dkcr/Structs/UnknownStruct13.xml"/>
             </properties>
         </struct>
         <struct ID="0x9EC1DF0C" type="multi">
@@ -51,18 +51,18 @@
                     <default>320</default>
                     <cook_pref>always</cook_pref>
                 </property>
-                <struct ID="0xA0FB9986" template="Structs/SpindlePositionInterpolant.xml"/>
-                <struct ID="0x58079583" template="Structs/SpindlePositionInterpolant.xml"/>
-                <struct ID="0xE44C1003" template="Structs/SpindlePositionInterpolant.xml"/>
-                <struct ID="0x39936936" template="Structs/SpindlePositionInterpolant.xml"/>
-                <struct ID="0x2D8C38B0" template="Structs/SpindlePositionInterpolant.xml"/>
-                <struct ID="0x1D2A6188" template="Structs/SpindlePositionInterpolant.xml"/>
-                <struct ID="0x91CC9F6A" template="Structs/SpindlePositionInterpolant.xml"/>
-                <struct ID="0x905289AC" template="Structs/SpindlePositionInterpolant.xml"/>
-                <struct ID="0xF5F6849D" template="Structs/SpindlePositionInterpolant.xml"/>
-                <struct ID="0x7B66A7B4" template="Structs/SpindlePositionInterpolant.xml"/>
-                <struct ID="0x68926CCD" template="Structs/SpindlePositionInterpolant.xml"/>
-                <struct ID="0x3158FD3B" template="Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0xA0FB9986" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0x58079583" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0xE44C1003" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0x39936936" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0x2D8C38B0" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0x1D2A6188" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0x91CC9F6A" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0x905289AC" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0xF5F6849D" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0x7B66A7B4" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0x68926CCD" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
+                <struct ID="0x3158FD3B" template="dkcr/Structs/SpindlePositionInterpolant.xml"/>
             </properties>
         </struct>
         <struct ID="0xBBB2D1E6" type="multi">
@@ -71,8 +71,8 @@
                     <default>1</default>
                     <cook_pref>always</cook_pref>
                 </property>
-                <struct ID="0xE69C51D7" template="Structs/OffsetInterpolant.xml"/>
-                <struct ID="0x959108A5" template="Structs/Convergence.xml"/>
+                <struct ID="0xE69C51D7" template="dkcr/Structs/OffsetInterpolant.xml"/>
+                <struct ID="0x959108A5" template="dkcr/Structs/Convergence.xml"/>
             </properties>
         </struct>
         <struct ID="0x07D194AF" type="multi">
@@ -87,7 +87,7 @@
                         <enumerator ID="0x53FC988F" name="Unknown 5"/>
                     </enumerators>
                 </enum>
-                <struct ID="0x3769A209" template="Structs/OffsetInterpolant.xml"/>
+                <struct ID="0x3769A209" template="dkcr/Structs/OffsetInterpolant.xml"/>
             </properties>
         </struct>
         <struct ID="0xEBBF81D7" type="multi">
@@ -113,7 +113,7 @@
                                 </property>
                             </properties>
                         </struct>
-                        <struct ID="0x02B79243" template="Structs/UnknownStruct14.xml"/>
+                        <struct ID="0x02B79243" template="dkcr/Structs/UnknownStruct14.xml"/>
                     </properties>
                 </struct>
                 <property ID="0x947AA955" type="bool">
@@ -180,7 +180,7 @@
                                 </property>
                             </properties>
                         </struct>
-                        <struct ID="0x37C8C046" template="Structs/UnknownStruct15.xml"/>
+                        <struct ID="0x37C8C046" template="dkcr/Structs/UnknownStruct15.xml"/>
                         <struct ID="0x774BA905" type="multi">
                             <properties>
                                 <property ID="0x3B6740F1" type="float">
@@ -194,10 +194,10 @@
                                 </property>
                             </properties>
                         </struct>
-                        <struct ID="0x02B79243" template="Structs/UnknownStruct14.xml"/>
+                        <struct ID="0x02B79243" template="dkcr/Structs/UnknownStruct14.xml"/>
                     </properties>
                 </struct>
-                <struct ID="0xC0C31785" template="Structs/UnknownStruct15.xml"/>
+                <struct ID="0xC0C31785" template="dkcr/Structs/UnknownStruct15.xml"/>
                 <struct ID="0x2D63B0F7" type="multi">
                     <properties>
                         <property ID="0xAD122E5D" type="float">

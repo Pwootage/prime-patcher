@@ -7,7 +7,7 @@
         <property ID="0x02" name="Rotation" type="vector3f"/>
         <property ID="0x03" name="Scale" type="vector3f"/>
         <property ID="0x04" name="Active" type="bool"/>
-        <struct ID="0x05" name="ActorParameters" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x05" name="ActorParameters" template="mp1/Structs/ActorParameters.xml"/>
         <property ID="0x06" name="Unknown 1" type="long"/>
         <property ID="0x07" name="AnimationParameters" type="character"/>
         <property ID="0x08" name="Unknown 2" type="long"/>
@@ -16,9 +16,9 @@
         <property ID="0x0B" name="Particle 2" type="file" extensions="PART"/>
         <property ID="0x0C" name="Always FFFFFFFF 1" type="long"/>
         <property ID="0x0D" name="Always FFFFFFFF 2" type="long"/>
-        <struct ID="0x0E" name="DamageInfo 1" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x0E" name="DamageInfo 1" template="mp1/Structs/DamageInfo.xml"/>
         <property ID="0x0F" name="Unknown 4" type="float"/>
-        <struct ID="0x10" name="DamageInfo 2" template="Structs/DamageInfo.xml"/>
+        <struct ID="0x10" name="DamageInfo 2" template="mp1/Structs/DamageInfo.xml"/>
         <property ID="0x11" name="Unknown 5" type="float"/>
         <property ID="0x12" name="Unknown 6" type="float"/>
         <property ID="0x13" name="Unknown 7" type="float"/>
@@ -37,8 +37,8 @@
         <property ID="0x20" name="Unknown 20" type="float"/>
         <property ID="0x21" name="Unknown 21" type="float"/>
         <property ID="0x22" name="Unknown 22" type="float"/>
-        <struct ID="0x23" name="HealthInfo" template="Structs/HealthInfo.xml"/>
-        <struct ID="0x24" name="DamageVulnerability" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x23" name="HealthInfo" template="mp1/Structs/HealthInfo.xml"/>
+        <struct ID="0x24" name="DamageVulnerability" template="mp1/Structs/DamageVulnerability.xml"/>
         <property ID="0x25" name="Sound? 1" type="long"/>
         <property ID="0x26" name="Sound? 2" type="long"/>
     </properties>

@@ -2,11 +2,11 @@
 <ScriptTemplate version="4">
     <name>Swarm</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
         <property ID="0xC6BB2F45" type="bool">
             <default>true</default>
         </property>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
         <property ID="0x1BCEF53F" type="long">
             <default>0</default>
         </property>
@@ -27,7 +27,7 @@
         <property ID="0xDD3C10EB" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0xD756416E" template="Structs/DamageInfo.xml">
+        <struct ID="0xD756416E" template="mp2demo/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>9</default>
@@ -43,7 +43,7 @@
         <property ID="0xE0CDC7E3" type="float">
             <default>1.0</default>
         </property>
-        <struct ID="0x5285DB00" template="Structs/DamageInfo.xml">
+        <struct ID="0x5285DB00" template="mp2demo/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>9</default>
@@ -104,7 +104,7 @@
         <property ID="0x88DF3EA8" type="float">
             <default>0.0</default>
         </property>
-        <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml">
+        <struct ID="0xCF90D15E" template="mp2demo/Structs/HealthInfo.xml">
             <properties>
                 <property ID="0xF0668919">
                     <default>2.0</default>
@@ -114,7 +114,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x382E406E" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x382E406E" template="mp2demo/Structs/DamageVulnerability.xml"/>
         <property ID="0xD3C80362" type="long">
             <default>-1</default>
         </property>

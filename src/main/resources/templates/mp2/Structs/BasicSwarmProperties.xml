@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct name="BasicSwarmProperties" type="multi">
     <properties>
-        <struct ID="0xD756416E" template="Structs/DamageInfo.xml">
+        <struct ID="0xD756416E" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>11</default>
@@ -68,7 +68,7 @@
         <property ID="0x88DF3EA8" type="float">
             <default>0.0</default>
         </property>
-        <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml">
+        <struct ID="0xCF90D15E" template="mp2/Structs/HealthInfo.xml">
             <properties>
                 <property ID="0xF0668919">
                     <default>2.0</default>
@@ -78,7 +78,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x382E406E" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x382E406E" template="mp2/Structs/DamageVulnerability.xml"/>
         <property ID="0x7D462930" type="file" extensions="PART"/>
         <property ID="0x84F81F55" type="long">
             <default>5</default>

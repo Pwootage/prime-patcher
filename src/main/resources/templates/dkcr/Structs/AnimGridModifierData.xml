@@ -23,7 +23,7 @@
         <property ID="0xCFC6720E" type="bool">
             <default>false</default>
         </property>
-        <struct ID="0x900FB99C" template="Structs/UnknownStruct3.xml"/>
+        <struct ID="0x900FB99C" template="dkcr/Structs/UnknownStruct3.xml"/>
         <enum ID="0x6F74F82F">
             <default>0xE21173B7</default>
             <enumerators>
@@ -123,10 +123,10 @@
                 <property ID="0x30C30368" type="bool">
                     <default>false</default>
                 </property>
-                <enum ID="0x3C3862F3" template="Enums/UnknownEnum2.xml">
+                <enum ID="0x3C3862F3" template="dkcr/Enums/UnknownEnum2.xml">
                     <default>0x0291D74B</default>
                 </enum>
-                <enum ID="0x2F711429" template="Enums/UnknownEnum2.xml">
+                <enum ID="0x2F711429" template="dkcr/Enums/UnknownEnum2.xml">
                     <default>0x3BB45C07</default>
                 </enum>
             </properties>

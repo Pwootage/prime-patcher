@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct name="SandBossStructB" type="multi">
     <properties>
-        <struct ID="0x337F9524" template="Structs/DamageInfo.xml">
+        <struct ID="0x337F9524" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>11</default>

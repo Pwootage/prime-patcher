@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>TidalWave</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0xA244C9D8" type="character"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="dkcr/Structs/ActorParameters.xml"/>
         <struct ID="0x8C5E15C9" type="multi">
             <properties>
                 <property ID="0xB4783F01" type="bool">

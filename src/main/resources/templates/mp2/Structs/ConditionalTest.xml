@@ -9,7 +9,7 @@
                 <enumerator ID="0x02" name="Or"/>
             </enumerators>
         </enum>
-        <enum ID="0xD3AF8D72" template="Enums/Item.xml">
+        <enum ID="0xD3AF8D72" template="mp2/Enums/Item.xml">
             <default>0x00</default>
         </enum>
         <enum ID="0x03BDEA98">

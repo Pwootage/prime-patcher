@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>IngSpaceJumpGuardian</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml">
+        <struct ID="0x255A4580" template="mp2demo/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2demo/Structs/PatternedInfo.xml">
             <properties>
                 <property ID="0x020C78BB">
                     <default>360.0</default>
@@ -23,7 +23,7 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp2demo/Structs/ActorParameters.xml"/>
         <struct ID="0xF9837AB3" type="multi">
             <properties>
                 <property ID="0xA77F6212" type="float">
@@ -44,7 +44,7 @@
                 <property ID="0x4051FD1A" type="long">
                     <default>-1</default>
                 </property>
-                <struct ID="0x424A6D37" template="Structs/DamageInfo.xml">
+                <struct ID="0x424A6D37" template="mp2demo/Structs/DamageInfo.xml">
                     <properties>
                         <property ID="0x119FBD31">
                             <default>9</default>
@@ -57,7 +57,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x9C170968" template="Structs/PlasmaBeamInfo.xml">
+                <struct ID="0x9C170968" template="mp2demo/Structs/PlasmaBeamInfo.xml">
                     <properties>
                         <property ID="0xC26C291C">
                             <default>500.0</default>
@@ -85,7 +85,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0x8F4787CB" template="Structs/ShockWaveInfo.xml"/>
+                <struct ID="0x8F4787CB" template="mp2demo/Structs/ShockWaveInfo.xml"/>
             </properties>
         </struct>
     </properties>

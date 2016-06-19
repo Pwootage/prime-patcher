@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>Berserker</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
-        <struct ID="0x43BBB1DD" template="Structs/PatternedAITypedef.xml">
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
+        <struct ID="0x7E397FED" template="mp3proto/Structs/ActorParameters.xml"/>
+        <struct ID="0x43BBB1DD" template="mp3proto/Structs/PatternedAITypedef.xml">
             <properties>
                 <struct ID="0xD756416E">
                     <properties>
@@ -63,11 +63,11 @@
                 <property ID="0xC3E43D0E" type="float">
                     <default>10.0</default>
                 </property>
-                <struct ID="0x74BFFA78" template="Structs/DamageInfo.xml"/>
-                <struct ID="0xBB7977B9" template="Structs/DamageInfo.xml"/>
-                <struct ID="0xF4E003C1" template="Structs/DamageInfo.xml"/>
-                <struct ID="0xE0DBF22F" template="Structs/PlasmaBeamInfo.xml"/>
-                <struct ID="0x97321AF1" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x74BFFA78" template="mp3proto/Structs/DamageInfo.xml"/>
+                <struct ID="0xBB7977B9" template="mp3proto/Structs/DamageInfo.xml"/>
+                <struct ID="0xF4E003C1" template="mp3proto/Structs/DamageInfo.xml"/>
+                <struct ID="0xE0DBF22F" template="mp3proto/Structs/PlasmaBeamInfo.xml"/>
+                <struct ID="0x97321AF1" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0xFD5E7062" type="float">
                     <default>25.0</default>
                 </property>
@@ -80,7 +80,7 @@
                 <property ID="0x1A975A02" type="float">
                     <default>10.0</default>
                 </property>
-                <struct ID="0x066BC855" template="Structs/LaunchProjectileData.xml"/>
+                <struct ID="0x066BC855" template="mp3proto/Structs/LaunchProjectileData.xml"/>
                 <property ID="0x67E0E4B4" type="float">
                     <default>25.0</default>
                 </property>
@@ -118,7 +118,7 @@
                 <property ID="0x19F31D4E" type="file" extensions="UNKN"/>
                 <property ID="0xCDA8F0F3" type="file" extensions="UNKN"/>
                 <property ID="0x237C0374" type="file" extensions="UNKN"/>
-                <struct ID="0x9C8094F5" template="Structs/GrappleData.xml">
+                <struct ID="0x9C8094F5" template="mp3proto/Structs/GrappleData.xml">
                     <properties>
                         <property ID="0x5DCF91E1">
                             <default>1</default>
@@ -128,7 +128,7 @@
                 <property ID="0x58B0EBEA" type="float">
                     <default>60.0</default>
                 </property>
-                <struct ID="0xA39E44FF" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0xA39E44FF" template="mp3proto/Structs/DamageVulnerability.xml"/>
                 <property ID="0xE59DD61F" type="float">
                     <default>1.25</default>
                 </property>
@@ -147,7 +147,7 @@
                 <property ID="0xCF111A99" type="float">
                     <default>20.0</default>
                 </property>
-                <struct ID="0x719FD06B" template="Structs/DamageInfo.xml"/>
+                <struct ID="0x719FD06B" template="mp3proto/Structs/DamageInfo.xml"/>
                 <property ID="0x92F0B2C7" type="float">
                     <default>20.0</default>
                 </property>
@@ -172,7 +172,7 @@
                 <property ID="0x24F779CA" type="float">
                     <default>0.8</default>
                 </property>
-                <struct ID="0x896D5BD9" template="Structs/DamageVulnerability.xml"/>
+                <struct ID="0x896D5BD9" template="mp3proto/Structs/DamageVulnerability.xml"/>
                 <property ID="0x83439084" type="float">
                     <default>500.0</default>
                 </property>

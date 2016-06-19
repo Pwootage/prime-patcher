@@ -40,18 +40,18 @@
         <property ID="0x7D5A0487" type="float">
             <default>5.0</default>
         </property>
-        <struct ID="0xD756416E" template="Structs/DamageInfo.xml"/>
+        <struct ID="0xD756416E" template="mp2demo/Structs/DamageInfo.xml"/>
         <property ID="0xE0CDC7E3" type="float">
             <default>2.0</default>
         </property>
-        <struct ID="0xCF90D15E" template="Structs/HealthInfo.xml">
+        <struct ID="0xCF90D15E" template="mp2demo/Structs/HealthInfo.xml">
             <properties>
                 <property ID="0x3A2D17E4">
                     <default>2.0</default>
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7B71AE90" template="Structs/DamageVulnerability.xml"/>
+        <struct ID="0x7B71AE90" template="mp2demo/Structs/DamageVulnerability.xml"/>
         <property ID="0x8A6AB139" type="float">
             <default>1.0</default>
         </property>

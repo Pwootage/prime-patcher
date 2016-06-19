@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>AssignedAudioStream</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <enum ID="0xE7D8D823">
             <default>0xCBF698CA</default>
             <enumerators>

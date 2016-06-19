@@ -2,9 +2,9 @@
 <ScriptTemplate version="4">
     <name>SporbBase</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
         <property ID="0x95E7A2C2" type="float">
             <default>2.0</default>
         </property>
@@ -80,7 +80,7 @@
         <property ID="0x990745DD" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0x5F3C27C6" template="Structs/DamageInfo.xml">
+        <struct ID="0x5F3C27C6" template="mp2/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x119FBD31">
                     <default>11</default>
@@ -159,10 +159,10 @@
         <property ID="0x2690E216" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0x510DBA97" template="Structs/PowerBombGuardianStageProperties.xml"/>
-        <struct ID="0x0B6C85F7" template="Structs/PowerBombGuardianStageProperties.xml"/>
-        <struct ID="0x8B9C92E8" template="Structs/PowerBombGuardianStageProperties.xml"/>
-        <struct ID="0xBFAEFB37" template="Structs/PowerBombGuardianStageProperties.xml"/>
+        <struct ID="0x510DBA97" template="mp2/Structs/PowerBombGuardianStageProperties.xml"/>
+        <struct ID="0x0B6C85F7" template="mp2/Structs/PowerBombGuardianStageProperties.xml"/>
+        <struct ID="0x8B9C92E8" template="mp2/Structs/PowerBombGuardianStageProperties.xml"/>
+        <struct ID="0xBFAEFB37" template="mp2/Structs/PowerBombGuardianStageProperties.xml"/>
     </properties>
     <states/>
     <messages/>

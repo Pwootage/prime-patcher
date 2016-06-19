@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>ContextActionButtonPressing</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <struct ID="0x3907300E" type="multi">
             <properties>
                 <property ID="0x1B07123D" type="float">

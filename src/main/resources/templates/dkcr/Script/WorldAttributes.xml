@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>WorldAttributes</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0xEAE86BFB" type="multi">
             <properties>
                 <property ID="0x29C77D27" type="bool">

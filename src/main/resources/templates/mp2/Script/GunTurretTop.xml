@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>GunTurretTop</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp2/Structs/EditorProperties.xml"/>
         <property ID="0x3BC1D043" type="float">
             <default>0.5</default>
         </property>
@@ -30,8 +30,8 @@
         <property ID="0x5D9ED447" type="long">
             <default>-1</default>
         </property>
-        <struct ID="0xB3774750" template="Structs/PatternedInfo.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0xB3774750" template="mp2/Structs/PatternedInfo.xml"/>
+        <struct ID="0x7E397FED" template="mp2/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>PlayerGravityScalar</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <property ID="0x59ED2B0C" type="float">
             <default>0.42</default>
         </property>

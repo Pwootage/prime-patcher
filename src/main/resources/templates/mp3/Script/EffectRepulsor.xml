@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>EffectRepulsor</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <enum ID="0xA169D424" template="Enums/Item.xml">
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <enum ID="0xA169D424" template="mp3/Enums/Item.xml">
             <default>0xFB73F2B8</default>
         </enum>
         <property ID="0xB68C6D96" type="file" extensions="PART"/>
@@ -13,7 +13,7 @@
         <property ID="0xA8E3AFF1" type="float">
             <default>0.1</default>
         </property>
-        <struct ID="0x337F9524" template="Structs/DamageInfo.xml">
+        <struct ID="0x337F9524" template="mp3/Structs/DamageInfo.xml">
             <properties>
                 <property ID="0x555FF80A">
                     <default>1.0</default>

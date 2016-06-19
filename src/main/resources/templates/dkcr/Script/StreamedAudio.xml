@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>StreamedAudio</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <property ID="0x9D1A67A8" type="file" extensions="STRM"/>
         <property ID="0xB417064A" type="string"/>
         <property ID="0xC03EC271" type="bool">
@@ -61,10 +61,10 @@
             <default>0.0</default>
             <cook_pref>always</cook_pref>
         </property>
-        <enum ID="0xFB8F0B1F" template="Enums/MusicEnumB.xml">
+        <enum ID="0xFB8F0B1F" template="dkcr/Enums/MusicEnumB.xml">
             <default>0xCBF698CA</default>
         </enum>
-        <enum ID="0x9558711E" template="Enums/MusicEnumA.xml">
+        <enum ID="0x9558711E" template="dkcr/Enums/MusicEnumA.xml">
             <default>0x28D5A7D7</default>
         </enum>
     </properties>

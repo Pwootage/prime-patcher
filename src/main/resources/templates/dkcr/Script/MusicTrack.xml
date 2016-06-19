@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>MusicTrack</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="dkcr/Structs/EditorProperties.xml"/>
         <struct ID="0x3C18666C" type="multi">
             <properties>
                 <property ID="0x9D1A67A8" type="file" extensions="STRM"/>

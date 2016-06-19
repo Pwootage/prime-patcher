@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struct name="MinecartStructC" type="multi">
     <properties>
-        <struct ID="0xD72E09E1" template="Structs/ClingPathControlStruct.xml"/>
+        <struct ID="0xD72E09E1" template="dkcr/Structs/ClingPathControlStruct.xml"/>
         <property ID="0x36B1ADD6" type="file" extensions="CAUD"/>
         <property ID="0xEFE4798F" type="MayaSpline"/>
         <property ID="0x96D4F78B" type="MayaSpline"/>

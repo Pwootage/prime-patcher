@@ -2,8 +2,8 @@
 <ScriptTemplate version="4">
     <name>GragnolFlyer</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml">
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml">
             <properties>
                 <struct ID="0xCF90D15E">
                     <properties>
@@ -20,13 +20,13 @@
                 </property>
             </properties>
         </struct>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
         <struct ID="0x47ED32F2" type="multi">
             <properties>
                 <property ID="0x8ACC7D20" type="bool">
                     <default>false</default>
                 </property>
-                <struct ID="0x2C83C012" template="Structs/LaunchProjectileData.xml">
+                <struct ID="0x2C83C012" template="mp3/Structs/LaunchProjectileData.xml">
                     <properties>
                         <property ID="0x053AE4A7">
                             <cook_pref>never</cook_pref>
@@ -60,7 +60,7 @@
                 <property ID="0x1D159832" type="float">
                     <default>120.0</default>
                 </property>
-                <struct ID="0x05015775" template="Structs/ElectricBeamInfo.xml">
+                <struct ID="0x05015775" template="mp3/Structs/ElectricBeamInfo.xml">
                     <properties>
                         <property ID="0xC26C291C">
                             <cook_pref>never</cook_pref>
@@ -75,7 +75,7 @@
                 <property ID="0x7171BFC2" type="float">
                     <default>5.0</default>
                 </property>
-                <struct ID="0x24265839" template="Structs/ElectricBeamInfo.xml">
+                <struct ID="0x24265839" template="mp3/Structs/ElectricBeamInfo.xml">
                     <properties>
                         <property ID="0xC95479D4" extensions="UNKN">
                             <cook_pref>never</cook_pref>
@@ -98,21 +98,21 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xCCDD3ACA" template="Structs/FlyerMovementMode.xml">
+                <struct ID="0xCCDD3ACA" template="mp3/Structs/FlyerMovementMode.xml">
                     <properties>
                         <property ID="0x50A9BD0D">
                             <cook_pref>never</cook_pref>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xC845D3C0" template="Structs/FlyerMovementMode.xml">
+                <struct ID="0xC845D3C0" template="mp3/Structs/FlyerMovementMode.xml">
                     <properties>
                         <property ID="0x50A9BD0D">
                             <cook_pref>never</cook_pref>
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xFA2A173F" template="Structs/FlyerMovementMode.xml"/>
+                <struct ID="0xFA2A173F" template="mp3/Structs/FlyerMovementMode.xml"/>
                 <property ID="0xE74CF583" type="float">
                     <default>5.0</default>
                 </property>
@@ -137,7 +137,7 @@
                 <property ID="0xB2C2928E" type="float">
                     <default>5.0</default>
                 </property>
-                <struct ID="0xF609C637" template="Structs/GrappleData.xml">
+                <struct ID="0xF609C637" template="mp3/Structs/GrappleData.xml">
                     <properties>
                         <property ID="0x5DCF91E1">
                             <default>1</default>
@@ -284,7 +284,7 @@
                         </property>
                     </properties>
                 </struct>
-                <struct ID="0xB4C02854" template="Structs/ModIncaData.xml"/>
+                <struct ID="0xB4C02854" template="mp3/Structs/ModIncaData.xml"/>
             </properties>
         </struct>
     </properties>

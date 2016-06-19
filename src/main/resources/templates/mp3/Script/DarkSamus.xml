@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>DarkSamus</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3/Structs/EditorProperties.xml"/>
         <struct ID="0x0214A7EB" type="multi">
             <properties>
                 <property ID="0xB5049BBB" type="float">
@@ -66,14 +66,14 @@
                 <property ID="0xF3D84488" type="file" extensions="UNKN"/>
                 <property ID="0x49BE8A11" type="file" extensions="PART"/>
                 <property ID="0xE8706E6E" type="file" extensions="PART"/>
-                <struct ID="0x6CC7412A" template="Structs/PlasmaBeamInfo.xml"/>
+                <struct ID="0x6CC7412A" template="mp3/Structs/PlasmaBeamInfo.xml"/>
                 <property ID="0xACFD8EA8" type="file" extensions="WPSC"/>
-                <struct ID="0xE8FC7798" template="Structs/HoverThenHomeProjectile.xml"/>
+                <struct ID="0xE8FC7798" template="mp3/Structs/HoverThenHomeProjectile.xml"/>
                 <property ID="0x5377D4B5" type="character"/>
                 <property ID="0x4C8AEE6D" type="file" extensions="PART"/>
                 <property ID="0x0B17536C" type="file" extensions="SCAN"/>
                 <property ID="0x76C64459" type="file" extensions="WPSC"/>
-                <struct ID="0xEC493F59" template="Structs/PlasmaBeamInfo.xml"/>
+                <struct ID="0xEC493F59" template="mp3/Structs/PlasmaBeamInfo.xml"/>
                 <property ID="0xD1D51E35" type="file" extensions="WPSC"/>
                 <property ID="0x8E96E5E4" type="file" extensions="PART"/>
                 <property ID="0x5B67A4E7" type="file" extensions="TXTR"/>
@@ -89,13 +89,13 @@
                 <property ID="0xA47E51D3" type="file" extensions="UNKN"/>
             </properties>
         </struct>
-        <struct ID="0x02C43C41" template="Structs/DarkSamusData.xml"/>
-        <struct ID="0xB3774750" template="Structs/PatternedAI.xml"/>
-        <struct ID="0xDD042FE0" template="Structs/DarkSamusData.xml"/>
-        <struct ID="0x1464AE05" template="Structs/PatternedAI.xml"/>
-        <struct ID="0xD0621C92" template="Structs/DarkSamusData.xml"/>
-        <struct ID="0x24D00673" template="Structs/PatternedAI.xml"/>
-        <struct ID="0x7E397FED" template="Structs/ActorParameters.xml"/>
+        <struct ID="0x02C43C41" template="mp3/Structs/DarkSamusData.xml"/>
+        <struct ID="0xB3774750" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0xDD042FE0" template="mp3/Structs/DarkSamusData.xml"/>
+        <struct ID="0x1464AE05" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0xD0621C92" template="mp3/Structs/DarkSamusData.xml"/>
+        <struct ID="0x24D00673" template="mp3/Structs/PatternedAI.xml"/>
+        <struct ID="0x7E397FED" template="mp3/Structs/ActorParameters.xml"/>
     </properties>
     <states/>
     <messages/>

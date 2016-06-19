@@ -2,7 +2,7 @@
 <ScriptTemplate version="4">
     <name>SpawnPoint</name>
     <properties>
-        <struct ID="0x255A4580" template="Structs/EditorProperties.xml"/>
+        <struct ID="0x255A4580" template="mp3proto/Structs/EditorProperties.xml"/>
         <property ID="0xC0E4521B" type="bool">
             <default>true</default>
         </property>
@@ -13,7 +13,7 @@
             <properties>
                 <struct ID="0x52C779C0" type="multi">
                     <properties>
-                        <struct ID="0x336BD471" template="Structs/PlayerInventoryItem.xml">
+                        <struct ID="0x336BD471" template="mp3proto/Structs/PlayerInventoryItem.xml">
                             <properties>
                                 <property ID="0x94AF1445">
                                     <default>1</default>
@@ -23,7 +23,7 @@
                                 </property>
                             </properties>
                         </struct>
-                        <struct ID="0xD31B2209" template="Structs/PlayerInventoryItem.xml">
+                        <struct ID="0xD31B2209" template="mp3proto/Structs/PlayerInventoryItem.xml">
                             <properties>
                                 <property ID="0x94AF1445">
                                     <default>1</default>
@@ -49,7 +49,7 @@
                         <property ID="0xF34F99D7" type="bool">
                             <default>false</default>
                         </property>
-                        <struct ID="0xA387191D" template="Structs/PlayerInventoryItem.xml"/>
+                        <struct ID="0xA387191D" template="mp3proto/Structs/PlayerInventoryItem.xml"/>
                         <property ID="0x5DB3E694" type="bool">
                             <default>false</default>
                         </property>
