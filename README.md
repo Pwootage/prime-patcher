@@ -14,13 +14,17 @@ Working Features:
 
 Parax
 * Reverse Engineering
-* PWE (used while developing)
-* Template files for script object properties
-* Spelling Checks <3
+* PWE (for checking my work)
+* Template files for script objects
 
 Miles
 * Reverse Engineering
-* Prime scripts I used while working with dolphin
+
+Nintendo/Retro Studios
+* Releasing Metroid Prime(s)
+
+Everyone else
+* Being awesome
 
 # LICENSE
     Copyright (C) 2016 Christopher Freestone
