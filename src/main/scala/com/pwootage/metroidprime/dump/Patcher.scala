@@ -120,6 +120,10 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
 
   private def recursivelyPatchFiles(version: Option[PrimeVersion], srcRaf: RandomAccessFile, destRaf: RandomAccessFile, dir: FileDirectory): Unit = {
     for (file <- dir.fileChildren) {
+      new PrimeDataFile(Some(destRaf), Some(destRaf))
+        .setOffset(destRaf.getFilePointer.toInt)
+        .writePaddingTo(2048)
+
       val len = file.length
       srcRaf.seek(file.offset)
 
@@ -158,6 +162,10 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
 
       file.offset = fileOffset.toInt
       file.length = fileLen.toInt
+
+      new PrimeDataFile(Some(destRaf), Some(destRaf))
+        .setOffset(destRaf.getFilePointer.toInt)
+        .writePaddingTo(2048)
     }
 
     for (child <- dir.directoryChildren) recursivelyPatchFiles(version, srcRaf, destRaf, child)

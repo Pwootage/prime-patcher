@@ -290,6 +290,10 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
 
   def recursivelyWriteFiles(src: Path, dir: FileDirectory, targetRaf: RandomAccessFile): Unit = {
     for (file <- dir.fileChildren) {
+      new PrimeDataFile(Some(targetRaf), Some(targetRaf))
+        .setOffset(targetRaf.getFilePointer.toInt)
+        .writePaddingTo(2048)
+
       if (file.name.toLowerCase.endsWith(".pak") && isPakDirectory(src.resolve(file.name.replace('.', '-')))) {
         Logger.info("Found PAK; packing in-line")
         file.offset = targetRaf.getFilePointer.toInt
@@ -307,6 +311,10 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
         val fin = Files.newInputStream(srcFile)
         copyBytes(fin, file.length, new RandomAccessFileOutputStream(targetRaf))
       }
+
+      new PrimeDataFile(Some(targetRaf), Some(targetRaf))
+        .setOffset(targetRaf.getFilePointer.toInt)
+        .writePaddingTo(2048)
     }
 
     for (dir <- dir.directoryChildren) {
