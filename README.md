@@ -5,10 +5,14 @@ This project can be used to diff, patch, and randomize Metroid Prime and Metroid
 
 Working Features:
 * Iso + PAK extraction
+* Iso -> Iso direct patching
+* Iso <-> Iso diff (patch generation)
 
+The latest release can be found under the github releases tab
 
-[Latest Successful Build](https://circleci.com/api/v1/project/Pwootage/prime-randomizer/latest/artifacts/0/home/ubuntu/prime-randomizer/build/libs/patcher-0.1-SNAPSHOT-min.jar?branch=master&filter=successful)
-
+![build status](https://circleci.com/gh/Pwootage/prime-randomizer.png?circle-token=0cc2559ae2175225d34e6aeaf08ca37446bb7dec)
+[Latest Successful Build](https://circleci.com/api/v1/project/Pwootage/prime-randomizer/latest/artifacts/0//home/ubuntu/prime-randomizer/build/libs/patcher-0.1-SNAPSHOT.jar?branch=master&filter=successful)
+[CircleCI](https://circleci.com/gh/Pwootage/prime-randomizer)
 
 # Credits
 
