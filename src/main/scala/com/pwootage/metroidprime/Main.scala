@@ -11,7 +11,7 @@ import com.pwootage.metroidprime.formats.mrea.MREA
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
 import com.pwootage.metroidprime.randomizer.Randomizer
 import com.pwootage.metroidprime.templates.{IntScriptProperty, ScriptProperty, ScriptTemplate, ScriptTemplates}
-import com.pwootage.metroidprime.utils.{FileIdentifier, Patchfile, PrimeJacksonMapper}
+import com.pwootage.metroidprime.utils.{PrimeDiffUtils, FileIdentifier, Patchfile, PrimeJacksonMapper}
 import org.rogach.scallop.{ScallopConf, Subcommand}
 
 object Main {
@@ -25,30 +25,38 @@ object Main {
     addSubcommand(dump)
 
     val extract = new Subcommand("extract") {
-      val force = toggle(name="force", short='f', default=Some(false), descrYes = "Overwrite existing files")
-      val extractPaks = toggle(name="paks", short='p', default = Some(false), descrYes = "Extract PAKs from ISOs")
-      val quieter = toggle(name="quieter", short='q', default = Some(false), descrYes = "Squelch constant PAK extraction messages (will update every 500 files)")
+      val force = toggle(name = "force", short = 'f', default = Some(false), descrYes = "Overwrite existing files")
+      val extractPaks = toggle(name = "paks", short = 'p', default = Some(false), descrYes = "Extract PAKs from ISOs")
+      val quieter = toggle(name = "quieter", short = 'q', default = Some(false), descrYes = "Squelch constant PAK extraction messages (will update every 500 files)")
       val destDir = trailArg[String](descr = "Where to put the results")
       val srcFiles = trailArg[List[String]](descr = "ISOs or PAKs to parse")
     }
     addSubcommand(extract)
 
-    val repack =  new Subcommand("repack") {
-      val force = toggle(name="force", short='f', default=Some(false), descrYes = "Overwrite existing file")
-      val quieter = toggle(name="quieter", short='q', default = Some(false), descrYes = "Squelch constant PAK repacking messages (will update every 500 files)")
+    val repack = new Subcommand("repack") {
+      val force = toggle(name = "force", short = 'f', default = Some(false), descrYes = "Overwrite existing file")
+      val quieter = toggle(name = "quieter", short = 'q', default = Some(false), descrYes = "Squelch constant PAK repacking messages (will update every 500 files)")
       val srcDir = trailArg[String](descr = "Source directory - can be PAK root (list.json) or ISO root (info.json)")
       val outFile = trailArg[String](descr = "Target File (.pak or .iso)")
     }
     addSubcommand(repack)
 
-    val patch =  new Subcommand("patch") {
-      val force = toggle(name="force", short='f', default=Some(false), descrYes = "Overwrite existing file")
-      val quieter = toggle(name="quieter", short='q', default = Some(false), descrYes = "Squelch constant PAK extraction/repacking messages")
+    val patch = new Subcommand("patch") {
+      val force = toggle(name = "force", short = 'f', default = Some(false), descrYes = "Overwrite existing file")
+      val quieter = toggle(name = "quieter", short = 'q', default = Some(false), descrYes = "Squelch constant PAK extraction/repacking messages")
       val srcFile = trailArg[String](descr = "Source ISO")
       val outFile = trailArg[String](descr = "Target ISO")
       val patchfiles = trailArg[List[String]](descr = "Patchfiles to use")
     }
     addSubcommand(patch)
+
+    val diff = new Subcommand("diff") {
+      val quieter = toggle(name = "quieter", short = 'q', default = Some(false), descrYes = "Squelch constant PAK extraction/repacking messages")
+      val iso1 = trailArg[String](descr = "Starting ISO")
+      val iso2 = trailArg[String](descr = "Modified ISO")
+      val dest = trailArg[String](descr = "Destination directory for patches")
+    }
+    addSubcommand(diff)
 
     val randomize = new Subcommand("randomize") {
       val dirWithPAKs = trailArg[String]()
@@ -99,6 +107,7 @@ object Main {
       case conf.patch => patch(conf)
       case conf.test => test()
       case conf.fixTemplateXmls => fixTemplateUrls(conf)
+      case conf.diff => diff(conf)
     }
   }
 
@@ -134,15 +143,32 @@ object Main {
     new Patcher(conf.patch.outFile(), conf.patch.force(), conf.patch.quieter(), patchfiles).patch(conf.patch.srcFile())
   }
 
+  def diff(conf: PatcherConf): Unit = {
+    new Differ(conf.diff.quieter()).dif(conf.diff.iso1(), conf.diff.iso2(), conf.diff.dest())
+  }
+
   def randomize(conf: PatcherConf): Unit = {
-//    (new Randomizer).naiveRandomize(conf.randomize.dirWithPAKs())
+    //    (new Randomizer).naiveRandomize(conf.randomize.dirWithPAKs())
   }
 
   def test(): Unit = {
-    for (v <- Prime1ScriptObjectType.values()) {
-      println(v.template())
-    }
-    val t = ScriptTemplates.loadTemplate("ScriptTemplateV4.xml")
-    println(t)
+    val a = Array(
+      "a",
+      "c",
+      "d",
+      "e",
+      "b"
+    )
+    val b = Array(
+      "a",
+      "b",
+      "c",
+      "e",
+      "d"
+    )
+
+    val diff = PrimeDiffUtils.generateDiff(a, b)
+
+    println(diff)
   }
 }

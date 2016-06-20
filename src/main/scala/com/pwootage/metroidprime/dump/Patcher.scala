@@ -22,6 +22,14 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
     res
   }
 
+  val patchfilesByFile = {
+    val res = new mutable.HashMap[String, mutable.Set[Patchfile]] with mutable.MultiMap[String, Patchfile]
+    val tuples = patchfiles.flatMap(patchfile =>
+      patchfile.patches.map(a => (a.filename, patchfile))
+    ).foreach(tuple => res.addBinding(tuple._1, tuple._2))
+    res
+  }
+
   def patch(fileName: String): Unit = {
     val src = Paths.get(fileName)
     val dest = Paths.get(targetFile)
@@ -113,7 +121,6 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
   private def recursivelyPatchFiles(version: Option[PrimeVersion], srcRaf: RandomAccessFile, destRaf: RandomAccessFile, dir: FileDirectory): Unit = {
     for (file <- dir.fileChildren) {
       val len = file.length
-      Logger.progress(s"${file.name} (${DataTypeConversion.bytesToReadable(len)})")
       srcRaf.seek(file.offset)
 
       val fileOffset = destRaf.getFilePointer
@@ -121,7 +128,7 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
         Logger.info("Found PAK file; patching it")
 
         srcRaf.seek(file.offset)
-        repackPakFromRAFFromCurrentOffset(version.get, srcRaf, destRaf)
+        repackPakFromRAFFromCurrentOffset(version.get, file.name, srcRaf, destRaf)
         srcRaf.seek(file.offset + len)
       } else {
         Logger.progressResetLine(s"Copying ${file.name}")
@@ -170,12 +177,19 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
     }
   }
 
-  private def repackPakFromRAFFromCurrentOffset(primeVersion: PrimeVersion, srcRaf: RandomAccessFile, destRaf: RandomAccessFile) = {
+  private def repackPakFromRAFFromCurrentOffset(primeVersion: PrimeVersion, pakName: String, srcRaf: RandomAccessFile, destRaf: RandomAccessFile) = {
     val srcPakStart = srcRaf.getFilePointer
     val destPakStart = destRaf.getFilePointer
 
     val pak = new PAKFile(primeVersion)
     new PrimeDataFile(Some(srcRaf), None).read(pak)
+
+    if (shouldPatch(pakName)) {
+      for (patch <- patchesByFile(pakName)) {
+        val  patchedBytes = applyPatch(primeVersion, patch._1, patch._2, pak.toByteArray)
+        pak.read(patchedBytes)
+      }
+    }
 
     var processedFiles = 0
     var patchedFiles = 0
@@ -189,7 +203,7 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
       .setOffset(destRaf.getFilePointer.toInt)
       .writePaddingBytesGivenStartOffset(destPakStart, 32)
 
-    for (resource <- pak.resources.sortBy(_.offset)) {
+    for (resource <- pak.resources) {
       val resourceName = resource.idStr
       if (!quieter) {
         Logger.progressResetLine(s"Processing $resourceName $processedFiles/${pak.resources.length}")
@@ -214,14 +228,25 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
     srcRaf.seek(srcPakStart + resource.offset)
 
     if (shouldPatch(resource.idStr)) {
-      actuallyPatchResource(primeVersion, srcRaf, destRaf, resource, srcPakStart, destPakStart)
 
+      actuallyPatchResource(primeVersion, srcRaf, destRaf, resource, srcPakStart, destPakStart)
       true
+
     } else {
-      //Don't patch
-      val out = new RandomAccessFileOutputStream(destRaf)
-      resource.offset = (destRaf.getFilePointer - destPakStart).toInt
-      copyBytes(new RandomAccessFileInputStream(srcRaf), resource.size, out)
+      if (resource.offset <= 0) {
+        import better.files._
+        val srcFile = patchfiles.flatMap(_.patchfileLocation.get.toFile.toScala.parent.listRecursively).find(_.name == resourceName)
+        if (srcFile.isEmpty) {
+          throw new IllegalArgumentException(s"Unable to find $resourceName")
+        }
+        Logger.progressResetLine(s"Writing new file from ${srcFile.get}")
+        writeResourceToStream(primeVersion, destRaf, resource, destPakStart, srcFile.get.byteArray)
+      } else {
+        //Don't patch
+        val out = new RandomAccessFileOutputStream(destRaf)
+        resource.offset = (destRaf.getFilePointer - destPakStart).toInt
+        copyBytes(new RandomAccessFileInputStream(srcRaf), resource.size, out)
+      }
       false
     }
   }

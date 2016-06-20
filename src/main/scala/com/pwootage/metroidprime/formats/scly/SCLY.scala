@@ -4,7 +4,7 @@ import java.io.{ByteArrayInputStream, DataInputStream}
 
 import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
-import com.pwootage.metroidprime.utils.ByteDiffer
+import com.pwootage.metroidprime.utils.PrimeDiffUtils
 
 object SCLY {
   val MAGIC = 0x53434C59

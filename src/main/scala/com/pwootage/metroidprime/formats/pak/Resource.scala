@@ -28,4 +28,6 @@ class Resource extends BinarySerializable {
   }
 
   def idStr = DataTypeConversion.intPrimeResourceNameToStr(id, typ)
+
+  def idLong = (id.toLong << 32) | typ.toLong
 }
