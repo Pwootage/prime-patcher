@@ -133,40 +133,36 @@ case class ScriptObjectPatch(_filename: String,
       for (layer <- scly.layers) {
         if (remove.getOrElse(false)) {
           layer.objects = layer.objects.filter(o => o.id == id && o.typeEnum == objectType)
-        } else {
-          if (!add.getOrElse(false)) {
-            val objToModify = layer.objects
-              .find(o => o.id == id && o.typeEnum == objectType)
-              .getOrElse(throw new IllegalArgumentException("Unable to find script object to patch"))
-
-            if (objectPatch.isDefined) {
-              val template = objectType.template()
-
-              if (template == null) {
-                throw new IllegalArgumentException("Unknown actor parameters")
-              }
-
-              template.read(objToModify.binaryData)
-
-              applyPatchToTemplate(objectPatch.get, template)
-              objToModify.propertyCount = template.properties.length
-
-              val newBinary = template.toByteArray
-
-              objToModify.binaryData = newBinary
-              //
-              //            PrimeJacksonMapper.mapper.readerForUpdating(parsedObject).readValue(objectPatch.get)
-              //            objToModify.binaryData = parsedObject.toByteArray
-            }
-
-            if (binaryPatch.isDefined) {
-              objToModify.binaryData = binaryPatch.get
-            }
-          }
-
-          //Done modifying
         }
         //Done with layer
+      }
+      val allObjects = scly.layers.flatMap(_.objects)
+
+      if (!remove.getOrElse(false)) {
+        val objToModify = allObjects
+          .find(o => o.id == id && o.typeEnum == objectType)
+          .getOrElse(throw new IllegalArgumentException("Unable to find script object to patch"))
+
+        if (objectPatch.isDefined) {
+          val template = objectType.template()
+
+          if (template == null) {
+            throw new IllegalArgumentException("Unknown actor parameters")
+          }
+
+          template.read(objToModify.binaryData)
+
+          applyPatchToTemplate(objectPatch.get, template)
+          objToModify.propertyCount = template.properties.length
+
+          val newBinary = template.toByteArray
+
+          objToModify.binaryData = newBinary
+        }
+
+        if (binaryPatch.isDefined) {
+          objToModify.binaryData = binaryPatch.get
+        }
       }
     }
 

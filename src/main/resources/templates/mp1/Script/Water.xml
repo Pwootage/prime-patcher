@@ -73,8 +73,12 @@
         <property ID="0x3A" name="Unknown 54" type="long"/>
         <property ID="0x3B" name="Unknown 55" type="long"/>
         <property ID="0x3C" name="DO NOT ENABLE - WILL CRASH" type="bool"/>
+        <!--
+        Disabled these to make it work (they only exist if the bool above exists, and it never actually does)
+        (this is probably fine, per Parax)
         <property ID="0x3D" name="Ignore" type="short"/>
         <property ID="0x3E" name="Ignore" type="short"/>
+        -->
     </properties>
     <states/>
     <messages/>

@@ -1,6 +1,11 @@
 package com.pwootage.metroidprime.utils
 
-import java.io.{IOException, InputStream}
+import java.io.{ByteArrayInputStream, IOException, InputStream}
+
+import com.fasterxml.jackson.databind.JsonNode
+import com.fasterxml.jackson.databind.node.ObjectNode
+
+import scala.collection.JavaConversions._
 
 object PrimeDiffUtils {
   def diffByteArrayDebug(a: Array[Byte], b: Array[Byte]): Unit = {
@@ -19,6 +24,10 @@ object PrimeDiffUtils {
       }
     }
     println("end of diff")
+  }
+
+  def firstDifference(a: Array[Byte], b: Array[Byte]): Int = {
+    firstDifference(new ByteArrayInputStream(a), new ByteArrayInputStream(b), a.length)
   }
 
   def firstDifference(a: InputStream, b: InputStream, length: Int): Int = {
@@ -56,24 +65,24 @@ object PrimeDiffUtils {
         a = at
         b = bt
       } else {
-        val distInB =  bt.indexWhere(_._1 == ah._1)
-        val distInA =at.indexWhere(_._1 == bh._1)
+        val distInB = bt.indexWhere(_._1 == ah._1)
+        val distInA = at.indexWhere(_._1 == bh._1)
 
         if (distInB < 0) {
           //Not in B, so deleted
-          diff +:= ("REMOVE", ah._2, ah._1)
+          diff +:=("REMOVE", ah._2, ah._1)
           a = at
         } else if (distInA < 0) {
           //Not in A, so added
-          diff +:= ("ADD", bh._2, bh._1)
+          diff +:=("ADD", bh._2, bh._1)
           b = bt
         } else if (distInB < distInA) {
           //(probably) not in A, so added
-          diff +:= ("ADD", bh._2, bh._1)
+          diff +:=("ADD", bh._2, bh._1)
           b = bt
         } else {
           //Not in B, so deleted
-          diff +:= ("REMOVE", ah._2, ah._1)
+          diff +:=("REMOVE", ah._2, ah._1)
           a = at
         }
       }
@@ -82,17 +91,33 @@ object PrimeDiffUtils {
     while (a.nonEmpty) {
       //Not in B, so deleted
       val ah :: at = a
-      diff +:= ("REMOVE", ah._2, ah._1)
+      diff +:=("REMOVE", ah._2, ah._1)
       a = at
     }
 
     while (b.nonEmpty) {
       //Not in B, so deleted
       val bh :: bt = b
-      diff +:= ("ADD", bh._2, bh._1)
+      diff +:=("ADD", bh._2, bh._1)
       b = bt
     }
 
     diff.reverse
+  }
+
+  def recursiveJsonDiff(a: ObjectNode, b: ObjectNode): ObjectNode = {
+    val res = PrimeJacksonMapper.mapper.createObjectNode()
+    for (child <- b.fieldNames()) {
+      val childa = a.get(child)
+      val childb = b.get(child)
+      if (childa != childb) {
+        if (b.get(child).isObject) {
+          res.set(child, recursiveJsonDiff(a.get(child).asInstanceOf[ObjectNode], b.get(child).asInstanceOf[ObjectNode]))
+        } else {
+          res.set(child, childb)
+        }
+      }
+    }
+    res
   }
 }

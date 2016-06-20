@@ -7,10 +7,13 @@ import java.util
 import java.util.Base64
 import java.util.zip.{Deflater, DeflaterOutputStream, InflaterOutputStream}
 
+import com.fasterxml.jackson.databind.JsonNode
+import com.fasterxml.jackson.databind.node.ObjectNode
 import com.google.diff.diff_match_patch
 import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.iso.{FST, FileDirectory, GCIsoHeaders}
+import com.pwootage.metroidprime.formats.mrea.MREA
 import com.pwootage.metroidprime.formats.pak.{PAKFile, Resource}
 import com.pwootage.metroidprime.utils._
 import org.anarres.lzo._
@@ -25,10 +28,9 @@ class Differ(quieter: Boolean) {
 
   def dif(file1Path: String, file2Path: String, destDir: String): Unit = {
     Logger.info("Things to note:")
-    Logger.info("This diff currently only diffs:")
-    Logger.info("- MREA/SCLY (in PAKs)")
-    Logger.info("- Binary file diffs in PAKs")
-    Logger.info("- File list diffs in PAKs")
+    Logger.info("This diff won't handle:")
+    Logger.info("- Added/removed FST files (modified is fine):")
+    Logger.info("- A couple edge cases (check for warnings (yellow) in your output and file an issue if there are none)")
 
     val file1 = Paths.get(file1Path)
     val file2 = Paths.get(file2Path)
@@ -120,7 +122,7 @@ class Differ(quieter: Boolean) {
         val dir2Child = dir2ChildOpt.get
         val len = dir1Child.length
         if (dir1Child.name.toLowerCase.endsWith(".pak")) {
-          Logger.info("Found PAK file; diffing it")
+          Logger.progressResetLine(s"Diffing ${dir1Child.name} as a PAK")
           file1.seek(dir1Child.offset)
           file2.seek(dir2Child.offset)
           difPaksFromRAFFromCurrentOffset(version.get, dir1Child.name, file1, file2, dest)
@@ -224,7 +226,76 @@ class Differ(quieter: Boolean) {
           //Files are different
 
           if (resource2.idStr.endsWith(".MREA")) {
-            Logger.warning("Not diffing .MREA (TODO)")
+            val mreaName = resource2.idStr
+            val mrea1 = new MREA
+            val mrea2 = new MREA
+
+            val bout1 = new ByteArrayOutputStream()
+            val bout2 = new ByteArrayOutputStream()
+            readResourceToStream(primeVersion, pak1start.toInt, file1, resource1, bout1)
+            readResourceToStream(primeVersion, pak2start.toInt, file2, resource2, bout2)
+
+            mrea1.read(bout1.toByteArray)
+            mrea2.read(bout2.toByteArray)
+
+            val scly1 = mrea1.parseSCLY
+            val scly2 = mrea2.parseSCLY
+
+            val scly1Objects = scly1.layers.flatMap(_.objects)
+            val scly2Objects = scly2.layers.flatMap(_.objects)
+
+            val scly1ObjectsById = Map(scly1Objects.map(obj => (obj.id, obj)):_*)
+            val scly2ObjectsById = Map(scly2Objects.map(obj => (obj.id, obj)):_*)
+
+            val removedIds = scly1Objects.map(_.id).toSet -- scly2Objects.map(_.id)
+            for (id <- removedIds) {
+              val obj = scly1ObjectsById(id)
+              val patch = ScriptObjectPatch(mreaName, obj.typeString, id)
+              patch.remove = Some(true)
+              patch.description = Some(s"Remove script object id $id")
+              patches +:= patch
+            }
+
+            val adddedIds = scly2Objects.map(_.id).toSet -- scly1Objects.map(_.id)
+            for (id <- adddedIds) {
+              val obj = scly2ObjectsById(id)
+              val patchJson = PrimeJacksonMapper.mapper.createObjectNode()
+              for (prop <- obj.toTemplate.properties) {
+                patchJson.set(prop.ID, prop.valueAsJson)
+              }
+              val patch = ScriptObjectPatch(mreaName, obj.typeString, id)
+              patch.layer = Some(scly2.layers.indexWhere(_.objects.exists(_.id == id)))
+              patch.add = Some(true)
+              patch.objectPatch = Some(patchJson)
+              patch.description = Some(s"Add script object id $id (${obj.typeString})")
+              patches +:= patch
+            }
+
+            val modifiedIds = scly2Objects.map(_.id).toSet -- adddedIds
+            for (id <- modifiedIds) {
+              val obj1 = scly1ObjectsById(id)
+              val obj2 = scly2ObjectsById(id)
+
+              if (PrimeDiffUtils.firstDifference(obj1.binaryData, obj2.binaryData) >= 0) {
+                val patchJson1 = PrimeJacksonMapper.mapper.createObjectNode()
+                val patchJson2 = PrimeJacksonMapper.mapper.createObjectNode()
+                for (prop <- obj1.toTemplate.properties) {
+                  patchJson1.set(prop.ID, prop.valueAsJson)
+                }
+                for (prop <- obj2.toTemplate.properties) {
+                  patchJson2.set(prop.ID, prop.valueAsJson)
+                }
+
+                val realJson = PrimeDiffUtils.recursiveJsonDiff(patchJson1, patchJson2)
+                if (realJson.size() > 0) {
+                  val patch = ScriptObjectPatch(mreaName, obj2.typeString, id)
+                  patch.objectPatch = Some(realJson)
+                  patch.description = Some(s"Patch script object id $id (${obj2.typeString})")
+                  patches +:= patch
+                }
+              }
+            }
+
           } else {
             //Binary diff
             val bout1 = new ByteArrayOutputStream()
@@ -233,7 +304,11 @@ class Differ(quieter: Boolean) {
             readResourceToStream(primeVersion, pak1start.toInt, file1, resource1, bout1)
             readResourceToStream(primeVersion, pak2start.toInt, file2, resource2, bout2)
 
-            patches +:= createBinaryDiffForBytes(primeVersion, resource2.idStr, dest, bout1.toByteArray, bout2.toByteArray)
+            val arr1 = bout1.toByteArray
+            val arr2 = bout2.toByteArray
+            if (PrimeDiffUtils.firstDifference(arr1, arr2) >= 0) { //Make sure it wasn't just a change in compression
+              patches +:= createBinaryDiffForBytes(primeVersion, resource2.idStr, dest, arr1, arr2)
+            }
           }
         }
       }

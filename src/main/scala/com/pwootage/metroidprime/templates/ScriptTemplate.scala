@@ -34,4 +34,5 @@ class ScriptTemplate extends XmlSerializable with BinarySerializable {
       prop.read(f)
     }
   }
+
 }

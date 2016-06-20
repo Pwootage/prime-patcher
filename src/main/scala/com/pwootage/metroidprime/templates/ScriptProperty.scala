@@ -1,15 +1,18 @@
 package com.pwootage.metroidprime.templates
 
+
 import com.fasterxml.jackson.annotation._
 import com.fasterxml.jackson.databind.JsonNode
+import com.fasterxml.jackson.databind.node._
 import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.templates.XMLUtils._
-import com.pwootage.metroidprime.utils.DataTypeConversion
+import com.pwootage.metroidprime.utils.{DataTypeConversion, PrimeJacksonMapper}
+import jdk.nashorn.internal.runtime.regexp.joni.ast.StringNode
 
+import scala.collection.JavaConversions._
 import scala.collection.mutable
 import scala.xml.NodeSeq
-import scala.collection.JavaConversions._
 
 object ScriptProperty {
   def determineType(n: NodeSeq): ScriptProperty[_] = {
@@ -57,6 +60,8 @@ abstract class ScriptProperty[T] extends XmlSerializable with BinarySerializable
 
   def applyPatch(v: JsonNode): Unit
 
+  def valueAsJson: JsonNode
+
   override def fromXml(v: NodeSeq): Unit = {
     ID = (v \ "@ID").text
     name = (v \ "@name").headOption.map(_.text)
@@ -74,6 +79,10 @@ abstract class ScriptProperty[T] extends XmlSerializable with BinarySerializable
   def shouldCook = cookPref != ScriptPropertyCookPreference.NEVER
 
   override def toString = s"${getClass.getSimpleName}($ID, $name, $description)"
+
+  def valueOrDefaultValue: T = {
+    value.orElse(defaultDefault).get
+  }
 
   def copy(): ScriptProperty[T] = clone().asInstanceOf[ScriptProperty[T]]
 }
@@ -113,36 +122,42 @@ class ByteScriptProperty extends ScriptProperty[Byte] with NumericScriptProperty
   override def fromString(v: String): Byte = DataTypeConversion.stringToLong(v).toByte //Make sure we support unsigned
 
   override def write(f: PrimeDataFile): Unit = {
-    if (shouldCook) f.write8(value.orElse(defaultDefault).get)
+    if (shouldCook) f.write8(valueOrDefaultValue)
   }
 
   override def read(f: PrimeDataFile): Unit = {
     if (shouldCook) value = Some(f.read8())
   }
+
+  override def valueAsJson: JsonNode = TextNode.valueOf("0x" + (valueOrDefaultValue & 0xFFL).toHexString)
 }
 
 class ShortScriptProperty extends ScriptProperty[Short] with NumericScriptProperty[Short] {
   override def fromString(v: String): Short = DataTypeConversion.stringToLong(v).toShort //Make sure we support unsigned
 
   override def write(f: PrimeDataFile): Unit = {
-    if (shouldCook) f.write16(value.orElse(defaultDefault).get)
+    if (shouldCook) f.write16(valueOrDefaultValue)
   }
 
   override def read(f: PrimeDataFile): Unit = {
     if (shouldCook) value = Some(f.read16())
   }
+
+  override def valueAsJson: JsonNode = TextNode.valueOf("0x" + (valueOrDefaultValue & 0xFFFFL).toHexString)
 }
 
 class IntScriptProperty extends ScriptProperty[Int] with NumericScriptProperty[Int] {
   override def fromString(v: String): Int = DataTypeConversion.stringToLong(v).toInt //Make sure we support unsigned
 
   override def write(f: PrimeDataFile): Unit = {
-    if (shouldCook) f.write32(value.orElse(defaultDefault).get)
+    if (shouldCook) f.write32(valueOrDefaultValue)
   }
 
   override def read(f: PrimeDataFile): Unit = {
     if (shouldCook) value = Some(f.read32())
   }
+
+  override def valueAsJson: JsonNode = TextNode.valueOf("0x" + (valueOrDefaultValue & 0xFFFFFFFFL).toHexString)
 }
 
 class CharacterScriptProperty extends ScriptProperty[CharacterScriptPropertyValue] {
@@ -151,23 +166,28 @@ class CharacterScriptProperty extends ScriptProperty[CharacterScriptPropertyValu
   override def defaultDefault: Option[CharacterScriptPropertyValue] = Some(new CharacterScriptPropertyValue)
 
   override def write(f: PrimeDataFile): Unit = {
-    if (shouldCook) value.orElse(defaultDefault).get.write(f)
+    if (shouldCook) valueOrDefaultValue.write(f)
   }
 
   override def read(f: PrimeDataFile): Unit = {
     if (shouldCook) {
       value = Some(new CharacterScriptPropertyValue)
-      value.orElse(defaultDefault).get.read(f)
+      valueOrDefaultValue.read(f)
     }
   }
+
   override def applyPatch(v: JsonNode): Unit = {
     if (value.isEmpty) value = defaultDefault
 
     if (v.has("animANCS")) {
       val ancs = v.get("animANCS").asText
-      if (!ancs.endsWith(".ANCS")) throw new IllegalArgumentException(s"Must provide ANCS to anim (got $ancs)")
-      val (id, typ) = DataTypeConversion.strResourceToIdAndType(ancs)
-      value.get.animANCS = id
+      if (ancs.contains('.')) {
+        if (!ancs.endsWith(".ANCS")) throw new IllegalArgumentException(s"Must provide ANCS to anim (got $ancs)")
+        val (id, typ) = DataTypeConversion.strResourceToIdAndType(ancs)
+        value.get.animANCS = id
+      } else {
+        value.get.animANCS = DataTypeConversion.stringToLong(ancs).toInt
+      }
     }
 
     if (v.has("character")) {
@@ -178,17 +198,28 @@ class CharacterScriptProperty extends ScriptProperty[CharacterScriptPropertyValu
       value.get.defaultAnim = DataTypeConversion.stringToLong(v.get("defaultAnim").asText).toInt
     }
   }
+
+  override def valueAsJson: JsonNode = {
+    val v = valueOrDefaultValue
+    val node = PrimeJacksonMapper.mapper.createObjectNode()
+    node.set("animANCS", TextNode.valueOf("0x" + (v.animANCS & 0xFFFFFFFFL).toHexString))
+    node.set("character", TextNode.valueOf("0x" + (v.character & 0xFFFFFFFFL).toHexString))
+    node.set("defaultAnim", TextNode.valueOf("0x" + (v.defaultAnim & 0xFFFFFFFFL).toHexString))
+    node
+  }
 }
 
 class FloatScriptProperty extends ScriptProperty[Float] with NumericScriptProperty[Float] {
   override def fromString(v: String): Float = v.toFloat
 
   override def write(f: PrimeDataFile): Unit = {
-    if (shouldCook) f.writeFloat(value.orElse(defaultDefault).get)
+    if (shouldCook) f.writeFloat(valueOrDefaultValue)
   }
   override def read(f: PrimeDataFile): Unit = {
     if (shouldCook) value = Some(f.readFloat())
   }
+
+  override def valueAsJson: JsonNode = FloatNode.valueOf(valueOrDefaultValue)
 }
 
 class Vector3FScriptProperty extends ScriptProperty[Vector3FScriptPropertyValue] {
@@ -197,7 +228,7 @@ class Vector3FScriptProperty extends ScriptProperty[Vector3FScriptPropertyValue]
   override def defaultDefault: Option[Vector3FScriptPropertyValue] = Some(new Vector3FScriptPropertyValue("0,0,0"))
 
   override def write(f: PrimeDataFile): Unit = {
-    if (shouldCook) value.orElse(defaultDefault).get.write(f)
+    if (shouldCook) valueOrDefaultValue.write(f)
   }
 
   override def read(f: PrimeDataFile): Unit = {
@@ -219,6 +250,14 @@ class Vector3FScriptProperty extends ScriptProperty[Vector3FScriptPropertyValue]
       value.get.z = v.get("z").asText.toFloat
     }
   }
+
+  override def valueAsJson: JsonNode = {
+    val v = valueOrDefaultValue
+    PrimeJacksonMapper.mapper.createObjectNode()
+      .put("x", v.x)
+      .put("y", v.y)
+      .put("z", v.z)
+  }
 }
 
 class ColorScriptProperty extends ScriptProperty[ColorScriptPropertyValue] {
@@ -227,7 +266,7 @@ class ColorScriptProperty extends ScriptProperty[ColorScriptPropertyValue] {
   override def defaultDefault: Option[ColorScriptPropertyValue] = Some(new ColorScriptPropertyValue("1,1,1,1"))
 
   override def write(f: PrimeDataFile): Unit = {
-    if (shouldCook) value.orElse(defaultDefault).get.write(f)
+    if (shouldCook) valueOrDefaultValue.write(f)
   }
 
   override def read(f: PrimeDataFile): Unit = {
@@ -252,6 +291,15 @@ class ColorScriptProperty extends ScriptProperty[ColorScriptPropertyValue] {
       value.get.b = v.get("a").asText.toFloat
     }
   }
+
+  override def valueAsJson: JsonNode = {
+    val v = valueOrDefaultValue
+    PrimeJacksonMapper.mapper.createObjectNode()
+      .put("r", v.r)
+      .put("g", v.g)
+      .put("b", v.b)
+      .put("a", v.a)
+  }
 }
 
 class FileScriptProperty extends ScriptProperty[Int] {
@@ -271,20 +319,27 @@ class FileScriptProperty extends ScriptProperty[Int] {
   }
 
   override def write(f: PrimeDataFile): Unit = {
-    if (shouldCook) f.write32(value.orElse(defaultDefault).get)
+    if (shouldCook) f.write32(valueOrDefaultValue)
   }
   override def read(f: PrimeDataFile): Unit = {
     if (shouldCook) value = Some(f.read32())
   }
   override def applyPatch(v: JsonNode): Unit = {
     val file = v.asText
-    val (id, typ) = DataTypeConversion.strResourceToIdAndType(file)
-    val typString = DataTypeConversion.intContainingCharsAsStr(typ)
-    if (!extensions.contains(typString)) {
-      throw new IllegalArgumentException(s"Format not allowed (allowed ${extensions.mkString(",")}, got $file)")
+    if (file.contains('.')) {
+      val (id, typ) = DataTypeConversion.strResourceToIdAndType(file)
+      val typString = DataTypeConversion.intContainingCharsAsStr(typ)
+      if (!extensions.contains(typString)) {
+        throw new IllegalArgumentException(s"Format not allowed (allowed ${extensions.mkString(",")}, got $file)")
+      }
+      value = Some(id)
+    } else {
+      value = Some(DataTypeConversion.stringToLong(file).toInt)
     }
-    value = Some(id)
   }
+
+  //TODO: multiple extensions?
+  override def valueAsJson: JsonNode = TextNode.valueOf("0x" + (valueOrDefaultValue & 0xFFFFFFFFL).toHexString)
 }
 
 class StringScriptProperty extends ScriptProperty[String] {
@@ -293,7 +348,7 @@ class StringScriptProperty extends ScriptProperty[String] {
   override def defaultDefault: Option[String] = Some("")
 
   override def write(f: PrimeDataFile): Unit = {
-    if (shouldCook) f.writeString(value.orElse(defaultDefault).get)
+    if (shouldCook) f.writeString(valueOrDefaultValue)
   }
 
   override def read(f: PrimeDataFile): Unit = {
@@ -303,6 +358,8 @@ class StringScriptProperty extends ScriptProperty[String] {
   override def applyPatch(v: JsonNode): Unit = {
     value = Some(v.asText())
   }
+
+  override def valueAsJson: JsonNode = TextNode.valueOf(valueOrDefaultValue)
 }
 
 class BooleanScriptProperty extends ScriptProperty[Boolean] {
@@ -311,7 +368,7 @@ class BooleanScriptProperty extends ScriptProperty[Boolean] {
   override def defaultDefault: Option[Boolean] = Some(false)
 
   override def write(f: PrimeDataFile): Unit = {
-    if (shouldCook) f.writeBool(value.orElse(defaultDefault).get)
+    if (shouldCook) f.writeBool(valueOrDefaultValue)
   }
 
   override def read(f: PrimeDataFile): Unit = {
@@ -321,6 +378,8 @@ class BooleanScriptProperty extends ScriptProperty[Boolean] {
   override def applyPatch(v: JsonNode): Unit = {
     value = Some(v.asBoolean())
   }
+
+  override def valueAsJson: JsonNode = if (valueOrDefaultValue) BooleanNode.TRUE else BooleanNode.FALSE
 }
 
 abstract class TemplatedScriptProperty[T] extends ScriptProperty[T] {
@@ -391,6 +450,14 @@ class StructScriptProperty extends TemplatedScriptProperty[StructScriptProperty]
       prop.applyPatch(v.get(field))
     }
   }
+
+  override def valueAsJson: JsonNode = {
+    val node = PrimeJacksonMapper.mapper.createObjectNode()
+    for ((id, prop) <- properties) {
+      node.set(id, prop.valueAsJson)
+    }
+    node
+  }
 }
 
 class EnumScriptProperty extends TemplatedScriptProperty[Int] {
@@ -401,7 +468,7 @@ class EnumScriptProperty extends TemplatedScriptProperty[Int] {
   override def parseValue(node: NodeSeq): Int = DataTypeConversion.stringToLong(node.text).toInt
 
   override def write(f: PrimeDataFile): Unit = {
-    if (shouldCook) f.write32(value.orElse(defaultDefault).get)
+    if (shouldCook) f.write32(valueOrDefaultValue)
   }
 
   override def read(f: PrimeDataFile): Unit = {
@@ -411,6 +478,8 @@ class EnumScriptProperty extends TemplatedScriptProperty[Int] {
   override def applyPatch(v: JsonNode): Unit = {
     value = Some(DataTypeConversion.stringToLong(v.asText()).toInt)
   }
+
+  override def valueAsJson: JsonNode = TextNode.valueOf("0x" + (valueOrDefaultValue & 0xFFFFFFFF).toHexString)
 }
 
 class BitfieldScriptProperty extends TemplatedScriptProperty[Int] {
@@ -421,7 +490,7 @@ class BitfieldScriptProperty extends TemplatedScriptProperty[Int] {
   override def defaultDefault: Option[Int] = Some(0)
 
   override def write(f: PrimeDataFile): Unit = {
-    if (shouldCook) f.write32(value.orElse(defaultDefault).get)
+    if (shouldCook) f.write32(valueOrDefaultValue)
   }
 
   override def read(f: PrimeDataFile): Unit = {
@@ -431,6 +500,8 @@ class BitfieldScriptProperty extends TemplatedScriptProperty[Int] {
   override def applyPatch(v: JsonNode): Unit = {
     value = Some(DataTypeConversion.stringToLong(v.asText()).toInt)
   }
+
+  override def valueAsJson: JsonNode = TextNode.valueOf("0x" + (valueOrDefaultValue & 0xFFFFFFFF).toHexString)
 }
 
 class ArrayScriptProperty extends TemplatedScriptProperty[Array[StructScriptProperty]] {
@@ -457,7 +528,7 @@ class ArrayScriptProperty extends TemplatedScriptProperty[Array[StructScriptProp
 
   override def write(f: PrimeDataFile): Unit = {
     if (shouldCook) {
-      val actualValue: Array[StructScriptProperty] = value.orElse(defaultDefault).get
+      val actualValue: Array[StructScriptProperty] = valueOrDefaultValue
       f.write32(actualValue.length)
       for (v <- actualValue; prop <- v.properties) {
         prop._2.write(f)
@@ -469,7 +540,7 @@ class ArrayScriptProperty extends TemplatedScriptProperty[Array[StructScriptProp
     if (shouldCook) {
       val count = f.read32()
       value = Some(new Array[StructScriptProperty](count))
-      val actualValue: Array[StructScriptProperty] = value.orElse(defaultDefault).get
+      val actualValue: Array[StructScriptProperty] = valueOrDefaultValue
       for (i <- actualValue.indices) {
         val struct = new StructScriptProperty
         struct.properties = mutable.LinkedHashMap(properties.map(prop => prop._1 -> prop._2.copy()).toSeq: _*)
@@ -480,6 +551,7 @@ class ArrayScriptProperty extends TemplatedScriptProperty[Array[StructScriptProp
   }
 
   override def applyPatch(v: JsonNode): Unit = ???
+  override def valueAsJson: JsonNode = ???
 }
 
 class GameVersion extends XmlSerializable {
