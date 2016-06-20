@@ -11,7 +11,7 @@ Working Features:
 The latest release (updated more infrequently than the latest build below) can be found under the github releases tab
 
 ![build status](https://circleci.com/gh/Pwootage/prime-patcher.png?circle-token=0cc2559ae2175225d34e6aeaf08ca37446bb7dec)
-| [Latest Successful Build](https://circleci.com/api/v1/project/Pwootage/prime-patcher/latest/artifacts/0//home/ubuntu/prime-patcher/build/libs/patcher-0.1-SNAPSHOT.jar?branch=master&filter=successful)
+| [Latest Successful Build](https://circleci.com/api/v1/project/Pwootage/prime-patcher/latest/artifacts/0//home/ubuntu/prime-patcher/build/libs/patcher-0.1.1-SNAPSHOT.jar?branch=master&filter=successful)
 | [CircleCI](https://circleci.com/gh/Pwootage/prime-patcher)
 
 # Credits
