@@ -36,8 +36,8 @@ object PrimeDiffUtils {
     val buff2 = new Array[Byte](1024)
     while (i < length) {
       val toRead = Math.min(buff1.length, length - i)
-      if (a.read(buff1, 0, toRead) != toRead) throw new IOException("Read too few bytes from a")
-      if (b.read(buff2, 0, toRead) != toRead) throw new IOException("Read too few bytes from b")
+      if (a.read(buff1, 0, toRead) != toRead) return i
+      if (b.read(buff2, 0, toRead) != toRead) return i
       for (j <- 0 until toRead) {
         if (buff1(j) != buff2(j)) {
           return i
