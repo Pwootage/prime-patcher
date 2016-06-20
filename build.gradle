@@ -1,6 +1,6 @@
 import proguard.gradle.ProGuardTask
 
-group 'com.pwootage.metroidprime.randomizer'
+group 'com.pwootage.metroidprime.patcher'
 version '0.1-SNAPSHOT'
 
 apply plugin: 'java'
