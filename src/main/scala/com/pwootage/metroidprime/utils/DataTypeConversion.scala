@@ -35,12 +35,12 @@ object DataTypeConversion {
 
   def intPrimeResourceNameToStr(id: Int, typ: Int) = intToPaddedHexString(id) + "." + intContainingCharsAsStr(typ)
 
-  def strResourceToIdAndType(idStr: String) = """([0-9a-f]{8})\.([A-Z]{4})""".r.findFirstMatchIn(idStr) match {
+  def strResourceToIdAndType(idStr: String) = """([0-9a-f]{8})\.([A-Z0-9]{4})""".r.findFirstMatchIn(idStr) match {
     case Some(m) =>
       val idStr = m.group(1)
       val typStr = m.group(2)
       (java.lang.Long.parseLong(idStr, 16).toInt, strToIntContainingChars(typStr))
-    case siNone => throw new IllegalArgumentException(s"Invalid file ID $idStr")
+    case None => throw new IllegalArgumentException(s"Invalid file ID $idStr")
   }
 
   def stringToLong(str: String): Long = {

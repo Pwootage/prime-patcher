@@ -145,8 +145,6 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
         val resourceInput = Files.newInputStream(resourcePath, StandardOpenOption.READ)
 
         if (realList.primeVersion == PrimeVersion.PRIME_1) {
-          //Manually add header
-          //          targetRaf.writeShort(0x78DA)
           //Compress
           val compressedOut = new DeflaterOutputStream(new RandomAccessFileOutputStream(targetRaf), new Deflater(9, false))
           copyBytes(resourceInput, decompressedSize, compressedOut)
@@ -157,19 +155,22 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
           while (compressedSoFar < decompressedSize) {
             //Setup
             val compressor = LzoLibrary.getInstance().newCompressor(LzoAlgorithm.LZO1X, LzoConstraint.COMPRESSION)
-            val outByteStream = new ByteArrayOutputStream()
-            val compressedOuputStream = new LzoOutputStream(outByteStream, compressor)
             val toCompress = Math.min(0x4000, decompressedSize - compressedSoFar)
+            val inBytes = new ByteArrayOutputStream(toCompress)
+            copyBytes(resourceInput, toCompress, inBytes)
 
             //Compress
-            copyBytes(resourceInput, toCompress, compressedOuputStream)
-            compressedOuputStream.flush()
-            compressedSoFar += toCompress
+            val outBuff = new Array[Byte](0x8000)
+            val outLen = new lzo_uintp
+            val code = compressor.compress(inBytes.toByteArray, 0, toCompress, outBuff, 0, outLen)
+            if (code != LzoTransformer.LZO_E_OK) {
+              throw new IOException(compressor.toErrorString(code))
+            }
 
             //Output
-            val outBytes = outByteStream.toByteArray
-            targetRaf.writeShort(outBytes.length)
-            targetRaf.write(outBytes)
+            targetRaf.writeShort(outLen.value)
+            copyBytes(new ByteArrayInputStream(outBuff), outLen.value, new RandomAccessFileOutputStream(targetRaf))
+            compressedSoFar += toCompress
           }
           //Done compressing
         } else {
