@@ -1,12 +1,13 @@
 package com.pwootage.metroidprime.formats.mrea
 
-import java.io.{ByteArrayInputStream, DataInputStream}
+import java.io.{ByteArrayInputStream, ByteArrayOutputStream, DataInputStream, IOException}
 
 import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.mrea.collision.Collision
 import com.pwootage.metroidprime.formats.scly.SCLY
+import com.pwootage.metroidprime.utils.IOUtils
 
 object MREA {
   val MAGIC = 0xDEADBEEF
@@ -130,6 +131,7 @@ class MREA extends BinarySerializable {
 
       val sectionSizes = f.readArrayWithCount(sectionCount, _.read32)
       f.readPaddingTo(32)
+      rawSections = new Array(sectionCount)
 
       //Decompress the compressed blocks
       println("test")
@@ -148,12 +150,37 @@ class MREA extends BinarySerializable {
         }
         f.readBytes(padding)
 
+        val sectionStart = f.pos
         val unprocessedBytes = f.readBytes(toRead)
+        val decompressedByteStream = new ByteArrayOutputStream()
 
-//        val decompressedData = decompress(unprocessedBytes, header)
+        if (header.compressedSize == 0) {
+          IOUtils.copyBytes(new ByteArrayInputStream(unprocessedBytes), header.uncompressedSize, decompressedByteStream)
+        } else {
+          IOUtils.decompressSegmentedLZOStream(new ByteArrayInputStream(unprocessedBytes), decompressedByteStream, header.uncompressedSize)
+        }
+
+        val decompressedBytes = decompressedByteStream.toByteArray
+        if (decompressedBytes.length != header.uncompressedSize) {
+          throw new IOException(s"Decompressed block is wrong size ${decompressedBytes.length} (expected ${header.uncompressedSize})")
+        }
+        var currentOffset = 0
+        for (blockSection <- 0 until header.dataSectionCount) {
+          val currentSectionSize = sectionSizes(currentSection)
+          rawSections(currentSection) = decompressedBytes.slice(currentOffset, currentOffset + currentSectionSize)
+          currentOffset += currentSectionSize
+          currentSection += 1
+        }
+        if (currentOffset != header.uncompressedSize) {
+          throw new IOException(s"Decompressed did not get completely used $currentOffset (expected ${header.uncompressedSize})")
+        }
       }
 
-      println("test")
+      if (currentSection != sectionCount) {
+        throw new IOException(s"Failed to read enough sections $currentSection (expected $sectionCount)")
+      }
+
+      //Done with Prime 2 specifics
     }
   }
 

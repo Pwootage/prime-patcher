@@ -34,26 +34,32 @@ object IOUtils {
     val din = new DataInputStream(resourceInput)
     var decompressedSoFar = 0
     while (decompressedSoFar < decompressedSize) {
-      //Input
-      val inBytes = new Array[Byte](din.readUnsignedShort())
-      din.readFully(inBytes)
-      val toRead = Math.min(0x4000, decompressedSize - decompressedSoFar)
-      val outBytes = new Array[Byte](toRead)
+      val size = din.readShort()
+      if (size < 0) {
+        copyBytes(din, -size, out)
+        decompressedSoFar += -size
+      } else {
+        //Input
+        val inBytes = new Array[Byte](size)
+        din.readFully(inBytes)
+        val toRead = Math.min(0x4000, decompressedSize - decompressedSoFar)
+        val outBytes = new Array[Byte](toRead)
 
-      //Decompress/verify
-      val decompressor = LzoLibrary.getInstance().newDecompressor(LzoAlgorithm.LZO1X, LzoConstraint.COMPRESSION)
-      val outLen = new lzo_uintp
-      val code = decompressor.decompress(inBytes, 0, inBytes.length, outBytes, 0, outLen)
-      if (code != LzoTransformer.LZO_E_OK) {
-        throw new IOException(decompressor.toErrorString(code))
-      }
-      if (outLen.value != toRead) {
-        throw new IOException(s"Read incorrect number of bytes: $outLen")
-      }
+        //Decompress/verify
+        val decompressor = LzoLibrary.getInstance().newDecompressor(LzoAlgorithm.LZO1X, LzoConstraint.COMPRESSION)
+        val outLen = new lzo_uintp
+        val code = decompressor.decompress(inBytes, 0, inBytes.length, outBytes, 0, outLen)
+        if (code != LzoTransformer.LZO_E_OK) {
+          throw new IOException(decompressor.toErrorString(code))
+        }
+        if (outLen.value != toRead) {
+          throw new IOException(s"Read incorrect number of bytes: $outLen")
+        }
 
-      //Output
-      out.write(outBytes)
-      decompressedSoFar += toRead
+        //Output
+        out.write(outBytes)
+        decompressedSoFar += outLen.value
+      }
     }
   }
 
