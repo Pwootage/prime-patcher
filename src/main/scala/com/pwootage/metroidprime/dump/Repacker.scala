@@ -10,7 +10,7 @@ import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.iso.{FST, FileDirectory, FileEntry, GCIsoHeaders}
 import com.pwootage.metroidprime.formats.pak.{BasicResourceList, PAKFile}
-import com.pwootage.metroidprime.utils.{DataTypeConversion, Logger, PrimeJacksonMapper, RandomAccessFileOutputStream}
+import com.pwootage.metroidprime.utils._
 import org.anarres.lzo._
 
 class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
@@ -147,32 +147,11 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
         if (realList.primeVersion == PrimeVersion.PRIME_1) {
           //Compress
           val compressedOut = new DeflaterOutputStream(new RandomAccessFileOutputStream(targetRaf), new Deflater(9, false))
-          copyBytes(resourceInput, decompressedSize, compressedOut)
+          IOUtils.copyBytes(resourceInput, decompressedSize, compressedOut)
           compressedOut.finish()
 
         } else if (realList.primeVersion == PrimeVersion.PRIME_2) {
-          var compressedSoFar = 0
-          while (compressedSoFar < decompressedSize) {
-            //Setup
-            val compressor = LzoLibrary.getInstance().newCompressor(LzoAlgorithm.LZO1X, LzoConstraint.COMPRESSION)
-            val toCompress = Math.min(0x4000, decompressedSize - compressedSoFar)
-            val inBytes = new ByteArrayOutputStream(toCompress)
-            copyBytes(resourceInput, toCompress, inBytes)
-
-            //Compress
-            val outBuff = new Array[Byte](0x8000)
-            val outLen = new lzo_uintp
-            val code = compressor.compress(inBytes.toByteArray, 0, toCompress, outBuff, 0, outLen)
-            if (code != LzoTransformer.LZO_E_OK) {
-              throw new IOException(compressor.toErrorString(code))
-            }
-
-            //Output
-            targetRaf.writeShort(outLen.value)
-            copyBytes(new ByteArrayInputStream(outBuff), outLen.value, new RandomAccessFileOutputStream(targetRaf))
-            compressedSoFar += toCompress
-          }
-          //Done compressing
+          IOUtils.compressLZOSegmentedStream(new RandomAccessFileOutputStream(targetRaf), decompressedSize, resourceInput)
         } else {
           throw new Error("I did something wrong D:")
         }
@@ -192,7 +171,7 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
         //Write uncompressed file
         targetRaf.seek(resourceStart)
         val resourceInput = Files.newInputStream(resourcePath, StandardOpenOption.READ)
-        copyBytes(resourceInput, decompressedSize, new RandomAccessFileOutputStream(targetRaf))
+        IOUtils.copyBytes(resourceInput, decompressedSize, new RandomAccessFileOutputStream(targetRaf))
         resourceInput.close()
       }
 
@@ -216,20 +195,6 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
 
     targetRaf.seek(pakEnd)
     Logger.info("Finished packing PAK.")
-  }
-
-  private def copyBytes(in: InputStream, len: Int, out: OutputStream): Unit = {
-    val buff = new Array[Byte](16 * 1026) //16k blocks
-    var totalRead = 0
-    while (totalRead < len) {
-      val toRead = Math.min(buff.length, len - totalRead)
-      val read = in.read(buff, 0, toRead)
-      if (read < 0) {
-        throw new IOException("Attempt to read too many bytes")
-      }
-      out.write(buff, 0, read)
-      totalRead += read
-    }
   }
 
   private def isCompressedType(size: Int, typ: Int) = DataTypeConversion.intContainingCharsAsStr(typ) match {
@@ -310,7 +275,7 @@ class Repacker(targetFile: String, force: Boolean, quieter: Boolean) {
 
         Logger.progressResetLine(s"Writing ${file.name} @ ${file.offset} (${file.length} bytes)")
         val fin = Files.newInputStream(srcFile)
-        copyBytes(fin, file.length, new RandomAccessFileOutputStream(targetRaf))
+        IOUtils.copyBytes(fin, file.length, new RandomAccessFileOutputStream(targetRaf))
       }
 
       new PrimeDataFile(Some(targetRaf), Some(targetRaf))

@@ -152,23 +152,14 @@ object Main {
   }
 
   def test(): Unit = {
-    val a = Array(
-      "a",
-      "c",
-      "d",
-      "e",
-      "b"
-    )
-    val b = Array(
-      "a",
-      "b",
-      "c",
-      "e",
-      "d"
-    )
+    val inf = "out/62b0d67d.MREA"
+    val raf = new RandomAccessFile(inf, "r")
 
-    val diff = PrimeDiffUtils.generateDiff(a, b)
+    val pdf = new PrimeDataFile(Some(raf), Some(raf))
 
-    println(diff)
+    val mrea = new MREA
+    mrea.read(pdf)
+
+
   }
 }

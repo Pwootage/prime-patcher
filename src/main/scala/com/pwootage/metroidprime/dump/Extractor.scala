@@ -8,7 +8,7 @@ import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.iso.{FST, FileDirectory, GCIsoHeaders}
 import com.pwootage.metroidprime.formats.pak.PAKFile
-import com.pwootage.metroidprime.utils.{DataTypeConversion, Logger, PrimeJacksonMapper}
+import com.pwootage.metroidprime.utils._
 import org.anarres.lzo._
 
 class Extractor(targetDirectory: String, force: Boolean, extractPaks: Boolean, quieter: Boolean) {
@@ -140,26 +140,12 @@ class Extractor(targetDirectory: String, force: Boolean, extractPaks: Boolean, q
         raf.seek(file.offset + len)
       } else {
         val out = Files.newOutputStream(targetDir.resolve(file.name), StandardOpenOption.WRITE, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING)
-        copyBytes(raf, len, out)
+        IOUtils.copyBytes(raf, len, out)
         out.close()
       }
     }
 
     for (child <- dir.directoryChildren) recursivelyExtractFiles(version, raf, child, targetDir.resolve(child.name))
-  }
-
-  private def copyBytes(in: RandomAccessFile, len: Int, out: OutputStream): Unit = {
-    val buff = new Array[Byte](16 * 1026) //16k blocks
-    var totalRead = 0
-    while (totalRead < len) {
-      val toRead = Math.min(buff.length, len - totalRead)
-      val read = in.read(buff, 0, toRead)
-      if (read < 0) {
-        throw new IOException("Attempt to read too many bytes")
-      }
-      out.write(buff, 0, read)
-      totalRead += read
-    }
   }
 
   def shouldExtract(name: String): Boolean = {
@@ -202,7 +188,7 @@ class Extractor(targetDirectory: String, force: Boolean, extractPaks: Boolean, q
           if (primeVersion == PrimeVersion.PRIME_1) {
             val resourceStart = raf.getFilePointer
             val decompressedOut = new InflaterOutputStream(out)
-            copyBytes(raf, resource.size - 4, decompressedOut)
+            IOUtils.copyBytes(raf, resource.size - 4, decompressedOut)
             decompressedOut.flush()
             val resourceEnd = raf.getFilePointer
             val bytesRead = resourceEnd - resourceStart
@@ -210,35 +196,12 @@ class Extractor(targetDirectory: String, force: Boolean, extractPaks: Boolean, q
               throw new IOException("Read incorrect number of bytes from original file")
             }
           } else if (primeVersion == PrimeVersion.PRIME_2) {
-            var decompressedSoFar = 0
-            while (decompressedSoFar < decompressedSize) {
-              //Input
-              val inBytes = new Array[Byte](raf.readUnsignedShort())
-              raf.readFully(inBytes)
-              val toRead = Math.min(0x4000, decompressedSize - decompressedSoFar)
-              val outBytes = new Array[Byte](toRead)
-
-              //Decompress/verify
-              val decompressor = LzoLibrary.getInstance().newDecompressor(LzoAlgorithm.LZO1X, LzoConstraint.COMPRESSION)
-              val outLen = new lzo_uintp
-              val code = decompressor.decompress(inBytes, 0, inBytes.length, outBytes, 0, outLen)
-              if (code != LzoTransformer.LZO_E_OK) {
-                throw new IOException(decompressor.toErrorString(code))
-              }
-              if (outLen.value != toRead) {
-                throw new IOException(s"Read incorrect number of bytes: $outLen")
-              }
-
-              //Output
-              out.write(outBytes)
-              decompressedSoFar += toRead
-            }
-            //Done decompressing
+            IOUtils.decompressSegmentedLZOStream(new RandomAccessFileInputStream(raf), out, decompressedSize)
           } else {
             throw new Error("I did something wrong D:")
           }
         } else {
-          copyBytes(raf, resource.size, out)
+          IOUtils.copyBytes(raf, resource.size, out)
         }
         out.close()
       }

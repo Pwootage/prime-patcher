@@ -12,6 +12,8 @@ object MREA {
   val MAGIC = 0xDEADBEEF
   val VERSION_PRIME_1 = 0xF
   val VERSION_PRIME_2 = 0x19
+
+  val MAX_DECOMPRESSED_SIZE = 0x20000
 }
 
 class MREA extends BinarySerializable {
@@ -19,15 +21,21 @@ class MREA extends BinarySerializable {
   var version: Int = -1
   val transform = new Array[Float](12)
   var meshCount: Int = -1
+  var scriptLayerCount: Int = -1
   var sectionCount: Int = -1
   var geometrySection: Int = -1
   var SCLYSection: Int = -1
+  var generatedSCLYSection: Int = -1
   var collisionSection: Int = -1
   var unknownSection1: Int = -1
   var lightSection: Int = -1
   var VISISection: Int = -1
   var PATHSection: Int = -1
   var AROTsection: Int = -1
+  var unknownSection2: Int = -1
+  var portalAreaSection: Int = -1
+  var staticGeomSection: Int = -1
+
   var rawSections = Array[Array[Byte]]()
 
   override def write(f: PrimeDataFile): Unit = {
@@ -35,52 +43,117 @@ class MREA extends BinarySerializable {
     f.write32(version)
     f.writeArray(transform, _.writeFloat)
     f.write32(meshCount)
+    if (version == MREA.VERSION_PRIME_2) {
+      f.write32(scriptLayerCount)
+    }
     f.write32(sectionCount)
     f.write32(geometrySection)
     f.write32(SCLYSection)
+    if (version == MREA.VERSION_PRIME_2) {
+      f.write32(generatedSCLYSection)
+    }
     f.write32(collisionSection)
     f.write32(unknownSection1)
     f.write32(lightSection)
     f.write32(VISISection)
     f.write32(PATHSection)
-    f.write32(AROTsection)
-    f.writeArray(rawSections.map(_.length), _.write32)
-    f.writePaddingTo(32)
 
-    for (section <- rawSections) {
-      f.writeBytes(section)
+    if (version == MREA.VERSION_PRIME_1) {
+      f.write32(AROTsection)
+      f.writeArray(rawSections.map(_.length), _.write32)
       f.writePaddingTo(32)
+
+      for (section <- rawSections) {
+        f.writeBytes(section)
+        f.writePaddingTo(32)
+      }
+    }
+
+    if (version == MREA.VERSION_PRIME_2) {
+      f.write32(unknownSection2)
+      f.write32(portalAreaSection)
+      f.write32(staticGeomSection)
+
+      //Hm, we need to figure out this count prior to actually writing it
+      //      f.write32(compressedBlockCount)
+      f.write32(0).write32(0).write32(0) //padding
     }
   }
 
   override def read(f: PrimeDataFile): Unit = {
     magic = f.read32()
     version = f.read32()
-    f.readArray(transform, _.readFloat)
-    meshCount = f.read32()
-    sectionCount = f.read32()
-    geometrySection = f.read32()
-    SCLYSection = f.read32()
-    collisionSection = f.read32()
-    unknownSection1 = f.read32()
-    lightSection = f.read32()
-    VISISection = f.read32()
-    PATHSection = f.read32()
-    AROTsection = f.read32()
-    val sectionSizes = f.readArrayWithCount(sectionCount, _.read32)
-    f.readPaddingTo(32)
-
-    rawSections = new Array(sectionCount)
-    for (i <- rawSections.indices) {
-      rawSections(i) = f.readBytes(sectionSizes(i))
-      f.readPaddingTo(32)
-    }
-
     if (magic != MREA.MAGIC) {
       throw new IllegalArgumentException(s"Invalid magic: ${magic.toHexString}")
     }
     if (!(version == MREA.VERSION_PRIME_1 || version == MREA.VERSION_PRIME_2)) {
       throw new IllegalArgumentException(s"Invalid version: ${version.toHexString}")
+    }
+    f.readArray(transform, _.readFloat)
+    meshCount = f.read32()
+    if (version == MREA.VERSION_PRIME_2) {
+      scriptLayerCount = f.read32()
+    }
+    sectionCount = f.read32()
+    geometrySection = f.read32()
+    SCLYSection = f.read32()
+    if (version == MREA.VERSION_PRIME_2) {
+      generatedSCLYSection = f.read32()
+    }
+    collisionSection = f.read32()
+    unknownSection1 = f.read32()
+    lightSection = f.read32()
+    VISISection = f.read32()
+    PATHSection = f.read32()
+
+    if (version == MREA.VERSION_PRIME_1) {
+      AROTsection = f.read32()
+
+      val sectionSizes = f.readArrayWithCount(sectionCount, _.read32)
+      f.readPaddingTo(32)
+
+      rawSections = new Array(sectionCount)
+      for (i <- rawSections.indices) {
+        rawSections(i) = f.readBytes(sectionSizes(i))
+        f.readPaddingTo(32)
+      }
+    }
+
+    if (version == MREA.VERSION_PRIME_2) {
+      unknownSection2 = f.read32()
+      portalAreaSection = f.read32()
+      staticGeomSection = f.read32()
+      val compressedBlockCount = f.read32()
+      f.read32() //padding
+      f.read32()
+      f.read32()
+
+      val sectionSizes = f.readArrayWithCount(sectionCount, _.read32)
+      f.readPaddingTo(32)
+
+      //Decompress the compressed blocks
+      println("test")
+      val compressedBlockHeaders = f.readArray(compressedBlockCount, () => new MREACompressedBlockHeader)
+
+      f.readPaddingTo(32)
+
+      var currentSection = 0
+      for (header <- compressedBlockHeaders) {
+        var toRead = header.compressedSize
+        if (toRead == 0) toRead = header.uncompressedSize
+
+        val padding = {
+          val mod = toRead % 32
+          if (mod == 0) 0 else 32 - mod
+        }
+        f.readBytes(padding)
+
+        val unprocessedBytes = f.readBytes(toRead)
+
+//        val decompressedData = decompress(unprocessedBytes, header)
+      }
+
+      println("test")
     }
   }
 

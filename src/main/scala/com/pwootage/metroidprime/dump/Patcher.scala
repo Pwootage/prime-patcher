@@ -293,30 +293,7 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
           throw new IOException("Read incorrect number of bytes from original file")
         }
       } else if (primeVersion == PrimeVersion.PRIME_2) {
-        var decompressedSoFar = 0
-        while (decompressedSoFar < decompressedSize) {
-          //Input
-          val inBytes = new Array[Byte](srcRaf.readUnsignedShort())
-          srcRaf.readFully(inBytes)
-          val toRead = Math.min(0x4000, decompressedSize - decompressedSoFar)
-          val outBytes = new Array[Byte](toRead)
-
-          //Decompress/verify
-          val decompressor = LzoLibrary.getInstance().newDecompressor(LzoAlgorithm.LZO1X, LzoConstraint.COMPRESSION)
-          val outLen = new lzo_uintp
-          val code = decompressor.decompress(inBytes, 0, inBytes.length, outBytes, 0, outLen)
-          if (code != LzoTransformer.LZO_E_OK) {
-            throw new IOException(decompressor.toErrorString(code))
-          }
-          if (outLen.value != toRead) {
-            throw new IOException(s"Read incorrect number of bytes: $outLen")
-          }
-
-          //Output
-          byteOut.write(outBytes)
-          decompressedSoFar += toRead
-        }
-        //Done decompressing
+        IOUtils.decompressSegmentedLZOStream(new RandomAccessFileInputStream(srcRaf), byteOut, decompressedSize)
       } else {
         throw new Error("I did something wrong D:")
       }
@@ -345,28 +322,7 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
         compressedOut.finish()
 
       } else if (primeVersion == PrimeVersion.PRIME_2) {
-        var compressedSoFar = 0
-        while (compressedSoFar < decompressedSize) {
-          //Setup
-          val compressor = LzoLibrary.getInstance().newCompressor(LzoAlgorithm.LZO1X, LzoConstraint.COMPRESSION)
-          val toCompress = Math.min(0x4000, decompressedSize - compressedSoFar)
-          val inBytes = new ByteArrayOutputStream(toCompress)
-          copyBytes(resourceInput, toCompress, inBytes)
-
-          //Compress
-          val outBuff = new Array[Byte](0x8000)
-          val outLen = new lzo_uintp
-          val code = compressor.compress(inBytes.toByteArray, 0, toCompress, outBuff, 0, outLen)
-          if (code != LzoTransformer.LZO_E_OK) {
-            throw new IOException(compressor.toErrorString(code))
-          }
-
-          //Output
-          destRaf.writeShort(outLen.value)
-          copyBytes(new ByteArrayInputStream(outBuff), outLen.value, new RandomAccessFileOutputStream(destRaf))
-          compressedSoFar += toCompress
-        }
-        //Done compressing
+        IOUtils.compressLZOSegmentedStream(new RandomAccessFileOutputStream(destRaf), decompressedSize, resourceInput)
       } else {
         throw new Error("I did something wrong D:")
       }
