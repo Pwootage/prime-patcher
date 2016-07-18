@@ -1,0 +1,12 @@
+[
+  {
+    "name": "World",
+    "id": "0x26",
+    "layer": "10"
+  },
+  {
+    "name": "Livegiver",
+    "id": "0x21",
+    "layer": "5"
+  }
+]

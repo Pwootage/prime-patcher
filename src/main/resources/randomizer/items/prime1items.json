@@ -1,0 +1,172 @@
+[
+  {
+    "description": "Main Plaza - Tree",
+    "object": "0x0002006A",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Main Plaza - Grapple Ledge",
+    "object": "0x00020131",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Main Plaza - Half Pipe",
+    "object": "0x0002012C",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Main Plaza - Closed Door",
+    "object": "0x00020156",
+    "originalItem": "0x18"
+  },
+  {
+    "description": "Ruined Shrine - Beetle Battle",
+    "object": "0x00090024",
+    "originalItem": "0x10"
+  },
+  {
+    "description": "Ruined Shrine - Bombable Tunnel",
+    "object": "0x0009006D",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Ruined Shrine - Half Pipe",
+    "object": "0x00090068",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Tower of Light",
+    "object": "0x00150335",
+    "originalItem": "0x1C"
+  },
+  {
+    "description": "Tower Chamber",
+    "object": "0x001B0019",
+    "originalItem": "0x21"
+  },
+  {
+    "description": "Training Chamber",
+    "object": "0x000C0026",
+    "originalItem": "0x18"
+  },
+  {
+    "description": "Training Chamber Access",
+    "object": "0x00120003",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Magma Pool",
+    "object": "0x00150335",
+    "originalItem": "0x07"
+  },
+  {
+    "description": "Ruined Nursery",
+    "object": "0x00100062",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Ruined Gallery - Missile Wall",
+    "object": "0x001C0024",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Ruined Gallery - Morph Tunnel",
+    "object": "0x00150054",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Hive Totem",
+    "object": "0x002401DC",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Transport Access North",
+    "object": "0x001E0172",
+    "originalItem": "0x18"
+  },
+  {
+    "description": "Vault",
+    "object": "0x000B003D",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Sunchamber - Flaahgra",
+    "object": "0x002528EE",
+    "originalItem": "0x16"
+  },
+  {
+    "description": "Sunchamber - Ghost Fight",
+    "object": "0x18252F7D",
+    "originalItem": "0x20"
+  },
+  {
+    "description": "Ruined Fountain",
+    "object": "0x00080076",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Watery Hall Access",
+    "object": "0x00260008",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Watery Hall - Scan Puzzle",
+    "object": "0x00290085",
+    "originalItem": "0x0A"
+  },
+  {
+    "description": "Watery Hall - Underwater Tunnel",
+    "object": "0x002927E6",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Dynamo - Missile Grate",
+    "object": "0x002D0022",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Dynamo - Spider Track",
+    "object": "0x002D00AD",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Burn Dome - Incinerator Drone",
+    "object": "0x0030278A",
+    "originalItem": "0x06"
+  },
+  {
+    "description": "Burn Dome - Morph Tunnel",
+    "object": "0x00300036",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Furnace - Morph Tunnel",
+    "object": "0x0031000A",
+    "originalItem": "0x18"
+  },
+  {
+    "description": "Furnace - Spider Track",
+    "object": "0x0031005E",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Crossway",
+    "object": "0x003502C8",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Hall of the Elders",
+    "object": "0x003402DE",
+    "originalItem": "0x18"
+  },
+  {
+    "description": "Elder Chamber",
+    "object": "0x00390003",
+    "originalItem": "0x26"
+  },
+  {
+    "description": "Antechamber",
+    "object": "0x003D0003",
+    "originalItem": "0x01"
+  }
+]
