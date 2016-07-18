@@ -1,12 +1,62 @@
 [
   {
-    "name": "World",
-    "id": "0x26",
-    "layer": "10"
+    "name": "Truth",
+    "id": "0x1D",
+    "layer": "-1"
+  },
+  {
+    "name": "Strength",
+    "id": "0x1E",
+    "layer": "2"
+  },
+  {
+    "name": "Elder",
+    "id": "0x1F",
+    "layer": "3"
+  },
+  {
+    "name": "Wild",
+    "id": "0x20",
+    "layer": "4"
   },
   {
     "name": "Livegiver",
     "id": "0x21",
     "layer": "5"
+  },
+  {
+    "name": "Warrior",
+    "id": "0x22",
+    "layer": "6"
+  },
+  {
+    "name": "Chozo",
+    "id": "0x23",
+    "layer": "7"
+  },
+  {
+    "name": "Nature",
+    "id": "0x24",
+    "layer": "8"
+  },
+  {
+    "name": "Sun",
+    "id": "0x25",
+    "layer": "9"
+  },
+  {
+    "name": "World",
+    "id": "0x26",
+    "layer": "10"
+  },
+  {
+    "name": "Spirit",
+    "id": "0x27",
+    "layer": "11"
+  },
+  {
+    "name": "Newborn",
+    "id": "0x28",
+    "layer": "12"
   }
 ]

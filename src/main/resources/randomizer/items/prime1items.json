@@ -105,6 +105,11 @@
     "originalItem": "0x04"
   },
   {
+    "description": "Gathering Hall",
+    "object": "0x00200057",
+    "originalItem": "0x04"
+  },
+  {
     "description": "Watery Hall Access",
     "object": "0x00260008",
     "originalItem": "0x04"
@@ -168,5 +173,330 @@
     "description": "Antechamber",
     "object": "0x003D0003",
     "originalItem": "0x01"
+  },
+  {
+    "description": "Phendrana Shorelines - Behind Ice",
+    "object": "0x0002016E",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Phendrana Shorelines - Tower",
+    "object": "0x00020176",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Chozo Ice Temple",
+    "object": "0x00080257",
+    "originalItem": "0x25"
+  },
+  {
+    "description": "Chapel of the Elders",
+    "object": "0x000E0058",
+    "originalItem": "0x02"
+  },
+  {
+    "description": "Ice Ruins East - Behind Ice",
+    "object": "0x000A00AB",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Ice Ruins East - Spider Track",
+    "object": "0x000A0191",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Ice Ruins West",
+    "object": "0x000928ED",
+    "originalItem": "0x07"
+  },
+  {
+    "description": "Phendrana Canyon",
+    "object": "0x001000E1",
+    "originalItem": "0x12"
+  },
+  {
+    "description": "Ruined Courtyard",
+    "object": "0x000F022C",
+    "originalItem": "0x18"
+  },
+  {
+    "description": "Quarantine Cave",
+    "object": "0x001801CA",
+    "originalItem": "0x13"
+  },
+  {
+    "description": "Quarantine Monitor",
+    "object": "0x001B0011",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Transport Access",
+    "object": "0x01F00A5",
+    "originalItem": "0x18"
+  },
+  {
+    "description": "Frost Cave",
+    "object": "0x00290187",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Security Cave",
+    "object": "0x00370019",
+    "originalItem": "0x07"
+  },
+  {
+    "description": "Storage Cave",
+    "object": "0x003600A9",
+    "originalItem": "0x27"
+  },
+  {
+    "description": "Gravity Chamber - Underwater",
+    "object": "0x0035001F",
+    "originalItem": "0x15"
+  },
+  {
+    "description": "Gravity Chamber - Grapple Ledge",
+    "object": "0x0035012C",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Research Core",
+    "object": "0x0428011C",
+    "originalItem": "0x09"
+  },
+  {
+    "description": "Research Lab Aether - Glass Case",
+    "object": "0x003303E0",
+    "originalItem": "0x18"
+  },
+  {
+    "description": "Research Lab Aether - Morph Track",
+    "object": "0x00330411",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Control Tower",
+    "object": "0x002704CF",
+    "originalItem": "0x1F"
+  },
+  {
+    "description": "Observatory",
+    "object": "0x001E02F6",
+    "originalItem": "0x0B"
+  },
+  {
+    "description": "Research Lab Hydra",
+    "object": "0x00190513",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Landing Site",
+    "object": "0x0000007E",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Alcove",
+    "object": "0x00040007",
+    "originalItem": "0x0F"
+  },
+  {
+    "description": "Root Cave",
+    "object": "0x000F0032",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Arbor Chamber",
+    "object": "0x00140015",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Transport Tunnel B",
+    "object": "0x00130136",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Frigate Crash Site",
+    "object": "0x000801FB",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Overgrown Cavern",
+    "object": "0x000D00C6",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Cargo Freight Lift to Deck Gamma",
+    "object": "0x001B0115",
+    "originalItem": "0x18"
+  },
+  {
+    "description": "Biohazard Containment",
+    "object": "0x001E02EC",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Hydro Access Tunnel",
+    "object": "0x00230053",
+    "originalItem": "0x18"
+  },
+  {
+    "description": "Great Tree Chamber",
+    "object": "0x0025000D",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Life Grove Tunnel",
+    "object": "0x00270036",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Life Grove - Entryway",
+    "object": "0x002A0021",
+    "originalItem": "0x0D"
+  },
+  {
+    "description": "Life Grove - Spinner",
+    "object": "0x002A0234",
+    "originalItem": "0x23"
+  },
+  {
+    "description": "Artifact Temple",
+    "object": "0x041001D4",
+    "originalItem": "0x1D"
+  },
+  {
+    "description": "Main Quarry",
+    "object": "0x00020233",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Security Access A",
+    "object": "0x00050187",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Storage Depot A",
+    "object": "0x000C0026",
+    "originalItem": "0x08"
+  },
+  {
+    "description": "Elite Research - Elite Pirate",
+    "object": "0x000D0340",
+    "originalItem": "0x22"
+  },
+  {
+    "description": "Elite Research - Laser Wall",
+    "object": "0x000D04F1",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Storage Depot B",
+    "object": "0x00090003",
+    "originalItem": "0x0C"
+  },
+  {
+    "description": "Fungal Hall Access",
+    "object": "0x00280102",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Phazon Mining Tunnel",
+    "object": "0x0027007F",
+    "originalItem": "0x28"
+  },
+  {
+    "description": "Fungal Hall B",
+    "object": "0x00240127",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Metroid Quarantine B",
+    "object": "0x001F0205",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Elite Quarters",
+    "object": "0x001A04B8",
+    "originalItem": "0x17"
+  },
+  {
+    "description": "Processing Center Access",
+    "object": "0x001600A7",
+    "originalItem": "0x18"
+  },
+  {
+    "description": "Phazon Processing Center",
+    "object": "0x00130766",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Elite Control Access",
+    "object": "0x000F008D",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Ventilation Shaft",
+    "object": "0x0012010C",
+    "originalItem": "0x18"
+  },
+  {
+    "description": "Central Dynamo",
+    "object": "0x001B04B1",
+    "originalItem": "0x07"
+  },
+  {
+    "description": "Metroid Quarantine A",
+    "object": "0x002005EA",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Lava Lake",
+    "object": "0x0004287C",
+    "originalItem": "0x24"
+  },
+  {
+    "description": "Triclops Pit",
+    "object": "0x0006010C",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Storage Cavern",
+    "object": "0x0008000F",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Transport Tunnel A",
+    "object": "0x000A0006",
+    "originalItem": "0x18"
+  },
+  {
+    "description": "Shore Tunnel",
+    "object": "0x000C0028",
+    "originalItem": "0x0E"
+  },
+  {
+    "description": "Firey Shores - Track",
+    "object": "0x000E01DA",
+    "originalItem": "0x04"
+  },
+  {
+    "description": "Firey Shores - From Warrior Shrine",
+    "object": "0x000E023F",
+    "originalItem": "0x07"
+  },
+  {
+    "description": "Warrior Shrine",
+    "object": "0x000B0037",
+    "originalItem": "0x1E"
+  },
+  {
+    "description": "Plasma Processing",
+    "object": "0x0015001F",
+    "originalItem": "0x03"
+  },
+  {
+    "description": "Magmoor Workstation",
+    "object": "0x0017028E",
+    "originalItem": "0x18"
   }
 ]
