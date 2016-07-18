@@ -153,6 +153,7 @@ object Main {
 
   def test(): Unit = {
     val inf = "out/62b0d67d.MREA"
+//    val inf = "out/b2701146.MREA-mp1"
     val raf = new RandomAccessFile(inf, "r")
 
     val pdf = new PrimeDataFile(Some(raf), Some(raf))
@@ -160,6 +161,14 @@ object Main {
     val mrea = new MREA
     mrea.read(pdf)
 
+    val raf2 = new RandomAccessFile(inf + "-out", "rw")
+    val pdf2 = new PrimeDataFile(Some(raf2), Some(raf2))
 
+    mrea.write(pdf2)
+    raf2.setLength(raf2.getFilePointer)
+    raf2.seek(0)
+
+    val pdf3 = new PrimeDataFile(Some(raf2), Some(raf2))
+    mrea.read(pdf3)
   }
 }

@@ -2,12 +2,18 @@ package com.pwootage.metroidprime.utils
 
 import java.nio.{ByteBuffer, ByteOrder, IntBuffer}
 import java.nio.channels.FileChannel
+import java.nio.charset.StandardCharsets
 import java.nio.file.Paths
 
 import com.fasterxml.jackson.databind.util.ArrayBuilders.ByteBuilder
 import com.pwootage.metroidprime.formats.iso.GCDiscHeader
 
 object FileIdentifier {
+  def isScriptLayer(bytes: Array[Byte]): Boolean = {
+    val firstFourBytes = bytes.slice(0, 4)
+    (firstFourBytes sameElements "SCLY".getBytes) || (firstFourBytes sameElements "SCGN".getBytes)
+  }
+
   def isISO(file: String): Boolean = try {
     val fc = FileChannel.open(Paths.get(file))
     try {

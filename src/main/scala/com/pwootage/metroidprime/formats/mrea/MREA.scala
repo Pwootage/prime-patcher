@@ -1,13 +1,14 @@
 package com.pwootage.metroidprime.formats.mrea
 
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream, DataInputStream, IOException}
+import java.util
 
 import com.pwootage.metroidprime.formats.BinarySerializable
 import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.mrea.collision.Collision
 import com.pwootage.metroidprime.formats.scly.SCLY
-import com.pwootage.metroidprime.utils.IOUtils
+import com.pwootage.metroidprime.utils.{FileIdentifier, IOUtils}
 
 object MREA {
   val MAGIC = 0xDEADBEEF
@@ -75,9 +76,87 @@ class MREA extends BinarySerializable {
       f.write32(portalAreaSection)
       f.write32(staticGeomSection)
 
-      //Hm, we need to figure out this count prior to actually writing it
-      //      f.write32(compressedBlockCount)
+      //Figure out how we are going to compress our blocks
+      var compressedBlockHeaders = Seq[MREACompressedBlockHeader]()
+      var currentSection = 0
+      while (currentSection < sectionCount) {
+        val header = new MREACompressedBlockHeader
+        if (FileIdentifier.isScriptLayer(rawSections(currentSection))) {
+          header.dataSectionCount = 1
+          header.uncompressedSize = rawSections(currentSection).length
+          currentSection += 1
+        } else {
+          header.dataSectionCount = 0
+          do {
+            header.dataSectionCount += 1
+            header.uncompressedSize += rawSections(currentSection).length
+            currentSection += 1
+          } while (
+            currentSection < sectionCount && rawSections(currentSection).length + header.uncompressedSize < 0x20000
+              && !FileIdentifier.isScriptLayer(rawSections(currentSection))
+          )
+        }
+        compressedBlockHeaders = compressedBlockHeaders ++ Seq(header)
+      }
+
+      val allCompressedBlocksOutputStream = new ByteArrayOutputStream()
+
+      currentSection = 0
+      for (header <- compressedBlockHeaders) {
+        val blockUncompressedBytesStream = new ByteArrayOutputStream()
+        header.uncompressedSize = 0
+        for (_ <- 0 until header.dataSectionCount) {
+          header.uncompressedSize += rawSections(currentSection).length
+          IOUtils.copyBytes(new ByteArrayInputStream(rawSections(currentSection)), rawSections(currentSection).length, blockUncompressedBytesStream)
+          currentSection += 1
+        }
+        val blockUncompressedBytes = blockUncompressedBytesStream.toByteArray
+        val blockCompressedBytesStream = new ByteArrayOutputStream()
+        IOUtils.compressLZOSegmentedStream(blockCompressedBytesStream, header.uncompressedSize, new ByteArrayInputStream(blockUncompressedBytes), negativeUncomprssedBlocks = true)
+        val blockCompressedBytes = blockCompressedBytesStream.toByteArray
+
+        if (blockCompressedBytes.length >= blockUncompressedBytes.length /*|| blockUncompressedBytes.length < 0x400*/) {
+          header.compressedSize = 0
+          header.bufferSize = header.uncompressedSize
+
+          val padding = {
+            val mod = header.uncompressedSize % 32
+            if (mod == 0) 0 else 32 - mod
+          }
+          allCompressedBlocksOutputStream.write(new Array[Byte](padding))
+
+
+          IOUtils.copyBytes(new ByteArrayInputStream(blockUncompressedBytes), blockUncompressedBytes.length, allCompressedBlocksOutputStream)
+        } else {
+          header.compressedSize = blockCompressedBytes.length
+          header.bufferSize = header.uncompressedSize + 0x120
+
+          val padding = {
+            val mod = header.compressedSize % 32
+            if (mod == 0) 0 else 32 - mod
+          }
+          allCompressedBlocksOutputStream.write(new Array[Byte](padding))
+
+          IOUtils.copyBytes(new ByteArrayInputStream(blockCompressedBytes), blockCompressedBytes.length, allCompressedBlocksOutputStream)
+        }
+      }
+
+      if (currentSection != sectionCount) {
+        throw new IOException(s"Failed to write enough sections $currentSection (expected $sectionCount)")
+      }
+
+      f.write32(compressedBlockHeaders.size)
       f.write32(0).write32(0).write32(0) //padding
+
+      f.writeArray(rawSections.map(_.length), _.write32)
+      f.writePaddingTo(32)
+
+      f.writeArray(compressedBlockHeaders.toArray)
+      f.writePaddingTo(32)
+
+      f.writeBytes(allCompressedBlocksOutputStream.toByteArray)
+
+      //Done with Prime 2 specifics
     }
   }
 

@@ -5,27 +5,34 @@ import java.io.{ByteArrayInputStream, _}
 import org.anarres.lzo._
 
 object IOUtils {
-  def compressLZOSegmentedStream(out: OutputStream, decompressedSize: Int, resourceInput: InputStream): Unit = {
+  def compressLZOSegmentedStream(out: OutputStream, decompressedSize: Int, resourceInput: InputStream, negativeUncomprssedBlocks: Boolean = false): Unit = {
     val dout = new DataOutputStream(out)
     var compressedSoFar = 0
     while (compressedSoFar < decompressedSize) {
       //Setup
-      val compressor = LzoLibrary.getInstance().newCompressor(LzoAlgorithm.LZO1X, LzoConstraint.COMPRESSION)
+//      val compressor = LzoLibrary.getInstance().newCompressor(LzoAlgorithm.LZO1X, LzoConstraint.COMPRESSION)
+      val compressor = new LzoCompressor1x_999(8)
       val toCompress = Math.min(0x4000, decompressedSize - compressedSoFar)
-      val inBytes = new ByteArrayOutputStream(toCompress)
-      copyBytes(resourceInput, toCompress, inBytes)
+      val inBytesStream = new ByteArrayOutputStream(toCompress)
+      copyBytes(resourceInput, toCompress, inBytesStream)
+      val inBytes = inBytesStream.toByteArray
 
       //Compress
       val outBuff = new Array[Byte](0x8000)
       val outLen = new lzo_uintp
-      val code = compressor.compress(inBytes.toByteArray, 0, toCompress, outBuff, 0, outLen)
+      val code = compressor.compress(inBytes, 0, toCompress, outBuff, 0, outLen)
       if (code != LzoTransformer.LZO_E_OK) {
         throw new IOException(compressor.toErrorString(code))
       }
 
       //Output
-      dout.writeShort(outLen.value)
-      copyBytes(new ByteArrayInputStream(outBuff), outLen.value, dout)
+      if (outLen.value >= toCompress && negativeUncomprssedBlocks) {
+        dout.writeShort(-toCompress)
+        copyBytes(new ByteArrayInputStream(inBytes), toCompress, dout)
+      } else {
+        dout.writeShort(outLen.value)
+        copyBytes(new ByteArrayInputStream(outBuff), outLen.value, dout)
+      }
       compressedSoFar += toCompress
     }
   }
