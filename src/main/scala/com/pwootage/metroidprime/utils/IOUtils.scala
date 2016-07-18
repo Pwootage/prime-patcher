@@ -11,7 +11,7 @@ object IOUtils {
     while (compressedSoFar < decompressedSize) {
       //Setup
 //      val compressor = LzoLibrary.getInstance().newCompressor(LzoAlgorithm.LZO1X, LzoConstraint.COMPRESSION)
-      val compressor = new LzoCompressor1x_999(8)
+      val compressor = new LzoCompressor1x_999(9)
       val toCompress = Math.min(0x4000, decompressedSize - compressedSoFar)
       val inBytesStream = new ByteArrayOutputStream(toCompress)
       copyBytes(resourceInput, toCompress, inBytesStream)
