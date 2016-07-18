@@ -19,6 +19,18 @@ import scala.collection.JavaConversions._
 import scala.collection.JavaConverters._
 import scala.collection.mutable
 
+object Patchfile {
+  def applyPatchToTemplate(patch: JsonNode, template: ScriptTemplate) = {
+    for (field: String <- patch.fieldNames().toIterator) {
+      val v = patch.get(field)
+      template.properties.find(_.ID == field) match {
+        case Some(x) => x.applyPatch(v)
+        case None => throw new IllegalArgumentException(s"Unknown property $field")
+      }
+    }
+  }
+}
+
 case class Patchfile(description: String,
                      patches: Seq[PatchAction],
                      author: Option[String] = None) {
@@ -121,7 +133,7 @@ case class ScriptObjectPatch(_filename: String,
 
       val template = res.typeEnum.template()
 
-      applyPatchToTemplate(objectPatch.get, template)
+      Patchfile.applyPatchToTemplate(objectPatch.get, template)
 
       res.binaryData = template.toByteArray
 
@@ -152,7 +164,7 @@ case class ScriptObjectPatch(_filename: String,
 
           template.read(objToModify.binaryData)
 
-          applyPatchToTemplate(objectPatch.get, template)
+          Patchfile.applyPatchToTemplate(objectPatch.get, template)
           objToModify.propertyCount = template.properties.length
 
           val newBinary = template.toByteArray
@@ -168,17 +180,6 @@ case class ScriptObjectPatch(_filename: String,
 
     mrea.setSCLY(scly)
     mrea.toByteArray
-  }
-
-
-  def applyPatchToTemplate(patch: JsonNode, template: ScriptTemplate) = {
-    for (field: String <- patch.fieldNames().toIterator) {
-      val v = patch.get(field)
-      template.properties.find(_.ID == field) match {
-        case Some(x) => x.applyPatch(v)
-        case None => throw new IllegalArgumentException(s"Unknown property $field")
-      }
-    }
   }
 }
 

@@ -1,502 +1,702 @@
 [
   {
+    "area": "Chozo Ruins",
     "description": "Main Plaza - Tree",
-    "object": "0x0002006A",
+    "room": "d5cdb809.MREA",
+    "id": "0x0002006A",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Main Plaza - Grapple Ledge",
-    "object": "0x00020131",
+    "room": "d5cdb809.MREA",
+    "id": "0x00020131",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Main Plaza - Half Pipe",
-    "object": "0x0002012C",
+    "room": "d5cdb809.MREA",
+    "id": "0x0002012C",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Main Plaza - Closed Door",
-    "object": "0x00020156",
+    "room": "d5cdb809.MREA",
+    "id": "0x00020156",
     "originalItem": "0x18"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Ruined Shrine - Beetle Battle",
-    "object": "0x00090024",
+    "room": "3c785450.MREA",
+    "id": "0x00090024",
     "originalItem": "0x10"
   },
   {
+    "area": "Chozo Ruins",
+    "room": "3c785450.MREA",
     "description": "Ruined Shrine - Bombable Tunnel",
-    "object": "0x0009006D",
+    "id": "0x0009006D",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Ruined Shrine - Half Pipe",
-    "object": "0x00090068",
+    "room": "3c785450.MREA",
+    "id": "0x00090068",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Tower of Light",
-    "object": "0x00150335",
+    "room": "0d72f1f7.MREA",
+    "id": "0x00150335",
     "originalItem": "0x1C"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Tower Chamber",
-    "object": "0x001B0019",
+    "room": "11bd63b7.MREA",
+    "id": "0x001B0019",
     "originalItem": "0x21"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Training Chamber",
-    "object": "0x000C0026",
+    "room": "3f04f304.MREA",
+    "id": "0x000C0026",
     "originalItem": "0x18"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Training Chamber Access",
-    "object": "0x00120003",
+    "room": "18d186bb.MREA",
+    "id": "0x00120003",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Magma Pool",
-    "object": "0x00150335",
+    "room": "491bfaba.MREA",
+    "id": "0x001400ED",
     "originalItem": "0x07"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Ruined Nursery",
-    "object": "0x00100062",
+    "room": "c2576e4d.MREA",
+    "id": "0x00100062",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Ruined Gallery - Missile Wall",
-    "object": "0x001C0024",
+    "room": "e34fd92b.MREA",
+    "id": "0x001C0024",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Ruined Gallery - Morph Tunnel",
-    "object": "0x00150054",
+    "room": "e34fd92b.MREA",
+    "id": "0x001C0054",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Hive Totem",
-    "object": "0x002401DC",
+    "room": "c8309df6.MREA",
+    "id": "0x002401DC",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Transport Access North",
-    "object": "0x001E0172",
+    "room": "3ad2120f.MREA",
+    "id": "0x001E0172",
     "originalItem": "0x18"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Vault",
-    "object": "0x000B003D",
+    "room": "ef069019.MREA",
+    "id": "0x000B003D",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Sunchamber - Flaahgra",
-    "object": "0x002528EE",
+    "room": "9a0a03eb.MREA",
+    "id": "0x002528EE",
     "originalItem": "0x16"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Sunchamber - Ghost Fight",
-    "object": "0x18252F7D",
+    "room": "9a0a03eb.MREA",
+    "id": "0x18252F7D",
     "originalItem": "0x20"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Ruined Fountain",
-    "object": "0x00080076",
+    "room": "165a4de9.MREA",
+    "id": "0x00080076",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Gathering Hall",
-    "object": "0x00200057",
+    "room": "47e73bc5.MREA",
+    "id": "0x00200057",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Watery Hall Access",
-    "object": "0x00260008",
+    "room": "eeec837d.MREA",
+    "id": "0x00260008",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Watery Hall - Scan Puzzle",
-    "object": "0x00290085",
+    "room": "492cbf4a.MREA",
+    "id": "0x00290085",
     "originalItem": "0x0A"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Watery Hall - Underwater Tunnel",
-    "object": "0x002927E6",
+    "room": "492cbf4a.MREA",
+    "id": "0x002927E6",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Dynamo - Missile Grate",
-    "object": "0x002D0022",
+    "room": "04d6c285.MREA",
+    "id": "0x002D0022",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Dynamo - Spider Track",
-    "object": "0x002D00AD",
+    "room": "04d6c285.MREA",
+    "id": "0x002D00AD",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Burn Dome - Incinerator Drone",
-    "object": "0x0030278A",
+    "room": "4148f7b0.MREA",
+    "id": "0x0030278A",
     "originalItem": "0x06"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Burn Dome - Morph Tunnel",
-    "object": "0x00300036",
+    "room": "4148f7b0.MREA",
+    "id": "0x00300036",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Furnace - Morph Tunnel",
-    "object": "0x0031000A",
+    "room": "2e318473.MREA",
+    "id": "0x0031000A",
     "originalItem": "0x18"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Furnace - Spider Track",
-    "object": "0x0031005E",
+    "room": "2e318473.MREA",
+    "id": "0x0031005E",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Crossway",
-    "object": "0x003502C8",
+    "room": "13fff119.MREA",
+    "id": "0x003502C8",
     "originalItem": "0x04"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Hall of the Elders",
-    "object": "0x003402DE",
+    "room": "fb54a0cb.MREA",
+    "id": "0x003402DE",
     "originalItem": "0x18"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Elder Chamber",
-    "object": "0x00390003",
+    "room": "e1981efc.MREA",
+    "id": "0x00390003",
     "originalItem": "0x26"
   },
   {
+    "area": "Chozo Ruins",
     "description": "Antechamber",
-    "object": "0x003D0003",
+    "room": "afefe677.MREA",
+    "id": "0x003D0003",
     "originalItem": "0x01"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Phendrana Shorelines - Behind Ice",
-    "object": "0x0002016E",
+    "room": "f7285979.MREA",
+    "id": "0x0002016E",
     "originalItem": "0x04"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Phendrana Shorelines - Tower",
-    "object": "0x00020176",
+    "room": "f7285979.MREA",
+    "id": "0x00020176",
     "originalItem": "0x04"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Chozo Ice Temple",
-    "object": "0x00080257",
+    "room": "6655f51e.MREA",
+    "id": "0x00080257",
     "originalItem": "0x25"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Chapel of the Elders",
-    "object": "0x000E0058",
+    "room": "40c548e9.MREA",
+    "id": "0x000E0058",
     "originalItem": "0x02"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Ice Ruins East - Behind Ice",
-    "object": "0x000A00AB",
+    "room": "dafcc26f.MREA",
+    "id": "0x000A00AB",
     "originalItem": "0x04"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Ice Ruins East - Spider Track",
-    "object": "0x000A0191",
+    "room": "dafcc26f.MREA",
+    "id": "0x000A0191",
     "originalItem": "0x04"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Ice Ruins West",
-    "object": "0x000928ED",
+    "room": "b33a0620.MREA",
+    "id": "0x000928ED",
     "originalItem": "0x07"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Phendrana Canyon",
-    "object": "0x001000E1",
+    "room": "a20a7455.MREA",
+    "id": "0x001000E1",
     "originalItem": "0x12"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Ruined Courtyard",
-    "object": "0x000F022C",
+    "room": "1921876d.MREA",
+    "id": "0x000F022C",
     "originalItem": "0x18"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Quarantine Cave",
-    "object": "0x001801CA",
+    "room": "70181194.MREA",
+    "id": "0x001801CA",
     "originalItem": "0x13"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Quarantine Monitor",
-    "object": "0x001B0011",
+    "room": "2191a05d.MREA",
+    "id": "0x001B0011",
     "originalItem": "0x04"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Transport Access",
-    "object": "0x01F00A5",
+    "room": "d695b958.MREA",
+    "id": "0x01F00A5",
     "originalItem": "0x18"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Frost Cave",
-    "object": "0x00290187",
+    "room": "4c6f7773.MREA",
+    "id": "0x00290187",
     "originalItem": "0x04"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Security Cave",
-    "object": "0x00370019",
+    "room": "3c9490e5.MREA",
+    "id": "0x00370019",
     "originalItem": "0x07"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Storage Cave",
-    "object": "0x003600A9",
+    "room": "f7c84340.MREA",
+    "id": "0x003600A9",
     "originalItem": "0x27"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Gravity Chamber - Underwater",
-    "object": "0x0035001F",
+    "room": "49175472.MREA",
+    "id": "0x0035001F",
     "originalItem": "0x15"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Gravity Chamber - Grapple Ledge",
-    "object": "0x0035012C",
+    "room": "49175472.MREA",
+    "id": "0x0035012C",
     "originalItem": "0x04"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Research Core",
-    "object": "0x0428011C",
+    "room": "a49b2544.MREA",
+    "id": "0x0428011C",
     "originalItem": "0x09"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Research Lab Aether - Glass Case",
-    "object": "0x003303E0",
+    "room": "21b4bff6.MREA",
+    "id": "0x003303E0",
     "originalItem": "0x18"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Research Lab Aether - Morph Track",
-    "object": "0x00330411",
+    "room": "21b4bff6.MREA",
+    "id": "0x00330411",
     "originalItem": "0x04"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Control Tower",
-    "object": "0x002704CF",
+    "room": "b3c33249.MREA",
+    "id": "0x002704CF",
     "originalItem": "0x1F"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Observatory",
-    "object": "0x001E02F6",
+    "room": "3fb4a34e.MREA",
+    "id": "0x001E02F6",
     "originalItem": "0x0B"
   },
   {
+    "area": "Phendrana Drifts",
     "description": "Research Lab Hydra",
-    "object": "0x00190513",
+    "room": "43e4cc25.MREA",
+    "id": "0x00190513",
     "originalItem": "0x04"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Landing Site",
-    "object": "0x0000007E",
+    "room": "b2701146.MREA",
+    "id": "0x0000007E",
     "originalItem": "0x04"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Alcove",
-    "object": "0x00040007",
+    "room": "c44e7a07.MREA",
+    "id": "0x00040007",
     "originalItem": "0x0F"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Root Cave",
-    "object": "0x000F0032",
+    "room": "bd8c8625.MREA",
+    "id": "0x000F0032",
     "originalItem": "0x04"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Arbor Chamber",
-    "object": "0x00140015",
+    "room": "24f8aff3.MREA",
+    "id": "0x00140015",
     "originalItem": "0x04"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Transport Tunnel B",
-    "object": "0x00130136",
+    "room": "c7e821ba.MREA",
+    "id": "0x00130136",
     "originalItem": "0x04"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Frigate Crash Site",
-    "object": "0x000801FB",
+    "room": "b9abcd56.MREA",
+    "id": "0x000801FB",
     "originalItem": "0x04"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Overgrown Cavern",
-    "object": "0x000D00C6",
+    "room": "cea263e3.MREA",
+    "id": "0x000D00C6",
     "originalItem": "0x04"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Cargo Freight Lift to Deck Gamma",
-    "object": "0x001B0115",
+    "room": "37b3afe6.MREA",
+    "id": "0x001B0115",
     "originalItem": "0x18"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Biohazard Containment",
-    "object": "0x001E02EC",
+    "room": "ac2c58fe.MREA",
+    "id": "0x001E02EC",
     "originalItem": "0x04"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Hydro Access Tunnel",
-    "object": "0x00230053",
+    "room": "ffb4a966.MREA",
+    "id": "0x00230053",
     "originalItem": "0x18"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Great Tree Chamber",
-    "object": "0x0025000D",
+    "room": "c5d6a597.MREA",
+    "id": "0x0025000D",
     "originalItem": "0x04"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Life Grove Tunnel",
-    "object": "0x00270036",
+    "room": "b4fbbef5.MREA",
+    "id": "0x00270036",
     "originalItem": "0x04"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Life Grove - Entryway",
-    "object": "0x002A0021",
+    "room": "86eb2e02.MREA",
+    "id": "0x002A0021",
     "originalItem": "0x0D"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Life Grove - Spinner",
-    "object": "0x002A0234",
+    "room": "86eb2e02.MREA",
+    "id": "0x002A0234",
     "originalItem": "0x23"
   },
   {
+    "area": "Tallon Overworld",
     "description": "Artifact Temple",
-    "object": "0x041001D4",
+    "room": "2398e906.MREA",
+    "id": "0x041001D4",
     "originalItem": "0x1D"
   },
   {
+    "area": "Phazon Mines",
     "description": "Main Quarry",
-    "object": "0x00020233",
+    "room": "643d038f.MREA",
+    "id": "0x00020233",
     "originalItem": "0x04"
   },
   {
+    "area": "Phazon Mines",
     "description": "Security Access A",
-    "object": "0x00050187",
+    "room": "c7653a92.MREA",
+    "id": "0x00050187",
     "originalItem": "0x04"
   },
   {
+    "area": "Phazon Mines",
     "description": "Storage Depot A",
-    "object": "0x000C0026",
+    "room": "35c5d736.MREA",
+    "id": "0x000C0026",
     "originalItem": "0x08"
   },
   {
+    "area": "Phazon Mines",
     "description": "Elite Research - Elite Pirate",
-    "object": "0x000D0340",
+    "room": "8a97bb54.MREA",
+    "id": "0x000D0340",
     "originalItem": "0x22"
   },
   {
+    "area": "Phazon Mines",
     "description": "Elite Research - Laser Wall",
-    "object": "0x000D04F1",
+    "room": "8a97bb54.MREA",
+    "id": "0x000D04F1",
     "originalItem": "0x04"
   },
   {
+    "area": "Phazon Mines",
     "description": "Storage Depot B",
-    "object": "0x00090003",
+    "room": "e39c342b.MREA",
+    "id": "0x00090003",
     "originalItem": "0x0C"
   },
   {
+    "area": "Phazon Mines",
     "description": "Fungal Hall Access",
-    "object": "0x00280102",
+    "room": "de9d71f5.MREA",
+    "id": "0x00280102",
     "originalItem": "0x04"
   },
   {
+    "area": "Phazon Mines",
     "description": "Phazon Mining Tunnel",
-    "object": "0x0027007F",
+    "room": "bbfa4ab3.MREA",
+    "id": "0x0027007F",
     "originalItem": "0x28"
   },
   {
+    "area": "Phazon Mines",
     "description": "Fungal Hall B",
-    "object": "0x00240127",
+    "room": "ec47c242.MREA",
+    "id": "0x00240127",
     "originalItem": "0x04"
   },
   {
+    "area": "Phazon Mines",
     "description": "Metroid Quarantine B",
-    "object": "0x001F0205",
+    "room": "bb3afc4e.MREA",
+    "id": "0x001F0205",
     "originalItem": "0x04"
   },
   {
+    "area": "Phazon Mines",
     "description": "Elite Quarters",
-    "object": "0x001A04B8",
+    "room": "3953c353.MREA",
+    "id": "0x001A04B8",
     "originalItem": "0x17"
   },
   {
+    "area": "Phazon Mines",
     "description": "Processing Center Access",
-    "object": "0x001600A7",
+    "room": "ed6de73b.MREA",
+    "id": "0x001600A7",
     "originalItem": "0x18"
   },
   {
+    "area": "Phazon Mines",
     "description": "Phazon Processing Center",
-    "object": "0x00130766",
+    "room": "ad2e7eb9.MREA",
+    "id": "0x00130766",
     "originalItem": "0x04"
   },
   {
+    "area": "Phazon Mines",
     "description": "Elite Control Access",
-    "object": "0x000F008D",
+    "room": "8988d1cb.MREA",
+    "id": "0x000F008D",
     "originalItem": "0x04"
   },
   {
+    "area": "Phazon Mines",
     "description": "Ventilation Shaft",
-    "object": "0x0012010C",
+    "room": "90709aac.MREA",
+    "id": "0x0012010C",
     "originalItem": "0x18"
   },
   {
+    "area": "Phazon Mines",
     "description": "Central Dynamo",
-    "object": "0x001B04B1",
+    "room": "fea372e2.MREA",
+    "id": "0x001B04B1",
     "originalItem": "0x07"
   },
   {
+    "area": "Phazon Mines",
     "description": "Metroid Quarantine A",
-    "object": "0x002005EA",
+    "room": "fb051f5a.MREA",
+    "id": "0x002005EA",
     "originalItem": "0x04"
   },
   {
+    "area": "Magmoor Caverns",
     "description": "Lava Lake",
-    "object": "0x0004287C",
+    "room": "a4719c6a.MREA",
+    "id": "0x0004287C",
     "originalItem": "0x24"
   },
   {
+    "area": "Magmoor Caverns",
     "description": "Triclops Pit",
-    "object": "0x0006010C",
+    "room": "bad9edbf.MREA",
+    "id": "0x0006010C",
     "originalItem": "0x04"
   },
   {
+    "area": "Magmoor Caverns",
     "description": "Storage Cavern",
-    "object": "0x0008000F",
+    "room": "adef843e.MREA",
+    "id": "0x0008000F",
     "originalItem": "0x04"
   },
   {
+    "area": "Magmoor Caverns",
     "description": "Transport Tunnel A",
-    "object": "0x000A0006",
+    "room": "47f2c087.MREA",
+    "id": "0x000A0006",
     "originalItem": "0x18"
   },
   {
+    "area": "Magmoor Caverns",
     "description": "Shore Tunnel",
-    "object": "0x000C0028",
+    "room": "901040df.MREA",
+    "id": "0x000C0028",
     "originalItem": "0x0E"
   },
   {
+    "area": "Magmoor Caverns",
     "description": "Firey Shores - Track",
-    "object": "0x000E01DA",
+    "room": "f5ef1862.MREA",
+    "id": "0x000E01DA",
     "originalItem": "0x04"
   },
   {
+    "area": "Magmoor Caverns",
     "description": "Firey Shores - From Warrior Shrine",
-    "object": "0x000E023F",
+    "room": "f5ef1862.MREA",
+    "id": "0x000E023F",
     "originalItem": "0x07"
   },
   {
+    "area": "Magmoor Caverns",
     "description": "Warrior Shrine",
-    "object": "0x000B0037",
+    "room": "89a6cb8d.MREA",
+    "id": "0x000B0037",
     "originalItem": "0x1E"
   },
   {
+    "area": "Magmoor Caverns",
     "description": "Plasma Processing",
-    "object": "0x0015001F",
+    "room": "4cc18e5a.MREA",
+    "id": "0x0015001F",
     "originalItem": "0x03"
   },
   {
+    "area": "Magmoor Caverns",
     "description": "Magmoor Workstation",
-    "object": "0x0017028E",
+    "room": "8abeb3c3.MREA",
+    "id": "0x0017028E",
     "originalItem": "0x18"
   }
 ]

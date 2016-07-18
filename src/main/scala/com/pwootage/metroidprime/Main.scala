@@ -59,7 +59,8 @@ object Main {
     addSubcommand(diff)
 
     val randomize = new Subcommand("randomize") {
-      val dirWithPAKs = trailArg[String]()
+      val primeVersion = trailArg[String](descr = "mp1, mp2")
+      val outFile = trailArg[String]()
     }
     addSubcommand(randomize)
 
@@ -148,7 +149,7 @@ object Main {
   }
 
   def randomize(conf: PatcherConf): Unit = {
-    //    (new Randomizer).naiveRandomize(conf.randomize.dirWithPAKs())
+        (new Randomizer).naiveRandomize(conf.randomize.primeVersion(), conf.randomize.outFile())
   }
 
   def test(): Unit = {
