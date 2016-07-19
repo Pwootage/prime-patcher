@@ -6,11 +6,12 @@ import java.util.Random
 
 import better.files._
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
+import com.pwootage.metroidprime.templates.ScriptTemplates._
 import com.pwootage.metroidprime.utils._
 
 class Randomizer(config: RandomizerConfig) {
   val prime1ItemLocations = {
-    val src = resourceAsString("randomizer/items/prime1ItemLocations.json")
+    val src = resourceAsString("/randomizer/items/prime1ItemLocations.json")
     PrimeJacksonMapper.mapper.readValue(src, classOf[Array[Prime1ItemLocation]])
   }
 
@@ -26,7 +27,7 @@ class Randomizer(config: RandomizerConfig) {
     val rng = new Random(seed)
 
     var itemPool = {
-      val src = resourceAsString("randomizer/items/prime1Items.json")
+      val src = resourceAsString("/randomizer/items/prime1Items.json")
       PrimeJacksonMapper.mapper.readValue(src, classOf[Array[Prime1Item]])
     }
 
@@ -121,7 +122,7 @@ class Randomizer(config: RandomizerConfig) {
   }
 
   def resourceAsString(path: String): String = {
-    val in = ClassLoader.getSystemResourceAsStream(path)
+    val in = getClass.getResourceAsStream(path)
     if (in == null) {
       throw new FileNotFoundException(path)
     }

@@ -4,12 +4,14 @@ import java.io.FileNotFoundException
 
 import scala.xml.{NodeSeq, XML}
 import better.files._
+import com.pwootage.metroidprime.randomizer.Randomizer
 
 object ScriptTemplates {
   def loadTemplateXml(templ: String): NodeSeq = {
-    val in = ClassLoader.getSystemResourceAsStream("templates/" + templ)
+    val path = "/templates/" + templ
+    val in = getClass.getResourceAsStream(path)
     if (in == null) {
-      throw new FileNotFoundException(templ)
+      throw new FileNotFoundException(path)
     }
     val str = new String(in.bytes.toArray).replaceAll("<\\?xml.*\\?>", "") //Hack off the meta tag... no idea why I have to
     in.close()
