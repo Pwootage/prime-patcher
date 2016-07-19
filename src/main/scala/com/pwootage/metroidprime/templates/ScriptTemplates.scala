@@ -7,7 +7,7 @@ import better.files._
 
 object ScriptTemplates {
   def loadTemplateXml(templ: String): NodeSeq = {
-    val in = getClass.getClassLoader.getResourceAsStream("templates/" + templ)
+    val in = ClassLoader.getSystemResourceAsStream("templates/" + templ)
     if (in == null) {
       throw new FileNotFoundException(templ)
     }

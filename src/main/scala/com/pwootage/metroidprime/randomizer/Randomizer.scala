@@ -121,7 +121,7 @@ class Randomizer(config: RandomizerConfig) {
   }
 
   def resourceAsString(path: String): String = {
-    val in = getClass.getClassLoader.getResourceAsStream(path)
+    val in = ClassLoader.getSystemResourceAsStream(path)
     if (in == null) {
       throw new FileNotFoundException(path)
     }
