@@ -14,6 +14,19 @@ The latest release (updated more infrequently than the latest build below) can b
 | [Latest Successful Build](https://circleci.com/api/v1/project/Pwootage/prime-patcher/latest/artifacts/0//home/ubuntu/prime-patcher/build/libs/patcher-0.1.1-SNAPSHOT.jar?branch=master&filter=successful)
 | [CircleCI](https://circleci.com/gh/Pwootage/prime-patcher)
 
+# How do I randomize?
+
+It's not completely working, but you're going to want a [config.json](config.json) and then run patcher a couple times
+from a command prompt/terminal. Hopefully the error message is useful if it doesn't work! No guarantees.
+
+Requires JRE8 or JDK8
+
+## Generate Seed
+`java -jar patcher-0.1.1-SHAPSHOT.jar randomize mp1 config.json`
+
+## Apply patches
+`java -jar patcher-0.1.1-SNAPSHOT.jar patch -fq mprime.iso out/mprime-randomized.iso prime-patchfiles-master/widescreen/patchfile.json prime-patchfiles-master/frigateskip-GM8E01-0-00.json rando/randomize.json`
+
 # Credits
 
 Parax
