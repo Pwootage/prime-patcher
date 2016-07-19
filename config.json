@@ -1,7 +1,6 @@
 {
-  "seed": 1234,
-  "patchFile": "out/randomize.json",
-  "logFile": "out/log%SEED%.txt",
+  "patchFile": "out/rando/randomize.json",
+  "logFile": "out/rando/log%SEED%.txt",
   "invisibleItems": true,
   "fixed": {
     "4": {

@@ -25,10 +25,14 @@ class Randomizer(config: RandomizerConfig) {
     val seed = config.seed.getOrElse(new Random().nextInt())
     val rng = new Random(seed)
 
-    val itemPool = {
+    var itemPool = {
       val src = resourceAsString("randomizer/items/prime1Items.json")
       PrimeJacksonMapper.mapper.readValue(src, classOf[Array[Prime1Item]])
     }
+
+    itemPool = itemPool.flatMap(item => {
+      Array.fill(item.count)(new Prime1Item(item.name, 1, item.item, item.capacity, item.amount))
+    })
 
     def removeItemFromPool(id: Int): Unit = {
       itemPool.filter(_.item == id).find(_.count > 0) match {
@@ -104,10 +108,14 @@ class Randomizer(config: RandomizerConfig) {
 
     val patch = Patchfile(s"Randomizer seed $seed", patches, Some("prime-patcher"))
 
+    config.patchFile.toFile.parent.createDirectories()
     config.patchFile.toFile.write(PrimeJacksonMapper.pretty.writeValueAsString(patch))
     config.logFile
       .map(_.replace("%SEED%", seed.toString))
-      .foreach(_.toFile.write(log))
+      .foreach(file => {
+        file.toFile.parent.createDirectories()
+        file.toFile.write(log)
+      })
 
     Logger.success(s"Successfully generated patch file for seed $seed")
   }
