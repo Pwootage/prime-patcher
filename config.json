@@ -1,0 +1,23 @@
+{
+  "seed": 1234,
+  "patchFile": "out/randomize.json",
+  "logFile": "out/log%SEED%.txt",
+  "invisibleItems": true,
+  "fixed": {
+    "4": {
+      "id": "0x10",
+      "capacity": 1,
+      "amount": 1
+    },
+    "15": {
+      "id": "0x04",
+      "capacity": 5,
+      "amount": 5
+    },
+    "27": {
+      "id": "0x06",
+      "capacity": 1,
+      "amount": 1
+    }
+  }
+}

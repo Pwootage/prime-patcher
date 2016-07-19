@@ -9,9 +9,9 @@ import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.mrea.MREA
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
-import com.pwootage.metroidprime.randomizer.Randomizer
+import com.pwootage.metroidprime.randomizer.{Randomizer, RandomizerConfig}
 import com.pwootage.metroidprime.templates.{IntScriptProperty, ScriptProperty, ScriptTemplate, ScriptTemplates}
-import com.pwootage.metroidprime.utils.{PrimeDiffUtils, FileIdentifier, Patchfile, PrimeJacksonMapper}
+import com.pwootage.metroidprime.utils.{FileIdentifier, Patchfile, PrimeDiffUtils, PrimeJacksonMapper}
 import org.rogach.scallop.{ScallopConf, Subcommand}
 
 object Main {
@@ -60,7 +60,7 @@ object Main {
 
     val randomize = new Subcommand("randomize") {
       val primeVersion = trailArg[String](descr = "mp1, mp2")
-      val outFile = trailArg[String]()
+      val configFile = trailArg[String]()
     }
     addSubcommand(randomize)
 
@@ -149,12 +149,17 @@ object Main {
   }
 
   def randomize(conf: PatcherConf): Unit = {
-        (new Randomizer).naiveRandomize(conf.randomize.primeVersion(), conf.randomize.outFile())
+    import better.files._
+    val randomizerConfig = PrimeJacksonMapper.mapper.readValue(
+      conf.randomize.configFile().toFile.contentAsString,
+      classOf[RandomizerConfig]
+    )
+    new Randomizer(randomizerConfig).naiveRandomize(conf.randomize.primeVersion())
   }
 
   def test(): Unit = {
     val inf = "out/62b0d67d.MREA"
-//    val inf = "out/b2701146.MREA-mp1"
+    //    val inf = "out/b2701146.MREA-mp1"
     val raf = new RandomAccessFile(inf, "r")
 
     val pdf = new PrimeDataFile(Some(raf), Some(raf))
