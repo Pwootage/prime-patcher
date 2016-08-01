@@ -64,7 +64,7 @@ class Patcher(targetFile: String, force: Boolean, quieter: Boolean, patchfiles: 
 
     Logger.info(s"Found game ID $gameID version ${header.discHeader.version} (Internal name: ${header.discHeader.name})")
 
-    val version = if (gameID == "GM8E01") {
+    val version = if (gameID == "GM8E01" || gameID == "GM8P01") {
       Some(PrimeVersion.PRIME_1)
     } else if (gameID == "G2ME01") {
       Some(PrimeVersion.PRIME_2)

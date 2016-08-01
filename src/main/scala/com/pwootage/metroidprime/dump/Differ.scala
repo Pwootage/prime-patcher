@@ -58,7 +58,7 @@ class Differ(quieter: Boolean) {
 
     Logger.info(s"Found game ID $gameID1 version ${header1.discHeader.version} (Internal name: ${header1.discHeader.name})")
 
-    val version = if (gameID1 == "GM8E01") {
+    val version = if (gameID1 == "GM8E01" || gameID1 == "GM8P01") {
       Some(PrimeVersion.PRIME_1)
     } else if (gameID2 == "G2ME01") {
       Some(PrimeVersion.PRIME_2)
