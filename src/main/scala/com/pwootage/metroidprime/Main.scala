@@ -115,6 +115,8 @@ object Main {
   def dump(conf: PatcherConf): Unit = {
     conf.dump.what() match {
       case "collision" => new CollisionDumper().dump(conf.dump.searchDirectory(), conf.dump.outDir())
+      case "offsets" => new FileOffsetDumper().dump(conf.dump.searchDirectory(), conf.dump.outDir())
+      case "areas" => new AreaDumper().dump(conf.dump.searchDirectory(), conf.dump.outDir())
     }
   }
 
