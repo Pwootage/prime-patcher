@@ -14,6 +14,19 @@ The latest release (updated more infrequently than the latest build below) can b
 | [Latest Successful Build](https://circleci.com/api/v1/project/Pwootage/prime-patcher/latest/artifacts/0//home/ubuntu/prime-patcher/build/libs/patcher-0.1.1-SNAPSHOT.jar?branch=master&filter=successful)
 | [CircleCI](https://circleci.com/gh/Pwootage/prime-patcher)
 
+# Some common commands
+
+All commands should be prefixed with `java -jar patcher-0.1.1-SHAPSHOT.jar `
+
+Extract an iso (but not embedded PAKs)
+* `extract -fq output-directory/ input/GM8E01.iso`
+
+Extract an iso (and embedded PAKs)
+* `extract -fpq output-directory/ input/GM8E01.iso`
+
+Repack an iso (auto-detects PAKs if they are extracted by this tool)
+* `repack -fq input/directory/ output-file.iso`
+
 # How do I randomize?
 
 It's not completely working, but you're going to want a [config.json](config.json) and then run patcher a couple times
