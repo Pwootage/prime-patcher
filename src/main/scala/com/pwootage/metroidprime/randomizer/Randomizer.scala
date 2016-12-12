@@ -32,7 +32,7 @@ class Randomizer(config: RandomizerConfig) {
     }
 
     itemPool = itemPool.flatMap(item => {
-      Array.fill(item.count)(new Prime1Item(item.name, 1, item.item, item.capacity, item.amount))
+      Array.fill(item.count)(new Prime1Item(item.name, 1, item.item, item.capacity, item.amount, item.model, item.animSet, item.animCharacter, item.rotation, item.xrayModel, item.xraySkin))
     })
 
     def removeItemFromPool(id: Int): Unit = {
@@ -64,8 +64,8 @@ class Randomizer(config: RandomizerConfig) {
         log += s"${p1obj.area},${p1obj.description},${item.name}\n"
         val objectPatch = PrimeJacksonMapper.mapper.createObjectNode()
           .put("0x06", item.item) //item
-          .put("0x07", item.capacity.getOrElse(1)) //capacity
-          .put("0x08", item.amount.getOrElse(1)) //amount
+          .put("0x07", item.capacityInt.getOrElse(1)) //capacity
+          .put("0x08", item.amountInt.getOrElse(1)) //amount
 
         if (config.invisibleItems) {
           objectPatch.put("0x0C", "86908399.CMDL") //model

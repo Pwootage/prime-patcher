@@ -11,7 +11,7 @@ import com.pwootage.metroidprime.formats.mrea.MREA
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
 import com.pwootage.metroidprime.randomizer.{Randomizer, RandomizerConfig}
 import com.pwootage.metroidprime.templates.{IntScriptProperty, ScriptProperty, ScriptTemplate, ScriptTemplates}
-import com.pwootage.metroidprime.utils.{FileIdentifier, Patchfile, PrimeDiffUtils, PrimeJacksonMapper}
+import com.pwootage.metroidprime.utils._
 import org.rogach.scallop.{ScallopConf, Subcommand}
 
 object Main {
@@ -74,6 +74,12 @@ object Main {
     }
     addSubcommand(test)
 
+    val depFind = new Subcommand("depfind") {
+      val pakFile = trailArg[String](descr = "PAK")
+      val fileID = trailArg[String](descr = "File ID")
+    }
+    addSubcommand(depFind)
+
     verify()
   }
 
@@ -109,6 +115,7 @@ object Main {
       case conf.test => test()
       case conf.fixTemplateXmls => fixTemplateUrls(conf)
       case conf.diff => diff(conf)
+      case conf.depFind => depFind(conf)
     }
   }
 
@@ -148,6 +155,10 @@ object Main {
 
   def diff(conf: PatcherConf): Unit = {
     new Differ(conf.diff.quieter()).dif(conf.diff.iso1(), conf.diff.iso2(), conf.diff.dest())
+  }
+
+  def depFind(conf: PatcherConf): Unit = {
+    FileDepFinder.findDepsOfFileInPak(conf.depFind.fileID(), conf.depFind.pakFile())
   }
 
   def randomize(conf: PatcherConf): Unit = {
