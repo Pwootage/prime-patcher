@@ -1,10 +1,8 @@
 package com.pwootage.metroidprime.randomizer
 
-case class RandomizerConfig(invisibleItems: Boolean = false,
-                            seed: Option[Int],
+case class RandomizerConfig(seed: Option[Int],
                             fixed: Map[String, RandomizerFixedLocation] = Map(),
-                            patchFile: String = "./randomize.json",
-                            logFile: Option[String]
+                            outDir: String
                            )
 
 case class RandomizerFixedLocation(id: Int, capacity: Int, amount: Int)

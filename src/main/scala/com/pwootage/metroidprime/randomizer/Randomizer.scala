@@ -1,14 +1,16 @@
 package com.pwootage.metroidprime.randomizer
 
-import java.io.{FileNotFoundException, IOException, RandomAccessFile}
-import java.nio.file.Paths
+import java.io.{ByteArrayOutputStream, FileNotFoundException, IOException, RandomAccessFile}
+import java.nio.file.{Files, Paths, StandardOpenOption}
 import java.time.LocalDateTime
 import java.util.Random
+import java.util.zip.InflaterOutputStream
 
 import better.files._
 import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
-import com.pwootage.metroidprime.formats.iso.GCIsoHeaders
+import com.pwootage.metroidprime.formats.iso.{FST, FileEntry, GCIsoHeaders}
+import com.pwootage.metroidprime.formats.pak.{PAKFile, Resource}
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
 import com.pwootage.metroidprime.templates.ScriptTemplates._
 import com.pwootage.metroidprime.utils._
@@ -48,6 +50,8 @@ class Randomizer(config: RandomizerConfig) {
   }
 
   def prime1Patches(raf: RandomAccessFile) = {
+    config.outDir.toFile.createDirectories()
+
     val seed = config.seed.getOrElse(new Random().nextInt())
     val rng = new Random(seed)
 
@@ -92,37 +96,35 @@ class Randomizer(config: RandomizerConfig) {
           .put("0x07", item.capacityInt.getOrElse(1)) //capacity
           .put("0x08", item.amountInt.getOrElse(1)) //amount
 
-        if (config.invisibleItems) {
-          objectPatch.put("0x0C", "0x" + DataTypeConversion.intToPaddedHexString(item.model)) //model
-          //Particle doesn't change, so no need to patch it
+        objectPatch.put("0x0C", "0x" + DataTypeConversion.intToPaddedHexString(item.model)) //model
+        //Particle doesn't change, so no need to patch it
 
-          //TODO: get actual scales of items (I forgot to grab them)
-          //          val scale = PrimeJacksonMapper.mapper.createObjectNode()
-          //            .put("x", 0)
-          //            .put("y", 0)
-          //            .put("z", 0)
-          //          objectPatch.set("0x03", scale)
+        //TODO: get actual scales of items (I forgot to grab them)
+        //          val scale = PrimeJacksonMapper.mapper.createObjectNode()
+        //            .put("x", 0)
+        //            .put("y", 0)
+        //            .put("z", 0)
+        //          objectPatch.set("0x03", scale)
 
-          val animParams = PrimeJacksonMapper.mapper.createObjectNode()
-            .put("animANCS", "0x" + DataTypeConversion.intToPaddedHexString(item.animSet))
-            .put("character", item.animCharacterInt.getOrElse(0))
-            .put("defaultAnim", 0)
+        val animParams = PrimeJacksonMapper.mapper.createObjectNode()
+          .put("animANCS", "0x" + DataTypeConversion.intToPaddedHexString(item.animSet))
+          .put("character", item.animCharacterInt.getOrElse(0))
+          .put("defaultAnim", 0)
 
-          objectPatch.set("0x0D", animParams)
+        objectPatch.set("0x0D", animParams)
 
-          val actorParams = PrimeJacksonMapper.mapper.createObjectNode()
-            .put("0x02", DataTypeConversion.intToPaddedHexString(item.xrayModelInt.getOrElse(0xFFFFFFFF)) + ".CMDL") //xray model
-            .put("0x03", DataTypeConversion.intToPaddedHexString(item.xraySkinInt.getOrElse(0xFFFFFFFF)) + ".CSKR") //xray skin
-          //Thermal never changes
+        val actorParams = PrimeJacksonMapper.mapper.createObjectNode()
+          .put("0x02", DataTypeConversion.intToPaddedHexString(item.xrayModelInt.getOrElse(0xFFFFFFFF)) + ".CMDL") //xray model
+          .put("0x03", DataTypeConversion.intToPaddedHexString(item.xraySkinInt.getOrElse(0xFFFFFFFF)) + ".CSKR") //xray skin
+        //Thermal never changes
 
-          //TODO: Scans
-          val scannableParams = PrimeJacksonMapper.mapper.createObjectNode()
-            .put("0x00", "ffffffff.SCAN")
+        //TODO: Scans
+        val scannableParams = PrimeJacksonMapper.mapper.createObjectNode()
+          .put("0x00", "ffffffff.SCAN")
 
-          actorParams.set("0x01", scannableParams)
+        actorParams.set("0x01", scannableParams)
 
-          objectPatch.set("0x0E", actorParams) //Actor params
-        }
+        objectPatch.set("0x0E", actorParams) //Actor params
 
         val res = ScriptObjectPatch(p1obj.room, Prime1ScriptObjectType.Pickup.name(), p1obj.id)
         res.objectPatch = Some(objectPatch)
@@ -130,18 +132,12 @@ class Randomizer(config: RandomizerConfig) {
 
         Some(res)
       }
-    }).flatten
+    }).flatten ++ getPakPatches(PrimeVersion.PRIME_1, raf)
 
     val patch = Patchfile(s"Randomizer seed $seed", patches, Some("prime-patcher"))
 
-    config.patchFile.toFile.parent.createDirectories()
-    config.patchFile.toFile.write(PrimeJacksonMapper.pretty.writeValueAsString(patch))
-    config.logFile
-      .map(_.replace("%SEED%", seed.toString))
-      .foreach(file => {
-        file.toFile.parent.createDirectories()
-        file.toFile.write(log)
-      })
+    (config.outDir.toFile / "randomize.json").write(PrimeJacksonMapper.pretty.writeValueAsString(patch))
+    (config.outDir.toFile / s"log${seed}.log").write(log)
 
     Logger.success(s"Successfully generated patch file for seed $seed")
   }
@@ -152,5 +148,100 @@ class Randomizer(config: RandomizerConfig) {
       throw new FileNotFoundException(path)
     }
     new String(in.bytes.toArray)
+  }
+
+  def resourceAsBytes(path: String): Array[Byte] = {
+    val in = getClass.getResourceAsStream(path)
+    if (in == null) {
+      throw new FileNotFoundException(path)
+    }
+    in.bytes.toArray
+  }
+
+  def getPakPatches(primeVersion: PrimeVersion, raf: RandomAccessFile): Seq[PatchAction] = {
+    val header = new GCIsoHeaders
+    raf.seek(0)
+    PrimeDataFile(Some(raf), Some(raf)).read(header)
+
+    val fst = new FST
+    raf.seek(header.discHeader.fstOffset)
+    PrimeDataFile(Some(raf), Some(raf)).read(fst)
+
+    //Copy files to dest dir
+    val resourceDir = config.outDir.toFile / "res"
+    resourceDir.createDirectories()
+
+    Seq(
+      "50535430.CMDL",
+      "50535431.TXTR",
+      "50535432.TXTR"
+    ).foreach(f => {
+      Files.write((resourceDir / f).toJava.toPath, resourceAsBytes("/randomizer/phazonsuit/" + f))
+    })
+
+    val paks = Seq(
+      "metroid2.pak",
+      "metroid3.pak",
+      "metroid4.pak",
+      "metroid5.pak",
+      "metroid6.pak"
+    ).flatMap(pak => fst.rootDirectoryEntry.fileChildren.find(_.name.toLowerCase == pak))
+
+    val fileDepMap = PrimeJacksonMapper.mapper.readValue(resourceAsString("/randomizer/deps.json"), classOf[Map[String, List[String]]])
+
+    val allDeps = fileDepMap.flatMap(tuple => {
+      val (key, value) = tuple
+      key::value
+    }).map(v => DataTypeConversion.stringToLong("0x" + v).toInt).toSet
+    //Copy all required files into dest dir
+    paks.foreach(pak => copyFileFromPak(primeVersion, raf, pak, allDeps))
+
+//    paks.map(getPatchForPak)
+
+    Seq()
+  }
+
+  def copyFileFromPak(primeVersion: PrimeVersion, raf: RandomAccessFile, pakFileEntry: FileEntry, files: Set[Int]) = {
+    val resourceDir = config.outDir.toFile / "res"
+
+    //Read PAK info
+    val offset = pakFileEntry.offset
+    raf.seek(offset)
+    val pak = new PAKFile(primeVersion)
+    pak.read(new PrimeDataFile(Some(raf), None))
+
+    val resources = pak.resources
+      .filter(r => files.contains(r.id))
+      .filter(r => (resourceDir / r.idStr).notExists)
+
+    def copyResource(resource: Resource): Unit = {
+      Logger.progressResetLine("Copying " + resource.idStr + " from " + pakFileEntry.name)
+      raf.seek(offset + resource.offset)
+      val out = Files.newOutputStream((resourceDir / resource.idStr).toJava.toPath, StandardOpenOption.WRITE, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING)
+      if (resource.compressed) {
+        val decompressedSize = raf.readInt()
+
+        if (primeVersion == PrimeVersion.PRIME_1) {
+          val resourceStart = raf.getFilePointer
+          val decompressedOut = new InflaterOutputStream(out)
+          IOUtils.copyBytes(raf, resource.size - 4, decompressedOut)
+          decompressedOut.flush()
+          val resourceEnd = raf.getFilePointer
+          val bytesRead = resourceEnd - resourceStart
+          if (bytesRead != resource.size - 4) {
+            throw new IOException("Read incorrect number of bytes from original file")
+          }
+        } else if (primeVersion == PrimeVersion.PRIME_2) {
+          IOUtils.decompressSegmentedLZOStream(new RandomAccessFileInputStream(raf), out, decompressedSize)
+        } else {
+          throw new Error("I did something wrong D:")
+        }
+      } else {
+        IOUtils.copyBytes(raf, resource.size, out)
+      }
+      out.close()
+    }
+
+    resources.foreach(copyResource)
   }
 }

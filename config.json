@@ -1,7 +1,5 @@
 {
-  "patchFile": "out/rando/randomize.json",
-  "logFile": "out/rando/log%SEED%.txt",
-  "invisibleItems": true,
+  "outDir": "out/rando/",
   "fixed": {
     "4": {
       "id": "0x10",
