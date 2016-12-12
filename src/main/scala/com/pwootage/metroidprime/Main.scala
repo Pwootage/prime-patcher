@@ -59,8 +59,8 @@ object Main {
     addSubcommand(diff)
 
     val randomize = new Subcommand("randomize") {
-      val primeVersion = trailArg[String](descr = "mp1, mp2")
-      val configFile = trailArg[String]()
+      val iso = opt[String]("iso", short = 'i', descr = "Source ISO (required to find script objects)", required = true)
+      val config = opt[String]("config", short = 'c', descr = "Randomization config JSON file", required = true)
     }
     addSubcommand(randomize)
 
@@ -75,8 +75,8 @@ object Main {
     addSubcommand(test)
 
     val depFind = new Subcommand("depfind") {
-      val pakFile = trailArg[String](descr = "PAK")
-      val fileID = trailArg[String](descr = "File ID")
+      val pakFile = opt[String]("pak", short = 'p', descr = "PAK file to find deps in", required = true)
+      val fileID = opt[String]("file", short = 'f', descr = "File ID (8 hex characters)", required = true)
     }
     addSubcommand(depFind)
 
@@ -164,10 +164,10 @@ object Main {
   def randomize(conf: PatcherConf): Unit = {
     import better.files._
     val randomizerConfig = PrimeJacksonMapper.mapper.readValue(
-      conf.randomize.configFile().toFile.contentAsString,
+      conf.randomize.config().toFile.contentAsString,
       classOf[RandomizerConfig]
     )
-    new Randomizer(randomizerConfig).naiveRandomize(conf.randomize.primeVersion())
+    new Randomizer(randomizerConfig).naiveRandomize(conf.randomize.iso())
   }
 
   def test(): Unit = {

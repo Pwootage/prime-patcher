@@ -1,10 +1,14 @@
 package com.pwootage.metroidprime.randomizer
 
-import java.io.{FileNotFoundException, IOException}
+import java.io.{FileNotFoundException, IOException, RandomAccessFile}
+import java.nio.file.Paths
 import java.time.LocalDateTime
 import java.util.Random
 
 import better.files._
+import com.pwootage.metroidprime.formats.common.PrimeVersion
+import com.pwootage.metroidprime.formats.io.PrimeDataFile
+import com.pwootage.metroidprime.formats.iso.GCIsoHeaders
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
 import com.pwootage.metroidprime.templates.ScriptTemplates._
 import com.pwootage.metroidprime.utils._
@@ -15,14 +19,35 @@ class Randomizer(config: RandomizerConfig) {
     PrimeJacksonMapper.mapper.readValue(src, classOf[Array[Prime1ItemLocation]])
   }
 
-  def naiveRandomize(primeVersion: String): Unit = {
-    primeVersion match {
-      case "mp1" => prime1Patches()
+  def naiveRandomize(isoFile: String): Unit = {
+    val raf = new RandomAccessFile(Paths.get(isoFile).toFile, "rw")
+
+    Logger.progress("Reading ISO header information...")
+
+    val header = new GCIsoHeaders
+    raf.seek(0)
+    PrimeDataFile(Some(raf), Some(raf)).read(header)
+
+    val gameID = DataTypeConversion.intContainingCharsAsStr(header.discHeader.gameCode) + DataTypeConversion.intContainingCharsAsStr(header.discHeader.makerCode)
+
+    Logger.info(s"Found game ID $gameID version ${header.discHeader.version} (Internal name: ${header.discHeader.name})")
+
+    val version = if (gameID == "GM8E01" || gameID == "GM8P01") {
+      Some(PrimeVersion.PRIME_1)
+    } else if (gameID == "G2ME01") {
+      Some(PrimeVersion.PRIME_2)
+    } else {
+      None
+    }
+    raf.seek(0)
+
+    version match {
+      case Some(PrimeVersion.PRIME_1) => prime1Patches(raf)
       case _ => ???
     }
   }
 
-  def prime1Patches() = {
+  def prime1Patches(raf: RandomAccessFile) = {
     val seed = config.seed.getOrElse(new Random().nextInt())
     val rng = new Random(seed)
 
@@ -68,29 +93,29 @@ class Randomizer(config: RandomizerConfig) {
           .put("0x08", item.amountInt.getOrElse(1)) //amount
 
         if (config.invisibleItems) {
-          objectPatch.put("0x0C", "86908399.CMDL") //model
-          objectPatch.put("0x11", "0deb9456.PART") //particle
+          objectPatch.put("0x0C", "0x" + DataTypeConversion.intToPaddedHexString(item.model)) //model
+          //Particle doesn't change, so no need to patch it
 
-          val scale = PrimeJacksonMapper.mapper.createObjectNode()
-            .put("x", 0)
-            .put("y", 0)
-            .put("z", 0)
-
-          objectPatch.set("0x03", scale)
+          //TODO: get actual scales of items (I forgot to grab them)
+          //          val scale = PrimeJacksonMapper.mapper.createObjectNode()
+          //            .put("x", 0)
+          //            .put("y", 0)
+          //            .put("z", 0)
+          //          objectPatch.set("0x03", scale)
 
           val animParams = PrimeJacksonMapper.mapper.createObjectNode()
-            .put("animANCS", "0xf37bcbc7")
-            .put("character", 0)
+            .put("animANCS", "0x" + DataTypeConversion.intToPaddedHexString(item.animSet))
+            .put("character", item.animCharacterInt.getOrElse(0))
             .put("defaultAnim", 0)
 
           objectPatch.set("0x0D", animParams)
 
           val actorParams = PrimeJacksonMapper.mapper.createObjectNode()
-            .put("0x02", "ffffffff.CMDL") //xray model
-            .put("0x03", "ffffffff.CSKR") //xray skin
-            .put("0x04", "ffffffff.CMDL") //thermal model
-            .put("0x05", "ffffffff.CSKR") //thermal skin
+            .put("0x02", DataTypeConversion.intToPaddedHexString(item.xrayModelInt.getOrElse(0xFFFFFFFF)) + ".CMDL") //xray model
+            .put("0x03", DataTypeConversion.intToPaddedHexString(item.xraySkinInt.getOrElse(0xFFFFFFFF)) + ".CSKR") //xray skin
+          //Thermal never changes
 
+          //TODO: Scans
           val scannableParams = PrimeJacksonMapper.mapper.createObjectNode()
             .put("0x00", "ffffffff.SCAN")
 

@@ -40,7 +40,7 @@ dependencies {
     compile 'org.scala-lang:scala-library:2.11.8'
     compile 'org.scala-lang:scala-reflect:2.11.8'
     compile 'org.scala-lang.modules:scala-xml_2.11:1.0.5'
-    compile 'org.rogach:scallop_2.11:1.0.1'
+    compile 'org.rogach:scallop_2.11:2.0.5'
     compile 'com.fasterxml.jackson.core:jackson-core:2.7.2'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.7.2'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.7.2'
