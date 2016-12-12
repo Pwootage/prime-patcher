@@ -4,185 +4,304 @@
     "count": 49,
     "item": "0x04",
     "capacity": 5,
-    "amount": 5
+    "amount": 5,
+    "model": "0x2d7e6590",
+    "animSet": "0xa9b8e446",
   },
   {
     "name": "Missile Launcher",
     "count": 1,
     "item": "0x04",
     "capacity": 5,
-    "amount": 5
+    "amount": 5,
+    "model": "0x2d7e6590",
+    "animSet": "0xa9b8e446",
+    "rotation": {
+      "x": -8.872797,
+      "y": 0,
+      "z": 0
+    }
   },
   {
     "name": "Energy Tank",
     "count": 14,
-    "item": "0x18"
+    "item": "0x18",
+    "model": "0x86908399",
+    "animSet": "0xf37bcbc7"
   },
   {
     "name": "Wave Beam",
     "count": 1,
-    "item": "0x02"
+    "item": "0x02",
+    "model": "0x009771b9",
+    "animSet": "0x09881302"
   },
   {
     "name": "Ice Beam",
     "count": 1,
-    "item": "0x01"
+    "item": "0x01",
+    "model": "0xda25b1be",
+    "animSet": "0x52a3b1a4"
   },
   {
     "name": "Plasma Beam",
     "count": 1,
-    "item": "0x03"
+    "item": "0x03",
+    "model": "0xa792116a",
+    "animSet": "0x6397cc1b"
   },
   {
     "name": "Morph Ball",
     "count": 1,
-    "item": "0x10"
+    "item": "0x10",
+    "model": "0x903e8ac5",
+    "animSet": "0x2d0fd5c9"
   },
   {
     "name": "Morph Ball Bomb",
     "count": 1,
-    "item": "0x06"
+    "item": "0x06",
+    "model": "0xb5544d27",
+    "animSet": "0xda110e43"
   },
   {
     "name": "Power Bomb",
     "count": 1,
     "item": "0x07",
     "capacity": 4,
-    "amount": 4
+    "amount": 4,
+    "model": "0xd532bdb8",
+    "animSet": "0xf19131ad"
   },
   {
     "name": "Power Bomb Expansion",
     "count": 4,
-    "item": "0x07"
+    "item": "0x07",
+    "model": "0x227d7166",
+    "animSet": "0x0b5bbf9e"
   },
   {
     "name": "Charge Beam",
     "count": 1,
-    "item": "0x0A"
+    "item": "0x0A",
+    "model": "0xc5472401",
+    "animSet": "0xe3cbc3f3"
   },
   {
     "name": "Super Missiles",
     "count": 1,
-    "item": "0x0B"
+    "item": "0x0B",
+    "model": "0x853a56f0",
+    "animSet": "0x7c04e388",
+    "animCharacter": 0
   },
   {
     "name": "Wavebuster",
     "count": 1,
-    "item": "0x1C"
+    "item": "0x1C",
+    "model": "0x74a39fe6",
+    "animSet": "0x7c04e388",
+    "animCharacter": 2
   },
   {
     "name": "Ice Spreader",
     "count": 1,
-    "item": "0x0E"
+    "item": "0x0E",
+    "model": "0x85ba7acb",
+    "animSet": "0x7c04e388",
+    "animCharacter": 3
   },
   {
     "name": "Flamethrower",
     "count": 1,
-    "item": "0x08"
+    "item": "0x08",
+    "model": "0xc54bbf68",
+    "animSet": "0x7c04e388",
+    "animCharacter": 1
   },
   {
     "name": "Thermal Visor",
     "count": 1,
-    "item": "0x09"
+    "item": "0x09",
+    "model": "0x61dab956",
+    "animSet": "0x9f0c908a"
   },
   {
     "name": "X-Ray Visor",
     "count": 1,
-    "item": "0x0D"
+    "item": "0x0D",
+    "model": "0x61dab956",
+    "animSet": "0x9f0c908a"
   },
   {
     "name": "Space Jump Boots",
     "count": 1,
-    "item": "0x0F"
+    "item": "0x0F",
+    "model": "0xa10715da",
+    "animSet": "0x999e81fe"
   },
   {
     "name": "Grapple Beam",
     "count": 1,
-    "item": "0x0C"
+    "item": "0x0C",
+    "model": "0xf86621c9",
+    "animSet": "0xc5b5ed4d"
   },
   {
     "name": "Boost Ball",
     "count": 1,
-    "item": "0x12"
+    "item": "0x12",
+    "model": "0xbe57a2b2",
+    "animSet": "0xbe57a2b2",
+    "animCharacter": 0
   },
   {
     "name": "Spider Ball",
     "count": 1,
-    "item": "0x13"
+    "item": "0x13",
+    "model": "0x79d95dec",
+    "animSet": "0xbe57a2b2",
+    "animCharacter": 1
   },
   {
     "name": "Varia Suit",
     "count": 1,
-    "item": "0x16"
+    "item": "0x16",
+    "model": "0xcd995c16",
+    "animSet": "0xa3e787b7"
   },
   {
     "name": "Gravity Suit",
     "count": 1,
-    "item": "0x15"
+    "item": "0x15",
+    "model": "0x95946e41",
+    "animSet": "0x27a97006"
   },
   {
     "name": "Phazon Suit",
     "count": 1,
-    "item": "0x17"
+    "item": "0x17",
+    "model": "0x50535430",
+    "animSet": "0x27a97006"
   },
   {
     "name": "Artifact of Truth",
     "count": 1,
-    "item": "0x1D"
+    "item": "0x1D",
+    "model": "0x884e88dc",
+    "xrayModel": "0x83210fce",
+    "xraySkin": "0xe80ea018",
+    "animSet": "0xfaa9c708",
+    "animCharacter": 3
   },
   {
     "name": "Artifact of Strength",
     "count": 1,
-    "item": "0x1E"
+    "item": "0x1E",
+    "model": "0xffd05a2c",
+    "xrayModel": "0x83210fce",
+    "xraySkin": "0xe80ea018",
+    "animSet": "0xfaa9c708",
+    "animCharacter": 1
   },
   {
     "name": "Artifact of Elder",
     "count": 1,
-    "item": "0x1F"
+    "item": "0x1F",
+    "model": "0x64751643",
+    "xrayModel": "0x83210fce",
+    "xraySkin": "0xe80ea018",
+    "animSet": "0xfaa9c708",
+    "animCharacter": 5
   },
   {
     "name": "Artifact of Wild",
     "count": 1,
-    "item": "0x20"
+    "item": "0x20",
+    "model": "0x10edffcc",
+    "xrayModel": "0x83210fce",
+    "xraySkin": "0xe80ea018",
+    "animSet": "0xfaa9c708",
+    "animCharacter": 6
   },
   {
     "name": "Artifact of Lifegiver",
     "count": 1,
-    "item": "0x21"
+    "item": "0x21",
+    "model": "0x8b48b3a3",
+    "xrayModel": "0x83210fce",
+    "xraySkin": "0xe80ea018",
+    "animSet": "0xfaa9c708",
+    "animCharacter": 7
   },
   {
     "name": "Artifact of Warrior",
     "count": 1,
-    "item": "0x22"
+    "item": "0x22",
+    "model": "0xfcd66153",
+    "xrayModel": "0x83210fce",
+    "xraySkin": "0xe80ea018",
+    "animSet": "0xfaa9c708",
+    "animCharacter": 8
   },
   {
     "name": "Artifact of Chozo",
     "count": 1,
-    "item": "0x23"
+    "item": "0x23",
+    "model": "0x67732d3c",
+    "xrayModel": "0x83210fce",
+    "xraySkin": "0xe80ea018",
+    "animSet": "0xfaa9c708",
+    "animCharacter": 9
   },
   {
     "name": "Artifact of Nature",
     "count": 1,
-    "item": "0x24"
+    "item": "0x24",
+    "model": "0x15e7b24d",
+    "xrayModel": "0x83210fce",
+    "xraySkin": "0xe80ea018",
+    "animSet": "0xfaa9c708",
+    "animCharacter": 10
   },
   {
     "name": "Artifact of Sun",
     "count": 1,
-    "item": "0x25"
+    "item": "0x25",
+    "model": "0x8e42fe22",
+    "xrayModel": "0x83210fce",
+    "xraySkin": "0xe80ea018",
+    "animSet": "0xfaa9c708",
+    "animCharacter": 11
   },
   {
     "name": "Artifact of World",
     "count": 1,
-    "item": "0x26"
+    "item": "0x26",
+    "model": "0x12174a4c",
+    "xrayModel": "0x83210fce",
+    "xraySkin": "0xe80ea018",
+    "animSet": "0xfaa9c708",
+    "animCharacter": 0
   },
   {
     "name": "Artifact of Spirit",
     "count": 1,
-    "item": "0x27"
+    "item": "0x27",
+    "model": "0x89b20623",
+    "xrayModel": "0x83210fce",
+    "xraySkin": "0xe80ea018",
+    "animSet": "0xfaa9c708",
+    "animCharacter": 2
   },
   {
     "name": "Artifact of Newborn",
     "count": 1,
-    "item": "0x28"
+    "item": "0x28",
+    "model": "0xfe2cd4d3",
+    "xrayModel": "0x83210fce",
+    "xraySkin": "0xe80ea018",
+    "animSet": "0xfaa9c708",
+    "animCharacter": 4
   }
 ]
