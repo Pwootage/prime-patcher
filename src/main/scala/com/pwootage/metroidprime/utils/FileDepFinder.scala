@@ -25,55 +25,68 @@ object FileDepFinder {
       PrimeJacksonMapper.mapper.readValue(src, classOf[Array[Prime1Item]])
     }
 
-    var knownFilesWeNeedToFind = (
-      itemPool.map(_.animSet)
-        ++ itemPool.map(_.model)
-        ++ itemPool.flatMap(_.xrayModelInt)
-        ++ itemPool.flatMap(_.xraySkinInt)
-      ).toSet
+    def findItemsFor(things: Set[Int]): Map[Int, Set[Int]] = {
+      var knownFilesWeNeedToFind = things
 
-    var fileDeps = Map[Int, Set[Int]]()
-    var paksLookedIn = Set[String]()
+      var fileDeps = Map[Int, Set[Int]]()
+      var paksLookedIn = Set[String]()
 
-    def findDepsInPak(pak: String) = {
-      var filesToGetDepsFor = Queue[Int](
-        (knownFilesWeNeedToFind -- fileDeps.keySet).toSeq: _*
-      )
-      paksLookedIn += pak
-      var itemDepsFound = fileDeps.keySet
+      def findDepsInPak(pak: String) = {
+        var filesToGetDepsFor = Queue[Int](
+          (knownFilesWeNeedToFind -- fileDeps.keySet).toSeq: _*
+        )
+        paksLookedIn += pak
+        var itemDepsFound = fileDeps.keySet
 
-      while (filesToGetDepsFor.nonEmpty) {
-        var (next, newQueue) = filesToGetDepsFor.dequeue
-        filesToGetDepsFor = newQueue
+        while (filesToGetDepsFor.nonEmpty) {
+          var (next, newQueue) = filesToGetDepsFor.dequeue
+          filesToGetDepsFor = newQueue
 
-        if (!itemDepsFound.contains(next)) {
-          val deps = findDepsOfFileInPak(DataTypeConversion.intToPaddedHexString(next), pak)
-          itemDepsFound += next
-          if (deps.isDefined) {
-            fileDeps += next -> deps.get
-            val newDeps = deps.get -- itemDepsFound
-            filesToGetDepsFor = filesToGetDepsFor.enqueue(newDeps)
-            knownFilesWeNeedToFind ++= newDeps
-            Logger.progressResetLine(newDeps.size + " new deps, " + filesToGetDepsFor.length + " in queue, " + (knownFilesWeNeedToFind.size - fileDeps.size) + " left")
+          if (!itemDepsFound.contains(next)) {
+            val deps = findDepsOfFileInPak(DataTypeConversion.intToPaddedHexString(next), pak)
+            itemDepsFound += next
+            if (deps.isDefined) {
+              fileDeps += next -> deps.get
+              val newDeps = deps.get -- itemDepsFound
+              filesToGetDepsFor = filesToGetDepsFor.enqueue(newDeps)
+              knownFilesWeNeedToFind ++= newDeps
+              Logger.progressResetLine(newDeps.size + " new deps, " + filesToGetDepsFor.length + " in queue, " + (knownFilesWeNeedToFind.size - fileDeps.size) + " left")
+            }
           }
         }
       }
-    }
-    Seq(
-      "out/mp1/Metroid4.pak",
-      "out/mp1/Metroid2.pak",
-      "out/mp1/Metroid3.pak",
-      "out/mp1/Metroid5.pak",
-      "out/mp1/Metroid6.pak"
-    ).foreach(findDepsInPak)
+      Seq(
+        "out/mp1/Metroid4.pak",
+        "out/mp1/Metroid2.pak",
+        "out/mp1/Metroid3.pak",
+        "out/mp1/Metroid5.pak",
+        "out/mp1/Metroid6.pak"
+      ).foreach(findDepsInPak)
 
-    val json = PrimeJacksonMapper.pretty.writeValueAsString(fileDeps.map(tuple => {
+      fileDeps
+    }
+
+    val allDeps = Map(itemPool.map(i => {
+      val things = Seq(Some(i.animSet), Some(i.model), i.xrayModelInt, i.xraySkinInt).flatten.toSet
+      i.name -> findItemsFor(things).map(tuple => {
+        val (key, value) = tuple
+        DataTypeConversion.intToPaddedHexString(key) -> value.map(DataTypeConversion.intToPaddedHexString)
+      })
+    }):_*)
+
+    val flatDeps = allDeps.flatMap(tuple => {
       val (key, value) = tuple
-      DataTypeConversion.intToPaddedHexString(key) -> value.map(DataTypeConversion.intToPaddedHexString)
-    }))
+      value.flatMap(tuple => {
+        val (key2, value2) = tuple
+        value2 ++ Set(key2)
+      })
+    }).toSet
+
+    val json = PrimeJacksonMapper.pretty.writeValueAsString(allDeps)
+    val flatJson = PrimeJacksonMapper.pretty.writeValueAsString(flatDeps)
     Logger.success(json)
-    Logger.success(paksLookedIn.toString())
-    Files.write(Paths.get("out/deps.json"), json.getBytes(StandardCharsets.UTF_8))
+    Files.write(Paths.get("out/deps-detailed.json"), json.getBytes(StandardCharsets.UTF_8))
+    Files.write(Paths.get("out/deps-basic.json"), flatJson.getBytes(StandardCharsets.UTF_8))
   }
 
   def resourceAsString(path: String): String = {
@@ -102,7 +115,6 @@ object FileDepFinder {
       case None =>
         Logger.error("Can't find resource: " + DataTypeConversion.intToPaddedHexString(fileID) + " in PAK " + pakPath)
         return None
-        Array[Byte]()
       case Some(resource) =>
         raf.seek(offset + resource.offset)
         val out = new ByteArrayOutputStream()
@@ -132,14 +144,24 @@ object FileDepFinder {
 
     val resourceIdSet = pak.resources.map(_.id).toSet
 
-    val buff = ByteBuffer.wrap(resourceBytes).asIntBuffer()
+    val buff = ByteBuffer.wrap(resourceBytes)
     var ids = Set[Int]()
-    for (i <- 0 until resourceBytes.length / 4) {
-      var maybeID = buff.get()
-      if (resourceIdSet.contains(maybeID)) {
-        ids += maybeID
+
+    def lookForIDs(buff: ByteBuffer) = {
+      val intBuff = buff.asIntBuffer()
+      while (intBuff.hasRemaining) {
+        var maybeID = intBuff.get()
+        if (resourceIdSet.contains(maybeID)) {
+          ids += maybeID
+        }
       }
     }
+    lookForIDs(buff)
+    buff.get()
+    lookForIDs(buff.slice())
+    buff.get()
+    lookForIDs(buff.slice())
+
 
     Logger.success("Done")
     val idStr = ids.map(DataTypeConversion.intToPaddedHexString).mkString(" ")

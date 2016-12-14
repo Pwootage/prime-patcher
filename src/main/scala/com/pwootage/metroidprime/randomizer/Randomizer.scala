@@ -7,10 +7,11 @@ import java.util.Random
 import java.util.zip.InflaterOutputStream
 
 import better.files._
+import com.google.diff.diff_match_patch
 import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.iso.{FST, FileEntry, GCIsoHeaders}
-import com.pwootage.metroidprime.formats.pak.{PAKFile, Resource}
+import com.pwootage.metroidprime.formats.pak.{BasicResourceList, PAKFile, Resource}
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
 import com.pwootage.metroidprime.templates.ScriptTemplates._
 import com.pwootage.metroidprime.utils._
@@ -137,7 +138,7 @@ class Randomizer(config: RandomizerConfig) {
     val patch = Patchfile(s"Randomizer seed $seed", patches, Some("prime-patcher"))
 
     (config.outDir.toFile / "randomize.json").write(PrimeJacksonMapper.pretty.writeValueAsString(patch))
-    (config.outDir.toFile / s"log${seed}.log").write(log)
+    (config.outDir.toFile / s"log$seed.log").write(log)
 
     Logger.success(s"Successfully generated patch file for seed $seed")
   }
@@ -167,6 +168,17 @@ class Randomizer(config: RandomizerConfig) {
     raf.seek(header.discHeader.fstOffset)
     PrimeDataFile(Some(raf), Some(raf)).read(fst)
 
+    val paks = Seq(
+      "metroid2.pak",
+      "metroid3.pak",
+      "metroid4.pak",
+      "metroid5.pak",
+      "metroid6.pak"
+    ).flatMap(pak => fst.rootDirectoryEntry.fileChildren.find(_.name.toLowerCase == pak))
+
+    val fileDepList = PrimeJacksonMapper.mapper.readValue(resourceAsString("/randomizer/deps-basic.json"), classOf[List[String]])
+    val allDeps = fileDepList.map(v => DataTypeConversion.stringToLong("0x" + v).toInt).toSet
+
     //Copy files to dest dir
     val resourceDir = config.outDir.toFile / "res"
     resourceDir.createDirectories()
@@ -179,26 +191,51 @@ class Randomizer(config: RandomizerConfig) {
       Files.write((resourceDir / f).toJava.toPath, resourceAsBytes("/randomizer/phazonsuit/" + f))
     })
 
-    val paks = Seq(
-      "metroid2.pak",
-      "metroid3.pak",
-      "metroid4.pak",
-      "metroid5.pak",
-      "metroid6.pak"
-    ).flatMap(pak => fst.rootDirectoryEntry.fileChildren.find(_.name.toLowerCase == pak))
-
-    val fileDepMap = PrimeJacksonMapper.mapper.readValue(resourceAsString("/randomizer/deps.json"), classOf[Map[String, List[String]]])
-
-    val allDeps = fileDepMap.flatMap(tuple => {
-      val (key, value) = tuple
-      key::value
-    }).map(v => DataTypeConversion.stringToLong("0x" + v).toInt).toSet
     //Copy all required files into dest dir
     paks.foreach(pak => copyFileFromPak(primeVersion, raf, pak, allDeps))
 
-//    paks.map(getPatchForPak)
+    val filesInDepDir = Map[Int, Int](
+      resourceDir.list.map(f => DataTypeConversion.strResourceToIdAndType(f.name)).toSeq: _*
+    )
 
-    Seq()
+    val depsWithType = fileDepList.map(v => {
+      val intid = DataTypeConversion.stringToLong("0x" + v).toInt
+      DataTypeConversion.intPrimeResourceNameToStr(intid, filesInDepDir(intid))
+    }).toSet
+
+    def getPatchForPak(raf: RandomAccessFile, pakEntry: FileEntry): Seq[PatchAction] = {
+      //Read PAK info
+      val offset = pakEntry.offset
+      raf.seek(offset)
+      val pak = new PAKFile(primeVersion)
+      pak.read(new PrimeDataFile(Some(raf), None))
+
+      val filesInPak = pak.resources.map(_.idStr).toSet
+
+      val needed = depsWithType -- filesInPak
+
+      val originalBrl = pak.toBasicResourceList
+      val brl = BasicResourceList(originalBrl.primeVersion, originalBrl.namedResources, {
+        originalBrl.resources ++ needed
+      })
+
+      val differ = new diff_match_patch
+
+      val pakDiff = differ.diff_main(
+        originalBrl.resources.mkString("\n"),
+        brl.resources.mkString("\n")
+      )
+
+      differ.diff_cleanupEfficiency(pakDiff)
+      val pakPatch = differ.patch_make(pakDiff)
+
+      Seq(PakfileResourceListPatch(
+        pakEntry.name,
+        differ.patch_toText(pakPatch)
+      ))
+    }
+
+    paks.flatMap(pak => getPatchForPak(raf, pak))
   }
 
   def copyFileFromPak(primeVersion: PrimeVersion, raf: RandomAccessFile, pakFileEntry: FileEntry, files: Set[Int]) = {
