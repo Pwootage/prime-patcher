@@ -31,7 +31,7 @@ class Extractor(targetDirectory: String, force: Boolean, extractPaks: Boolean, q
     } else {
       Files.createDirectories(target)
     }
-    val raf = new RandomAccessFile(file.toFile, "rw")
+    val raf = new RandomAccessFile(file.toFile, "r")
 
     Logger.progress("Reading ISO header information...")
 

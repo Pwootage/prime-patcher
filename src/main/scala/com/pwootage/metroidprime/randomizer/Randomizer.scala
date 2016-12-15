@@ -186,7 +186,8 @@ class Randomizer(config: RandomizerConfig) {
     Seq(
       "50535430.CMDL",
       "50535431.TXTR",
-      "50535432.TXTR"
+      "50535432.TXTR",
+      "50535433.ANCS"
     ).foreach(f => {
       Files.write((resourceDir / f).toJava.toPath, resourceAsBytes("/randomizer/phazonsuit/" + f))
     })
@@ -201,7 +202,12 @@ class Randomizer(config: RandomizerConfig) {
     val depsWithType = fileDepList.map(v => {
       val intid = DataTypeConversion.stringToLong("0x" + v).toInt
       DataTypeConversion.intPrimeResourceNameToStr(intid, filesInDepDir(intid))
-    }).toSet
+    }).toSet ++ Seq(
+      "50535430.CMDL",
+      "50535431.TXTR",
+      "50535432.TXTR",
+      "50535433.ANCS"
+    )
 
     def getPatchForPak(raf: RandomAccessFile, pakEntry: FileEntry): Seq[PatchAction] = {
       //Read PAK info
