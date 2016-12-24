@@ -1,8 +1,8 @@
 package com.pwootage.metroidprime.randomizer
 
-case class RandomizerConfig(seed: Option[Int],
-                            fixed: Map[String, RandomizerFixedLocation] = Map(),
+case class RandomizerConfig(seed: Option[Long],
+                            fixed: Seq[RandomizerFixedLocation] = Seq(),
                             outDir: String
                            )
 
-case class RandomizerFixedLocation(id: Int, capacity: Int, amount: Int)
+case class RandomizerFixedLocation(world: String, name: String, item: String)

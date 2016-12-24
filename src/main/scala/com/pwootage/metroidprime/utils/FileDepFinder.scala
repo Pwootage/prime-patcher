@@ -21,7 +21,7 @@ import scala.collection.immutable.Queue
 object FileDepFinder {
   def main(args: Array[String]): Unit = {
     var itemPool = {
-      val src = resourceAsString("/randomizer/items/prime1Items.json")
+      val src = ResourceUtils.resourceAsString("/randomizer/items/prime1Items.json")
       PrimeJacksonMapper.mapper.readValue(src, classOf[Array[Prime1Item]])
     }
 
@@ -87,14 +87,6 @@ object FileDepFinder {
     Logger.success(json)
     Files.write(Paths.get("out/deps-detailed.json"), json.getBytes(StandardCharsets.UTF_8))
     Files.write(Paths.get("out/deps-basic.json"), flatJson.getBytes(StandardCharsets.UTF_8))
-  }
-
-  def resourceAsString(path: String): String = {
-    val in = getClass.getResourceAsStream(path)
-    if (in == null) {
-      throw new FileNotFoundException(path)
-    }
-    new String(in.bytes.toArray)
   }
 
   def findDepsOfFileInPak(fileIDStr: String, pakPath: String): Option[Set[Int]] = {

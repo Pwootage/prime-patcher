@@ -18,7 +18,7 @@ import com.pwootage.metroidprime.utils._
 
 class Randomizer(config: RandomizerConfig) {
   val prime1ItemLocations = {
-    val src = resourceAsString("/randomizer/items/prime1ItemLocations.json")
+    val src = ResourceUtils.resourceAsString("/randomizer/items/prime1ItemLocations.json")
     PrimeJacksonMapper.mapper.readValue(src, classOf[Array[Prime1ItemLocation]])
   }
 
@@ -53,11 +53,11 @@ class Randomizer(config: RandomizerConfig) {
   def prime1Patches(raf: RandomAccessFile) = {
     config.outDir.toFile.createDirectories()
 
-    val seed = config.seed.getOrElse(new Random().nextInt())
+    val seed = config.seed.getOrElse(new Random().nextLong())
     val rng = new Random(seed)
 
     var itemPool = {
-      val src = resourceAsString("/randomizer/items/prime1Items.json")
+      val src = ResourceUtils.resourceAsString("/randomizer/items/prime1Items.json")
       PrimeJacksonMapper.mapper.readValue(src, classOf[Array[Prime1Item]])
     }
 
@@ -65,15 +65,15 @@ class Randomizer(config: RandomizerConfig) {
       Array.fill(item.count)(new Prime1Item(item.name, 1, item.item, item.capacity, item.amount, item.model, item.animSet, item.animCharacter, item.rotation, item.xrayModel, item.xraySkin))
     })
 
-    def removeItemFromPool(id: Int): Unit = {
-      itemPool.filter(_.item == id).find(_.count > 0) match {
+    def removeItemFromPool(item: String): Unit = {
+      itemPool.filter(_.name == item).find(_.count > 0) match {
         case Some(x) => x.count -= 1
         case None => throw new IOException("Tried to remove more of an item than there is")
       }
     }
 
-    for ((_, item) <- config.fixed) {
-      removeItemFromPool(item.id)
+    for (fixed <- config.fixed) {
+      removeItemFromPool(fixed.item)
     }
 
     var log =
@@ -91,7 +91,7 @@ class Randomizer(config: RandomizerConfig) {
         val item = possibleItems(rng.nextInt(possibleItems.length))
         item.count -= 1
 
-        log += s"${p1obj.area},${p1obj.description},${item.name}\n"
+        log += s"${p1obj.world},${p1obj.description},${item.name}\n"
         val objectPatch = PrimeJacksonMapper.mapper.createObjectNode()
           .put("0x06", item.item) //item
           .put("0x07", item.capacityInt.getOrElse(1)) //capacity
@@ -129,7 +129,7 @@ class Randomizer(config: RandomizerConfig) {
 
         val res = ScriptObjectPatch(p1obj.room, Prime1ScriptObjectType.Pickup.name(), p1obj.id)
         res.objectPatch = Some(objectPatch)
-        res.description = Some(s"${p1obj.area} - ${p1obj.description}")
+        res.description = Some(s"${p1obj.world} - ${p1obj.description}")
 
         Some(res)
       }
@@ -141,22 +141,6 @@ class Randomizer(config: RandomizerConfig) {
     (config.outDir.toFile / s"log$seed.log").write(log)
 
     Logger.success(s"Successfully generated patch file for seed $seed")
-  }
-
-  def resourceAsString(path: String): String = {
-    val in = getClass.getResourceAsStream(path)
-    if (in == null) {
-      throw new FileNotFoundException(path)
-    }
-    new String(in.bytes.toArray)
-  }
-
-  def resourceAsBytes(path: String): Array[Byte] = {
-    val in = getClass.getResourceAsStream(path)
-    if (in == null) {
-      throw new FileNotFoundException(path)
-    }
-    in.bytes.toArray
   }
 
   def getPakPatches(primeVersion: PrimeVersion, raf: RandomAccessFile): Seq[PatchAction] = {
@@ -176,7 +160,7 @@ class Randomizer(config: RandomizerConfig) {
       "metroid6.pak"
     ).flatMap(pak => fst.rootDirectoryEntry.fileChildren.find(_.name.toLowerCase == pak))
 
-    val fileDepList = PrimeJacksonMapper.mapper.readValue(resourceAsString("/randomizer/deps-basic.json"), classOf[List[String]])
+    val fileDepList = PrimeJacksonMapper.mapper.readValue(ResourceUtils.resourceAsString("/randomizer/deps-basic.json"), classOf[List[String]])
     val allDeps = fileDepList.map(v => DataTypeConversion.stringToLong("0x" + v).toInt).toSet
 
     //Copy files to dest dir
@@ -189,7 +173,7 @@ class Randomizer(config: RandomizerConfig) {
       "50535432.TXTR",
       "50535433.ANCS"
     ).foreach(f => {
-      Files.write((resourceDir / f).toJava.toPath, resourceAsBytes("/randomizer/phazonsuit/" + f))
+      Files.write((resourceDir / f).toJava.toPath, ResourceUtils.resourceAsBytes("/randomizer/phazonsuit/" + f))
     })
 
     //Copy all required files into dest dir

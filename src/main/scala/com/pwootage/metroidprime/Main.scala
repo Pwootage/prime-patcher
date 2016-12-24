@@ -9,6 +9,7 @@ import com.pwootage.metroidprime.formats.common.PrimeVersion
 import com.pwootage.metroidprime.formats.io.PrimeDataFile
 import com.pwootage.metroidprime.formats.mrea.MREA
 import com.pwootage.metroidprime.formats.scly.Prime1ScriptObjectType
+import com.pwootage.metroidprime.randomizer.seedGeneration.SeedGenerator
 import com.pwootage.metroidprime.randomizer.{Randomizer, RandomizerConfig}
 import com.pwootage.metroidprime.templates.{IntScriptProperty, ScriptProperty, ScriptTemplate, ScriptTemplates}
 import com.pwootage.metroidprime.utils._
@@ -57,6 +58,12 @@ object Main {
       val dest = trailArg[String](descr = "Destination directory for patches")
     }
     addSubcommand(diff)
+
+    val generateSeed = new Subcommand("genseed") {
+      val config = opt[String]("config", short = 'f', descr = "Randomization config JSON file", required = true)
+      val check = toggle(name = "check", default = Some(false), short= 'c', descrYes = "Check for completability", descrNo = "Don't check for completability")
+    }
+    addSubcommand(generateSeed)
 
     val randomize = new Subcommand("randomize") {
       val iso = opt[String]("iso", short = 'i', descr = "Source ISO (required to find script objects)", required = true)
@@ -108,6 +115,7 @@ object Main {
 
     command match {
       case conf.dump => dump(conf)
+      case conf.generateSeed => generateSeed(conf)
       case conf.randomize => randomize(conf)
       case conf.extract => extract(conf)
       case conf.repack => repack(conf)
@@ -159,6 +167,15 @@ object Main {
 
   def depFind(conf: PatcherConf): Unit = {
     FileDepFinder.findDepsOfFileInPak(conf.depFind.fileID(), conf.depFind.pakFile())
+  }
+
+  def generateSeed(conf: PatcherConf): Unit = {
+    import better.files._
+    val config = PrimeJacksonMapper.mapper.readValue(
+      conf.generateSeed.config().toFile.contentAsString,
+      classOf[RandomizerConfig]
+    )
+    val seed = new SeedGenerator(config)
   }
 
   def randomize(conf: PatcherConf): Unit = {
