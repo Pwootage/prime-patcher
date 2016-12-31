@@ -43,7 +43,7 @@ class CollisionDumper() {
           "index" -> index
         )
       }
-    }):_*)
+    }): _*)
     Files.write(destPath.resolve("areas.json"), PrimeJacksonMapper.pretty.writeValueAsBytes(areas))
   }
 
@@ -74,7 +74,20 @@ class CollisionDumper() {
     objOut.write(s"# Vertexes (${coll.verts.length})\n")
     for (v <- verts) objOut.write(s"v ${v.x} ${v.y} ${v.z}\n")
     objOut.write(s"# Faces (${coll.faces.length})\n")
-    for (f <- faces) objOut.write(s"f ${f.ind1 + 1} ${f.ind2 + 1} ${f.ind3 + 1}\n")
+    for ((f, i) <- faces.zipWithIndex) {
+      val (v1, v2, v3) = (verts(f.ind1), verts(f.ind2), verts(f.ind3))
+
+      val normal = ((v2 - v1) x (v3 - v1)).normalized
+      val flags = coll.collisionMaterialFlags(coll.facePropertyIndices(i))
+
+      // Alg from the actual game
+      val (r, g, b) = if ((flags & 0x80000000) > 0 || normal.z > 0.85) {
+        (1, 0, 0)
+      } else {
+        (1, 1, 1)
+      }
+      objOut.write(s"f ${f.ind1 + 1} ${f.ind2 + 1} ${f.ind3 + 1} $r $g $b\n")
+    }
     objOut.close()
   }
 
