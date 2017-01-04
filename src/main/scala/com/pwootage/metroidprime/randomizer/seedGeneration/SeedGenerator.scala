@@ -38,13 +38,6 @@ class SeedGenerator(config: RandomizerConfig) {
       val item = itemPool(rng.nextInt(itemPool.size))
       setItem(loc, item)
     }
-
-    println("-----set-----")
-    items.foreach(println)
-    println("-----locs-----")
-    itemLocations.foreach(println)
-    println("-----pool-----")
-    itemPool.foreach(println)
   }
 
   private def setFixedItems(): Unit = {
