@@ -81,7 +81,7 @@ class CollisionDumper() {
       val flags = coll.collisionMaterialFlags(coll.facePropertyIndices(i))
 
       // Alg from the actual game
-      val (r, g, b) = if ((flags & 0x80000000) > 0 || normal.z > 0.85) {
+      val (r, g, b) = if ((flags & 0x80000000) != 0 || normal.z > 0.85) {
         (1, 0, 0)
       } else {
         (1, 1, 1)
