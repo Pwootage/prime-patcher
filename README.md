@@ -42,12 +42,12 @@ Requires JRE8 or JDK8
 
 # Credits
 
-Parax
+Aruki
 * Reverse Engineering
 * PWE (for checking my work)
 * Template files for script objects
 
-Miles
+Claris
 * Reverse Engineering
 
 Nintendo/Retro Studios
