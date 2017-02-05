@@ -19,8 +19,10 @@ object Main {
   class PatcherConf(args: Seq[String]) extends ScallopConf(args) {
     val dump = new Subcommand("dump") {
       val what = trailArg[String](descr = "What to dump")
-      val searchDirectory = trailArg[String](descr = "Path to search for MREAs (should contain the various extracted PAKs")
-      val outDir = trailArg[String](descr = "Output directory")
+      val fileID = opt[String]("file", short = 'f', descr = "File ID (8 hex characters)", required = true)
+
+      val searchDirectory = opt[String]("in", short = 'i', descr = "Path to search (should contain extracted PAKs)", required = true)
+      val outDir = opt[String]("out", short = 'o', descr = "Output directory", required = true)
     }
     addSubcommand(dump)
 
@@ -28,33 +30,33 @@ object Main {
       val force = toggle(name = "force", short = 'f', default = Some(false), descrYes = "Overwrite existing files")
       val extractPaks = toggle(name = "paks", short = 'p', default = Some(false), descrYes = "Extract PAKs from ISOs")
       val quieter = toggle(name = "quieter", short = 'q', default = Some(false), descrYes = "Squelch constant PAK extraction messages (will update every 500 files)")
-      val destDir = trailArg[String](descr = "Where to put the results")
-      val srcFiles = trailArg[List[String]](descr = "ISOs or PAKs to parse")
+      val destDir = opt[String]("out", short = 'o', descr = "Output directory", required = true)
+      val srcFiles = opt[List[String]]("in", short = 'i', descr = "ISO or PAK to parse", required = true)
     }
     addSubcommand(extract)
 
     val repack = new Subcommand("repack") {
       val force = toggle(name = "force", short = 'f', default = Some(false), descrYes = "Overwrite existing file")
       val quieter = toggle(name = "quieter", short = 'q', default = Some(false), descrYes = "Squelch constant PAK repacking messages (will update every 500 files)")
-      val srcDir = trailArg[String](descr = "Source directory - can be PAK root (list.json) or ISO root (info.json)")
-      val outFile = trailArg[String](descr = "Target File (.pak or .iso)")
+      val srcDir = opt[String]("in", short = 'i', descr = "Source directory - can be PAK root (list.json) or ISO root (info.json)", required = true)
+      val outFile = opt[String]("out", short = 'o', descr = "Target File (.pak or .iso)", required = true)
     }
     addSubcommand(repack)
 
     val patch = new Subcommand("patch") {
       val force = toggle(name = "force", short = 'f', default = Some(false), descrYes = "Overwrite existing file")
       val quieter = toggle(name = "quieter", short = 'q', default = Some(false), descrYes = "Squelch constant PAK extraction/repacking messages")
-      val srcFile = trailArg[String](descr = "Source ISO")
-      val outFile = trailArg[String](descr = "Target ISO")
+      val srcFile = opt[String]("in", short = 'i', descr = "Source ISO", required = true)
+      val outFile = opt[String]("out", short = 'o', descr = "Target ISO", required = true)
       val patchfiles = trailArg[List[String]](descr = "Patchfiles to use")
     }
     addSubcommand(patch)
 
     val diff = new Subcommand("diff") {
       val quieter = toggle(name = "quieter", short = 'q', default = Some(false), descrYes = "Squelch constant PAK extraction/repacking messages")
-      val iso1 = trailArg[String](descr = "Starting ISO")
-      val iso2 = trailArg[String](descr = "Modified ISO")
-      val dest = trailArg[String](descr = "Destination directory for patches")
+      val iso1 = opt[String]("in1", short = 'a', descr = "Starting ISO", required = true)
+      val iso2 = opt[String]("in2", short = 'b', descr = "Modified ISO", required = true)
+      val dest = opt[String]("out", short = 'o', descr = "Destination directory for patches", required = true)
     }
     addSubcommand(diff)
 
