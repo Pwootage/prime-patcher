@@ -19,13 +19,13 @@ The latest release (updated more infrequently than the latest build below) can b
 All commands should be prefixed with `java -jar patcher-0.1.1-SHAPSHOT.jar `
 
 Extract an iso (but not embedded PAKs)
-* `extract -fq output-directory/ input/GM8E01.iso`
+* `extract -fq -o output-directory/ -i input/GM8E01.iso`
 
 Extract an iso (and embedded PAKs)
-* `extract -fpq output-directory/ input/GM8E01.iso`
+* `extract -fpq -o output-directory/ -i input/GM8E01.iso`
 
 Repack an iso (auto-detects PAKs if they are extracted by this tool)
-* `repack -fq input/directory/ output-file.iso`
+* `repack -fq -i input/directory/ -o output-file.iso`
 
 # How do I randomize?
 
@@ -35,10 +35,10 @@ from a command prompt/terminal. Hopefully the error message is useful if it does
 Requires JRE8 or JDK8
 
 ## Generate Seed
-`java -jar patcher-0.1.1-SHAPSHOT.jar randomize mp1 config.json`
+`java -jar patcher-0.1.1-SHAPSHOT.jar randomize -i GM8E01.iso -c config.json`
 
 ## Apply patches
-`java -jar patcher-0.1.1-SNAPSHOT.jar patch -fq mprime.iso out/mprime-randomized.iso prime-patchfiles-master/widescreen/patchfile.json prime-patchfiles-master/frigateskip-GM8E01-0-00.json rando/randomize.json`
+`java -jar patcher-0.1.1-SNAPSHOT.jar patch -fq -i mprime.iso -o out/mprime-randomized.iso prime-patchfiles-master/widescreen/patchfile.json prime-patchfiles-master/frigateskip-GM8E01-0-00.json rando/randomize.json`
 
 # Credits
 
