@@ -19,8 +19,6 @@ object Main {
   class PatcherConf(args: Seq[String]) extends ScallopConf(args) {
     val dump = new Subcommand("dump") {
       val what = trailArg[String](descr = "What to dump")
-      val fileID = opt[String]("file", short = 'f', descr = "File ID (8 hex characters)", required = true)
-
       val searchDirectory = opt[String]("in", short = 'i', descr = "Path to search (should contain extracted PAKs)", required = true)
       val outDir = opt[String]("out", short = 'o', descr = "Output directory", required = true)
     }
