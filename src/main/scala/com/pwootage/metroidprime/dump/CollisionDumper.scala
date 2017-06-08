@@ -123,7 +123,7 @@ class CollisionDumper() {
         }
       }
       val face = new Face
-      if ((flags & 0x2000000) > 0) {
+      if ((flags & 0x2000000) != 0) {
         face.ind1 = i1
         face.ind2 = i2
         face.ind3 = i3
