@@ -124,6 +124,7 @@ object Main {
       case "collision" => new CollisionDumper().dump(conf.dump.searchDirectory(), conf.dump.outDir())
       case "offsets" => new FileOffsetDumper().dump(conf.dump.searchDirectory(), conf.dump.outDir())
       case "areas" => new AreaDumper().dump(conf.dump.searchDirectory(), conf.dump.outDir())
+      case "assets" => new PakAssetIDDumper().dump(conf.dump.searchDirectory(), conf.dump.outDir())
     }
   }
 
