@@ -37,8 +37,8 @@ task proguard(type: ProGuardTask, dependsOn: 'fatJar') {
 }
 
 dependencies {
-    compile 'org.scala-lang:scala-library:2.11.8'
-    compile 'org.scala-lang:scala-reflect:2.11.8'
+    compile 'org.scala-lang:scala-library:2.11.12'
+    compile 'org.scala-lang:scala-reflect:2.11.12'
     compile 'org.scala-lang.modules:scala-xml_2.11:1.0.5'
     compile 'org.rogach:scallop_2.11:2.0.5'
     compile 'com.fasterxml.jackson.core:jackson-core:2.7.2'
